@@ -84,6 +84,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
+      expressvpn
       git
       obsidian
       vscode
