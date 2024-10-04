@@ -84,8 +84,8 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
-      obsidian
-      vscode
+      obsidian  # Note-Taking Software
+      vscode    # Code Editor
     ];
   };
 
@@ -100,8 +100,9 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-    git
-    mullvad-vpn
+    git         # Version Control System
+    # mullvad-vpn # VPN
+    dnf5        # Package Manager for stuff that needs to be at the latest version
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
