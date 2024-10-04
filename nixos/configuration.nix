@@ -97,12 +97,13 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     git         # Version Control System
     # mullvad-vpn # VPN
-    dnf5        # Package Manager for stuff that needs to be at the latest version
+    wireguard-tools # Necessary for wireguard to work
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
