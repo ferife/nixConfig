@@ -85,6 +85,8 @@
     packages = with pkgs; [
     #  thunderbird
       git
+      obsidian
+      vscode
     ];
   };
 
