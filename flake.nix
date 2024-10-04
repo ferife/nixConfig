@@ -1,3 +1,6 @@
+# The command to rebuild is
+# sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop
+
 {
   description = "A flake for my NixOS configuration";
 
