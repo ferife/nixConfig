@@ -37,6 +37,7 @@
 
 # TODO: Figure out how to use MullvadVPN on NixOS
   # A good idea to look into would be using Distrobox to install the apt version of MullvadVPN
+# TODO: Implement Home Manager
 # TODO: Add back all the packages I was using
 # TODO: Configure GNOME
 # TODO: Figure out gaming on NixOS
