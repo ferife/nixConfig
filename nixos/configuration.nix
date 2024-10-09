@@ -144,6 +144,7 @@
     dockerCompat = true;
   };
 
+  # This block allows Mullvad VPN to work
   networking.firewall.checkReversePath = "loose";
   networking.wireguard.enable = true;
   services.mullvad-vpn.enable = true;
