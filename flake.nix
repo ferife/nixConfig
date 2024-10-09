@@ -38,6 +38,7 @@
 # TODO: Figure out how to use MullvadVPN on NixOS
   # A good idea to look into would be using Distrobox to install the apt version of MullvadVPN
 # TODO: Implement Home Manager
+# TODO: Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
 # TODO: Add back all the packages I was using
 # TODO: Configure GNOME
 # TODO: Figure out gaming on NixOS
