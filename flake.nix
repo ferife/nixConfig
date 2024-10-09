@@ -40,3 +40,4 @@
 # TODO: Add back all the packages I was using
 # TODO: Configure GNOME
 # TODO: Figure out gaming on NixOS
+# TODO: Make this a remote repo
