@@ -104,6 +104,8 @@
     git         # Version Control System
     # mullvad-vpn # VPN
     wireguard-tools # Necessary for wireguard to work
+    mullvad-browser
+    distrobox # Program that allows adding programs from outside the nixpkgs environment
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
