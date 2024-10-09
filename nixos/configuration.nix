@@ -102,11 +102,13 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     git         # Version Control System
-    # mullvad-vpn # VPN
-    wireguard-tools # Necessary for wireguard to work
-    mullvad-browser
-    distrobox # Program that allows adding programs from outside the nixpkgs environment
-    podman # Dev tool (required by distrobox)
+    mullvad-vpn # VPN
+    # wireguard-tools # Necessary for wireguard to work
+    # mullvad-browser
+
+  # The following is not necessary now, but it's useful
+    # distrobox # Program that allows adding programs from outside the nixpkgs environment
+    # podman # Dev tool (required by distrobox)
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -141,5 +143,9 @@
     enable = true;
     dockerCompat = true;
   };
+
+  networking.firewall.checkReversePath = "loose";
+  networking.wireguard.enable = true;
+  services.mullvad-vpn.enable = true;
 
 }
