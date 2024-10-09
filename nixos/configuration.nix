@@ -136,4 +136,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
+  # The following snippet is here because it seems to be required to make distrobox work
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
 }
