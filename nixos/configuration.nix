@@ -106,6 +106,7 @@
     wireguard-tools # Necessary for wireguard to work
     mullvad-browser
     distrobox # Program that allows adding programs from outside the nixpkgs environment
+    docker # Dev tool  (required by distrobox)
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
