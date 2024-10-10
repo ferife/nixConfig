@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/accessMedia.nix
+      ./modules/cliTools.nix
       ./modules/createMedia.nix
       # ./modules/distrobox.nix
       ./modules/mullvad-vpn.nix
