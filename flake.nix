@@ -1,15 +1,12 @@
-# The command to rebuild is
-# sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop
-
 {
   description = "A flake for my NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   input.nixpkgs.follows = "nixpkgs";
-    # };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
@@ -35,14 +32,15 @@
 
       # Standalone home-manager configuration entrypoint
       # Available through 'home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop'
-      # homeConfigurations = {
-      #   "fernandorf@laptop" = home-manager.lib.homeManagerConfiguration {
-      #     extraSpecialArgs = { inherit system; };
-      #     modules = [
-      #       ./homeManager/home.nix
-      #     ];
-      #   }
-      # };
+      homeConfigurations = {
+        "fernandorf@laptop" = home-manager.lib.homeManagerConfiguration {
+          pkgs = pkgs;
+          extraSpecialArgs = { inherit system; };
+          modules = [
+            ./homeManager/home.nix
+          ];
+        };
+      };
     };
 
     # packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;

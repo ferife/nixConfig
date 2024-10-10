@@ -103,7 +103,7 @@
 
   environment.systemPackages = with pkgs; [
     git           # Version Control System
-    # home-manager  # Program that allows for more declarative control over my computer setup
+    home-manager  # Program that allows for more declarative control over my computer setup
     mullvad-vpn   # VPN
     # mullvad-browser
 
