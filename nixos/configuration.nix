@@ -95,15 +95,16 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-    git         # Version Control System
-    mullvad-vpn # VPN
-    # wireguard-tools # Necessary for wireguard to work
+    git           # Version Control System
+    # home-manager  # Program that allows for more declarative control over my computer setup
+    mullvad-vpn   # VPN
     # mullvad-browser
 
   # The following is not necessary now, but it's useful
