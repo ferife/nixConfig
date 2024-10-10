@@ -13,6 +13,8 @@
       ./modules/createMedia.nix
       # ./modules/distrobox.nix
       ./modules/mullvad-vpn.nix
+      ./modules/thunderbird.nix
+      ./modules/tor.nix
     ];
 
   # Bootloader.
