@@ -4,7 +4,7 @@
 {
   # Install extensions
   home.packages = with pkgs; [
-    dconf-editor              # GNOME settings editor
+    dconf-editor                    # GNOME settings editor
     gnome-tweaks
     gnomeExtensions.caffeine        # Keeps screen on
     gnomeExtensions.forge           # Tiling Windows
