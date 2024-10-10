@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./gnomeConfig.nix
     ];
 
   # Bootloader.
@@ -106,6 +105,7 @@
     git           # Version Control System
     home-manager  # Program that allows for more declarative control over my computer setup
     mullvad-vpn   # VPN
+    gnome.gnome-tweaks
     # mullvad-browser
 
   # The following is not necessary now, but it's useful
