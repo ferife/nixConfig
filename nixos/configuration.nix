@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/accessMedia.nix
+      ./modules/createMedia.nix
       # ./modules/distrobox.nix
       ./modules/mullvad-vpn.nix
     ];
@@ -87,7 +88,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
-      obsidian  # Note-Taking Software
       vscode    # Code Editor
     ];
   };
