@@ -4,14 +4,14 @@
 {
   # Install extensions
   home.packages = with pkgs; [
-    gnome.dconf-editor              # GNOME settings editor
+    dconf-editor              # GNOME settings editor
+    gnome-tweaks
     gnomeExtensions.caffeine        # Keeps screen on
     gnomeExtensions.forge           # Tiling Windows
     gnomeExtensions.weather-oclock  # Displays Weather
   ];
 
   # Settings
-  # programs.dconf.enable = true;
   dconf.settings = {
     "org/gnome/desktop/peripherals/touchpad" = {
       send-events = "disabled-on-external-mouse";

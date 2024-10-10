@@ -50,8 +50,6 @@
   
 }
 
-# TODO: Implement Home Manager
-  # Link for searching home manager options: https://home-manager-options.extranix.com/
 # TODO: Make my configuration more modular
 # TODO: Add back all the packages I was using
 # TODO: Configure GNOME - Use Home Manger for this

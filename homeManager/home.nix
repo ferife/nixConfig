@@ -1,8 +1,10 @@
+# Link for searching home manager options: https://home-manager-options.extranix.com/
+
 { config, pkgs, ... }:
 
 {
   imports = [
-    ./gnomeConfig.nix
+    ./modules/gnomeConfig.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
