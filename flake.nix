@@ -63,3 +63,11 @@
 # TODO: Set up NixOS auto update
 # TODO: Set up auto update for all my applications
 # TODO: Look into Manix CLI
+
+# Useful tools
+# mynixos.com - For searching nix options
+
+
+
+
+
