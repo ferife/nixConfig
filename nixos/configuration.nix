@@ -8,8 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/mullvad-vpn.nix
+      ./modules/accessMedia.nix
       # ./modules/distrobox.nix
+      ./modules/mullvad-vpn.nix
     ];
 
   # Bootloader.
@@ -106,10 +107,6 @@
   environment.systemPackages = with pkgs; [
     git           # Version Control System
     home-manager  # Program that allows for more declarative control over my computer setup
-    # mullvad-browser
-
-  # The following is not necessary now, but it's useful
-    
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

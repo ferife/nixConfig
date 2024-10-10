@@ -50,7 +50,6 @@
   
 }
 
-# TODO: Make my configuration more modular
 # TODO: Add back all the packages I was using
 # TODO: Configure GNOME - Use Home Manger for this
 # TODO: Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
