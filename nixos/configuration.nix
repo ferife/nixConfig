@@ -8,7 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/mullvadVpn.nix
+      ./modules/mullvad-vpn.nix
+      # ./modules/distrobox.nix
     ];
 
   # Bootloader.
@@ -108,8 +109,7 @@
     # mullvad-browser
 
   # The following is not necessary now, but it's useful
-    # distrobox # Program that allows adding programs from outside the nixpkgs environment
-    # podman # Dev tool (required by distrobox)
+    
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -138,11 +138,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
-  # The following snippet is here because it seems to be required to make distrobox work
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-  };
-
 }
