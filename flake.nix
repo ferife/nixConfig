@@ -50,8 +50,7 @@
   
 }
 
-# TODO: Add back all the packages I was using
-# TODO: Configure GNOME - Use Home Manger for this
+# TODO: Add Whatsapp access to the computer for communicating with mom
 # TODO: Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
 # TODO: Figure out gaming on NixOS
 # TODO: Make this a remote repo
