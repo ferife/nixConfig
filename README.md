@@ -6,11 +6,12 @@ I do not intend for anyone else to use this, but I can't/won't stop you
 
 I made this remote repo to have a secure remote place to keep my config and to keep track of the changes
 
-I made this remote repo public to show off that **I use Nix btw** lol
-But seriously, I did it to show off (mostly to prospective employers) that I am willing and able to learn to use all sorts of different tools
-Also to show off that I understand the value in making changes in a declarative manner as opposed to an imperative manner
+I made this remote repo public to show off that ***I use Nix btw*** lol
 
-# TO-DO LIST
+But seriously, I did it to show off (mostly to prospective employers) that I am willing and able to learn to use all sorts of different tools.
+Also to show off that I understand the value in making changes in a declarative manner as opposed to an imperative manner.
+
+# To-Do List
 - [x] Figure out how to use MullvadVPN on NixOS
 - [x] Add back all the packages I was using
 - [x] Configure GNOME - Use Home Manager for this
@@ -27,6 +28,6 @@ Also to show off that I understand the value in making changes in a declarative 
 - [ ] Set up auto update for all my applications
 - [ ] Look into Manix CLI
 
-# NOTES
+# Notes
 
 [This website](https://home-manager-options.extranix.com/) can be used to search for Home Manager options
