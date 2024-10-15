@@ -49,21 +49,3 @@
 
   
 }
-
-# TODO: Add Whatsapp access to the computer for communicating with mom
-# TODO: Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
-# TODO: Figure out gaming on NixOS
-# TODO: Make this a remote repo
-# TODO: Set up a password management solution
-# TODO: Cancel my subsctiption to ExpressVPN
-# TODO: Set up NixOS auto update
-# TODO: Set up auto update for all my applications
-# TODO: Look into Manix CLI
-
-# Useful tools
-# mynixos.com - For searching nix options
-
-
-
-
-
