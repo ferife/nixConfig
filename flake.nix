@@ -19,8 +19,8 @@
         };
       };
     in {
+      
       # NixOS Configuration Entrypoint
-      # Available through 'sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop'
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit system; };
@@ -31,7 +31,6 @@
       };
 
       # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop'
       homeConfigurations = {
         "fernandorf@laptop" = home-manager.lib.homeManagerConfiguration {
           pkgs = pkgs;
@@ -41,11 +40,5 @@
           ];
         };
       };
-    };
-
-    # packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    # packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
-  
+    };  
 }

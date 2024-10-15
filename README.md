@@ -31,3 +31,7 @@ Also to show off that I understand the value in making changes in a declarative 
 # Notes
 
 [This website](https://home-manager-options.extranix.com/) can be used to search for Home Manager options
+
+Use the command `sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#fernandorf@laptop` to update the NixOS configuration
+
+Use the command `sudo home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop` to update the Home Manager configuration
