@@ -15,6 +15,7 @@
       ./modules/createMedia.nix
       # ./modules/distrobox.nix
       ./modules/mullvad-vpn.nix
+      ./modules/requiredForProgramming.nix
       ./modules/thunderbird.nix
       ./modules/tor.nix
     ];
