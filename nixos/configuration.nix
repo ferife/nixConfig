@@ -93,8 +93,7 @@
     description = "Fernando RiveraFernadez";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
-      vscode    # Code Editor
+
     ];
   };
 
@@ -113,6 +112,7 @@
   environment.systemPackages = with pkgs; [
     git           # Version Control System
     home-manager  # Program that allows for more declarative control over my computer setup
+    vscode        # Code Editor
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
