@@ -10,14 +10,14 @@
       ./hardware-configuration.nix
 
       # Application Modules
-      ./modules/accessMedia.nix
-      ./modules/cliTools.nix
-      ./modules/createMedia.nix
-      # ./modules/distrobox.nix
-      ./modules/mullvad-vpn.nix
-      ./modules/requiredForProgramming.nix
-      ./modules/thunderbird.nix
-      ./modules/tor.nix
+      ./modules/applications/accessMedia.nix
+      ./modules/applications/cliTools.nix
+      ./modules/applications/createMedia.nix
+      # ./modules/applications/distrobox.nix
+      ./modules/applications/mullvad-vpn.nix
+      ./modules/applications/requiredForProgramming.nix
+      ./modules/applications/thunderbird.nix
+      ./modules/applications/tor.nix
     ];
 
   # Bootloader.
