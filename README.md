@@ -24,7 +24,7 @@ Also to show off that I understand the value in making changes in a declarative 
 - [ ] Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
 - [ ] Set up a password management solution
 - [ ] Cancel my subsctiption to ExpressVPN
-- [ ] Set up NixOS auto update
+- [x] Set up NixOS auto update
 - [ ] Set up auto update for all my applications
 - [ ] Look into Manix CLI
 
