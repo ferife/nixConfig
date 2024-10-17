@@ -9,6 +9,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
+      ./modules/autoupgrade.nix
+
       # Application Modules
       ./modules/applications/accessMedia.nix
       ./modules/applications/cliTools.nix
