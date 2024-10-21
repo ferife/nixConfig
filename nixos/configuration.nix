@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./hardware/laptop/hardware-configuration.nix
 
       ./modules/autoupgrade.nix
 
