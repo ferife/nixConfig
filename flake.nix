@@ -25,7 +25,13 @@
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit system; };
           modules = [
-            ./nixos/configuration.nix
+            ./nixos/hardware/laptop/configuration.nix
+          ];
+        };
+        device2 = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit system; };
+          modules = [
+            ./nixos/hardware/device2/configuration.nix
           ];
         };
       };

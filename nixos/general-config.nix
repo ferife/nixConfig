@@ -5,23 +5,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware/laptop/hardware-configuration.nix
-
-      ./modules/autoupgrade.nix
-
-      # Application Modules
-      ./modules/applications/accessMedia.nix
-      ./modules/applications/cliTools.nix
-      ./modules/applications/createMedia.nix
-      # ./modules/applications/distrobox.nix
-      ./modules/applications/mullvad-vpn.nix
-      ./modules/applications/requiredForProgramming.nix
-      ./modules/applications/thunderbird.nix
-      ./modules/applications/tor.nix
-    ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

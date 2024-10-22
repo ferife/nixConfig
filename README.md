@@ -21,7 +21,7 @@ Also to show off that I understand the value in making changes in a declarative 
 - [x] Make my configuration more modular
 - [x] Set up NixOS auto update
 - [-] Add gitignore with hardware-configuration.nix
-
+- [x] Create the options necessary for multiple devices to make use of this setup
 
 - [ ] Add Whatsapp access to the computer for communicating with mom
 - [ ] Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
