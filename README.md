@@ -29,6 +29,10 @@ Also to show off that I understand the value in making changes in a declarative 
 - [ ] Cancel my subsctiption to ExpressVPN
 - [ ] Set up auto update for all my applications
 - [ ] Look into Manix CLI
+- [ ] Separate out the packages into ones that are core components needed by all users of the computer and everything else
+    - The core components should be installed by NixOS
+    - Everything else should be installed by Home Manager
+    - This limits the amount of packages that have privileged access
 
 # Notes
 
@@ -36,6 +40,8 @@ Also to show off that I understand the value in making changes in a declarative 
 
 [This website](https://home-manager-options.extranix.com/) can be used to search for Home Manager options
 
-Use the command `sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop` to update the NixOS configuration
+Use the command `sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop` to rebuild the NixOS configuration
 
-Use the command `sudo home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop` to update the Home Manager configuration
+To update packages, first `cd` into the location of this config, then run `sudo nix flake update`, and finally rebuild the NixOS configuration.
+
+Use the command `sudo home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop` to rebuild the Home Manager configuration
