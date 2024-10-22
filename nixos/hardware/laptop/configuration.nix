@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
 
       ../../modules/auto-upgrade.nix
+      ../../modules/delete-old-stuff.nix
 
       # Application Modules
       ../../modules/packages/access-media.nix
