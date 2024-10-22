@@ -32,6 +32,8 @@ Also to show off that I understand the value in making changes in a declarative 
 
 # Notes
 
+[This website](https://nixos-and-flakes.thiscute.world/) serves as an unofficial beginners guide to NixOS, with a big focus on a flake-based NixOS config
+
 [This website](https://home-manager-options.extranix.com/) can be used to search for Home Manager options
 
 Use the command `sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop` to update the NixOS configuration
