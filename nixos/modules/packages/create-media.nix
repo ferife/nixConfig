@@ -8,4 +8,7 @@
     obs-studio  # Recording Software
     obsidian    # Note-taking Tool
   ];
+  programs.obs-studio = {
+    enable = true;
+  };
 }

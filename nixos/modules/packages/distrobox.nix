@@ -4,7 +4,7 @@
 {
   environment.systemPackages = with pkgs; [
     distrobox # Program that allows adding programs from outside the nixpkgs environment
-    podman    # Dev tool (required by distrobox)
+    # podman    # Dev tool (required by distrobox)
   ];
 
   virtualisation.podman = {

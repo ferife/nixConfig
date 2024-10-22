@@ -2,7 +2,7 @@
 
 { config, pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    thunderbird # Email client
-  ];
+  programs.thunderbird = {
+    enable = true;
+  };
 }
