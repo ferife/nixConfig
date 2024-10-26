@@ -5,6 +5,12 @@
 { config, pkgs, ... }:
 
 {
+  # This import exists for modules with code that is necessary to allow for a barebones useable computer
+  imports = [
+    ./modules/nixpkgs-config.nix
+    ./modules/packages/browsers.nix
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -81,9 +87,6 @@
 
     ];
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
