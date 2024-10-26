@@ -2,6 +2,10 @@
 
 { config, pkgs, ... }:
 {
+  imports = [
+    ./openrazer.nix # Support & Configure Razer-brand peripheral usage
+  ];
+
   programs.steam = {
     enable = true;
   };
