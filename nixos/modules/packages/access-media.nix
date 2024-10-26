@@ -2,7 +2,9 @@
 
 { config, pkgs, ... }:
 {
-  programs.steam.enable = true;
+  imports = [
+    ./gaming.nix
+  ];
   environment.systemPackages = with pkgs; [
     qbittorrent # Torrenting
     vlc         # Playing audio & video files
