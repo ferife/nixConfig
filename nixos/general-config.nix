@@ -8,6 +8,9 @@
   # This import exists for modules with code that is necessary to allow for a barebones useable computer
   imports = [
     ./modules/nixpkgs-config.nix
+    ./modules/user-config.nix
+
+    # Required package modules
     ./modules/packages/browsers.nix
   ];
 
@@ -77,16 +80,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.fernandorf = {
-    isNormalUser = true;
-    description = "Fernando RiveraFernadez";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-
-    ];
-  };
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
