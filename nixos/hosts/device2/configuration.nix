@@ -10,7 +10,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      ../../modules/auto-upgrade.nix
+      ../../modules/settings/auto-upgrade.nix
 
       # Application Modules
       ../../modules/packages/access-media.nix

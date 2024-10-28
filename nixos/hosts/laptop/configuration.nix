@@ -10,8 +10,8 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
-      ../../modules/auto-upgrade.nix
-      ../../modules/delete-old-stuff.nix
+      ../../modules/settings/auto-upgrade.nix
+      ../../modules/settings/delete-old-stuff.nix
 
       # Application Modules
       ../../modules/packages/access-media.nix

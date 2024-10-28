@@ -7,8 +7,8 @@
 {
   # This import exists for modules with code that is necessary to allow for a barebones useable computer
   imports = [
-    ./modules/nixpkgs-config.nix
-    ./modules/user-config.nix
+    ./modules/settings/nixpkgs-config.nix
+    ./modules/settings/user-config.nix
 
     # Required package modules
     ./modules/packages/browsers.nix
