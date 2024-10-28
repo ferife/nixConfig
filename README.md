@@ -49,3 +49,5 @@ To update packages, first `cd` into the location of this config, then run `sudo 
 Use the command `sudo home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop` to rebuild the Home Manager configuration
 
 If a list or object gets modified in multiple modules, all those modifications merge and get applied, assuming there's no conflict
+
+Watch Vimjoyer's YT video "Modularize NixOS and Home Manager | Great Practices" to learn about some good practices to make my config more controllable in a modular way
