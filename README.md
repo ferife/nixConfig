@@ -9,7 +9,9 @@ I made this remote repo to have a secure remote place to keep my config and to k
 I made it a public repo to show off that ***I use Nix btw*** lol
 
 But seriously, I did it to show off (mostly to prospective employers) that I am willing and able to learn to use all sorts of different tools.
+
 Also to show off that I understand the value in making changes in a declarative manner as opposed to an imperative manner.
+The value of declarativity is that it's easier to find out about the details of a configuration. It's also easier to keep track of the changes made to that configuration, since a declarative config can be tracked through a VCS like git.
 
 # To-Do List
 - [x] Figure out how to use MullvadVPN on NixOS
