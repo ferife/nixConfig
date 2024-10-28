@@ -12,6 +12,7 @@
 
     # Required package modules
     ./modules/packages/browsers.nix
+    ./modules/packages/git.nix
   ];
 
   # Bootloader.
@@ -90,7 +91,6 @@
   # These packages are here because I consider them essential to the basic function of this config
   # Once I become comfortable with NeoVim, I will remove VS Code from here in favor of it
   environment.systemPackages = with pkgs; [
-    git           # Version Control System
     home-manager  # Program that allows for more declarative control over my computer setup
     neofetch      # Display system specifications
     vscode        # Code Editor
