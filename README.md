@@ -6,7 +6,7 @@ I do not intend for anyone else to use this, but I can't/won't stop you
 
 I made this remote repo to have a secure remote place to keep my config and to keep track of the changes
 
-I made this remote repo public to show off that ***I use Nix btw*** lol
+I made it a public repo to show off that ***I use Nix btw*** lol
 
 But seriously, I did it to show off (mostly to prospective employers) that I am willing and able to learn to use all sorts of different tools.
 Also to show off that I understand the value in making changes in a declarative manner as opposed to an imperative manner.
