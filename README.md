@@ -45,3 +45,5 @@ Use the command `sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop
 To update packages, first `cd` into the location of this config, then run `sudo nix flake update`, and finally rebuild the NixOS configuration.
 
 Use the command `sudo home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop` to rebuild the Home Manager configuration
+
+If a list or object gets modified in multiple modules, all those modifications merge and get applied, assuming there's no conflict
