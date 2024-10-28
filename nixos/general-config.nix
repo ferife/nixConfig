@@ -92,6 +92,7 @@
   environment.systemPackages = with pkgs; [
     git           # Version Control System
     home-manager  # Program that allows for more declarative control over my computer setup
+    neofetch      # Display system specifications
     vscode        # Code Editor
   ];
 
