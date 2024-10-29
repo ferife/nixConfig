@@ -4,7 +4,7 @@
 		vlcModule.enable = lib.mkEnableOption "Installs & configures VLC";
 	};
 
-	config = lib.mkIf config.openrazerModule.enable {
+	config = lib.mkIf config.vlcModule.enable {
 		environment.systemPackages = with pkgs; [
       vlc
     ];

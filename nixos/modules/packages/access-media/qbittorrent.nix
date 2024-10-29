@@ -4,7 +4,7 @@
 		qbittorrentModule.enable = lib.mkEnableOption "Installs & configures QBitTorrent";
 	};
 
-	config = lib.mkIf config.openrazerModule.enable {
+	config = lib.mkIf config.qbittorrentModule.enable {
 		environment.systemPackages = with pkgs; [
       qbittorrent
     ];
