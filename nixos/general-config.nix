@@ -7,7 +7,7 @@
 {
   # This import exists for modules with code that is necessary to allow for a barebones useable computer
   imports = [
-    ./modules/settings/moduleBundle.nix
+    ./modules/settings/module-bundle.nix
 
     # Required package modules
     ./modules/packages/browsers.nix

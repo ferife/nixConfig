@@ -14,7 +14,7 @@
       # ../../modules/settings/delete-old-stuff.nix
 
       # Application Modules
-      ../../modules/packages/access-media.nix
+      ../../modules/packages/access-media/module-bundle.nix
       ../../modules/packages/browsers.nix
       ../../modules/packages/cli-tools.nix
       ../../modules/packages/create-media.nix

@@ -24,7 +24,7 @@ The value of declarativity is that it's easier to find out about the details of 
 - [x] Set up NixOS auto update
 - [-] Add gitignore with hardware-configuration.nix
 - [x] Create the options necessary for multiple devices to make use of this setup
-- [X] Set up auto update for all my applications
+- [x] Set up auto update for all my applications
 
 - [ ] Add Whatsapp access to the computer for communicating with mom
 - [ ] Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
@@ -35,6 +35,7 @@ The value of declarativity is that it's easier to find out about the details of 
     - The core components should be installed by NixOS
     - Everything else should be installed by Home Manager
     - This limits the amount of packages that have privileged access
+- [ ] In openrazer.nix, make it so that the users added to the "openrazer" extraGroup is dependent on the users in the current host (AKa make it programmatic)
 
 # Notes
 
