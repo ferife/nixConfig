@@ -15,7 +15,7 @@
 
       # Application Modules
       ../../modules/packages/access-media/module-bundle.nix
-      ../../modules/packages/browsers.nix
+      ../../modules/packages/browsers/module-bundle.nix
       ../../modules/packages/cli-tools.nix
       ../../modules/packages/create-media.nix
       # ../../modules/packages/distrobox.nix

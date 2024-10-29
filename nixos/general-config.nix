@@ -10,7 +10,7 @@
     ./modules/settings/module-bundle.nix
 
     # Required package modules
-    ./modules/packages/browsers.nix
+    ./modules/packages/browsers/module-bundle.nix
     ./modules/packages/git.nix
   ];
 
