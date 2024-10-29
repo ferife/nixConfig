@@ -2,17 +2,9 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
-  # This import exists for modules with code that is necessary to allow for a barebones useable computer
-  imports = [
-    ./modules/settings/module-bundle.nix
-
-    # Required package modules
-    ./modules/packages/browsers/module-bundle.nix
-    ./modules/packages/git.nix
-  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -91,7 +83,6 @@
   # Once I become comfortable with NeoVim, I will remove VS Code from here in favor of it
   environment.systemPackages = with pkgs; [
     home-manager  # Program that allows for more declarative control over my computer setup
-    neofetch      # Display system specifications
     vscode        # Code Editor
   ];
 
@@ -121,4 +112,10 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
+
+  # The following lines enable certain programs that I consider essential for the minimum installation of a computer using this config
+  firefoxModule.enable = lib.mkForce true;
+  gitModule.enable = lib.mkForce true;
+  neofetchModule.enable = lib.mkForce true;
+
 }
