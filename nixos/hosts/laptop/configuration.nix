@@ -17,7 +17,7 @@
       ../../modules/packages/access-media/module-bundle.nix
       ../../modules/packages/browsers/module-bundle.nix
       ../../modules/packages/cli-tools/module-bundle.nix
-      ../../modules/packages/create-media.nix
+      ../../modules/packages/create-media/module-bundle.nix
       ../../modules/packages/mullvad-vpn.nix
       ../../modules/packages/programming.nix
       ../../modules/packages/thunderbird.nix
