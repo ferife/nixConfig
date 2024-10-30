@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -18,6 +18,7 @@
       ../../modules/packages/browsers/module-bundle.nix
       ../../modules/packages/cli-tools/module-bundle.nix
       ../../modules/packages/create-media/module-bundle.nix
+      ../../modules/packages/nix-related/module-bundle.nix
       ../../modules/packages/other/module-bundle.nix
     ];
 }

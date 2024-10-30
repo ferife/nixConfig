@@ -79,13 +79,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
 
-  # These packages are here because I consider them essential to the basic function of this config
-  # Once I become comfortable with NeoVim, I will remove VS Code from here in favor of it
-  environment.systemPackages = with pkgs; [
-    home-manager  # Program that allows for more declarative control over my computer setup
-    vscode        # Code Editor
-  ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -117,5 +110,7 @@
   firefoxModule.enable = lib.mkForce true;
   gitModule.enable = lib.mkForce true;
   neofetchModule.enable = lib.mkForce true;
-
+  homeManagerModule.enable = lib.mkForce true;
+  vsCodeModule.enable = lib.mkForce true;
+  # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
 }
