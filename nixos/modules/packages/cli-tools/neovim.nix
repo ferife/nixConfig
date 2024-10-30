@@ -8,5 +8,7 @@
 		programs.neovim = {
       enable = true;
     };
+		
+		libgccModule.enable = lib.mkForce true;
 	};
 }
