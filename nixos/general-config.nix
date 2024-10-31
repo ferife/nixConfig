@@ -10,7 +10,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -111,6 +110,7 @@
   gitModule.enable = lib.mkForce true;
   neofetchModule.enable = lib.mkForce true;
   homeManagerModule.enable = lib.mkForce true;
+  nhModule.enable = lib.mkForce true;
   vsCodeModule.enable = lib.mkForce true;
   # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
 }

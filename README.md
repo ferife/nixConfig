@@ -37,17 +37,27 @@ The value of declarativity is that it's easier to find out about the details of 
     - This limits the amount of packages that have privileged access
 - [ ] In openrazer.nix, make it so that the users added to the "openrazer" extraGroup is dependent on the users in the current host (AKa make it programmatic)
 
+# Commands
+
+- Rebuild the system after changing the configuration: `nh os switch -aH laptop`
+- Upgrade nixpkgs and rebuild `nh os switch -auH laptop`
+- Rebuild home-manager after changing the configuration: `nh home switch -aH fernandorf@laptop`
+- Rebuild to test a program or make a temporary change: `nh os test -aH laptop`
+
 # Notes
 
 [This website](https://nixos-and-flakes.thiscute.world/) serves as an unofficial beginners guide to NixOS, with a big focus on a flake-based NixOS config
 
 [This website](https://home-manager-options.extranix.com/) can be used to search for Home Manager options
 
-Use the command `sudo nixos-rebuild switch --flake ~/Documents/nixConfig/#laptop` to rebuild the NixOS configuration
-
-To update packages, first `cd` into the location of this config, then run `sudo nix flake update`, and finally rebuild the NixOS configuration.
-
-Use the command `sudo home-manager switch --flake ~/Documents/nixConfig/#fernandorf@laptop` to rebuild the Home Manager configuration
+Use the command `nh os switch` to rebuild the NixOS configuration
+- Add the `-u`/`--upgrade` flag to upgrade the flake before rebuilding
+- Add the `-n`/`--dry` flag to simply show the actions that would be taken without taking them
+- Add the `-H`/`--hostname` function lets me choose a host to build from
+  - The hostname is the name of the configuration as written in `flake.nix`
+- Add the `-a`/`--ask` flag to show all the changes, but ask for confirmation before applying them
+- Type `test` instead of `switch` to rebuild and activate without switching
+- This all also works with home manager configurations. Simply type `home` zinstead of `os`
 
 If a list or object gets modified in multiple modules, all those modifications merge and get applied, assuming there's no conflict
 
