@@ -42,7 +42,7 @@ The value of declarativity is that it's easier to find out about the details of 
 
 - Rebuild the system after changing the configuration: `nh os switch -aH laptop`
 - Upgrade nixpkgs and rebuild `nh os switch -auH laptop`
-- Rebuild home-manager after changing the configuration: `nh home switch -aH fernandorf@laptop`
+- Rebuild home-manager after changing the configuration: `nh home switch -ac fernandorf@laptop`
 - Rebuild to test a program or make a temporary change: `nh os test -aH laptop`
 
 # Notes

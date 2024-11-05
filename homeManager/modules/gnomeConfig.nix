@@ -16,5 +16,8 @@
     "org/gnome/desktop/peripherals/touchpad" = {
       send-events = "disabled-on-external-mouse";
     };
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
+    };
   };
 }
