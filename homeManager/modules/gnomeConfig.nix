@@ -13,7 +13,11 @@
 
   # Settings
   dconf.settings = {
+    "org/gnome/desktop/calendar" = {
+      show-weekdate = true;
+    };
     "org/gnome/desktop/interface" = {
+      clock-show-weekday = true;
       show-battery-percentage = true;
     };
     "org/gnome/desktop/peripherals/touchpad" = {
