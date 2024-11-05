@@ -58,7 +58,8 @@ Use the command `nh os switch` to rebuild the NixOS configuration
   - The hostname is the name of the configuration as written in `flake.nix`
 - Add the `-a`/`--ask` flag to show all the changes, but ask for confirmation before applying them
 - Type `test` instead of `switch` to rebuild and activate without switching
-- This all also works with home manager configurations. Simply type `home` zinstead of `os`
+- This all also works with home manager configurations. Simply type `home` instead of `os`
+  - For `nh home ...`, use the `-c`/`--configuration` flag instead of `-H`/`--hostname`
 
 If a list or object gets modified in multiple modules, all those modifications merge and get applied, assuming there's no conflict
 
