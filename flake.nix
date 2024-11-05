@@ -42,7 +42,14 @@
           pkgs = pkgs;
           extraSpecialArgs = { inherit system; };
           modules = [
-            ./homeManager/home.nix
+            ./homeManager/hosts/laptop/home.nix
+          ];
+        };
+        "fernandorf@device2" = home-manager.lib.homeManagerConfiguration {
+          pkgs = pkgs;
+          extraSpecialArgs = { inherit system; };
+          modules = [
+            ./homeManager/hosts/device2/home.nix
           ];
         };
       };
