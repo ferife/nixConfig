@@ -11,11 +11,11 @@
     boot.loader.systemd-boot.configurationLimit = 10;
     # boot.loader.grub.configurationLimit = 10;
 
-    # Perform garbage collection weekly to maintain low disk usage
+    # Perform garbage collection daily to maintain low disk usage
     nix.gc = {
       automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 1w";
+      dates = "daily";
+      # options = "--delete-older-than 1w";
     };
 
     # Optimize storage

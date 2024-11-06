@@ -44,6 +44,7 @@ The value of declarativity is that it's easier to find out about the details of 
 - Upgrade nixpkgs and rebuild `nh os switch -auH laptop`
 - Rebuild home-manager after changing the configuration: `nh home switch -ac fernandorf@laptop`
 - Rebuild to test a program or make a temporary change: `nh os test -aH laptop`
+- Clean up my storage: `nh clean all -ak 10`
 
 # Notes
 
@@ -57,9 +58,16 @@ Use the command `nh os switch` to rebuild the NixOS configuration
 - Add the `-H`/`--hostname` function lets me choose a host to build from
   - The hostname is the name of the configuration as written in `flake.nix`
 - Add the `-a`/`--ask` flag to show all the changes, but ask for confirmation before applying them
+- Add the `-n`/`--dry` flag to simply show the actions that would be taken without taking them
 - Type `test` instead of `switch` to rebuild and activate without switching
 - This all also works with home manager configurations. Simply type `home` instead of `os`
   - For `nh home ...`, use the `-c`/`--configuration` flag instead of `-H`/`--hostname`
+
+Use the command `nh clean all` to clean out old generations and do a garbage collection
+- Add the `-k <NUM>`/`--keep <NUM>` flag to keep at least `<NUM>` number of generations
+- Add the `-K <TIME>`/`--keep-since <TIME>` flag to keep all generations that are at most `<TIME>`
+- Add the `-a`/`--ask` flag to show all the changes, but ask for confirmation before applying them
+- Add the `-n`/`--dry` flag to simply show the actions that would be taken without taking them
 
 If a list or object gets modified in multiple modules, all those modifications merge and get applied, assuming there's no conflict
 
