@@ -1,18 +1,12 @@
-# This is the module that I will use to configure GNOME
 
-{ config, pkgs, ... }:
+
+{ config, lib, pkgs, ... }:
 {
-  # Install extensions
   home.packages = with pkgs; [
-    dconf-editor                    # GNOME settings editor
-    gnome-tweaks
-    gnomeExtensions.caffeine        # Keeps screen on
-    gnomeExtensions.tiling-shell    # Tiling Windows
-    gnomeExtensions.weather-oclock  # Displays Weather
-    gnomeExtensions.forge
+    dconf-editor  # Allows for the editing of GNOME settings in NixOS
+    gnome-tweaks  # Find the existence of hidden settings much more easily than with dconf editor
   ];
 
-  # Settings
   dconf.settings = {
     "org/gnome/desktop/calendar" = {
       show-weekdate = true;
