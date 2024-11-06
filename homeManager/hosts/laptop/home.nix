@@ -5,7 +5,6 @@
 {
   imports = [
     ../../modules/dconf-settings.nix
-    ../../modules/packages/gnome-extensions/third-party/module-bundle.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

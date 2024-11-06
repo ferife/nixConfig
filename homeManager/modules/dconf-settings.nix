@@ -7,6 +7,11 @@
     gnome-tweaks  # Find the existence of hidden settings much more easily than with dconf editor
   ];
 
+  imports = [
+    ./packages/gnome-extensions/default/module-bundle.nix
+    ./packages/gnome-extensions/third-party/module-bundle.nix
+  ];
+
   dconf.settings = {
     "org/gnome/desktop/calendar" = {
       show-weekdate = true;
