@@ -24,4 +24,11 @@
   networking.hostName = "nixos";
   # Should match the name given in the NixOS configuration entrypoint in flake.nix
 
+  gimpModule.enable = lib.mkForce false;
+  libreofficeModule.enable = lib.mkForce false;
+  obsStudioModule.enable = lib.mkForce false;
+  qbittorrentModule.enable = lib.mkForce false;
+  thunderbirdModule.enable = lib.mkForce false;
+  torBrowserModule.enable = lib.mkForce false;
+  vlcModule.enable = lib.mkForce false;
 }
