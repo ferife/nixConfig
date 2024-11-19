@@ -65,6 +65,7 @@ Use the command `nh os switch` to rebuild the NixOS configuration
 - Type `test` instead of `switch` to rebuild and activate without switching
 - This all also works with home manager configurations. Simply type `home` instead of `os`
   - For `nh home ...`, use the `-c`/`--configuration` flag instead of `-H`/`--hostname`
+  - `nh home test` does not work
 
 Use the command `nh clean all` to clean out old generations and do a garbage collection
 - Add the `-k <NUM>`/`--keep <NUM>` flag to keep at least `<NUM>` number of generations
