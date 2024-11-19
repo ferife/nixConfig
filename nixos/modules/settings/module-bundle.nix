@@ -10,5 +10,5 @@
     ];
 
     autoUpgradeOption.enable = lib.mkDefault true;
-    autoStorageCleanupOption.enable = lib.mkDefault true;
+    autoStorageCleanupOption.enable = lib.mkDefault false;
 }
