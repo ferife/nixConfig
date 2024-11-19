@@ -18,6 +18,12 @@
           "forge@jmmaranan.com"
         ];
       };
+
+      "org/gnome/shell/extensions/forge" = {
+        tiling-mode-enabled = true;
+        window-gap-hidden-on-single = true;
+      };
+
     };
   };
 }

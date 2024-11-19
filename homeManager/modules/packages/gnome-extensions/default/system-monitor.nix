@@ -21,8 +21,8 @@
         show-download = true;
         show-swap = false;
       };
-    };
-  };
 
-  
+    };
+
+  };
 }
