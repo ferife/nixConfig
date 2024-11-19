@@ -20,17 +20,18 @@
   ];
 
   appsMenuModule.enable = lib.mkDefault true;
+  nativeWindowPlacementModule.enable = lib.mkDefault true;
+  statusIconsModule.enable = lib.mkDefault true;
+  systemMonitorModule.enable = lib.mkDefault true;
+  windowsNavigatorModule.enable = lib.mkDefault true;
+  placesMenuModule.enable = lib.mkDefault true;
+
   autoMoveWindowsModule.enable = lib.mkDefault false;
   driveMenuModule.enable = lib.mkDefault false;
   launchNewInstanceModule.enable = lib.mkDefault false;
   lightStyleModule.enable = lib.mkDefault false;
-  nativeWindowPlacementModule.enable = lib.mkDefault true;
-  placesMenuModule.enable = lib.mkDefault true;
   screenshotWindowSizerModule.enable = lib.mkDefault false;
-  statusIconsModule.enable = lib.mkDefault true;
-  systemMonitorModule.enable = lib.mkDefault true;
   userThemeModule.enable = lib.mkDefault false;
   windowListModule.enable = lib.mkDefault false;
-  windowsNavigatorModule.enable = lib.mkDefault true;
   workspaceIndicatorModule.enable = lib.mkDefault false;
 }

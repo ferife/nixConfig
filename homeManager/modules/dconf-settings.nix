@@ -26,5 +26,6 @@
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
     };
+    "org/gnome/shell".disabled-extensions = [ ];
   };
 }
