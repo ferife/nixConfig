@@ -4,6 +4,7 @@
 {
   imports = [
     ./caffeine.nix
+    ./clipboard-indicator.nix
     ./forge.nix
     ./tiling-shell.nix
     ./weather-oclock.nix
@@ -14,6 +15,7 @@
     enable = lib.mkDefault true;
     # activate = lib.mkDefault false;
   };
+  clipboardIndicatorModule.enable = lib.mkDefault true;
   forgeModule.enable = lib.mkDefault true;
   tilingShellModule.enable = lib.mkDefault false;
   weatherOclockModule.enable = lib.mkDefault true;
