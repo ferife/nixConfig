@@ -11,14 +11,11 @@
     ./weather-oclock.nix
   ];
 
-  # caffeineModule.enable = lib.mkDefault true;
-  caffeineModule = {
-    enable = lib.mkDefault true;
-    # activate = lib.mkDefault false;
-  };
+  caffeineModule.enable = lib.mkDefault true;
   clipboardIndicatorModule.enable = lib.mkDefault true;
   forgeModule.enable = lib.mkDefault true;
   mediaControlsModule.enable = lib.mkDefault true;
-  tilingShellModule.enable = lib.mkDefault false;
   weatherOclockModule.enable = lib.mkDefault true;
+
+  tilingShellModule.enable = lib.mkDefault false;
 }
