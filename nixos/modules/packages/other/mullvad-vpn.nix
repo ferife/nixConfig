@@ -6,7 +6,8 @@
 
 	config = lib.mkIf config.mullvadVpnModule.enable {
 		environment.systemPackages = with pkgs; [
-      mullvad-vpn
+      mullvad     # CLI
+      mullvad-vpn # GUI
     ];
 		
     networking.firewall.checkReversePath = "loose";

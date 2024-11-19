@@ -37,6 +37,9 @@ The value of declarativity is that it's easier to find out about the details of 
     - This limits the amount of packages that have privileged access
 - [ ] In openrazer.nix, make it so that the users added to the "openrazer" extraGroup is dependent on the users in the current host (AKa make it programmatic)
 - [ ] Figure out if I can use home manager to manage the configurations of obsidian and neovim, since home manager is all about managing dotfiles
+- [ ] Set up a way to handle secrets so I don't accidentally put passwords in my public repo
+- [ ] Set up a bash script that will use the Mullvad VPN CLI to set up my account
+  - I should only do it once I've set up secrets so that I don't put my private MullvadVPN account on my public repo like an idiot
 
 # Commands
 
