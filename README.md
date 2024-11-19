@@ -22,7 +22,6 @@ The value of declarativity is that it's easier to find out about the details of 
 - [x] Make this a remote repo
 - [x] Make my configuration more modular
 - [x] Set up NixOS auto update
-- [-] Add gitignore with hardware-configuration.nix
 - [x] Create the options necessary for multiple devices to make use of this setup
 - [x] Set up auto update for all my applications
 
