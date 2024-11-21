@@ -18,14 +18,13 @@
     };
     "org/gnome/desktop/interface" = {
       clock-show-weekday = true;
-      show-battery-percentage = true;
-    };
-    "org/gnome/desktop/peripherals/touchpad" = {
-      send-events = "disabled-on-external-mouse";
     };
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
     };
+
     "org/gnome/shell".disabled-extensions = [ ];
+    # The line above makes it so that the list of disabled extensions is empty
+    # Since the list of disabled extensions takes precedence over enabled extensions, letting it not be empty would sometimes cause extensions to not successfully enable when they should
   };
 }

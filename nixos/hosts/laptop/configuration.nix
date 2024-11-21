@@ -29,6 +29,6 @@
   obsStudioModule.enable = lib.mkForce false;
   qbittorrentModule.enable = lib.mkForce false;
   thunderbirdModule.enable = lib.mkForce false;
-  # torBrowserModule.enable = lib.mkForce false;
+  torBrowserModule.enable = lib.mkForce false;
   vlcModule.enable = lib.mkForce false;
 }
