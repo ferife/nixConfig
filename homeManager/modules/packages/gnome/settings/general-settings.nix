@@ -8,8 +8,8 @@
   ];
 
   imports = [
-    ./packages/gnome-extensions/default/module-bundle.nix
-    ./packages/gnome-extensions/third-party/module-bundle.nix
+    ../extensions/default/module-bundle.nix
+    ../extensions/third-party/module-bundle.nix
   ];
 
   dconf.settings = {
