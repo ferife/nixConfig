@@ -39,6 +39,7 @@ The value of declarativity is that it's easier to find out about the details of 
 - [ ] Set up a way to handle secrets so I don't accidentally put passwords in my public repo
 - [ ] Set up a bash script that will use the Mullvad VPN CLI to set up my account
   - I should only do it once I've set up secrets so that I don't put my private MullvadVPN account on my public repo like an idiot
+- [ ] Set things up in such a way that it's easy to switch desktop environments or window managers
 
 # Commands
 
