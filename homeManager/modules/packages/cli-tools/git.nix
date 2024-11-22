@@ -7,6 +7,8 @@
 	config = lib.mkIf config.gitModule.enable {
 		programs.git = {
       enable = true;
+      userEmail = "ferife@icloud.com";
+      userName = "Fernando RF";
     };
 	};
 }

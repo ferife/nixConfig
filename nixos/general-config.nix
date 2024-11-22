@@ -106,11 +106,9 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   # The following lines enable certain programs that I consider essential for the minimum installation of a computer using this config
-  firefoxModule.enable = lib.mkForce true;
   gitModule.enable = lib.mkForce true;
   neofetchModule.enable = lib.mkForce true;
   homeManagerModule.enable = lib.mkForce true;
   nhModule.enable = lib.mkForce true;
-  vsCodeModule.enable = lib.mkForce true;
   # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
 }

@@ -7,7 +7,7 @@
 # Once I move this to Home Manager, I will be able to use programs.obs-studio.enable
 
 	config = lib.mkIf config.obsStudioModule.enable {
-		environment.systemPackages = with pkgs; [
+		home.packages = with pkgs; [
       obs-studio
     ];
 	};

@@ -8,10 +8,17 @@
 
 	config = lib.mkIf config.openrazerModule.enable {
 		
-    # The following lines are required for OpenRazer
-    hardware.openrazer.enable = true; # Enable OpenRazer drivers
-    users.users.fernandorf.extraGroups = [ "openrazer" ];
-    # TODO: Make it so that the users added to the "OpenRazer" extraGroups can be controlled programmatically
+    # hardware.openrazer.enable = true; # Enable OpenRazer drivers
+    # users.users.fernandorf.extraGroups = [ "openrazer" ];
+
+    # TODO: Test to make sure that the programmatic way of doing it below can replace the imperative way obove
+    hardware.openrazer = {
+      enable = true;
+      users = [
+        "fernandorf"
+      ];
+    };
+    
 
     environment.systemPackages = with pkgs; [
       openrazer-daemon  # self-explanatory

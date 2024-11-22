@@ -5,7 +5,7 @@
 	};
 
 	config = lib.mkIf config.vlcModule.enable {
-		environment.systemPackages = with pkgs; [
+		home.packages = with pkgs; [
       vlc
     ];
 	};

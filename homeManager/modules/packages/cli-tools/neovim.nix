@@ -9,6 +9,6 @@
       enable = true;
     };
 		
-		libgccModule.enable = lib.mkForce true;
+		home.packages = [ pkgs.libgcc ];
 	};
 }

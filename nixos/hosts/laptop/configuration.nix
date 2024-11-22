@@ -18,11 +18,11 @@
 
   gaming.enable = lib.mkForce false; # Temporarily, as I finish the semester
   
-  gimpModule.enable = lib.mkForce false;
-  libreofficeModule.enable = lib.mkForce false;
-  obsStudioModule.enable = lib.mkForce false;
-  qbittorrentModule.enable = lib.mkForce false;
-  thunderbirdModule.enable = lib.mkForce false;
-  torBrowserModule.enable = lib.mkForce false;
-  vlcModule.enable = lib.mkForce false;
+  # gimpModule.enable = lib.mkForce false;
+  # libreofficeModule.enable = lib.mkForce false;
+  # obsStudioModule.enable = lib.mkForce false;
+  # qbittorrentModule.enable = lib.mkForce false;
+  # thunderbirdModule.enable = lib.mkForce false;
+  # torBrowserModule.enable = lib.mkForce false;
+  # vlcModule.enable = lib.mkForce false;
 }

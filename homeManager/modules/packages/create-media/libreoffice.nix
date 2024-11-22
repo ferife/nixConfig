@@ -5,7 +5,7 @@
 	};
 
 	config = lib.mkIf config.libreofficeModule.enable {
-		environment.systemPackages = with pkgs; [
+		home.packages = with pkgs; [
       libreoffice
     ];
 	};

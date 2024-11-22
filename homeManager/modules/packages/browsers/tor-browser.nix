@@ -5,7 +5,7 @@
 	};
 
 	config = lib.mkIf config.torBrowserModule.enable {
-		environment.systemPackages = with pkgs; [
+		home.packages = with pkgs; [
       tor-browser
     ];
 
