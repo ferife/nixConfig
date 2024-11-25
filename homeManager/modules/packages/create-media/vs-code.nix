@@ -11,7 +11,8 @@
 			enable = true;
 		};
 
-		home.packages = [ pkgs.libgcc ];
+		home.packages = with pkgs; [ libgcc gnumake ];
+		# The telescope-fzf-native.nvim plugin requires libgcc and gnumake
 		
 	};
 }
