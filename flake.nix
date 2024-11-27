@@ -7,9 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    frf-neovim-config = {
+      url = "github:ferife/nvimConfig";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -40,7 +44,7 @@
       homeConfigurations = {
         "fernandorf@laptop" = home-manager.lib.homeManagerConfiguration {
           pkgs = pkgs;
-          extraSpecialArgs = { inherit system; };
+          extraSpecialArgs = { inherit system; inherit inputs; };
           modules = [
             ./homeManager/hosts/laptop/home.nix
           ];
