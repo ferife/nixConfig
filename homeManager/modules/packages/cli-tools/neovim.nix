@@ -14,27 +14,17 @@
 			vimdiffAlias = true;
 
 			defaultEditor = true;
-			cu
+			# cu
 
 			# extraConfig = lib.fileContents ./nvim/init.lua;
     };
-
-		nvimConfig = pkgs.vimUtils.buildVimPlugin {
-			name = "my-config";
-			src = ./nvim
-		}
-
-		# home.file."./.config/nvim" = {
-		# 	source = ./nvim;
-		# 	recursive = true;
-		# };
-
-		# environment.variables.EDITOR = "nvim";
 		
 		home.packages = with pkgs; [ 
 			libgcc
 			gnumake
 			ripgrep
+			unzip
+			xclip
 			# nerdfonts
 		];
 	};
