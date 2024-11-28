@@ -9,7 +9,7 @@
   config = lib.mkIf config.autoUpgradeOption.enable {
     system.autoUpgrade = {
       enable = true;
-      flake = "~/Documents/nixConfig";
+      flake = "~/Documents/Configs/nixConfig";
       flags = [
         "--update-input"
         "nixpkgs"

@@ -8,7 +8,7 @@
 	config = lib.mkIf config.nhModule.enable {
 		programs.nh = {
       enable = true;
-      flake = "/home/fernandorf/Documents/nixConfig";
+      flake = "/home/fernandorf/Documents/Configs/nixConfig";
 
 			clean = lib.mkIf config.nhModule.autoClean {
 				enable = true;
