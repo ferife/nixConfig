@@ -5,18 +5,7 @@
 	};
 	config = lib.mkIf config.neovimModule.enable {
 
-		nixpkgs = {
-			overlays = [
-				(final: prev: {
-					vimPlugins = prev.vimPlugins // {
-						neovim-config = prev.vimUtils.buildVimPlugin {
-							name = "nvimConfig";
-							src = inputs.frf-neovim-config;
-						};
-					};
-				})
-			];
-		};
+		xdg.configFile."nvim".source = ./nvim;
 
 		programs.neovim = {
 			enable = true;
@@ -29,7 +18,6 @@
 			defaultEditor = true;
 
 			extraPackages = with pkgs; [
-				libgcc
 				gnumake
 				ripgrep
 				unzip
@@ -37,9 +25,7 @@
 				# nerdfonts
 			];
 
-			plugins = with pkgs.vimPlugins; [
-				neovim-config
-			];
+			# There's a couple of packages that needed to be installed system-wide for this to work. They are getting installed in nixos/modules/packages/module-bundle.nix
 		};
 	};
 }
