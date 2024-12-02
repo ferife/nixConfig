@@ -24,23 +24,24 @@ The value of declarativity is that it's easier to find out about the details of 
 - [x] Set up NixOS auto update
 - [x] Create the options necessary for multiple devices to make use of this setup
 - [x] Set up auto update for all my applications
+- [x] Separate out the packages into ones that are core components needed by all users of the computer and everything else
+    - The core components should be installed by NixOS
+    - Everything else should be installed by Home Manager
+    - This limits the amount of packages that have privileged access
+- [x] In openrazer.nix, make it so that the users added to the "openrazer" extraGroup is dependent on the users in the current host (AKA make it programmatic)
 
 - [ ] Add Whatsapp access to the computer for communicating with mom
 - [ ] Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
 - [ ] Set up a password management solution
 - [ ] Cancel my subsctiption to ExpressVPN
 - [ ] Look into Manix CLI
-- [ ] Separate out the packages into ones that are core components needed by all users of the computer and everything else
-    - The core components should be installed by NixOS
-    - Everything else should be installed by Home Manager
-    - This limits the amount of packages that have privileged access
-- [ ] In openrazer.nix, make it so that the users added to the "openrazer" extraGroup is dependent on the users in the current host (AKA make it programmatic)
 - [ ] Figure out if I can use home manager to manage the configurations of obsidian and neovim, since home manager is all about managing dotfiles
 - [ ] Set up a way to handle secrets so I don't accidentally put passwords in my public repo
 - [ ] Set up a bash script that will use the Mullvad VPN CLI to set up my account
   - I should only do it once I've set up secrets so that I don't put my private MullvadVPN account on my public repo like an idiot
 - [ ] Set things up in such a way that it's easy to switch desktop environments or window managers
 - [ ] Look into NixOS overlays
+- [ ] Figure out a setup that allows for a consistent color scheme across my desktop manager(s), key CLI applications, key GUI applications, etc.
 
 # Commands
 
