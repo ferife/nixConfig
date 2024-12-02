@@ -7,6 +7,8 @@
 	config = lib.mkIf config.tmuxModule.enable {
 		programs.tmux = {
       enable = true;
+      mouse = true;
+      keyMode = "vi"; # Enables Vim-style shortcuts
     };
 	};
 }
