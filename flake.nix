@@ -7,10 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # frf-neovim-config = {
-    #   url = "github:ferife/nvimConfig";
-    #   flake = false;
-    # };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
