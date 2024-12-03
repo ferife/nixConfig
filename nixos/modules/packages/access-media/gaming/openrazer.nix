@@ -7,11 +7,7 @@
 	};
 
 	config = lib.mkIf config.openrazerModule.enable {
-		
-    # hardware.openrazer.enable = true; # Enable OpenRazer drivers
-    # users.users.fernandorf.extraGroups = [ "openrazer" ];
 
-    # TODO: Test to make sure that the programmatic way of doing it below can replace the imperative way obove
     hardware.openrazer = {
       enable = true;
       users = [
