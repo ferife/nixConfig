@@ -5,7 +5,7 @@
 	};
 	config = lib.mkIf config.neovimModule.enable {
 
-		xdg.configFile."nvim".source = ./nvim;
+		xdg.configFile."nvim".source = ./advent-of-nvim;
 
 		programs.neovim = {
 			enable = true;
