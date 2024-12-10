@@ -8,9 +8,4 @@
     ./nix-related/module-bundle.nix
     ./other/module-bundle.nix
   ];
-
-  environment.systemPackages = with pkgs; [
-    libgcc  # required by the neovim module from home manager
-    gcc     # required by the neovim module from home manager
-  ];
 }

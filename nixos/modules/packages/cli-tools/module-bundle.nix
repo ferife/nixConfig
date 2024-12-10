@@ -6,6 +6,7 @@
     ./distrobox.nix
     ./git.nix
     ./neofetch.nix
+    ./neovim.nix
   ];
 
   gitModule.enable = lib.mkDefault true;

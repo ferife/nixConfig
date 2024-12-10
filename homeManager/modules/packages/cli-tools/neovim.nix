@@ -25,6 +25,8 @@
 				# nerdfonts
 			];
 
+			withPython3 = true;
+
 			# There's a couple of packages that needed to be installed system-wide for this to work. They are getting installed in nixos/modules/packages/module-bundle.nix
 		};
 	};
