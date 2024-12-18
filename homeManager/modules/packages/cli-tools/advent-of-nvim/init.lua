@@ -2,6 +2,12 @@
 
 print("Welcome to FRF's Advent of NVim Configuration") -- This worked, it printed at the bottom of nvim
 
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.shiftwidth = 2
+vim.opt.clipboard = "unnamedplus"
+
 require("config.lazy")
 
 -- vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
@@ -21,6 +27,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
+-- LSPs communicate information about your code and the programming language to your code editor
 
 

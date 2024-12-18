@@ -22,7 +22,11 @@
 				ripgrep
 				unzip
 				xclip
+				tree-sitter
 				# nerdfonts
+
+				# Language servers
+				lua-language-server
 			];
 
 			withPython3 = true;

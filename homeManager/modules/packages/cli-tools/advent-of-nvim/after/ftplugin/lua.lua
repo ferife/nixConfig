@@ -1,0 +1,1 @@
+-- This file will set up configuration options specifically for work on .lua files
