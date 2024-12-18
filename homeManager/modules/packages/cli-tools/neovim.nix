@@ -1,44 +1,46 @@
 { config, lib, pkgs, inputs, ... }:
 {
-	options = {
-		neovimModule.enable = lib.mkEnableOption "Installs & configures Neovim";
-	};
-	config = lib.mkIf config.neovimModule.enable {
+  options = {
+    neovimModule.enable = lib.mkEnableOption "Installs & configures Neovim";
+  };
 
-		xdg.configFile."nvim".source = ./advent-of-nvim;
+  config = lib.mkIf config.neovimModule.enable {
 
-		programs.neovim = {
-			enable = true;
+    xdg.configFile."nvim".source = ./advent-of-nvim;
 
-			# The lines below make it so that if a program tries using the programs below, they use NeoVim instead
-			viAlias = true;
-			vimAlias = true;
-			vimdiffAlias = true;
+    programs.neovim = {
+      enable = true;
 
-			defaultEditor = true;
+      # The lines below make it so that if a program tries using the programs below, they use NeoVim instead
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
 
-			extraPackages = with pkgs; [
-				gnumake
-				ripgrep
-				unzip
-				xclip
-				tree-sitter
-				# nerdfonts
+      defaultEditor = true;
 
-				# Language servers
-				lua-language-server
-			];
+      extraPackages = with pkgs; [
+	gnumake
+	ripgrep
+	tree-sitter
+	unzip
+	xclip
+	# nerdfonts
 
-			withPython3 = true;
+	# Language servers
+	lua-language-server  # Lua
+	nixd  # Nix
+      ];
 
-			# There's a couple of packages that needed to be installed system-wide for this to work. They are getting installed in nixos/modules/packages/module-bundle.nix
-		};
-	};
+      withPython3 = true;
+
+      # There's a couple of packages that needed to be installed system-wide for this to work. They are getting installed in nixos/modules/packages/module-bundle.nix
+    };
+  };
 }
 
 # TODO: Modularize init.lua
 # TODO: Add LSPs and configure for the following programming languages (organized by priority)
-	# Java
-	# Nix
-	# C
-	# JS (for Obsidian stuff)
+  # Java
+  # Nix
+  # C
+  # JS (for Obsidian stuff)
