@@ -19,16 +19,17 @@
       defaultEditor = true;
 
       extraPackages = with pkgs; [
-	gnumake
-	ripgrep
-	tree-sitter
-	unzip
-	xclip
-	# nerdfonts
+        fd
+        gnumake
+        ripgrep
+        tree-sitter
+        unzip
+        xclip
+        # nerdfonts
 
-	# Language servers
-	lua-language-server  # Lua
-	nixd  # Nix
+        # Language servers
+        lua-language-server  # Lua
+        nixd  # Nix
       ];
 
       withPython3 = true;
