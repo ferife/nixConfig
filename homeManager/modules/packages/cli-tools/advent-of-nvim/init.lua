@@ -7,7 +7,13 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.shiftwidth = 2
+vim.opt.scrolloff = 10
 vim.opt.clipboard = "unnamedplus"
+
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 require("config.lazy")
 
@@ -29,5 +35,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- LSPs communicate information about your code and the programming language to your code editor
-
-
