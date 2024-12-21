@@ -31,7 +31,7 @@
   launchNewInstanceModule.enable = lib.mkDefault false;
   lightStyleModule.enable = lib.mkDefault false;
   screenshotWindowSizerModule.enable = lib.mkDefault false;
-  userThemeModule.enable = lib.mkDefault false;
+  userThemeModule.enable = lib.mkDefault true;
   windowListModule.enable = lib.mkDefault false;
   workspaceIndicatorModule.enable = lib.mkDefault false;
 }
