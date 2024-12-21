@@ -5,8 +5,12 @@
 	};
 
 	config = lib.mkIf config.thunderbirdModule.enable {
-		programs.thunderbird = {
-      enable = true;
-    };
+    # programs.thunderbird = {
+    #   enable = true;
+    #   profiles.fernandorf.name = "Fernando RF";
+    # };
+    home.packages = with pkgs; [
+      thunderbird
+    ];
 	};
 }
