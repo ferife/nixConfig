@@ -42,6 +42,8 @@ The value of declarativity is that it's easier to find out about the details of 
 - [ ] Set things up in such a way that it's easy to switch desktop environments or window managers
 - [ ] Look into NixOS overlays
 - [ ] Figure out a setup that allows for a consistent color scheme across my desktop manager(s), key CLI applications, key GUI applications, etc.
+- [ ] Set up Stylix for linux ricing
+- [ ] Look into the locate terminal application, which allows you to input a file name and will print out the location of the file (or files, if there's more than one with the same name) in the file system
 
 # Commands
 
