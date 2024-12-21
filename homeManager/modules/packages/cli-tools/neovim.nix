@@ -8,6 +8,8 @@
 
     xdg.configFile."nvim".source = ./advent-of-nvim;
 
+    fonts.fontconfig.enable = true;
+
     programs.neovim = {
       enable = true;
 
@@ -25,7 +27,6 @@
         tree-sitter
         unzip
         xclip
-        # nerdfonts
 
         # Language servers
         lua-language-server  # Lua
@@ -34,7 +35,7 @@
 
       withPython3 = true;
 
-      # There's a couple of packages that needed to be installed system-wide for this to work. They are getting installed in nixos/modules/packages/module-bundle.nix
+      # There's a few dependencies that needed to be installed system-wide for this to work. They are getting installed in nixos/modules/packages/module-bundle.nix
     };
   };
 }
@@ -42,6 +43,5 @@
 # TODO: Modularize init.lua
 # TODO: Add LSPs and configure for the following programming languages (organized by priority)
   # Java
-  # Nix
   # C
   # JS (for Obsidian stuff)

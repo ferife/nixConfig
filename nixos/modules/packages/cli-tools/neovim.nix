@@ -11,6 +11,11 @@
 		wget
 	];
 
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs.nerd-fonts; [ fira-code ];
+  };
+
 	programs.java = {
 		enable = true;
 		package = pkgs.jdk8;
