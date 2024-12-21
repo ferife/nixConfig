@@ -61,4 +61,7 @@ end)
 --   vim.fn.chansend(job_id, {"git add .\r\n"})
 -- end)
 
+-- Keymap for escaping out of terminal mode
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
 -- LSPs communicate information about your code and the programming language to your code editor
