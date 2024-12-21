@@ -13,8 +13,11 @@ return {
       },
     }, },
     config = function()
-      require("lspconfig").lua_ls.setup {} -- Lua
-      require("lspconfig").nixd.setup {}   -- Nix
+      -- Auto Completion
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
+
+      require("lspconfig").lua_ls.setup { capabilities = capabilities } -- Lua
+      require("lspconfig").nixd.setup { capabilities = capabilities }   -- Nix
 
       -- The following will auto-format the file I'm working on every time I press the keys written below
       vim.keymap.set("n", "<space>fo", function() vim.lsp.buf.format() end)
