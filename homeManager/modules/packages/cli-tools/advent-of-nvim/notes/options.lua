@@ -1,0 +1,4 @@
+-- This file is some basic notes on how to set basic options for NeoVim
+--
+-- Basic options are all prepended with vim.opt.
+-- Setting them with vim.opt_local. will allow them to be exclusive to the file containing them

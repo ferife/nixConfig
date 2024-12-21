@@ -1,0 +1,2 @@
+-- These are my notes on the navigation of windows, buffers, and tabs in neovim
+-- Use :help :winc to read the relevant help

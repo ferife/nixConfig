@@ -28,7 +28,7 @@ return {
       -- The following will use Telescope to fuzzy search the help
       vim.keymap.set("n", "<space>fh", require('telescope.builtin').help_tags)
 
-
+      -- The following will call a keymap to grep search the current working directory
       require "config.telescope.multigrep".setup()
     end
   }
