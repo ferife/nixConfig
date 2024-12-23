@@ -7,6 +7,16 @@
 	config = lib.mkIf config.gnomeTerminalModule.enable {
 		programs.gnome-terminal = {
       showMenubar = true;
+
+      profile.frfConfig = {
+        default = true;
+        visibleName = "Fernando's Terminal config";
+
+        showScrollbar = false;
+        font = "FiraCode Nerd Font 12";
+
+        colors.backgroundColor = "blue";
+      };
     };
 	};
 }
