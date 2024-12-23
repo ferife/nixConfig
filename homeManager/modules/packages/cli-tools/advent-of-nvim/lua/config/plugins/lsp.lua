@@ -1,3 +1,9 @@
+-- To add an LSP, simply type the following line into the code
+-- require("lspconfig").LSP_NAME.setup { capabilities = capabilities }
+
+-- To find the LSP for a specific language, type :help lspconfig-all
+-- or go to the repository for nvim-lspconfig
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -16,8 +22,9 @@ return {
       -- Auto Completion
       local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-      require("lspconfig").lua_ls.setup { capabilities = capabilities } -- Lua
-      require("lspconfig").nixd.setup { capabilities = capabilities }   -- Nix
+      require("lspconfig").java_language_server.setup { capabilities = capabilities } -- Java
+      require("lspconfig").lua_ls.setup { capabilities = capabilities }               -- Lua
+      require("lspconfig").nixd.setup { capabilities = capabilities }                 -- Nix
 
       -- The following will auto-format the file I'm working on every time I press the keys written below
       vim.keymap.set("n", "<space>fo", function() vim.lsp.buf.format() end)

@@ -29,8 +29,9 @@
         xclip
 
         # Language servers
-        lua-language-server  # Lua
-        nixd  # Nix
+        java-language-server  # Java
+        lua-language-server   # Lua
+        nixd                  # Nix
       ];
 
       withPython3 = true;
