@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -26,12 +27,14 @@
           specialArgs = { inherit system; };
           modules = [
             ./nixos/hosts/laptop/configuration.nix
+            stylix.nixosModules.stylix
           ];
         };
         device2 = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit system; };
           modules = [
             ./nixos/hosts/device2/configuration.nix
+            stylix.nixosModules.stylix
           ];
         };
       };
