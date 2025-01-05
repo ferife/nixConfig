@@ -32,7 +32,8 @@ The value of declarativity is that it's easier to find out about the details of 
 
 - [ ] Add Whatsapp access to the computer for communicating with mom
 - [ ] Figure out if there's a way to add my Obsidian plugin & settings setup to my flake, or at least to a git repo
-- [ ] Set up a password management solution
+- [/] Set up a password management solution
+    - It's gonna be the password-store terminal app, which CAN be used across devices, even iOS
 - [ ] Cancel my subsctiption to ExpressVPN
 - [ ] Look into Manix CLI
 - [/] Figure out if I can use home manager to manage the configurations of obsidian and neovim, since home manager is all about managing dotfiles

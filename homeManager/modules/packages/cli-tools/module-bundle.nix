@@ -9,6 +9,7 @@
     ./git.nix
     ./kitty.nix
     ./lazygit.nix
+    ./password-store.nix
     ./neovim.nix
     ./tmux.nix
     ./zoxide.nix
@@ -20,6 +21,7 @@
   gitModule.enable = lib.mkDefault true;
   kittyModule.enable = lib.mkDefault true;
   lazygitModule.enable = lib.mkDefault true;
+  passModule.enable = lib.mkDefault true;
   neovimModule.enable = lib.mkDefault true;
   tmuxModule.enable = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;

@@ -110,7 +110,12 @@
 
           multi-account-containers  # Extension by Mozilla that separates website log-ins and tabs into color-coded containers
           omnivore
+
           # onetab
+
+          # PassFF
+            # Firefox extension for the Terminal-based pass password manager
+
           privacy-badger  # Blocks invisible trackers
           protondb-for-steam
           react-devtools
