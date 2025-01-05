@@ -9,7 +9,7 @@
       enable = true;
       enableBashIntegration = true;
     };
-    programs.bash.bashrcExtra = "eval \"$(zoxide init bash)\"";
+    programs.fzf.enable = true;
 	};
 }
 
