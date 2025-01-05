@@ -39,6 +39,7 @@
 
         settings = { # To view all possible settings, go to firefox and type "about:config"
           # "dom.security.https_only_mode" = true;
+          browser.newtabpage.activity-stream.showSponsoredTopSites = false;
         };
 
         bookmarks = [
@@ -47,11 +48,11 @@
             url = "https://www.youtube.com/watch?v=JEuAYnjtJP0";
             keyword = "radio";
             tags = [ "Music" ];
-            toolbar = true;
+            # toolbar = true;
           }
           {
             name = "Nix sites";
-            toolbar = true;
+            # toolbar = true;
             bookmarks = [
               {
                 name = "NixOS Search";
@@ -109,7 +110,7 @@
 
           multi-account-containers  # Extension by Mozilla that separates website log-ins and tabs into color-coded containers
           omnivore
-          onetab
+          # onetab
           privacy-badger  # Blocks invisible trackers
           protondb-for-steam
           react-devtools
