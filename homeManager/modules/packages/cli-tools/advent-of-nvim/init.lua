@@ -5,9 +5,11 @@ print("Welcome to FRF's Advent of NVim Configuration")
 
 vim.opt.number = true         -- Turn on line numbers
 vim.opt.relativenumber = true -- Make line numbers relative
+vim.opt.linebreak = true      -- Allows for word wrap to break lines at any character contained inside of the `breakat` string
+-- By default, this is <space>I!@*-+;:,./?
 
-vim.opt.shiftwidth = 2        -- Makes indent width equal to 2 spaces
-vim.opt.scrolloff = 10        -- When moving up or down, makes cursor stay min 10 lines from top/bottom of window
+vim.opt.shiftwidth = 2 -- Makes indent width equal to 2 spaces
+vim.opt.scrolloff = 10 -- When moving up or down, makes cursor stay min 10 lines from top/bottom of window
 
 vim.opt.clipboard = "unnamedplus"
 
@@ -16,6 +18,8 @@ vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>', { desc = "Disab
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>', { desc = "Disable movement with arrow keys" })
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>', { desc = "Disable movement with arrow keys" })
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>', { desc = "Disable movement with arrow keys" })
+
+
 
 require("config.lazy") -- Allows plugins. Disable for a plugin-free experience
 
