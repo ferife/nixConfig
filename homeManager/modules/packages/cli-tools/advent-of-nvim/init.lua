@@ -12,10 +12,10 @@ vim.opt.scrolloff = 10        -- When moving up or down, makes cursor stay min 1
 vim.opt.clipboard = "unnamedplus"
 
 -- The following 4 lines disable the arrow keys when in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>', { desc = "Disable movement with arrow keys" })
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>', { desc = "Disable movement with arrow keys" })
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>', { desc = "Disable movement with arrow keys" })
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>', { desc = "Disable movement with arrow keys" })
 
 require("config.lazy") -- Allows plugins. Disable for a plugin-free experience
 
@@ -45,7 +45,6 @@ vim.api.nvim_create_autocmd('TermOpen', {
   end,
 })
 
--- Puts a small terminal window at the bottom of the screen
 -- local job_id = 0
 vim.keymap.set("n", "<space>st", function()
   vim.cmd.vnew()
@@ -54,7 +53,7 @@ vim.keymap.set("n", "<space>st", function()
   vim.api.nvim_win_set_height(0, 15)
 
   -- job_id = vim.bo.channel
-end)
+end, { desc = "Puts a small terminal window at the bottom of the screen" })
 
 -- Creates a keymap for staging all git changes
 -- vim.keymap.set("n", "<space>gita", function()
@@ -62,6 +61,6 @@ end)
 -- end)
 
 -- Keymap for escaping out of terminal mode
-vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Easily escape terminal mode" })
 
 -- LSPs communicate information about your code and the programming language to your code editor

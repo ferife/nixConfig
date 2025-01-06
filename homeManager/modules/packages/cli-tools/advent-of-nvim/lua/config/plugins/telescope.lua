@@ -23,11 +23,10 @@ return {
 
       require('telescope').load_extension('fzf')
 
-      -- The following keymap will use Telescope to fuzzy search files in the current working directory
-      vim.keymap.set("n", "<space>fd", require('telescope.builtin').find_files)
+      vim.keymap.set("n", "<space>fd", require('telescope.builtin').find_files,
+        { desc = "Fuzzy Search Files in Current Working Directory" })
 
-      -- The following will use Telescope to fuzzy search the help
-      vim.keymap.set("n", "<space>fh", require('telescope.builtin').help_tags)
+      vim.keymap.set("n", "<space>fh", require('telescope.builtin').help_tags, { desc = "Fuzzy search the help" })
 
       -- The following will call a keymap to grep search the current working directory
       require "config.telescope.multigrep".setup()

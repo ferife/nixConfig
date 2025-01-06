@@ -27,7 +27,7 @@ return {
       require("lspconfig").nixd.setup { capabilities = capabilities }                 -- Nix
 
       -- The following will auto-format the file I'm working on every time I press the keys written below
-      vim.keymap.set("n", "<space>fo", function() vim.lsp.buf.format() end)
+      vim.keymap.set("n", "<space>fo", function() vim.lsp.buf.format() end, { desc = "Auto format the current file" })
 
       -- The following will auto-format the file every time I write/save
       vim.api.nvim_create_autocmd('LspAttach', {
