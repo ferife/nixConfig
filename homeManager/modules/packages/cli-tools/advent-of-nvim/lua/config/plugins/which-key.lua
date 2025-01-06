@@ -18,10 +18,10 @@ return {
     --   end,
     --   desc = "Buffer Local Keymaps (which-key)",
     -- },
-    config = function()
-      local wk = require("which-key")
-      vim.keymap.set("n", "<leader>?", function() wk.show({ global = false }) end,
-        { desc = "View guide to key mappings" })
-    end
+    -- config = function()
+    --   local wk = require("which-key")
+    --   vim.keymap.set("n", "<leader>?", function() wk.show({ global = false }) end,
+    --     { desc = "View guide to key mappings" })
+    -- end
   }
 }
