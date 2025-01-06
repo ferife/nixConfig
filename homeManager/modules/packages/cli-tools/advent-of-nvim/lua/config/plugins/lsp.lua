@@ -7,6 +7,9 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    -- This plugin provides basic, default Nvim LSP client configurations for various LSP servers
+    -- To view the documentation for all configs, type `:help lspconfig-all`
+
     dependencies = { {
       "folke/lazydev.nvim",
       ft = "lua", -- only load on lua files

@@ -4,7 +4,8 @@
 - [ ] Auto format brackets, parantheses, braces when hitting newline from within them
 - [ ] Markdown Display
 - [ ] Obsidian.md Integration
-- [ ] Install && configure tpope/commentary.nvim
+- [x] Install && configure tpope/commentary.nvim
+- [ ] Snippet Management
 
 ## Vim Tutor Lessons To Review
 
