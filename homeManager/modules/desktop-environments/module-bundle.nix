@@ -7,6 +7,5 @@
     ./gnome/module-bundle.nix
   ];
 
-  hmGnomeModule.enable = true;
-
+  hmGnomeModule.enable = lib.mkDefault true;
 }
