@@ -51,6 +51,7 @@
           extraSpecialArgs = { inherit system; inherit inputs; };
           modules = [
             ./homeManager/hosts/laptop/home.nix
+            stylix.homeManagerModules.stylix
           ];
         };
         "fernandorf@device2" = home-manager.lib.homeManagerConfiguration {
