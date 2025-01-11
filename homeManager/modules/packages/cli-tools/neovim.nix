@@ -1,7 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 {
   options = {
-    neovimModule.enable = lib.mkEnableOption "Installs & configures Neovim";
+    neovimModule.enable = lib.mkEnableOption "Installs & configures Neovim, a TUI text editor";
   };
 
   config = lib.mkIf config.neovimModule.enable {
@@ -9,6 +9,9 @@
     xdg.configFile."nvim".source = ./advent-of-nvim;
 
     fonts.fontconfig.enable = true;
+
+    stylix.targets.neovim.enable = false;
+    # So that I can style it exclusively using Lua
 
     programs.neovim = {
       enable = true;
