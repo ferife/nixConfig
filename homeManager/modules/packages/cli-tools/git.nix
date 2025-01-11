@@ -2,7 +2,7 @@
 
 {
   options = {
-    gitModule.enable = lib.mkEnableOption "Installs & configures Git";
+    gitModule.enable = lib.mkEnableOption "Installs & configures Git, the most widely used version control system";
   };
 
   config = lib.mkIf config.gitModule.enable {

@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		gnomeTerminalModule.enable = lib.mkEnableOption "Installs & configures tmux";
+		gnomeTerminalModule.enable = lib.mkEnableOption "Installs & configures the GNOME terminal";
 	};
 
 	config = lib.mkIf config.gnomeTerminalModule.enable {
