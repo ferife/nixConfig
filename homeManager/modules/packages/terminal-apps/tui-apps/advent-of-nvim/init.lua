@@ -20,8 +20,7 @@ vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>', { desc = "Disable
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>', { desc = "Disable movement with arrow keys" })
 vim.opt.mouse = "" -- Disable Mouse
 
-
-require("config.lazy") -- Allows plugins. Disable for a plugin-free experience
+require("config.lazy")     -- Allows plugins. Disable for a plugin-free experience
 
 -- vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 -- This is supposed to run the code in the current file

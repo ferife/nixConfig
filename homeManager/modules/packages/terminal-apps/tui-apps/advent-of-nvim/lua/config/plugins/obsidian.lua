@@ -1,0 +1,43 @@
+return {
+  -- {
+  --   "epwalsh/obsidian.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",         -- required
+  --     "hrsh7th/nvim-cmp",              -- optional, for auto complete of note references
+  --     "nvim-telescope/telescope.nvim", -- optional, for search & quick-switch functionality
+  --     "nvim-treesitter",               -- optional, for base markdown syntax highlighting
+  --     "epwalsh/pomo.nvim",
+  --   },
+  --   opts = {
+  --     workspaces = {
+  --       {
+  --         name = "personal",
+  --         path = "~/Documents/obsidian-vault",
+  --       },
+  --     },
+  --   },
+  --   mappings = {
+  --     ["gf"] = {
+  --       -- Go to file under cursor
+  --       action = function()
+  --         return require("obsidian").util.gf_passthrough()
+  --       end,
+  --       opts = { noremap = false, expr = true, buffer = true },
+  --     },
+  --     ["<leader>ch"] = {
+  --       -- Toggle checkbox
+  --       action = function()
+  --         return require("obsidian").util.toggle_checkbox()
+  --       end,
+  --       opts = { buffer = true },
+  --     },
+  --     ["<cr>"] = {
+  --       -- Smart action depending on context, either follow link or toggle checkbox
+  --       action = function()
+  --         return require("obsidian").util.smart_action()
+  --       end,
+  --       opts = { buffer = true, expr = true },
+  --     },
+  --   },
+  -- }
+}
