@@ -12,7 +12,10 @@
 
     programs.firefox = {
       enable = true;
-      nativeMessagingHosts = with pkgs; [gnome-browser-connector]; # Allows the GNOME shell and its extensions to interact with Firefox
+      nativeMessagingHosts = with pkgs; [ 
+        gnome-browser-connector # Allows the GNOME shell and its extensions to interact with Firefox
+        passff-host
+      ];
 
       policies = {
         # To view all possible policies, go to Firefox and type about:policies#documentation
