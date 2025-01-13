@@ -43,9 +43,3 @@
     };
   };
 }
-
-# TODO: Modularize init.lua
-# TODO: Add LSPs and configure for the following programming languages (organized by priority)
-  # Java
-  # C
-  # JS (for Obsidian stuff)

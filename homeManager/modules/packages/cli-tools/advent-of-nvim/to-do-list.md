@@ -1,11 +1,22 @@
 # To Do List for Neovim
 
+- [x] Install && configure tpope/commentary.nvim
+
 - [ ] Auto close parentheses, brackets, braces
 - [ ] Auto format brackets, parantheses, braces when hitting newline from within them
 - [ ] Markdown Display
+
 - [ ] Obsidian.md Integration
-- [x] Install && configure tpope/commentary.nvim
+  - [ ] Good markdown workflow
+  - [ ] Working with LaTeX inside markdown files
+  - [ ] Spell check
+  - [ ] Fold headings
+  - [ ] Workflow with checklist items (hopefully with custom statuses)
+  - [ ] Obsidian file properties for Dataview-like workflow
+
 - [ ] Snippet Management
+
+- [ ] Consider whether there should be certain keyboard mappings/actions that only work on specific file types
 
 ## Vim Tutor Lessons To Review
 
