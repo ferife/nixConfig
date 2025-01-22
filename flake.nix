@@ -13,9 +13,14 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, nvf, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -33,6 +38,7 @@
           modules = [
             ./nixos/hosts/laptop/configuration.nix
             stylix.nixosModules.stylix
+            nvf.nixosModules.default
           ];
         };
         device2 = nixpkgs.lib.nixosSystem {
@@ -52,6 +58,7 @@
           modules = [
             ./homeManager/hosts/laptop/home.nix
             stylix.homeManagerModules.stylix
+            nvf.homeManagerModules.default
           ];
         };
         "fernandorf@device2" = home-manager.lib.homeManagerConfiguration {

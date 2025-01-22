@@ -30,6 +30,7 @@
 
       extraPackages = with pkgs; [
         fd
+        gcc
         gnumake
         ripgrep
         tree-sitter
