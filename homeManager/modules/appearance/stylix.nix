@@ -9,7 +9,7 @@
 	config = lib.mkIf config.stylixHmModule.enable {
 		stylix = {
       enable = true;
-      image = ./background-images/onedark_nixos_logo.png;
+      image = ./background-images/onedark/od_space02.png;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
       polarity = "dark";
     };
