@@ -83,7 +83,6 @@
   # gnomeLaptopSettingsModule.enable = true;
 
   gimpModule.enable = lib.mkForce false;
-  libreofficeModule.enable = lib.mkForce false;
   obsStudioModule.enable = lib.mkForce false;
   qbittorrentModule.enable = lib.mkForce false;
 }
