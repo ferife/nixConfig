@@ -16,8 +16,5 @@
     packages = with pkgs.nerd-fonts; [ fira-mono ];
   };
 
-	programs.java = {
-		enable = true;
-		package = pkgs.jdk8;
-  };
+	programs.java.enable = true;
 }
