@@ -1,5 +1,3 @@
-
-
 { config, lib, pkgs, ... }:
 {
   imports = [
@@ -10,9 +8,9 @@
     ./vs-code.nix
   ];
   
-  gimpModule.enable = lib.mkDefault true;
+  gimpModule.enable        = lib.mkDefault true;
   libreofficeModule.enable = lib.mkDefault true;
-  obsStudioModule.enable = lib.mkDefault true;
-  obsidianModule.enable = lib.mkDefault true;
-  vsCodeModule.enable = lib.mkDefault false;
+  obsStudioModule.enable   = lib.mkDefault true;
+  obsidianModule.enable    = lib.mkDefault true;
+  vsCodeModule.enable      = lib.mkDefault false;
 }
