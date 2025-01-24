@@ -18,6 +18,8 @@
 
 - [ ] Consider whether there should be certain keyboard mappings/actions that only work on specific file types
 
+- [ ] Code Runner
+
 ## Vim Tutor Lessons To Review
 
 - Lesson 3 (all of it)
