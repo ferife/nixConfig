@@ -20,6 +20,9 @@
 
 - [ ] Code Runner
 
+- [ ] Switch Java language server to JDTLS (named `jdt-language-server` in nixpkgs)
+  - Also install the extension `nvim-jdtls` to work with it
+
 ## Vim Tutor Lessons To Review
 
 - Lesson 3 (all of it)

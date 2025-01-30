@@ -10,7 +10,7 @@
     ./hardware-configuration.nix
 
     # Include all modules
-    ../../modules/module-bundle.nix
+    ../../modules
   ];
   
   networking.hostName = "nixos";

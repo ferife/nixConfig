@@ -3,7 +3,6 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
-    ./base16-schemes.nix
     ./bash.nix
     ./bat.nix
     ./btop.nix
@@ -21,7 +20,6 @@
     ./zoxide.nix
   ];
 
-  base16SchemesModule.enable = lib.mkDefault true;
   bashModule.enable = lib.mkDefault true;
   batModule.enable = lib.mkDefault true;
   btopModule.enable = lib.mkDefault true;

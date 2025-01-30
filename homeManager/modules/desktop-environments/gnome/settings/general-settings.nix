@@ -6,8 +6,8 @@
   ];
 
   imports = [
-    ../extensions/default/module-bundle.nix
-    ../extensions/third-party/module-bundle.nix
+    ../extensions/default
+    ../extensions/third-party
   ];
 
   dconf.settings = {

@@ -8,8 +8,8 @@
 
   # config = lib.mkIf config.hmGnomeModule.enable {
     imports = [
-      ./extensions/module-bundle.nix
-      ./settings/module-bundle.nix
+      ./extensions
+      ./settings
     ];
   # };
 }

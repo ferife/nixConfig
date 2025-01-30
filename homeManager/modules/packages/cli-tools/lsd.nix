@@ -7,6 +7,7 @@
 	config = lib.mkIf config.lsdModule.enable {
 		programs.lsd = {
       enable = true;
+      enableAliases = true;
     };
 	};
 }

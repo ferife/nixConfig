@@ -2,7 +2,7 @@
 
 {
   imports = [ 
-    ./gaming/module-bundle.nix
+    ./gaming
     ./vlc.nix
 ];
 
