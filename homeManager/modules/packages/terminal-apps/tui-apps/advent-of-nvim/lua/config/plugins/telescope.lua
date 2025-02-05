@@ -6,7 +6,8 @@ return {
     tag = '0.1.8',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+      'nvim-telescope/telescope-ui-select.nvim',
     },
     config = function()
       require('telescope').setup {
@@ -17,11 +18,17 @@ return {
           }
         },
         extensions = {
-          fzf = {}
+          fzf = {},
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown({
+              -- even more opts for telescope-ui-select
+            })
+          }
         }
       }
 
       require('telescope').load_extension('fzf')
+      require('telescope').load_extension('ui-select')
 
       vim.keymap.set("n", "<space>fd", require('telescope.builtin').find_files,
         { desc = "Fuzzy Search Files in Current Working Directory" })
