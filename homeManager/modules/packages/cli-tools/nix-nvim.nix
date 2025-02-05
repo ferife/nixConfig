@@ -82,7 +82,6 @@
         }
         {
           plugin = lazydev-nvim;
-
         }
         {
           plugin = nvim-lspconfig;
@@ -105,24 +104,25 @@
           config = toLuaFile ./nix-nvim/plugins/telescope.lua;
         }
         {
-          plugin = (nvim-treesitter.withPlugins (luaPkgs: with luaPkgs; [
-            # These can be found on search.nixos.org being preceded by `tree-sitter-grammars.`
-            # tree-sitter-bash
-            tree-sitter-c
-            # tree-sitter-css
-            # tree-sitter-html
-            tree-sitter-java
-            # tree-sitter-latex
-            tree-sitter-lua
-            tree-sitter-markdown
-            tree-sitter-nix
-            tree-sitter-vim
-          ]));
+          plugin = nvim-treesitter.withPlugins (luaPkgs:
+            with luaPkgs; [
+              # These can be found on search.nixos.org being preceded by `tree-sitter-grammars.`
+              # tree-sitter-bash
+              tree-sitter-c
+              # tree-sitter-css
+              # tree-sitter-html
+              tree-sitter-java
+              # tree-sitter-latex
+              tree-sitter-lua
+              tree-sitter-markdown
+              tree-sitter-nix
+              tree-sitter-vim
+            ]);
           config = toLuaFile ./nix-nvim/plugins/treesitter.lua;
         }
       ];
 
-      extraLuaPackages = luaPkgs: with luaPkgs; [ magick ];
+      extraLuaPackages = luaPkgs: with luaPkgs; [magick];
 
       extraPackages = with pkgs; [
         fd
@@ -137,12 +137,12 @@
         # ueberzugpp # Used to render images inside neovim. Should only be used if not using the Kitty terminal emulator nor an emulator that uses Kitty's Graphics Protocol
 
         # Language servers
-        bash-language-server  # Bash
-        ccls                  # C/C++
-        java-language-server  # Java
-        lua-language-server   # Lua
-        nixd                  # Nix
-        alejandra             # Nix Autoformat
+        bash-language-server # Bash
+        ccls # C/C++
+        jdt-language-server # Java
+        lua-language-server # Lua
+        nixd # Nix
+        alejandra # Nix Autoformat
       ];
 
       withPython3 = true;
@@ -150,7 +150,7 @@
       # There's a few dependencies that needed to be installed system-wide for this to work. They are getting installed in nixos/modules/packages/module-bundle.nix
     };
 
-    nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ]; # Recommended when using nixd LSP
+    nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"]; # Recommended when using nixd LSP
     # Allows referencing of nixpkgs exactly as it exists in my system (with any custom changes to it applied)
   };
 }
