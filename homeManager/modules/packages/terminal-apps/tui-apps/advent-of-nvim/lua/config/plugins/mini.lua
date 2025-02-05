@@ -36,13 +36,11 @@ return {
         { desc = "Open mini.files for filesystem traversal" })
 
       -- The following adds an animated vertical line that indicates scope, based on the number of indents
-      local indentscope = require 'mini.indentscope'
-      indentscope.setup()
+      require('mini.indentscope').setup()
 
       -- The following adds the ability to easily move text up or down, without having to cut and paste it
       -- It also allows for moving left and right, meaning to add/remove indents
-      local move = require 'mini.move'
-      move.setup({
+      require('mini.move').setup({
         mappings = {
           -- Move visual selection in normal mode
           -- Default (shown below) are Alt (Meta) + hjkl
@@ -63,18 +61,21 @@ return {
       -- The following will autoclose parentheses, braces, brackets, single-quotes, double-quotes, and backticks (`)
       -- When creating a newline from between the opening and closing symbols,
       --  it will automatically newline again for the closing symbol
-      local pairs = require 'mini.pairs'
-      pairs.setup()
+      require('mini.pairs').setup()
 
       -- The following adds the ability to toggle whether the of a table/array/dictionary are all on the same line
       -- or if they each have their own line
       -- Use `gS` to toggle
-      local splitjoin = require 'mini.splitjoin'
-      splitjoin.setup()
+      require('mini.splitjoin').setup({
+        mappings = {
+          toggle = 'gS',
+          -- split = '',
+          -- join = '',
+        },
+      })
 
       -- The following adds a pretty status line at the bottom of the window containing various important pieces of information
-      local statusline = require 'mini.statusline'
-      statusline.setup { use_icons = true }
+      require('mini.statusline').setup({ use_icons = true })
     end
   }
 }
