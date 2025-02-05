@@ -18,7 +18,7 @@ vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>', { desc = "Disab
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>', { desc = "Disable movement with arrow keys" })
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>', { desc = "Disable movement with arrow keys" })
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>', { desc = "Disable movement with arrow keys" })
-
+vim.opt.mouse = "" -- Disable Mouse
 
 
 require("config.lazy") -- Allows plugins. Disable for a plugin-free experience
