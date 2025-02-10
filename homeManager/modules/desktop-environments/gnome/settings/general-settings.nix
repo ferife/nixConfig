@@ -15,6 +15,7 @@
       show-weekdate = true;
     };
     "org/gnome/desktop/interface" = {
+      clock-show-seconds = true;
       clock-show-weekday = true;
     };
     "org/gnome/mutter" = {
