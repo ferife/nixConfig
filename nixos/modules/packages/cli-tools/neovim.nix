@@ -13,7 +13,7 @@
 
   fonts = {
     fontDir.enable = true;
-    packages = with pkgs.nerd-fonts; [ fira-mono ];
+    packages = with pkgs; [ fira-code-nerdfont ];
   };
 
 	programs.java.enable = true;
