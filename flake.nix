@@ -1,5 +1,6 @@
 {
   description = "A flake for my NixOS configuration";
+  # Shown in the CLI by the `nix flake metadata` command
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
@@ -15,6 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+  # To update a single input, use the command `nix flake lock --update-input <name-of-input>`
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
     let
@@ -79,6 +81,7 @@
           };
           modules = [
             ./homeManager/hosts/device2/home.nix
+            stylix.homeManagerModules.stylix
           ];
         };
       };
