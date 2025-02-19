@@ -1,5 +1,6 @@
 {
   description = "A flake for my NixOS configuration";
+  # Shown in the CLI by the `nix flake metadata` command
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
@@ -14,7 +15,11 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim-config = {
+      url = "github:ferife/nvimConfig";
+    };
   };
+  # To update a single input, use the command `nix flake lock --update-input <name-of-input>`
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
     let
@@ -79,6 +84,7 @@
           };
           modules = [
             ./homeManager/hosts/device2/home.nix
+            stylix.homeManagerModules.stylix
           ];
         };
       };
@@ -86,11 +92,11 @@
 }
 
 # To install packages from both stable and unstable
-# environment.systemPackages = 
+# environment.systemPackages =
 #   (with pkgs; [
-#     STABLE PACKAGES 
+#     STABLE PACKAGES
 #   ])
 #   ++
 #   (with pkgs-unstable; [
-#     UNSTABLE PACKAGES 
+#     UNSTABLE PACKAGES
 #   ]);

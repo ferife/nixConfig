@@ -1,2 +1,0 @@
--- Here is a basic explanation of Quickfix
--- Quickfix can create special lists of specific locations within files

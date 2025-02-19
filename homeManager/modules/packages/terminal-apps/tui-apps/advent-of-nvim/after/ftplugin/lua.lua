@@ -1,9 +1,0 @@
--- This file will set up configuration options specifically for work on .lua files
---
--- The after folder will run after the code in config
--- The after/ftplugin folder allows you to set specific options for files of a specific file type
--- You may wanna do this if you want neovim to act differently when working with different programming languages, for example
--- Simply name a file with <extension>.lua, and use that file to set options for that file type
--- <extension> should be the name of the file extension for source files of that language
---
--- When setting basic options, use vim.opt_local. instead of vim.opt.
