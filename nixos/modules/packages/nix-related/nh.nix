@@ -71,6 +71,14 @@
         nh clean all -ak 10 &&
         cd -
       '';
+      gashuos = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        sudo nix flake update &&
+        git add . &&
+        nh home switch --dry --configuration fernandorf@laptop &&
+        nh os switch --dry --Hostname laptop &&
+        cd -
+      '';
 
       nhc = ''
         cd /home/fernandorf/Documents/Configs/nixConfig/ &&
