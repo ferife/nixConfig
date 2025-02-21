@@ -19,17 +19,64 @@
     };
 
     environment.shellAliases = {
-      gash = "cd /home/fernandorf/Documents/Configs/nixConfig/ && git add . && nh home switch -b backup -ac fernandorf@laptop && cd -";
-      gashu = "cd /home/fernandorf/Documents/Configs/nixConfig/ &&  sudo nix flake update && git add . && nh home switch -b backup -ac fernandorf@laptop && cd -";
+      gash = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        git add . &&
+        nh home switch --backup-extension backup --ask --configuration fernandorf@laptop &&
+        cd -
+      '';
+      gashu = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        sudo nix flake update &&
+        git add . &&
+        nh home switch --backup-extension backup --ask --configuration fernandorf@laptop &&
+        cd -
+      '';
 
-      gaso = "cd /home/fernandorf/Documents/Configs/nixConfig/ && git add . && nh os switch -aH laptop && cd -";
-      gasuo = "cd /home/fernandorf/Documents/Configs/nixConfig/ &&  sudo nix flake update && git add . && nh os switch -aH laptop && cd -";
+      gaso = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        git add . &&
+        nh os switch --ask --hostname laptop &&
+        cd -
+      '';
+      gasuo = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        sudo nix flake update &&
+        git add . &&
+        nh os switch --ask --hostname laptop &&
+        cd -
+      '';
 
-      gasho = "cd /home/fernandorf/Documents/Configs/nixConfig/ && git add . && nh home switch -b backup -c fernandorf@laptop && nh os switch -aH laptop && cd -";
-      gashuo = "cd /home/fernandorf/Documents/Configs/nixConfig/ &&  sudo nix flake update && git add . && nh home switch -b backup -c fernandorf@laptop && nh os switch -aH laptop && cd -";
-      gashuoc = "cd /home/fernandorf/Documents/Configs/nixConfig/ &&  sudo nix flake update && git add . && nh home switch -b backup -c fernandorf@laptop && nh os switch -aH laptop && nh clean all -ak 10 && cd -";
+      gasho = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        git add . &&
+        nh home switch --backup-extension backup --configuration fernandorf@laptop &&
+        nh os switch --ask --hostname laptop &&
+        cd -
+      '';
+      gashuo = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        sudo nix flake update &&
+        git add . &&
+        nh home switch --backup-extension backup --configuration fernandorf@laptop &&
+        nh os switch --ask --hostname laptop &&
+        cd -
+      '';
+      gashuoc = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        sudo nix flake update &&
+        git add . &&
+        nh home switch --backup-extension backup --configuration fernandorf@laptop &&
+        nh os switch --ask --hostname laptop &&
+        nh clean all -ak 10 &&
+        cd -
+      '';
 
-      nhc = "cd /home/fernandorf/Documents/Configs/nixConfig/ && nh clean all -ak 10 && cd -";
+      nhc = ''
+        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        nh clean all -ak 10 &&
+        cd -
+      '';
     };
 	};
 }
