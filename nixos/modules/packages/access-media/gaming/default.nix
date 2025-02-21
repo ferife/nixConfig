@@ -17,4 +17,5 @@
     openrazerModule.enable = lib.mkDefault true;
     inputRemapperModule.enable  = lib.mkDefault true;
   };
+  # TODO: Set up gaming based on the Vimjoyer video about gaming on NixOS
 }

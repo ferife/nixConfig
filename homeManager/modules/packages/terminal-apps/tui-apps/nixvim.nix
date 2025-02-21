@@ -10,4 +10,6 @@
       "update-nixvim" = "cd ~/Documents/Configs/nixConfig && nix flake update nixvim-config && cd -";
     };
 	};
+  # TODO: Make it so that every time I open nixvim, it shows the name of the latest active commit
+  # This is so that I know whether I need to update the flake input to achieve what I want
 }

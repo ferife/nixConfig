@@ -19,7 +19,7 @@
       url = "github:ferife/nvimConfig";
     };
   };
-  # To update a single input, use the command `nix flake lock --update-input <name-of-input>`
+  # To update a single input, use the command `nix flake update <name-of-input>`
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
     let
