@@ -6,3 +6,4 @@
     ./tui-apps
   ];
 }
+# TODO: Look into installing yazi file manager
