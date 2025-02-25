@@ -7,6 +7,7 @@
     ./nixvim.nix
     ./ranger.nix
     ./tmux.nix
+    ./yazi.nix
   ];
 
   btopModule.enable    = lib.mkDefault true;
@@ -15,4 +16,5 @@
   nixvimModule.enable  = lib.mkDefault true;
   rangerModule.enable  = lib.mkDefault true;
   tmuxModule.enable    = lib.mkDefault true;
+  yaziModule.enable    = lib.mkDefault true;
 }
