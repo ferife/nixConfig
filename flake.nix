@@ -21,6 +21,10 @@
   };
   # To update a single input, use the command `nix flake update <name-of-input>`
 
+  # TODO: Figure out how to switch from GNOME to Hyprland
+  # TODO: Set up a way to easily switch desktop environments
+  # TODO: Look into NixOS overlays
+
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
     let
       system = "x86_64-linux";

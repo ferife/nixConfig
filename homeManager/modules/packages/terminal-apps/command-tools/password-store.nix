@@ -16,3 +16,5 @@
     # Some extra dependency stuff in nixos/modules/packages/cli-tools/password-store.nix
   };
 }
+# FIXME: password-store
+# TODO: Cancel ExpressVPN subscription

@@ -9,7 +9,6 @@
       mullvad     # CLI
       mullvad-vpn # GUI
     ];
-		
     networking.firewall.checkReversePath = "loose";
     networking.wireguard.enable = true;
     services.mullvad-vpn = {
@@ -17,3 +16,4 @@
     };
 	};
 }
+# TODO: Set a bash script that will auto log me in to my Mullvad account

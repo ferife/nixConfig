@@ -25,3 +25,5 @@
 
   pandocModule.enable = lib.mkDefault false;
 }
+# TODO: Install Manix CLI docs searcher for nix
+# Find documentation on Nixpkgs, NixOS options, and Home Manager options
