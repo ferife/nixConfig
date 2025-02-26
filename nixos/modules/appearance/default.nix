@@ -1,10 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ 
-      ./stylix.nix
-    ];
 
-  stylixNixOSModule.enable = lib.mkDefault true;
+  stylix.nixos = {
+    enable = lib.mkDefault true;
+    theme = "onedark";
+  };
 }

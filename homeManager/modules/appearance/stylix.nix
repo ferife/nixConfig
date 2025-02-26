@@ -1,17 +1,29 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		stylixHmModule.enable = lib.mkEnableOption "Enables & configures stylix, a tool for ricing my NixOS system (AKA styling everything at once for a consistent appearance)";
+    stylix.hm = with lib; {
+      enable = mkEnableOption "Enables & configures stylix, a tool for ricing my NixOS system (AKA styling everything at once for a consistent appearance)";
+      theme = mkOption {
+        type = with types; uniq str;
+        description = "Select a theme from the available options (currently only onedark)";
+        default = "onedark";
+        example = "tokyo night moon";
+      };
+    };
 	};
 
-  # To search through command history in the terminal using stylix, simply use CTRL+R
+	config = with lib; mkIf config.stylix.hm.enable {
+    stylix = with lib; mkMerge [
 
-	config = lib.mkIf config.stylixHmModule.enable {
-		stylix = {
-      enable = true;
-      image = ./background-images/onedark/od_nixos_logo.png;
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
-      polarity = "dark";
-    };
+      # General Settings
+      { enable = true; }
+
+      # Onedark
+      (mkIf (config.stylix.hm.theme == "onedark") {
+        image = ../../../generalResources/background-images/onedark/od_nixos_logo.png;
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
+        polarity = "dark";
+      })
+    ];
 	};
 }

@@ -1,10 +1,13 @@
-{ config, lib, pkgs, ... }:
+{ lib, ... }:
 
 {
   imports =
-    [ 
+    [
       ./stylix.nix
     ];
 
-  stylixHmModule.enable = lib.mkDefault true;
+  stylix.hm = {
+    enable = lib.mkDefault true;
+    theme = "onedark";
+  };
 }

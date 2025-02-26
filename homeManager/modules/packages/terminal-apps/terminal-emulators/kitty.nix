@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 {
 	options = {
 		kittyModule.enable = lib.mkEnableOption "Installs & configures Kitty, the terminal emulator";
@@ -11,3 +11,5 @@
     };
 	};
 }
+
+# To search through command history in the terminal using stylix, simply use CTRL+R

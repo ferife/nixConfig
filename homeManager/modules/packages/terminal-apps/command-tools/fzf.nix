@@ -10,5 +10,6 @@
 		programs.fzf = {
       enable = true;
     };
+    # stylix.targets.fzf.enable = lib.mkIf (config.stylix.hm.theme == "tokyo night moon") false;
 	};
 }
