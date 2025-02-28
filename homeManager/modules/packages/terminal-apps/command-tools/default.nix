@@ -12,6 +12,7 @@
     ./password-store.nix
     ./tldr.nix
     ./zoxide.nix
+    # ./zsh.nix
   ];
 
   bashModule.enable   = lib.mkDefault true;
@@ -24,6 +25,7 @@
   passModule.enable   = lib.mkDefault true;
   tldrModule.enable   = lib.mkDefault true;
   zoxideModule.enable = lib.mkDefault true;
+  # zsh.enable          = lib.mkDefault true;
 
   pandocModule.enable = lib.mkDefault false;
 }
