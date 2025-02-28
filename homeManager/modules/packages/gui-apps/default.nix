@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
     ./gimp.nix
@@ -23,6 +24,7 @@
   torBrowserModule.enable  = lib.mkDefault true;
   vlcModule.enable         = lib.mkDefault true;
 
+  chromium.enable          = lib.mkDefault false;
   eclipseModule.enable     = lib.mkDefault false;
   qbittorrentModule.enable = lib.mkDefault false;
   vsCodeModule.enable      = lib.mkDefault false;
