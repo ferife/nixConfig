@@ -8,6 +8,9 @@
 		programs.kitty = {
       enable = true;
       shellIntegration.enableBashIntegration = true;
+      settings = {
+        background_opacity = lib.mkForce 0.9;
+      };
     };
 	};
 }
