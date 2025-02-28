@@ -5,13 +5,17 @@
 	};
 
 	config = lib.mkIf config.zoxide.enable {
-		programs.zoxide = {
-      enable = true;
-      enableBashIntegration = true;
-    };
+    programs.zoxide = lib.mkMerge [
+      { enable = true; }
+
+      (lib.mkIf config.bash.hm.enable {
+        enableBashIntegration = true;
+      })
+
+      (lib.mkIf config.zsh.hm.enable {
+        enableZshIntegration = true;
+      })
+    ];
     programs.fzf.enable = true;
 	};
 }
-
-# NOTE: After installing zoxide, run "zoxide init <shell>", where <shell> is the shell you're using (bash, zsh, fish, etc.)
-# This is necessary to get zoxide to work

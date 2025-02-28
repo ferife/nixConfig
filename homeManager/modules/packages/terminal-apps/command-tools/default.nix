@@ -1,7 +1,8 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
-    ./bash.nix
+    ./shells
+
     ./bat.nix
     ./bc.nix
     ./cmatrix.nix
@@ -14,7 +15,6 @@
     ./zoxide.nix
   ];
 
-  bash.hm.enable = lib.mkDefault true;
   bat.enable     = lib.mkDefault true;
   bc.enable      = lib.mkDefault true;
   cmatrix.enable = lib.mkDefault true;

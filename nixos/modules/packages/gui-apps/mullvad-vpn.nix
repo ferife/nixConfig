@@ -16,4 +16,4 @@
     };
 	};
 }
-# TODO: Set a bash script that will auto log me in to my Mullvad account
+# TODO: Set a shell script that will auto log me in to my Mullvad account

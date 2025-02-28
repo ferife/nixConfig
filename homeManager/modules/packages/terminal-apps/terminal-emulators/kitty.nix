@@ -5,13 +5,21 @@
 	};
 
 	config = lib.mkIf config.kitty.enable {
-		programs.kitty = {
-      enable = true;
-      shellIntegration.enableBashIntegration = true;
-      settings = {
-        background_opacity = lib.mkForce 0.9;
-      };
-    };
+    programs.kitty = lib.mkMerge [
+      {
+        enable = true;
+        settings.background_opacity = lib.mkForce 0.9;
+      }
+
+      (lib.mkIf config.bash.hm.enable {
+        shellIntegration.enableBashIntegration = true;
+      })
+
+      (lib.mkIf config.zsh.hm.enable {
+        shellIntegration.enableZshIntegration = true;
+      })
+    ];
+
 	};
 }
 
