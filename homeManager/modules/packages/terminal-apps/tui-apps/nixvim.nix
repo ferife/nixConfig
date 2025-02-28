@@ -13,7 +13,10 @@
 	config = lib.mkIf config.nixvimModule.enable {
     home.packages = [ inputs.nixvim-config.packages.${system}.default ];
     home.shellAliases = {
-      "update-nixvim" = "cd ~/Documents/Configs/nixConfig && nix flake update nixvim-config && cd -";
+      "update-nixvim" = "
+        cd ~/Documents/Configs/nixConfig &&
+        nix flake update nixvim-config &&
+        cd -";
     };
     stylix.targets.neovim.enable = false;
     stylix.targets.nixvim.enable = false;
