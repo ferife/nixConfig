@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		mullvadVpnModule.enable = lib.mkEnableOption "Installs & configures Mullvad VPN";
+		mullvadVpn.enable = lib.mkEnableOption "Installs & configures Mullvad VPN";
 	};
 
-	config = lib.mkIf config.mullvadVpnModule.enable {
+	config = lib.mkIf config.mullvadVpn.enable {
 		environment.systemPackages = with pkgs; [
       mullvad     # CLI
       mullvad-vpn # GUI

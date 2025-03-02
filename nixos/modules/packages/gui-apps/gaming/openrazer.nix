@@ -1,5 +1,3 @@
-
-
 { config, lib, pkgs, ... }:
 {
 	options = {
@@ -14,7 +12,6 @@
         "fernandorf"
       ];
     };
-    
 
     environment.systemPackages = with pkgs; [
       openrazer-daemon  # self-explanatory

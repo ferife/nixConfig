@@ -2,6 +2,7 @@
 {
   imports = [
     ./appearance
+    ./desktop-environments
     ./packages
     ./settings
   ];

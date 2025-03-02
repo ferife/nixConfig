@@ -1,9 +1,8 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
-    ./access-media
-    ./cli-tools
-    ./nix-related
-    ./other
+    ./dependencies
+    ./gui-apps
+    ./terminal-tools
   ];
 }
