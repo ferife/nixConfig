@@ -1,7 +1,7 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, ... }:
 {
 	options = {
-		chromium.enable = lib.mkEnableOption "Installs & configures Firefox";
+		chromium.enable = lib.mkEnableOption "Installs & configures Chromium";
 	};
 
 	config = lib.mkIf config.chromium.enable {

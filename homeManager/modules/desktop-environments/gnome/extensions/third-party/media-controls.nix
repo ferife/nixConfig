@@ -1,13 +1,10 @@
-
-
 { config, lib, pkgs, ... }:
 {
-
   options = {
-    mediaControlsModule.enable = lib.mkEnableOption "Installs & enables the Media Controls extension, which adds controls for audio to be controlled from the top bar";
+    gnome.mediaControls.enable = lib.mkEnableOption "Installs & enables the Media Controls extension, which adds controls for audio to be controlled from the top bar";
   };
 
-  config = lib.mkIf config.mediaControlsModule.enable {
+  config = lib.mkIf config.gnome.mediaControls.enable {
     home.packages = with pkgs; [
       gnomeExtensions.media-controls
     ];

@@ -1,7 +1,5 @@
 # Link for searching home manager options: https://home-manager-options.extranix.com/
-
 { config, lib, pkgs, ... }:
-
 {
   imports = [
     ../../modules
@@ -79,10 +77,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # gnomeLaptopSettingsModule.enable = true;
-
-  gimpModule.enable = lib.mkForce false;
-  obsStudioModule.enable = lib.mkForce false;
-  qbittorrentModule.enable = lib.mkForce false;
 }

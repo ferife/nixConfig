@@ -1,14 +1,13 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		obsStudioModule.enable = lib.mkEnableOption "Installs & configures OBS Studio";
+		obsStudio.enable = lib.mkEnableOption "Installs & configures OBS Studio";
 	};
 
-# Once I move this to Home Manager, I will be able to use programs.obs-studio.enable
-
-	config = lib.mkIf config.obsStudioModule.enable {
+	config = lib.mkIf config.obsStudio.enable {
 		home.packages = with pkgs; [
       obs-studio
     ];
 	};
 }
+# TODO: Switch to programs.obs-studio.enable

@@ -1,5 +1,3 @@
-
-
 { config, lib, pkgs, ... }:
 {
   imports = [
@@ -7,5 +5,8 @@
     ./laptop-settings.nix
   ];
 
-  gnomeLaptopSettingsModule.enable = lib.mkDefault true;
+  gnome = {
+    generalSettings.enable = lib.mkDefault config.gnome.enable;
+    laptopSettings.enable  = lib.mkDefault config.gnome.enable;
+  };
 }

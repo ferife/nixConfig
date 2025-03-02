@@ -10,11 +10,11 @@
     ./yazi.nix
   ];
 
-  btopModule.enable    = lib.mkDefault true;
-  dustModule.enable    = lib.mkDefault true;
-  lazygitModule.enable = lib.mkDefault true;
-  nixvimModule.enable  = lib.mkDefault true;
-  rangerModule.enable  = lib.mkDefault false; # Replaced by yazi
-  tmuxModule.enable    = lib.mkDefault true;
-  yaziModule.enable    = lib.mkDefault true;
+  btop.enable    = lib.mkDefault true;
+  dust.enable    = lib.mkDefault true;
+  lazygit.enable = lib.mkDefault true;
+  nixvim.enable  = lib.mkDefault true;
+  ranger.enable  = lib.mkDefault false; # Replaced by yazi
+  tmux.enable    = lib.mkDefault true;
+  yazi.enable    = lib.mkDefault true;
 }

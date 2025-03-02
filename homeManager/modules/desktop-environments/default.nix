@@ -1,5 +1,3 @@
-
-
 { config, lib, pkgs, ... }:
 {
   imports = [
@@ -7,5 +5,5 @@
     ./gnome
   ];
 
-  hmGnomeModule.enable = lib.mkDefault true;
+  gnome.enable = lib.mkDefault true;
 }

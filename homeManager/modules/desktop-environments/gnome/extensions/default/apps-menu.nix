@@ -1,13 +1,10 @@
-
-
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 {
-
   options = {
-    appsMenuModule.enable = lib.mkEnableOption "Enables the Apps Menu extension, which lets you open applications from a menu divided by categories in the left side of the top bar";
+    gnome.appsMenu.enable = lib.mkEnableOption "Enables the Apps Menu extension, which lets you open applications from a menu divided by categories in the left side of the top bar";
   };
 
-  config = lib.mkIf config.appsMenuModule.enable {
+  config = lib.mkIf config.gnome.appsMenu.enable {
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [

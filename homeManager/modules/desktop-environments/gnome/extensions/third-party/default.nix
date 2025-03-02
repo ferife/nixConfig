@@ -1,6 +1,4 @@
-
-
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 {
   imports = [
     ./caffeine.nix
@@ -11,11 +9,12 @@
     ./weather-oclock.nix
   ];
 
-  caffeineModule.enable = lib.mkDefault true;
-  clipboardIndicatorModule.enable = lib.mkDefault true;
-  forgeModule.enable = lib.mkDefault true;
-  mediaControlsModule.enable = lib.mkDefault true;
-  weatherOclockModule.enable = lib.mkDefault true;
-
-  tilingShellModule.enable = lib.mkDefault false;
+  gnome = {
+    caffeine.enable           = lib.mkDefault config.gnome.enable;
+    clipboardIndicator.enable = lib.mkDefault config.gnome.enable;
+    forge.enable              = lib.mkDefault config.gnome.enable;
+    mediaControls.enable      = lib.mkDefault config.gnome.enable;
+    tilingShell.enable        = lib.mkDefault false;
+    weatherOClock.enable      = lib.mkDefault config.gnome.enable;
+  };
 }

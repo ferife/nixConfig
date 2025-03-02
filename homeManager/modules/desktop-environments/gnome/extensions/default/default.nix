@@ -1,6 +1,4 @@
-
-
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 {
   imports = [
     ./apps-menu.nix
@@ -19,19 +17,20 @@
     ./workspace-indicator.nix
   ];
 
-  appsMenuModule.enable = lib.mkDefault true;
-  nativeWindowPlacementModule.enable = lib.mkDefault true;
-  statusIconsModule.enable = lib.mkDefault true;
-  systemMonitorModule.enable = lib.mkDefault true;
-  windowsNavigatorModule.enable = lib.mkDefault true;
-  placesMenuModule.enable = lib.mkDefault true;
-
-  autoMoveWindowsModule.enable = lib.mkDefault false;
-  driveMenuModule.enable = lib.mkDefault false;
-  launchNewInstanceModule.enable = lib.mkDefault false;
-  lightStyleModule.enable = lib.mkDefault false;
-  screenshotWindowSizerModule.enable = lib.mkDefault false;
-  userThemeModule.enable = lib.mkDefault true;
-  windowListModule.enable = lib.mkDefault false;
-  workspaceIndicatorModule.enable = lib.mkDefault false;
+  gnome = {
+    appsMenu.enable              = lib.mkDefault config.gnome.enable;
+    autoMoveWindows.enable       = lib.mkDefault false;
+    driveMenu.enable             = lib.mkDefault false;
+    launchNewInstance.enable     = lib.mkDefault false;
+    lightStyle.enable            = lib.mkDefault false;
+    nativeWindowPlacement.enable = lib.mkDefault config.gnome.enable;
+    placesMenu.enable            = lib.mkDefault config.gnome.enable;
+    screenshotWindowSizer.enable = lib.mkDefault false;
+    statusIcons.enable           = lib.mkDefault config.gnome.enable;
+    systemMonitor.enable         = lib.mkDefault config.gnome.enable;
+    userTheme.enable             = lib.mkDefault config.gnome.enable;
+    windowList.enable            = lib.mkDefault false;
+    windowsNavigator.enable      = lib.mkDefault config.gnome.enable;
+    workspaceIndicator.enable    = lib.mkDefault false;
+  };
 }

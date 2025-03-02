@@ -1,13 +1,10 @@
-
-
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 {
-
   options = {
-    workspaceIndicatorModule.enable = lib.mkEnableOption "Enables the Workspace Indicator extension, which adds a workspace switcher to the top bar";
+    gnome.workspaceIndicator.enable = lib.mkEnableOption "Enables the Workspace Indicator extension, which adds a workspace switcher to the top bar";
   };
 
-  config = lib.mkIf config.workspaceIndicatorModule.enable {
+  config = lib.mkIf config.gnome.workspaceIndicator.enable {
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [

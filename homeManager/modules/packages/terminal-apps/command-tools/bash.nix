@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		bashModule.enable = lib.mkEnableOption "Installs & configures bash, the GNU Bourne-Again SHell";
+		bash.hm.enable = lib.mkEnableOption "Installs & configures bash, the GNU Bourne-Again SHell";
 	};
 
-	config = lib.mkIf config.bashModule.enable {
+	config = lib.mkIf config.bash.hm.enable {
     programs.bash = {
       enable = true;
       enableCompletion = true;

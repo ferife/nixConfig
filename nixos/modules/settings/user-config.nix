@@ -1,5 +1,3 @@
-
-
 { config, pkgs, ... }:
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -7,8 +5,6 @@
     isNormalUser = true;
     description = "Fernando Rivera Fernandez";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-
-    ];
+    packages = with pkgs; [ ];
   };
 }

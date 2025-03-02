@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		distroboxModule.enable = lib.mkEnableOption "Installs & configures Distrobox";
+		distrobox.enable = lib.mkEnableOption "Installs & configures Distrobox";
 	};
 
-	config = lib.mkIf config.distroboxModule.enable {
+	config = lib.mkIf config.distrobox.enable {
 		environment.systemPackages = with pkgs; [
       distrobox
     ];

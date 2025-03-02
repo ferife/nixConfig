@@ -1,10 +1,8 @@
 { lib, ... }:
-
 {
-  imports =
-    [
-      ./stylix.nix
-    ];
+  imports = [
+    ./stylix.nix
+  ];
 
   stylix.hm = {
     enable = lib.mkDefault true;

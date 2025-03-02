@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		vlcModule.enable = lib.mkEnableOption "Installs & configures VLC";
+		vlc.enable = lib.mkEnableOption "Installs & configures VLC";
 	};
 
-	config = lib.mkIf config.vlcModule.enable {
+	config = lib.mkIf config.vlc.enable {
 		home.packages = with pkgs; [
       vlc
     ];

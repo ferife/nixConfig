@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		inputRemapperModule.enable = lib.mkEnableOption "Installs & configures Input Remapper";
+		gaming.inputRemapper.enable = lib.mkEnableOption "Installs & configures Input Remapper";
 	};
 
-	config = lib.mkIf config.inputRemapperModule.enable {
+	config = lib.mkIf config.gaming.inputRemapper.enable {
 		services.input-remapper = {
       enable = true;
     };

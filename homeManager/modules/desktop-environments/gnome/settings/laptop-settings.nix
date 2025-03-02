@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
   options = {
-		gnomeLaptopSettingsModule.enable = lib.mkEnableOption "Sets certain GNOME settings that only make sense on laptops";
+		gnome.laptopSettings.enable = lib.mkEnableOption "Sets certain GNOME settings that only make sense on laptops";
 	};
 
-	config = lib.mkIf config.gnomeLaptopSettingsModule.enable {
+	config = lib.mkIf config.gnome.laptopSettings.enable {
 		dconf.settings = {
       "org/gnome/desktop/interface" = {
         show-battery-percentage = true;
@@ -13,5 +13,5 @@
         send-events = "disabled-on-external-mouse";
       };
     };
-	}; 
+	};
 }

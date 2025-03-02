@@ -1,5 +1,3 @@
-
-
 { config, pkgs, ... }:
 {
   nixpkgs.config = {

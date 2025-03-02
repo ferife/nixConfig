@@ -1,11 +1,8 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, lib, pkgs, ... }:
-
 {
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -107,9 +104,9 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   # The following lines enable certain programs that I consider essential for the minimum installation of a computer using this config
-  gitModule.enable = lib.mkForce true;
-  neofetchModule.enable = lib.mkForce true;
-  homeManagerModule.enable = lib.mkForce true;
-  nhModule.enable = lib.mkForce true;
+  git.nixos.enable = lib.mkForce true;
+  neofetch.enable = lib.mkForce true;
+  homeManager.enable = lib.mkForce true;
+  nh.enable = lib.mkForce true;
   # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
 }

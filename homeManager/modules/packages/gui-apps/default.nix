@@ -15,17 +15,16 @@
     ./vs-code.nix
   ];
 
-  firefoxModule.enable     = lib.mkDefault true;
-  gimpModule.enable        = lib.mkDefault true;
-  libreofficeModule.enable = lib.mkDefault true;
-  obsidianModule.enable    = lib.mkDefault true;
-  obsStudioModule.enable   = lib.mkDefault true;
-  thunderbirdModule.enable = lib.mkDefault true;
-  torBrowserModule.enable  = lib.mkDefault true;
-  vlcModule.enable         = lib.mkDefault true;
-
-  chromium.enable          = lib.mkDefault false;
-  eclipseModule.enable     = lib.mkDefault false;
-  qbittorrentModule.enable = lib.mkDefault false;
-  vsCodeModule.enable      = lib.mkDefault false;
+  chromium.enable    = lib.mkDefault false;
+  eclipse.enable     = lib.mkDefault false;
+  firefox.enable     = lib.mkDefault true;
+  gimp.enable        = lib.mkDefault false;
+  libreoffice.enable = lib.mkDefault true;
+  obsidian.enable    = lib.mkDefault true;
+  obsStudio.enable   = lib.mkDefault false;
+  qbittorrent.enable = lib.mkDefault false;
+  thunderbird.enable = lib.mkDefault true;
+  torBrowser.enable  = lib.mkDefault true;
+  vlc.enable         = lib.mkDefault true;
+  vsCode.enable      = lib.mkDefault false;
 }

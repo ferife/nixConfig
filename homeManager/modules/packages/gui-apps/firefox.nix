@@ -1,10 +1,10 @@
 { config, lib, pkgs, inputs, ... }:
 {
 	options = {
-		firefoxModule.enable = lib.mkEnableOption "Installs & configures Firefox";
+		firefox.enable = lib.mkEnableOption "Installs & configures Firefox";
 	};
 
-	config = lib.mkIf config.firefoxModule.enable {
+	config = lib.mkIf config.firefox.enable {
 		programs.firefox = {
       enable = true;
       nativeMessagingHosts = with pkgs; [ gnome-browser-connector ];  # Allows the GNOME shell and its extensions to interact with Firefox
@@ -29,7 +29,6 @@
         DNSOverHTTPS = { Enabled = false; };
         NetworkPrediction = false;      # Enable/Disable network prediction (DNS prefetching)
         Permissions = { Autoplay = { Default = "block-audio-video"; }; };
-      
         ExtensionSettings = {};
       };
 
@@ -87,11 +86,11 @@
 
           };
         };
-      
+
         extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
 
           # 600% Sound Volume
-          
+
           canvasblocker # Alters some JS APIs to prevent fingerprinting
           clearurls     # Remove tracking elements from URLs
           cookie-autodelete # When a tab closes, any cookies not being used are automatically deleted

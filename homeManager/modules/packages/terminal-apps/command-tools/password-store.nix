@@ -1,11 +1,10 @@
 { config, lib, pkgs, ... }:
-
 {
   options = {
-    passModule.enable = lib.mkEnableOption "Installs & configures password-store (AKA pass), a password storing solution";
+    pass.enable = lib.mkEnableOption "Installs & configures password-store (AKA pass), a password storing solution";
   };
 
-  config = lib.mkIf config.passModule.enable {
+  config = lib.mkIf config.pass.enable {
     programs.password-store = {
       enable = true;
     };

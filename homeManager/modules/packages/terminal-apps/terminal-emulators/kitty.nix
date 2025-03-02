@@ -1,10 +1,10 @@
 { config, lib, ... }:
 {
 	options = {
-		kittyModule.enable = lib.mkEnableOption "Installs & configures Kitty, the terminal emulator";
+		kitty.enable = lib.mkEnableOption "Installs & configures Kitty, the terminal emulator";
 	};
 
-	config = lib.mkIf config.kittyModule.enable {
+	config = lib.mkIf config.kitty.enable {
 		programs.kitty = {
       enable = true;
       shellIntegration.enableBashIntegration = true;

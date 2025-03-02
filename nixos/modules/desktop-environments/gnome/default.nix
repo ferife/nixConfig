@@ -4,5 +4,5 @@
     ./general-settings.nix
   ];
 
-  gnomeSettings.enable = lib.mkDefault true;
+  gnome.settings.enable = lib.mkDefault true;
 }

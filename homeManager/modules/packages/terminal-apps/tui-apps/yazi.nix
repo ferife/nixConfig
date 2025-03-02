@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		yaziModule.enable = lib.mkEnableOption "Installs & configures yazi, a file manager";
+		yazi.enable = lib.mkEnableOption "Installs & configures yazi, a file manager";
 	};
 
-	config = lib.mkIf config.yaziModule.enable {
+	config = lib.mkIf config.yazi.enable {
 		programs.yazi = {
       enable = true;
       settings = {

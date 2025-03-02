@@ -8,7 +8,7 @@
 
   gaming.enable = lib.mkDefault true;
   mullvadVpn.enable = lib.mkDefault true;
-  vlcModule = {
+  vlc = {
     enable = lib.mkDefault true;
     replaceGnomeDefault = false;
   };

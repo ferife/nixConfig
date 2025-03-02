@@ -1,12 +1,10 @@
-
-
 { config, lib, pkgs, ... }:
 {
 	options = {
-		steamModule.enable = lib.mkEnableOption "Installs & configures Steam";
+		gaming.steam.enable = lib.mkEnableOption "Installs & configures Steam";
 	};
 
-	config = lib.mkIf config.steamModule.enable {
+	config = lib.mkIf config.gaming.steam.enable {
 		programs.steam = {
 			enable = true;
 		};

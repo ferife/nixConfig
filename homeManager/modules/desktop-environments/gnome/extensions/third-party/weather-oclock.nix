@@ -1,13 +1,10 @@
-
-
 { config, lib, pkgs, ... }:
 {
-
   options = {
-    weatherOclockModule.enable = lib.mkEnableOption "Installs & enables the Weather OClock extension, which displays the weather in the pill at the center of the top bar";
+    gnome.weatherOClock.enable = lib.mkEnableOption "Installs & enables the Weather OClock extension, which displays the weather in the pill at the center of the top bar";
   };
 
-  config = lib.mkIf config.weatherOclockModule.enable {
+  config = lib.mkIf config.gnome.weatherOClock.enable {
     home.packages = with pkgs; [
       gnomeExtensions.weather-oclock
     ];

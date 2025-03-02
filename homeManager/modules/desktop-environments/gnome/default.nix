@@ -1,15 +1,11 @@
-
-
 { config, lib, pkgs, ... }:
 {
-  options = {
-    hmGnomeModule.enable = lib.mkEnableOption "Installs & configures certain extensions and settings for the GNOME desktop environment";
-  };
+  imports = [
+    ./extensions
+    ./settings
+  ];
 
-  # config = lib.mkIf config.hmGnomeModule.enable {
-    imports = [
-      ./extensions
-      ./settings
-    ];
-  # };
+  options = {
+    gnome.enable = lib.mkEnableOption "GNOME, the Desktop Environment";
+  };
 }

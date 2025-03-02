@@ -1,13 +1,10 @@
-
-
 { config, lib, pkgs, ... }:
 {
-
   options = {
-    tilingShellModule.enable = lib.mkEnableOption "Installs & enables the Tiling Shell extension, which allows for automatic window tiling";
+    gnome.tilingShell.enable = lib.mkEnableOption "Installs & enables the Tiling Shell extension, which allows for automatic window tiling";
   };
 
-  config = lib.mkIf config.tilingShellModule.enable {
+  config = lib.mkIf config.gnome.tilingShell.enable {
     home.packages = with pkgs; [
       gnomeExtensions.tiling-shell
     ];

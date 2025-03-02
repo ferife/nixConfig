@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		qbittorrentModule.enable = lib.mkEnableOption "Installs & configures QBitTorrent";
+		qbittorrent.enable = lib.mkEnableOption "Installs & configures QBitTorrent";
 	};
 
-	config = lib.mkIf config.qbittorrentModule.enable {
+	config = lib.mkIf config.qbittorrent.enable {
 		home.packages = with pkgs; [
       qbittorrent
     ];

@@ -5,6 +5,6 @@
     ./kitty.nix
   ];
 
-  gnomeTerminalModule.enable = lib.mkDefault true;
-  kittyModule.enable         = lib.mkDefault true;
+  gnomeTerminal.enable = lib.mkDefault true;
+  kitty.enable         = lib.mkDefault true;
 }

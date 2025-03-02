@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		gnomeTerminalModule.enable = lib.mkEnableOption "Installs & configures the GNOME terminal";
+		gnomeTerminal.enable = lib.mkEnableOption "Installs & configures the GNOME terminal";
 	};
 
-	config = lib.mkIf config.gnomeTerminalModule.enable {
+	config = lib.mkIf config.gnomeTerminal.enable {
 		programs.gnome-terminal = {
       showMenubar = true;
 

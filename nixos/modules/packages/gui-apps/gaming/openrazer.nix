@@ -1,11 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		openrazerModule.enable = lib.mkEnableOption "Installs & configures OpenRazer";
+		gaming.openrazer.enable = lib.mkEnableOption "Installs & configures OpenRazer";
 	};
 
-	config = lib.mkIf config.openrazerModule.enable {
-
+	config = lib.mkIf config.gaming.openrazer.enable {
     hardware.openrazer = {
       enable = true;
       users = [

@@ -1,5 +1,4 @@
 { lib, config, pkgs, ... }:
-
 {
   options = {
     autoStorageCleanupOption.enable = lib.mkEnableOption "Automatically cleans up storage & old generations";
@@ -25,5 +24,4 @@
     # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
     nix.settings.auto-optimise-store = true;
   };
-
 }

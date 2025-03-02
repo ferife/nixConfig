@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		thunderbirdModule.enable = lib.mkEnableOption "Installs & configures Thunderbird";
+		thunderbird.enable = lib.mkEnableOption "Installs & configures Thunderbird";
 	};
 
-	config = lib.mkIf config.thunderbirdModule.enable {
+	config = lib.mkIf config.thunderbird.enable {
     # programs.thunderbird = {
     #   enable = true;
     #   profiles.fernandorf.name = "Fernando RF";
@@ -14,3 +14,4 @@
     ];
 	};
 }
+# TODO: Switch to programs.thunderbird.enable

@@ -1,13 +1,10 @@
-#system-monitor@gnome-shell-extensions.gcampax.github.com
-
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 {
-
   options = {
-    systemMonitorModule.enable = lib.mkEnableOption "Enables the System Monitor extension, which shows system usage information in the right side of the top bar";
+    gnome.systemMonitor.enable = lib.mkEnableOption "Enables the System Monitor extension, which shows system usage information in the right side of the top bar";
   };
 
-  config = lib.mkIf config.systemMonitorModule.enable {
+  config = lib.mkIf config.gnome.systemMonitor.enable {
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [
@@ -21,8 +18,6 @@
         show-download = true;
         show-swap = false;
       };
-
     };
-
   };
 }

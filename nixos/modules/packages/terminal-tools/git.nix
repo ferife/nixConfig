@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		gitModule.enable = lib.mkEnableOption "Installs & configures Git";
+		git.nixos.enable = lib.mkEnableOption "Installs & configures Git";
 	};
 
-	config = lib.mkIf config.gitModule.enable {
+	config = lib.mkIf config.git.nixos.enable {
 		programs.git = {
       enable = true;
     };

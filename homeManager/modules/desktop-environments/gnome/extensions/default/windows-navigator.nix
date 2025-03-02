@@ -1,13 +1,10 @@
-
-
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 {
-
   options = {
-    windowsNavigatorModule.enable = lib.mkEnableOption "Enables the Window Navigator extension, which lets you use the keyboard to select windows and workspaces in overlay mode";
+    gnome.windowsNavigator.enable = lib.mkEnableOption "Enables the Window Navigator extension, which lets you use the keyboard to select windows and workspaces in overlay mode";
   };
 
-  config = lib.mkIf config.windowsNavigatorModule.enable {
+  config = lib.mkIf config.gnome.windowsNavigator.enable {
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [
