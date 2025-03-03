@@ -9,15 +9,11 @@
       {
         enable = true;
         settings.background_opacity = lib.mkForce 0.9;
+        font.name = "Fira Code";
       }
 
-      (lib.mkIf config.bash.hm.enable {
-        shellIntegration.enableBashIntegration = true;
-      })
-
-      (lib.mkIf config.zsh.hm.enable {
-        shellIntegration.enableZshIntegration = true;
-      })
+      (lib.mkIf config.bash.hm.enable { shellIntegration.enableBashIntegration = true; })
+      (lib.mkIf config.zsh.hm.enable { shellIntegration.enableZshIntegration = true; })
     ];
 
 	};
