@@ -1,10 +1,10 @@
 { config, lib, pkgs, ... }:
 {
 	options = {
-		neofetch.enable = lib.mkEnableOption "Installs & configures Neofetch";
+		neofetch.nixos.enable = lib.mkEnableOption "Installs & configures Neofetch";
 	};
 
-	config = lib.mkIf config.neofetch.enable {
+	config = lib.mkIf config.neofetch.nixos.enable {
 		environment.systemPackages = with pkgs; [ neofetch ];
 	};
 }
