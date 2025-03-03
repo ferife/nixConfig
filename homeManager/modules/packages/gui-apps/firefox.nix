@@ -4,6 +4,9 @@
 		firefox.enable = lib.mkEnableOption "Installs & configures Firefox";
 	};
 
+  # TODO: Replace Firefox with Librewolf
+  # Due to Firefox's recent changes to their policies on their use of users' personal info
+
 	config = lib.mkIf config.firefox.enable {
 		programs.firefox = {
       enable = true;
