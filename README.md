@@ -50,3 +50,6 @@ If a list or object gets modified in multiple modules, all those modifications m
 
 Watch Vimjoyer's YT video "Modularize NixOS and Home Manager | Great Practices" to learn about some good practices to make my config more controllable in a modular way
 This touches on the idea of custom options, described in further detail in the NixOS wiki pages on [declaration](https://nixos.wiki/wiki/Declaration) and [NixOS modules](https://nixos.wiki/wiki/NixOS_modules)
+# Resources to check out
+
+- [NixOS for the Impatient](https://borretti.me/article/nixos-for-the-impatient)
