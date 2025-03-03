@@ -21,3 +21,5 @@
     ];
 	};
 }
+# TODO: Make starship display the shell being used within the prompt
+# So that I know whether I'm using bash, zsh, fish, etc
