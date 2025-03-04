@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, userSettings, ... }:
 {
 	options = {
 		gaming.openrazer.enable = lib.mkEnableOption "Installs & configures OpenRazer";
@@ -8,7 +8,7 @@
     hardware.openrazer = {
       enable = true;
       users = [
-        "fernandorf"
+        "${userSettings.username}"
       ];
     };
 

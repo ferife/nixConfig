@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, systemSettings, userSettings, ... }:
 {
 	options = {
     nh = {
@@ -11,7 +11,7 @@
 	config = lib.mkIf config.nh.enable {
 		programs.nh = {
       enable = true;
-      flake = "/home/fernandorf/Documents/Configs/nixConfig";
+      flake = systemSettings.flakePath;
 
 			clean = lib.mkIf config.nh.autoClean {
 				enable = true;
@@ -22,68 +22,68 @@
 
     environment.shellAliases = lib.mkIf config.nh.shellAliases {
       gash = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         git add . &&
-        nh home switch --backup-extension backup --ask --configuration fernandorf@laptop &&
+        nh home switch --backup-extension backup --ask --configuration ${userSettings.username}@${systemSettings.hostname1} &&
         cd -
       '';
       gashu = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         sudo nix flake update &&
         git add . &&
-        nh home switch --backup-extension backup --ask --configuration fernandorf@laptop &&
+        nh home switch --backup-extension backup --ask --configuration ${userSettings.username}@${systemSettings.hostname1} &&
         cd -
       '';
 
       gaso = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         git add . &&
-        nh os switch --ask --hostname laptop &&
+        nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd -
       '';
       gasuo = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         sudo nix flake update &&
         git add . &&
-        nh os switch --ask --hostname laptop &&
+        nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd -
       '';
 
       gasho = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         git add . &&
-        nh home switch --backup-extension backup --configuration fernandorf@laptop &&
-        nh os switch --ask --hostname laptop &&
+        nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
+        nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd -
       '';
       gashuo = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         sudo nix flake update &&
         git add . &&
-        nh home switch --backup-extension backup --configuration fernandorf@laptop &&
-        nh os switch --ask --hostname laptop &&
+        nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
+        nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd -
       '';
       gashuoc = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         sudo nix flake update &&
         git add . &&
-        nh home switch --backup-extension backup --configuration fernandorf@laptop &&
-        nh os switch --ask --hostname laptop &&
+        nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
+        nh os switch --ask --hostname ${systemSettings.hostname1} &&
         nh clean all -ak 10 &&
         cd -
       '';
       gashuos = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         sudo nix flake update &&
         git add . &&
-        nh home switch --dry --configuration fernandorf@laptop &&
-        nh os switch --dry --Hostname laptop &&
+        nh home switch --dry --configuration ${userSettings.username}@${systemSettings.hostname1} &&
+        nh os switch --dry --Hostname ${systemSettings.hostname1} &&
         cd -
       '';
 
       nhc = ''
-        cd /home/fernandorf/Documents/Configs/nixConfig/ &&
+        cd ${systemSettings.flakePath} &&
         nh clean all -ak 10 &&
         cd -
       '';

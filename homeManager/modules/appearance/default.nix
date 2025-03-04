@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, userSettings, ... }:
 {
   imports = [
     ./stylix.nix
@@ -6,6 +6,6 @@
 
   stylix.hm = {
     enable = lib.mkDefault true;
-    theme = "onedark";
+    theme = userSettings.colorscheme;
   };
 }

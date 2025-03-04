@@ -1,5 +1,5 @@
 # Link for searching home manager options: https://home-manager-options.extranix.com/
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, userSettings, ... }:
 {
   imports = [
     ../../modules
@@ -7,8 +7,8 @@
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "fernandorf";
-  home.homeDirectory = "/home/fernandorf";
+  home.username = userSettings.username;
+  home.homeDirectory = "/home/${userSettings.username}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -69,7 +69,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/fernandorf/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/${userSettings.username}/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     # EDITOR = "emacs";

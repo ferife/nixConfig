@@ -27,39 +27,62 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
     let
-      system = "x86_64-linux";
+      userSettings = {
+        username = "fernandorf";
+        name = "Fernando";
+        colorscheme = "onedark";
+        terminal = "kitty";
+        font = "FiraCode Nerd Font";
+        fontPkg = pkgs.fira-code-nerdfont;
+      };
+      systemSettings = {
+        system = "x86_64-linux";
+        hostname1 = "laptop";
+        hostname2 = "device2";
+        timezone = "America/Chicago";
+        locale = "en_US.UTF-8";
+        flakePath = "/home/${userSettings.username}/Documents/Configs/nixConfig";
+      };
+
       pkgs = import nixpkgs {
-        inherit system;
+        system = systemSettings.system;
         config = {
           allowUnfree = true;
         };
       };
       pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
+        system = systemSettings.system;
         config = {
           allowUnfree = true;
         };
       };
+
     in {
       # NixOS Configuration Entrypoint
       nixosConfigurations = {
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {
-            inherit system;
+            system = systemSettings.system;
+            inherit pkgs;
             inherit pkgs-unstable;
+            inherit systemSettings;
+            inherit userSettings;
           };
           modules = [
-            ./nixos/hosts/laptop/configuration.nix
+            (./. + "/nixos/hosts/${systemSettings.hostname1}/configuration.nix" )
             stylix.nixosModules.stylix
           ];
         };
         device2 = nixpkgs.lib.nixosSystem {
           specialArgs = {
-            inherit system;
+            system = systemSettings.system;
+            inherit pkgs;
             inherit pkgs-unstable;
+            inherit systemSettings;
+            inherit userSettings;
           };
           modules = [
-            ./nixos/hosts/device2/configuration.nix
+            (./. + "/nixos/hosts/${systemSettings.hostname2}/configuration.nix" )
             stylix.nixosModules.stylix
           ];
         };
@@ -67,27 +90,34 @@
 
       # Standalone home-manager configuration entrypoint
       homeConfigurations = {
-        "fernandorf@laptop" = home-manager.lib.homeManagerConfiguration {
+        "${userSettings.username}@${systemSettings.hostname1}" = home-manager.lib.homeManagerConfiguration {
           pkgs = pkgs;
           extraSpecialArgs = {
-            inherit system;
+            system = systemSettings.system;
             inherit inputs;
+            inherit pkgs;
             inherit pkgs-unstable;
+            inherit systemSettings;
+            inherit userSettings;
           };
           modules = [
+            (./. + "/homeManager/hosts/${systemSettings.hostname1}/home.nix" )
             ./homeManager/hosts/laptop/home.nix
             stylix.homeManagerModules.stylix
           ];
         };
-        "fernandorf@device2" = home-manager.lib.homeManagerConfiguration {
+        "${userSettings.username}@${systemSettings.hostname2}" = home-manager.lib.homeManagerConfiguration {
           pkgs = pkgs;
           extraSpecialArgs = {
-            inherit system;
+            system = systemSettings.system;
             inherit inputs;
+            inherit pkgs;
             inherit pkgs-unstable;
+            inherit systemSettings;
+            inherit userSettings;
           };
           modules = [
-            ./homeManager/hosts/device2/home.nix
+            (./. + "/homeManager/hosts/${systemSettings.hostname2}/home.nix" )
             stylix.homeManagerModules.stylix
           ];
         };

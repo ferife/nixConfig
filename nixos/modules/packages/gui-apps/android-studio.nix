@@ -1,4 +1,4 @@
-{ config, lib, pkgs-unstable, ... }:
+{ config, lib, pkgs-unstable, userSettings, ... }:
 {
 	options = {
 		androidStudio.enable = lib.mkEnableOption "Android Studio, an IDE designed by Google specifically to create Android applications";
@@ -9,6 +9,6 @@
       android-studio
     ];
     nixpkgs.config.android_sdk.accept_license = true;
-    users.users.fernandorf.extraGroups = [ "kvm" ];
+    users.users.${userSettings.username}.extraGroups = [ "kvm" ];
 	};
 }
