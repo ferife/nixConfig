@@ -8,7 +8,21 @@
     programs.starship = lib.mkMerge [
       {
         enable = true;
-        # settings =
+        settings.shell = {
+          disabled = false;
+
+          bash_indicator = "bash";
+          cmd_indicator = "cmd";
+          elvish_indicator = "elvish";
+          fish_indicator = "fish";
+          ion_indicator = "ion";
+          nu_indicator = "nu";
+          powershell_indicator = "powershell";
+          tcsh_indicator = "tcsh";
+          xonsh_indicator = "xonsh";
+          zsh_indicator = "zsh";
+          unknown_indicator = "unknown";
+        };
       }
 
       (lib.mkIf config.bash.hm.enable {
@@ -21,5 +35,3 @@
     ];
 	};
 }
-# TODO: Make starship display the shell being used within the prompt
-# So that I know whether I'm using bash, zsh, fish, etc
