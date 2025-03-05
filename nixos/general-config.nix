@@ -105,7 +105,7 @@
 
   # The following lines enable certain programs that I consider essential for the minimum installation of a computer using this config
   git.nixos.enable = lib.mkForce true;
-  neofetch.enable = lib.mkForce true;
+  neofetch.nixos.enable = lib.mkForce true;
   homeManager.enable = lib.mkForce true;
   nh.enable = lib.mkForce true;
   # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
