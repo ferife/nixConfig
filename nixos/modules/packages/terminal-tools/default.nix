@@ -4,14 +4,16 @@
     ./shells
 
     ./distrobox.nix
+    ./fastfetch.nix
     ./git.nix
     ./neofetch.nix
     ./nh.nix
   ];
 
-  distrobox.enable = lib.mkDefault false;
-  git.nixos.enable = lib.mkDefault true;
-  neofetch.nixos.enable = lib.mkDefault true;
+  distrobox.enable       = lib.mkDefault false;
+  fastfetch.nixos.enable = lib.mkDefault true;
+  git.nixos.enable       = lib.mkDefault true;
+  neofetch.nixos.enable  = lib.mkDefault false;
   nh = {
     enable = lib.mkDefault true;
     autoClean = lib.mkDefault false;
