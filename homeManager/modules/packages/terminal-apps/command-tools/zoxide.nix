@@ -6,7 +6,7 @@
 
 	config = lib.mkIf config.zoxide.enable {
     programs.zoxide = lib.mkMerge [
-      { enable = true; }
+      {enable = true;}
 
       (lib.mkIf config.bash.hm.enable {
         enableBashIntegration = true;
@@ -17,5 +17,8 @@
       })
     ];
     programs.fzf.enable = true;
+    home.shellAliases = {
+      "cd" = "z";
+    };
 	};
 }
