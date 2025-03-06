@@ -24,3 +24,4 @@
     })
   ];
 }
+# TODO: Look into fastfetch configuration settings

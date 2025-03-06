@@ -17,5 +17,6 @@
 
 	};
 }
+# TODO: Customize font
 
 # To search through command history in the terminal using stylix, simply use CTRL+R
