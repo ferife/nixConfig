@@ -1,3 +1,3 @@
-[*.{nix,md,lua}]
+[*.{bash,nix,md,lua,sh,zsh}]
 indent_style = space
 indent_size = 2
