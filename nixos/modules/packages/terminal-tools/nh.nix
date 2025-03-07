@@ -20,81 +20,13 @@
 			};
     };
 
+    environment.variables = {
+      NIX_CONFIG_PATH="${systemSettings.nixConfigPath}";
+      FLAKE_HOSTNAME="${systemSettings.hostname1}";
+    };
+
     environment.shellAliases = lib.mkIf config.nh.shellAliases {
-      gash = ''
-        cd ${systemSettings.flakePath} &&
-        git add . &&
-        nh home switch --backup-extension backup --ask --configuration ${userSettings.username}@${systemSettings.hostname1} &&
-        cd - &&
-        exec "$SHELL"
-      '';
-      gashu = ''
-        cd ${systemSettings.flakePath} &&
-        sudo nix flake update &&
-        git add . &&
-        nh home switch --backup-extension backup --ask --configuration ${userSettings.username}@${systemSettings.hostname1} &&
-        cd - &&
-        exec "$SHELL"
-      '';
-
-      gaso = ''
-        cd ${systemSettings.flakePath} &&
-        git add . &&
-        nh os switch --ask --hostname ${systemSettings.hostname1} &&
-        cd - &&
-        exec "$SHELL"
-      '';
-      gasuo = ''
-        cd ${systemSettings.flakePath} &&
-        sudo nix flake update &&
-        git add . &&
-        nh os switch --ask --hostname ${systemSettings.hostname1} &&
-        cd - &&
-        exec "$SHELL"
-      '';
-
-      gasho = ''
-        cd ${systemSettings.flakePath} &&
-        git add . &&
-        nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
-        nh os switch --ask --hostname ${systemSettings.hostname1} &&
-        cd - &&
-        exec "$SHELL"
-      '';
-      gashuo = ''
-        cd ${systemSettings.flakePath} &&
-        sudo nix flake update &&
-        git add . &&
-        nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
-        nh os switch --ask --hostname ${systemSettings.hostname1} &&
-        cd - &&
-        exec "$SHELL"
-      '';
-      gashuoc = ''
-        cd ${systemSettings.flakePath} &&
-        sudo nix flake update &&
-        git add . &&
-        nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
-        nh os switch --ask --hostname ${systemSettings.hostname1} &&
-        nh clean all --ask --keep 10 &&
-        cd - &&
-        exec "$SHELL"
-      '';
-      gashuos = ''
-        cd ${systemSettings.flakePath} &&
-        sudo nix flake update &&
-        git add . &&
-        nh home switch --dry --configuration ${userSettings.username}@${systemSettings.hostname1} &&
-        nh os switch --dry --hostname ${systemSettings.hostname1} &&
-        cd -
-      '';
-
-      "nhc" = ''
-        cd ${systemSettings.flakePath} &&
-        nh clean all --ask --keep 10 &&
-        cd - &&
-        exec "$SHELL"
-      '';
+      gas = "bash ~/Documents/Scripts/nh-script.bash";
     };
 	};
 }

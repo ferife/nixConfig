@@ -35,14 +35,15 @@
         font = "FiraCode Nerd Font";
         fontPkg = pkgs.fira-code-nerdfont;
       };
-      systemSettings = {
+      systemSettings = rec {
         system = "x86_64-linux";
         shell = "bash";
         hostname1 = "laptop";
         hostname2 = "device2";
         timezone = "America/Chicago";
         locale = "en_US.UTF-8";
-        flakePath = "/home/${userSettings.username}/Documents/Configs/nixConfig/nixConfig-main";
+        nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig/";
+        flakePath = "${nixConfigPath}/nixConfig-shell-scripts";
       };
 
       pkgs = import nixpkgs {

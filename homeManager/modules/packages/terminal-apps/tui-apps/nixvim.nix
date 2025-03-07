@@ -12,13 +12,6 @@
 
 	config = lib.mkIf config.nixvim.enable {
     home.packages = [ inputs.nixvim-config.packages.${system}.default ];
-    home.shellAliases = {
-      "nixvim" = "nvim";
-      "update-nixvim" = "
-        cd ~/Documents/Configs/nixConfig &&
-        nix flake update nixvim-config &&
-        cd -";
-    };
     stylix.targets.neovim.enable = false;
     stylix.targets.nixvim.enable = false;
     stylix.targets.vim.enable    = false;
