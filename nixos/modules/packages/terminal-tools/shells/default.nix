@@ -1,10 +1,16 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, systemSettings, ... }:
 {
   imports = [
     ./bash.nix
     ./zsh.nix
   ];
 
-  bash.nixos.enable = lib.mkDefault true;
-  # zsh.nixos.enable  = lib.mkDefault true;
+  config = lib.mkMerge [
+    (lib.mkIf (systemSettings.shell == "bash") {
+      bash.nixos.enable = true;
+    })
+    (lib.mkIf (systemSettings.shell == "zsh") {
+      zsh.nixos.enable = true;
+    })
+  ];
 }

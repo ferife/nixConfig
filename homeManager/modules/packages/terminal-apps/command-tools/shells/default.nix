@@ -1,10 +1,16 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, systemSettings, ... }:
 {
   imports = [
     ./bash.nix
     ./zsh.nix
   ];
 
-  bash.hm.enable = lib.mkDefault true;
-  # zsh.hm.enable  = lib.mkDefault true;
+  config = lib.mkMerge [
+    (lib.mkIf (systemSettings.shell == "bash") {
+      bash.hm.enable = true;
+    })
+    (lib.mkIf (systemSettings.shell == "zsh") {
+      zsh.hm.enable = true;
+    })
+  ];
 }

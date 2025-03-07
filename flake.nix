@@ -37,6 +37,7 @@
       };
       systemSettings = {
         system = "x86_64-linux";
+        shell = "bash";
         hostname1 = "laptop";
         hostname2 = "device2";
         timezone = "America/Chicago";
