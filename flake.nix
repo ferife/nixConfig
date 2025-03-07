@@ -41,7 +41,7 @@
         hostname2 = "device2";
         timezone = "America/Chicago";
         locale = "en_US.UTF-8";
-        flakePath = "/home/${userSettings.username}/Documents/Configs/nixConfig";
+        flakePath = "/home/${userSettings.username}/Documents/Configs/nixConfig/nixConfig-main";
       };
 
       pkgs = import nixpkgs {
