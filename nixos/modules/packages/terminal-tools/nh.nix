@@ -26,7 +26,7 @@
         git add . &&
         nh home switch --backup-extension backup --ask --configuration ${userSettings.username}@${systemSettings.hostname1} &&
         cd - &&
-        exec '$SHELL'
+        exec "$SHELL"
       '';
       gashu = ''
         cd ${systemSettings.flakePath} &&
@@ -34,7 +34,7 @@
         git add . &&
         nh home switch --backup-extension backup --ask --configuration ${userSettings.username}@${systemSettings.hostname1} &&
         cd - &&
-        exec '$SHELL'
+        exec "$SHELL"
       '';
 
       gaso = ''
@@ -42,7 +42,7 @@
         git add . &&
         nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd - &&
-        exec '$SHELL'
+        exec "$SHELL"
       '';
       gasuo = ''
         cd ${systemSettings.flakePath} &&
@@ -50,7 +50,7 @@
         git add . &&
         nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd - &&
-        exec '$SHELL'
+        exec "$SHELL"
       '';
 
       gasho = ''
@@ -59,7 +59,7 @@
         nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
         nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd - &&
-        exec '$SHELL'
+        exec "$SHELL"
       '';
       gashuo = ''
         cd ${systemSettings.flakePath} &&
@@ -68,7 +68,7 @@
         nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
         nh os switch --ask --hostname ${systemSettings.hostname1} &&
         cd - &&
-        exec '$SHELL'
+        exec "$SHELL"
       '';
       gashuoc = ''
         cd ${systemSettings.flakePath} &&
@@ -76,9 +76,9 @@
         git add . &&
         nh home switch --backup-extension backup --configuration ${userSettings.username}@${systemSettings.hostname1} &&
         nh os switch --ask --hostname ${systemSettings.hostname1} &&
-        nh clean all -ak 10 &&
+        nh clean all --ask --keep 10 &&
         cd - &&
-        exec '$SHELL'
+        exec "$SHELL"
       '';
       gashuos = ''
         cd ${systemSettings.flakePath} &&
@@ -89,10 +89,11 @@
         cd -
       '';
 
-      nhc = ''
+      "nhc" = ''
         cd ${systemSettings.flakePath} &&
-        nh clean all -ak 10 &&
-        cd -
+        nh clean all --ask --keep 10 &&
+        cd - &&
+        exec "$SHELL"
       '';
     };
 	};
