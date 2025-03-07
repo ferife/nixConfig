@@ -85,7 +85,7 @@
         sudo nix flake update &&
         git add . &&
         nh home switch --dry --configuration ${userSettings.username}@${systemSettings.hostname1} &&
-        nh os switch --dry --Hostname ${systemSettings.hostname1} &&
+        nh os switch --dry --hostname ${systemSettings.hostname1} &&
         cd -
       '';
 
