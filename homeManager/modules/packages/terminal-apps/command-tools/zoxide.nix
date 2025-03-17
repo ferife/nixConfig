@@ -17,8 +17,5 @@
       })
     ];
     programs.fzf.enable = true;
-    home.shellAliases = {
-      "cd" = "z";
-    };
 	};
 }
