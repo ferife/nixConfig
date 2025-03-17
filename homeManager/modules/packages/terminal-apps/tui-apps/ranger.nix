@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		ranger.enable = lib.mkEnableOption "Installs & configures ranger";
-	};
-
-	config = lib.mkIf config.ranger.enable {
+	config = lib.mkIf config.hm.ranger {
 		programs.ranger = {
       enable = true;
     };

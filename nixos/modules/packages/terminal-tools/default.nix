@@ -1,8 +1,9 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
-    ./shells
+    ./options.nix
 
+    ./shells
     ./distrobox.nix
     ./fastfetch.nix
     ./git.nix
@@ -10,13 +11,15 @@
     ./nh.nix
   ];
 
-  distrobox.enable       = lib.mkDefault false;
-  fastfetch.nixos.enable = lib.mkDefault true;
-  git.nixos.enable       = lib.mkDefault true;
-  neofetch.nixos.enable  = lib.mkDefault false;
-  nh = {
-    enable = lib.mkDefault true;
-    autoClean = lib.mkDefault false;
-    shellAliases = lib.mkDefault true;
+  config.nixos = {
+    distrobox = lib.mkDefault false;
+    fastfetch = lib.mkDefault true;
+    git       = lib.mkDefault true;
+    neofetch  = lib.mkDefault false;
+    nh = {
+      enable = lib.mkDefault true;
+      autoClean = lib.mkDefault false;
+      shellAliases = lib.mkDefault true;
+    };
   };
 }

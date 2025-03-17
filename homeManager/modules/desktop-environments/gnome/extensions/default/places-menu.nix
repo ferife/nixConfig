@@ -1,10 +1,6 @@
 { config, lib, ... }:
 {
-  options = {
-    gnome.placesMenu.enable = lib.mkEnableOption "Enables the Places Menu extension, which lets you open the file explorer to certain directories from a menu in the left side of the top bar";
-  };
-
-  config = lib.mkIf config.gnome.placesMenu.enable {
+  config = lib.mkIf config.hm.gnome.placesMenu {
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [

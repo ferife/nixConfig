@@ -48,7 +48,7 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  # services.printing.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -103,10 +103,24 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
+  # The following installs documentation for all existing nixos options
+  documentation.man.enable = true;
+  documentation.doc.enable = true;
+  documentation.nixos = {
+    enable = true;
+
+    # The following will cause the docs to include all custom options created within my config
+    extraModuleSources = [
+      ./modules
+    ];
+  };
+  # FIXME: The above will cause errors with stylix
+  # Ensure that ONLY MY documentation is generated, not the docs for stylix or anything else
+
   # The following lines enable certain programs that I consider essential for the minimum installation of a computer using this config
-  git.nixos.enable       = lib.mkForce true;
-  fastfetch.nixos.enable = lib.mkForce true;
-  homeManager.enable     = lib.mkForce true;
-  nh.enable              = lib.mkForce true;
+  nixos.git         = lib.mkForce true;
+  nixos.fastfetch   = lib.mkForce true;
+  nixos.homeManager = lib.mkForce true;
+  nixos.nh.enable   = lib.mkForce true;
   # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
 }

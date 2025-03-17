@@ -1,13 +1,9 @@
 { config, lib, pkgs, inputs, ... }:
 {
-	options = {
-		firefox.enable = lib.mkEnableOption "Installs & configures Firefox";
-	};
-
   # TODO: Replace Firefox with Librewolf
   # Due to Firefox's recent changes to their policies on their use of users' personal info
 
-	config = lib.mkIf config.firefox.enable {
+	config = lib.mkIf config.hm.firefox {
 		programs.firefox = {
       enable = true;
       nativeMessagingHosts = with pkgs; [ gnome-browser-connector ];  # Allows the GNOME shell and its extensions to interact with Firefox

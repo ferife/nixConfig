@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		pandoc.enable = lib.mkEnableOption "Installs & configures pandoc, a CLI tool used to convert documents from one file type to another";
-	};
-
-	config = lib.mkIf config.pandoc.enable {
+	config = lib.mkIf config.hm.pandoc {
     programs.texlive = {  # texlive packages are a pandoc dependency
       enable = true;
       packageSet = pkgs.texlive.combined.scheme-small;

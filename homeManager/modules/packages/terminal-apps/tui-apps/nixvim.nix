@@ -6,11 +6,7 @@
   ...
 }:
 {
-	options = {
-		nixvim.enable = lib.mkEnableOption "My nixvim configuration, found at github:ferife/nvimConfig";
-	};
-
-	config = lib.mkIf config.nixvim.enable {
+	config = lib.mkIf config.hm.nixvim {
     home.packages = [ inputs.nixvim-config.packages.${system}.default ];
     stylix.targets.neovim.enable = false;
     stylix.targets.nixvim.enable = false;

@@ -1,12 +1,14 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./general-settings.nix
     ./laptop-settings.nix
   ];
 
-  gnome = {
-    generalSettings.enable = lib.mkDefault config.gnome.enable;
-    laptopSettings.enable  = lib.mkDefault config.gnome.enable;
+  hm.gnome = {
+    generalSettings = lib.mkDefault config.hm.gnome.enable;
+    laptopSettings  = lib.mkDefault config.hm.gnome.enable;
   };
 }

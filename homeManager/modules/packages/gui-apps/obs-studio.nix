@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		obsStudio.enable = lib.mkEnableOption "Installs & configures OBS Studio";
-	};
-
-	config = lib.mkIf config.obsStudio.enable {
+	config = lib.mkIf config.hm.obsStudio {
 		home.packages = with pkgs; [
       obs-studio
     ];

@@ -1,12 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		vsCode.enable = lib.mkEnableOption "Installs & configures VS Code";
-	};
-
-  # Once I move this to Home Manager, I will be able to use programs.vscode.enable
-
-	config = lib.mkIf config.vsCode.enable {
+	config = lib.mkIf config.hm.vsCode {
 		programs.vscode = {
 			enable = true;
 		};

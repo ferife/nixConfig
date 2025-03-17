@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		tldr.enable = lib.mkEnableOption "Installs & configures tldr, a set of simplified and community-driven man pages";
-	};
-
-	config = lib.mkIf config.tldr.enable {
+	config = lib.mkIf config.hm.tldr {
     home.packages = with pkgs; [
       tldr
     ];

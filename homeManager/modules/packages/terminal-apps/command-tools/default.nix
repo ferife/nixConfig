@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
     ./shells
 
     ./bat.nix
@@ -18,19 +19,21 @@
     ./zoxide.nix
   ];
 
-  bat.enable          = lib.mkDefault true;
-  bc.enable           = lib.mkDefault true;
-  cmatrix.enable      = lib.mkDefault true;
-  fastfetch.hm.enable = lib.mkDefault true;
-  fzf.enable          = lib.mkDefault true;
-  git.hm.enable       = lib.mkDefault true;
-  lsd.enable          = lib.mkDefault true;
-  neofetch.hm.enable  = lib.mkDefault false;
-  pandoc.enable       = lib.mkDefault false;
-  pass.enable         = lib.mkDefault true;
-  starship.enable     = lib.mkDefault true;
-  tldr.enable         = lib.mkDefault true;
-  zoxide.enable       = lib.mkDefault true;
+  hm = {
+    bat       = lib.mkDefault true;
+    bc        = lib.mkDefault true;
+    cmatrix   = lib.mkDefault true;
+    fastfetch = lib.mkDefault true;
+    fzf       = lib.mkDefault true;
+    git       = lib.mkDefault true;
+    lsd       = lib.mkDefault true;
+    neofetch  = lib.mkDefault false;
+    pandoc    = lib.mkDefault false;
+    pass      = lib.mkDefault true;
+    starship  = lib.mkDefault true;
+    tldr      = lib.mkDefault true;
+    zoxide    = lib.mkDefault true;
+  };
 }
 # TODO: Install Manix CLI docs searcher for nix
 # Find documentation on Nixpkgs, NixOS options, and Home Manager options

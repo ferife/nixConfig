@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		tmux.enable = lib.mkEnableOption "Installs & configures tmux, a terminal multiplexer";
-	};
-
-	config = lib.mkIf config.tmux.enable {
+	config = lib.mkIf config.hm.tmux {
 		programs.tmux = {
       enable = true;
       mouse = true;

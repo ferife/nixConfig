@@ -1,10 +1,6 @@
 { config, lib, pkgs, pkgs-unstable, ... }:
 {
-	options = {
-		obsidian.enable = lib.mkEnableOption "Installs & configures Obsidian.md";
-	};
-
-	config = lib.mkIf config.obsidian.enable {
+	config = lib.mkIf config.hm.obsidian {
 		home.packages = with pkgs-unstable; [
       obsidian
     ];

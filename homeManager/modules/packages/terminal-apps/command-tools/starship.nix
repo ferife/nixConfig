@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		starship.enable = lib.mkEnableOption "starship, a cross-shell prompt with a lot of customizability";
-	};
-
-	config = lib.mkIf config.starship.enable {
+	config = lib.mkIf config.hm.starship {
     programs.starship = lib.mkMerge [
       {
         enable = true;
@@ -25,11 +21,11 @@
         };
       }
 
-      (lib.mkIf config.bash.hm.enable {
+      (lib.mkIf config.hm.bash {
         enableBashIntegration = true;
       })
 
-      (lib.mkIf config.zsh.hm.enable {
+      (lib.mkIf config.hm.zsh {
         enableZshIntegration = true;
       })
     ];

@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  options = {
-    gnome.lightStyle.enable = lib.mkEnableOption "Enables the Light Style extension, which changes the default shell style to \"light\", while still following the system-wide \"dark\" preference";
-  };
-
-  config = lib.mkIf config.gnome.lightStyle.enable {
+  config = lib.mkIf config.hm.gnome.lightStyle {
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [

@@ -1,13 +1,9 @@
 { config, lib, pkgs, ... }:
 {
-  options = {
-    autoUpgradeOption.enable = lib.mkEnableOption "Automatically upgrades nixpkgs";
-  };
-
-  config = lib.mkIf config.autoUpgradeOption.enable {
+  config = lib.mkIf config.nixos.autoUpgradeOption {
     system.autoUpgrade = {
       enable = true;
-      flake = "~/Documents/Configs/nixConfig";
+      flake = "~/Documents/Configs/nixConfig/nixConfig-main";
       flags = [
         "--update-input"
         "nixpkgs"

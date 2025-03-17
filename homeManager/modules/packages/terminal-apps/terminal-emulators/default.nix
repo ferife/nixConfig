@@ -1,10 +1,14 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./gnome-terminal.nix
     ./kitty.nix
   ];
 
-  gnomeTerminal.enable = lib.mkDefault true;
-  kitty.enable         = lib.mkDefault true;
+  hm = {
+    gnomeTerminal = lib.mkDefault true;
+    kitty         = lib.mkDefault true;
+  };
 }

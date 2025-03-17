@@ -1,10 +1,6 @@
 { config, lib, ... }:
 {
-	options = {
-		chromium.enable = lib.mkEnableOption "Installs & configures Chromium";
-	};
-
-	config = lib.mkIf config.chromium.enable {
+	config = lib.mkIf config.hm.chromium {
     programs.chromium.enable = true;
 	};
 }

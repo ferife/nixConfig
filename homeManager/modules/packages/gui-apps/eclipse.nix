@@ -1,10 +1,6 @@
 { config, lib, ... }:
 {
-	options = {
-		eclipse.enable = lib.mkEnableOption "Installs & configures Eclipse, an IDE made primarily for Java development";
-	};
-
-	config = lib.mkIf config.eclipse.enable {
+	config = lib.mkIf config.hm.eclipse {
 		programs.eclipse = {
       enable = true;
     };

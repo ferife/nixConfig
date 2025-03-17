@@ -55,3 +55,7 @@ This touches on the idea of custom options, described in further detail in the N
 # Resources to check out
 
 - [NixOS for the Impatient](https://borretti.me/article/nixos-for-the-impatient)
+
+According to [this blog](https://bmcgee.ie/posts/2023/03/til-how-to-generate-nixos-module-docs/), if I want to generate docs for my custom options, I should separate out each module into one defining the options and one defining the config.
+
+This keeps native NixOS options from appearing in my docs, so it will be only my own custom options

@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		distrobox.enable = lib.mkEnableOption "Installs & configures Distrobox";
-	};
-
-	config = lib.mkIf config.distrobox.enable {
+	config = lib.mkIf config.nixos.distrobox {
 		environment.systemPackages = with pkgs; [
       distrobox
     ];

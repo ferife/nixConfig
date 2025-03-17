@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		bat.enable = lib.mkEnableOption "Installs & configures bat, a cat clone with syntax highlighting and Git integration";
-	};
-
-	config = lib.mkIf config.bat.enable {
+	config = lib.mkIf config.hm.bat {
 		programs.bat = {
       enable = true;
     };

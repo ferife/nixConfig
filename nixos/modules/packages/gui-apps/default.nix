@@ -1,17 +1,20 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./gaming
     ./android-studio.nix
     ./mullvad-vpn.nix
     ./vlc.nix
   ];
 
-  androidStudio.enable = true;
-  gaming.enable = lib.mkDefault true;
-  mullvadVpn.enable = lib.mkDefault true;
-  vlc = {
-    enable = lib.mkDefault true;
-    replaceGnomeDefault = false;
+  nixos = {
+    androidStudio = true;
+    gaming.enable = lib.mkDefault true;
+    mullvadVpn = lib.mkDefault true;
+    vlc = {
+      enable = lib.mkDefault true;
+    };
   };
 }

@@ -1,11 +1,8 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
     ./extensions
     ./settings
   ];
-
-  options = {
-    gnome.enable = lib.mkEnableOption "GNOME, the Desktop Environment";
-  };
 }

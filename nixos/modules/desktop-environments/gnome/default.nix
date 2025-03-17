@@ -1,10 +1,14 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./gdm-settings.nix
     ./general-settings.nix
   ];
 
-  gdmSettings.enable    = lib.mkDefault true;
-  gnome.settings.enable = lib.mkDefault true;
+  nixos.gnome = {
+    enable = lib.mkDefault true;
+    gdmSettings = lib.mkDefault true;
+  };
 }

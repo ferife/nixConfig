@@ -1,6 +1,8 @@
 { config, lib, ... }:
 {
   imports = [
+    ./options.nix
+
     ./caffeine.nix
     ./clipboard-indicator.nix
     ./forge.nix
@@ -9,12 +11,12 @@
     ./weather-oclock.nix
   ];
 
-  gnome = {
-    caffeine.enable           = lib.mkDefault config.gnome.enable;
-    clipboardIndicator.enable = lib.mkDefault config.gnome.enable;
-    forge.enable              = lib.mkDefault config.gnome.enable;
-    mediaControls.enable      = lib.mkDefault config.gnome.enable;
-    tilingShell.enable        = lib.mkDefault false;
-    weatherOClock.enable      = lib.mkDefault config.gnome.enable;
+  hm.gnome = {
+    caffeine           = lib.mkDefault config.hm.gnome.enable;
+    clipboardIndicator = lib.mkDefault config.hm.gnome.enable;
+    forge              = lib.mkDefault config.hm.gnome.enable;
+    mediaControls      = lib.mkDefault config.hm.gnome.enable;
+    tilingShell        = lib.mkDefault false;
+    weatherOClock      = lib.mkDefault config.hm.gnome.enable;
   };
 }

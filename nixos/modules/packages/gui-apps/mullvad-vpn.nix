@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		mullvadVpn.enable = lib.mkEnableOption "Installs & configures Mullvad VPN";
-	};
-
-	config = lib.mkIf config.mullvadVpn.enable {
+	config = lib.mkIf config.nixos.mullvadVpn {
 		environment.systemPackages = with pkgs; [
       mullvad     # CLI
       mullvad-vpn # GUI

@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		cmatrix.enable = lib.mkEnableOption "cmatrix, a tool that just displays falling text like the Matrix";
-	};
-
-	config = lib.mkIf config.cmatrix.enable {
+	config = lib.mkIf config.hm.cmatrix {
     home.packages = with pkgs; [
       cmatrix
     ];

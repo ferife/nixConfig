@@ -1,10 +1,6 @@
 { lib, config, pkgs, ... }:
 {
-  options = {
-    autoStorageCleanupOption.enable = lib.mkEnableOption "Automatically cleans up storage & old generations";
-  };
-
-  config = lib.mkIf config.autoStorageCleanupOption.enable {
+  config = lib.mkIf config.nixos.autoStorageCleanupOption {
 
     # Limit the number of generations to keep
     boot.loader.systemd-boot.configurationLimit = 10;

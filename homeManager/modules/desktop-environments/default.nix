@@ -5,5 +5,5 @@
     ./gnome
   ];
 
-  gnome.enable = lib.mkDefault true;
+  hm.gnome.enable = lib.mkDefault true;
 }

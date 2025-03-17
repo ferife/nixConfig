@@ -1,18 +1,14 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		zoxide.enable = lib.mkEnableOption "Installs & configures zoxide, the replacement for the cd command";
-	};
-
-	config = lib.mkIf config.zoxide.enable {
+	config = lib.mkIf config.hm.zoxide {
     programs.zoxide = lib.mkMerge [
       {enable = true;}
 
-      (lib.mkIf config.bash.hm.enable {
+      (lib.mkIf config.hm.bash {
         enableBashIntegration = true;
       })
 
-      (lib.mkIf config.zsh.hm.enable {
+      (lib.mkIf config.hm.zsh {
         enableZshIntegration = true;
       })
     ];

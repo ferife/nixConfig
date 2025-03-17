@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		gimp.enable = lib.mkEnableOption "Installs & configures Gimp";
-	};
-
-	config = lib.mkIf config.gimp.enable {
+	config = lib.mkIf config.hm.gimp {
 		home.packages = with pkgs; [
       gimp
     ];

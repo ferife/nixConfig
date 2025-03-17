@@ -1,10 +1,12 @@
 { config, lib, userSettings, ... }:
 {
   imports = [
+    ./options.nix
+
     ./stylix.nix
   ];
 
-  stylix.nixos = {
+  nixos.stylix = {
     enable = lib.mkDefault true;
     theme = userSettings.colorscheme;
   };

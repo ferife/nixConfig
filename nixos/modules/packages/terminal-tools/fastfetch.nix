@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		fastfetch.nixos.enable = lib.mkEnableOption "Installs & configures Fastfetch";
-	};
-
-	config = lib.mkIf config.fastfetch.nixos.enable {
+	config = lib.mkIf config.nixos.fastfetch {
 		environment.systemPackages = with pkgs; [ fastfetch ];
 	};
 }

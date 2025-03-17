@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		torBrowser.enable = lib.mkEnableOption "Installs & configures the Tor browser";
-	};
-
-	config = lib.mkIf config.torBrowser.enable {
+	config = lib.mkIf config.hm.torBrowser {
 		home.packages = with pkgs; [
       tor-browser
     ];

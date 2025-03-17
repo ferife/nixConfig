@@ -1,19 +1,15 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		neofetch.hm.enable = lib.mkEnableOption "Installs & configures Neofetch";
-	};
-
   config = lib.mkMerge [
-    (lib.mkIf config.neofetch.hm.enable {
+    (lib.mkIf config.hm.neofetch {
       home.packages = with pkgs; [ neofetch ];
     })
 
-    (lib.mkIf (config.neofetch.hm.enable && config.bash.hm.enable ) {
+    (lib.mkIf (config.hm.neofetch && config.hm.bash ) {
       programs.bash.initExtra = "neofetch";
     })
 
-    (lib.mkIf (config.neofetch.hm.enable && config.zsh.hm.enable ) {
+    (lib.mkIf (config.hm.neofetch && config.hm.zsh ) {
       programs.zsh.initExtra = "neofetch";
     })
   ];

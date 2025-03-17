@@ -1,10 +1,6 @@
 { config, lib, ... }:
 {
-  options = {
-    gnome.systemMonitor.enable = lib.mkEnableOption "Enables the System Monitor extension, which shows system usage information in the right side of the top bar";
-  };
-
-  config = lib.mkIf config.gnome.systemMonitor.enable {
+  config = lib.mkIf config.hm.gnome.systemMonitor {
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [

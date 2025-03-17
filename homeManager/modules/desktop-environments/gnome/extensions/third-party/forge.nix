@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  options = {
-    gnome.forge.enable = lib.mkEnableOption "Installs & enables the Forge extension, which allows for automatic window tiling";
-  };
-
-  config = lib.mkIf config.gnome.forge.enable {
+  config = lib.mkIf config.hm.gnome.forge {
     home.packages = with pkgs; [
       gnomeExtensions.forge
     ];

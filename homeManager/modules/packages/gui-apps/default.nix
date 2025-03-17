@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
@@ -15,16 +17,18 @@
     ./vs-code.nix
   ];
 
-  chromium.enable    = lib.mkDefault false;
-  eclipse.enable     = lib.mkDefault false;
-  firefox.enable     = lib.mkDefault true;
-  gimp.enable        = lib.mkDefault false;
-  libreoffice.enable = lib.mkDefault true;
-  obsidian.enable    = lib.mkDefault true;
-  obsStudio.enable   = lib.mkDefault false;
-  qbittorrent.enable = lib.mkDefault false;
-  thunderbird.enable = lib.mkDefault true;
-  torBrowser.enable  = lib.mkDefault true;
-  vlc.enable         = lib.mkDefault true;
-  vsCode.enable      = lib.mkDefault false;
+  hm = {
+    chromium    = lib.mkDefault false;
+    eclipse     = lib.mkDefault false;
+    firefox     = lib.mkDefault true;
+    gimp        = lib.mkDefault false;
+    libreoffice = lib.mkDefault true;
+    obsStudio   = lib.mkDefault false;
+		obsidian    = lib.mkDefault true;
+    qbittorrent = lib.mkDefault false;
+    thunderbird = lib.mkDefault true;
+    torBrowser  = lib.mkDefault true;
+    vlc         = lib.mkDefault true;
+    vsCode      = lib.mkDefault false;
+  };
 }

@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		zsh.nixos.enable = lib.mkEnableOption "Configures zsh at a system-wide level";
-	};
-
-	config = lib.mkIf config.zsh.nixos.enable {
+	config = lib.mkIf config.nixos.zsh {
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;
 	};

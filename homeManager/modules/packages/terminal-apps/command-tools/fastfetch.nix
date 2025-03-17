@@ -1,25 +1,24 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		fastfetch.hm.enable = lib.mkEnableOption "Installs & configures fastfetch";
-	};
-
   config = lib.mkMerge [
-    (lib.mkIf config.fastfetch.hm.enable {
+    (lib.mkIf config.hm.fastfetch {
       programs.fastfetch = {
         enable = true;
         # settings =
       };
+    })
+
+    (lib.mkIf (config.hm.fastfetch && ! config.hm.neofetch) {
       home.shellAliases = {
         "neofetch" = "echo 'executing fastfetch' && fastfetch";
       };
     })
 
-    (lib.mkIf (config.fastfetch.hm.enable && config.bash.hm.enable ) {
+    (lib.mkIf (config.hm.fastfetch && config.hm.bash ) {
       programs.bash.initExtra = "fastfetch";
     })
 
-    (lib.mkIf (config.fastfetch.hm.enable && config.zsh.hm.enable ) {
+    (lib.mkIf (config.hm.fastfetch && config.hm.zsh ) {
       programs.zsh.initExtra = "fastfetch";
     })
   ];

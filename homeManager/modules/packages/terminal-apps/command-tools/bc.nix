@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		bc.enable = lib.mkEnableOption "Installs & configures bc, a basic CLI math calculator. This should be useful when writing shell scripts";
-	};
-
-	config = lib.mkIf config.bc.enable {
+	config = lib.mkIf config.hm.bc {
     home.packages = with pkgs; [
       bc
     ];

@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  options = {
-    pass.enable = lib.mkEnableOption "Installs & configures password-store (AKA pass), a password storing solution";
-  };
-
-  config = lib.mkIf config.pass.enable {
+  config = lib.mkIf config.hm.pass {
     programs.password-store = {
       enable = true;
     };

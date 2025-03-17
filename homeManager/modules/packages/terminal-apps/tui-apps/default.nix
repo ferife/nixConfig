@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./btop.nix
     ./dust.nix
     ./lazygit.nix
@@ -10,11 +12,13 @@
     ./yazi.nix
   ];
 
-  btop.enable    = lib.mkDefault true;
-  dust.enable    = lib.mkDefault true;
-  lazygit.enable = lib.mkDefault true;
-  nixvim.enable  = lib.mkDefault true;
-  ranger.enable  = lib.mkDefault false; # Replaced by yazi
-  tmux.enable    = lib.mkDefault true;
-  yazi.enable    = lib.mkDefault true;
+  hm = {
+    btop    = lib.mkDefault true;
+    dust    = lib.mkDefault true;
+    lazygit = lib.mkDefault true;
+    nixvim  = lib.mkDefault true;
+    ranger  = lib.mkDefault false; # Replaced by yazi
+    tmux    = lib.mkDefault true;
+    yazi    = lib.mkDefault true;
+  };
 }

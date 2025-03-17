@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		bash.nixos.enable = lib.mkEnableOption "Configures bash at a system-wide level";
-	};
-
-	config = lib.mkIf config.bash.nixos.enable {
+	config = lib.mkIf config.nixos.bash {
     programs.bash = {
       completion.enable = true;
       enableLsColors = true;

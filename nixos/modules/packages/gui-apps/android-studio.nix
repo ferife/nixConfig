@@ -1,10 +1,6 @@
 { config, lib, pkgs-unstable, userSettings, ... }:
 {
-	options = {
-		androidStudio.enable = lib.mkEnableOption "Android Studio, an IDE designed by Google specifically to create Android applications";
-	};
-
-	config = lib.mkIf config.androidStudio.enable {
+	config = lib.mkIf config.nixos.androidStudio {
 		environment.systemPackages = with pkgs-unstable; [
       android-studio
     ];

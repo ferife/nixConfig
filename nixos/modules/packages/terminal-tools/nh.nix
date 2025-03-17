@@ -1,19 +1,11 @@
 { config, lib, pkgs, systemSettings, userSettings, ... }:
 {
-	options = {
-    nh = {
-      enable = lib.mkEnableOption "Installs & configures nh, a tool for simplifying the management of NixOS configs";
-      autoClean = lib.mkEnableOption "Allows nh to perform periodic garbage collection with nh clean all";
-      shellAliases = lib.mkEnableOption "shell aliases relating to nh";
-    };
-	};
-
-	config = lib.mkIf config.nh.enable {
+	config = lib.mkIf config.nixos.nh.enable {
 		programs.nh = {
       enable = true;
       flake = systemSettings.flakePath;
 
-			clean = lib.mkIf config.nh.autoClean {
+			clean = lib.mkIf config.nixos.nh.autoClean {
 				enable = true;
 				dates = "weekly";
 				extraArgs = "-- ask --keep 10";
@@ -25,7 +17,7 @@
       FLAKE_HOSTNAME="${systemSettings.hostname1}";
     };
 
-    environment.shellAliases = lib.mkIf config.nh.shellAliases {
+    environment.shellAliases = lib.mkIf config.nixos.nh.shellAliases {
       gas = "bash ~/Documents/Scripts/nh-script.bash";
     };
 	};

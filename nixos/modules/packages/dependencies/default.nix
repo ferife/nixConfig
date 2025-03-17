@@ -1,8 +1,10 @@
 { lib, ... }:
 {
   imports = [
+    ./options.nix
+
     ./home-manager.nix
   ];
 
-  homeManager.enable = lib.mkDefault true;
+  nixos.homeManager = lib.mkDefault true;
 }

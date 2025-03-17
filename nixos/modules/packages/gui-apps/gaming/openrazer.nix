@@ -1,10 +1,6 @@
 { config, lib, pkgs, userSettings, ... }:
 {
-	options = {
-		gaming.openrazer.enable = lib.mkEnableOption "Installs & configures OpenRazer";
-	};
-
-	config = lib.mkIf config.gaming.openrazer.enable {
+	config = lib.mkIf config.nixos.gaming.openrazer {
     hardware.openrazer = {
       enable = true;
       users = [

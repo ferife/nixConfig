@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-	options = {
-		homeManager.enable = lib.mkEnableOption "Home Manager";
-	};
-
-	config = lib.mkIf config.homeManager.enable {
+	config = lib.mkIf config.nixos.homeManager {
 		environment.systemPackages = with pkgs; [
       home-manager
     ];
