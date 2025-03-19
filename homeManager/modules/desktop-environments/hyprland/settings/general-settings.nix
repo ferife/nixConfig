@@ -4,11 +4,7 @@ let
   #   ${pkgs.waybar}/bin/waybar &
   # '';
 in {
-  options = {
-    hyprland.generalSettings.enable = lib.mkEnableOption "Enable some basic settings for GNOME";
-  };
-
-  config = lib.mkIf config.hyprland.generalSettings.enable {
+  config = lib.mkIf config.hm.hyprland.generalSettings.enable {
 
     home.sessionVariables.NIXOS_OZONE_WL = "1";
     # hint Electron apps to use Wayland
