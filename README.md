@@ -21,6 +21,8 @@ The value of declarativity is that it's easier to find out about the details of 
   - The `-b backup` is required to not have conflicts with the neovim config
 - Rebuild to test a program or make a temporary change: `nh os test -aH laptop`
 - Clean up my storage: `nh clean all -ak 10`
+- Install my existing configuration into a blank installation from the minimal NixOS ISO image:
+  - `nix-shell -p git --command "nix run github:ferife/nixConfig --extra-experimental-features nix-command --extra-experimental-features flakes"`
 
 # Notes
 
