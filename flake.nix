@@ -15,8 +15,11 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim-config = {
-      url = "github:ferife/nvimConfig";
+    nixvim-config.url = "github:ferife/nvimConfig";
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
     };
   };
   # To update a single input, use the command `nix flake update <name-of-input>`
