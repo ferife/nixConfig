@@ -38,3 +38,20 @@ in {
     };
   };
 }
+# TODO: Add Waybar - Status bar
+  # Depends on font-awesome
+
+# TODO: Add wofi - App Launcher
+
+# TODO: Add Hyprpaper - Wallpaper manager
+
+# TODO: Add Dolphin - File manager
+
+# TODO: Add Hyprshot - Tool for taking screenshots
+
+# TODO: Add swaync - Notification daemon
+  # May need to install library
+
+# TODO: Add Hyprlock - Hyprland lock screen
+
+# TODO: Add Hypridle - Program that configures what happens when computer sits idle
