@@ -13,9 +13,9 @@ in {
       # allow home manager to configure hyprland
       enable = true;
 
-      # plugins = [
-      #   inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
-      # ];
+      plugins = [
+        inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
+      ];
 
       settings = {
 
