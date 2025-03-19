@@ -1,10 +1,8 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./settings
   ];
-
-  options = {
-    hyprland.enable = lib.mkEnableOption "Hyprland, the window manager";
-  };
 }

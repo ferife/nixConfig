@@ -4,5 +4,5 @@
     ./general-settings.nix
   ];
 
-  hyprland.settings.enable = lib.mkDefault true;
+  nixos.hyprland.enable = lib.mkDefault true;
 }
