@@ -1,10 +1,12 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
+    ./options.nix
+
     ./general-settings.nix
   ];
 
-  hyprland = {
-    generalSettings.enable = lib.mkDefault config.hyprland.enable;
+  hm.hyprland = {
+    generalSettings.enable = lib.mkDefault config.hm.hyprland.enable;
   };
 }
