@@ -3,6 +3,7 @@
   imports = [
     ./options.nix
 
-    ./settings
+    ./plugins
+    ./hyprland.nix
   ];
 }
