@@ -48,6 +48,9 @@ in {
       enable = true;
       # settings = {};
     };
+    home.packages = with pkgs; [
+      font-awesome
+    ];
   };
 }
 # TODO: Add Waybar - Status bar
