@@ -10,6 +10,7 @@
     bat = mkEnableOption "bat, a cat clone with syntax highlighting and Git integration";
     bc = mkEnableOption "bc, a basic CLI math calculator that is often used when writing shell scripts";
     cmatrix = mkEnableOption "cmatrix, a tool that just displays falling text like the Matrix";
+    eza = mkEnableOption "eza, an improved version of the ls command with added features";
     fastfetch = mkEnableOption "fastfetch, a CLI system information tool that exists as an improved alternative to neofetch";
     fzf = mkEnableOption "fzf, a tool for fuzzy searching on the terminal";
     git = mkEnableOption "git, the most widely used version control system";

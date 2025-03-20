@@ -12,6 +12,7 @@
     ./bat.nix
     ./bc.nix
     ./cmatrix.nix
+    ./eza.nix
     ./fastfetch.nix
     ./fzf.nix
     ./git.nix
@@ -29,12 +30,13 @@
     bat = lib.mkDefault true;
     bc = lib.mkDefault true;
     cmatrix = lib.mkDefault true;
+    eza = lib.mkDefault true;
     fastfetch = lib.mkDefault true;
     fzf = lib.mkDefault true;
     git = lib.mkDefault true;
-    lsd = lib.mkDefault true;
-    neofetch = lib.mkDefault false;
-    pandoc = lib.mkDefault false;
+    lsd = false;
+    neofetch = false;
+    pandoc = false;
     pass = lib.mkDefault true;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
