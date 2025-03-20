@@ -1,7 +1,11 @@
-{ config, lib, pkgs, inputs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
   config = lib.mkIf config.hm.hyprland.enable {
-
     home.sessionVariables.NIXOS_OZONE_WL = "1";
     # hint Electron apps to use Wayland
 
@@ -20,7 +24,6 @@
         "monitor" = ", preferred, auto, 1";
       };
     };
-
   };
 }
 # TODO: Add wofi - App Launcher
@@ -37,3 +40,4 @@
 # TODO: Add Hyprlock - Hyprland lock screen
 
 # TODO: Add Hypridle - Program that configures what happens when computer sits idle
+
