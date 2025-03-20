@@ -10,6 +10,7 @@
       enable = true;
       settings = {
         mainBar = {
+          # font = "FiraCode Nerd Font Mono 16";
           layer = "top";
           position = "top";
           # mod = "dock";
@@ -35,6 +36,25 @@
           "clock" = {
             format = "  {:%H:%M   󰃮 %a %d %b}";
             interval = 1;
+          };
+
+          "battery" = {
+            states = {
+              # good = 95;
+              warning = 30;
+              critical = 15;
+            };
+            format = "{capacity}% {icon}";
+            interval = 1;
+            format-charging = "{capacity}% 󰂄";
+            # format-
+            format-icons = [
+              " "
+              " "
+              " "
+              " "
+              " "
+            ];
           };
         };
       };
