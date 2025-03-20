@@ -31,6 +31,11 @@
             # "pulseaudio"
             # "pulseaudio#microphone"
           ];
+
+          "clock" = {
+            format = "  {:%H:%M   󰃮 %a %d %b}";
+            interval = 1;
+          };
         };
       };
     };
