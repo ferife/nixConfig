@@ -626,11 +626,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1742476106,
-        "narHash": "sha256-Dsp/gPcc1dWfy8v5r9ThpdBaI6fzTA1iGGBPDHkie6U=",
+        "lastModified": 1742479163,
+        "narHash": "sha256-wCcHQ/nMd4iy3bvvA2/jK/cAHUjSbYrNwgnf883ceXY=",
         "owner": "ferife",
         "repo": "nvimConfig",
-        "rev": "294c3f99539344c1c7e53b169a623388b37efbeb",
+        "rev": "3c6b5ce9c4e49fe1e7dcc00a4dae2ec0e87b59fb",
         "type": "github"
       },
       "original": {
