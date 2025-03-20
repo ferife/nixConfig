@@ -12,24 +12,36 @@ in {
     wayland.windowManager.hyprland = {
       # allow home manager to configure hyprland
       enable = true;
+      settings = {
+        "$mod" = "SUPER";
+        bind = [
+          "$mod, M, exec, kitty"
+          "$mod, F, exec, firefox"
+        ];
+        "monitor" = ", preferred, auto, 1";
+        exec-once = [
+          "waybar"
+        ];
+      };
+
 
       plugins = [
       #   inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
       ];
 
-      settings = {
+      # settings = {
 
-        "plugin:borders-plus-plus" = {
-          add_borders = 1;
+      #   "plugin:borders-plus-plus" = {
+      #     add_borders = 1;
 
-          "col.border_1" = "rgb(ffffff)";
-          "col.border_2" = "rgb(2222ff)";
-        };
-        border_size_1 = 10;
-        border_size_2 = -1;
+      #     "col.border_1" = "rgb(ffffff)";
+      #     "col.border_2" = "rgb(2222ff)";
+      #   };
+      #   border_size_1 = 10;
+      #   border_size_2 = -1;
 
-        natural_rounding = "yes";
-      };
+      #   natural_rounding = "yes";
+      # };
     };
 
     programs.waybar = {
