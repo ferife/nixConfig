@@ -24,8 +24,10 @@
 # TODO: Add Hyprpaper - Wallpaper manager
 # TODO: Add Dolphin - File manager
 # TODO: Add Hyprshot - Tool for taking screenshots
+#   Alternative to hyprshot: grim + slurp
 # TODO: Add swaync - Notification daemon
 #   May need to install library
 # TODO: Add Hyprlock - Hyprland lock screen
 # TODO: Add Hypridle - Program that configures what happens when computer sits idle
+# TODO: Add qt6.qtwayland - Dependency for any QT applications
 
