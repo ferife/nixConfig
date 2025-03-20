@@ -17,6 +17,7 @@
         bind = [
           "$mainMod, K, exec, kitty"
           "$mainMod, F, exec, firefox"
+          "$mainMod, W, exec, wofi --show drun --allow-images"
           # TODO: make the specific terminal and browser depend on userSettings
         ];
 
@@ -26,7 +27,6 @@
     };
   };
 }
-# TODO: Add wofi - App Launcher
 # TODO: Add Hyprpaper - Wallpaper manager
 # TODO: Add Dolphin - File manager
 # TODO: Add Hyprshot - Tool for taking screenshots
