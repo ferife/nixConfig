@@ -1,7 +1,9 @@
-
-
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./firefox.nix
     ./mullvad-vpn.nix
