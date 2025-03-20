@@ -6,8 +6,8 @@
   ...
 }: {
   config = lib.mkIf config.hm.hyprland.enable {
-    home.sessionVariables.NIXOS_OZONE_WL = "1";
     # hint Electron apps to use Wayland
+    home.sessionVariables.NIXOS_OZONE_WL = "1";
 
     wayland.windowManager.hyprland = {
       # allow home manager to configure hyprland
@@ -15,7 +15,7 @@
       settings = {
         "$mainMod" = "SUPER";
         bind = [
-          "$mainMod, T, exec, kitty"
+          "$mainMod, K, exec, kitty"
           "$mainMod, F, exec, firefox"
           # TODO: make the specific terminal and browser depend on userSettings
         ];
@@ -27,17 +27,11 @@
   };
 }
 # TODO: Add wofi - App Launcher
-
 # TODO: Add Hyprpaper - Wallpaper manager
-
 # TODO: Add Dolphin - File manager
-
 # TODO: Add Hyprshot - Tool for taking screenshots
-
 # TODO: Add swaync - Notification daemon
-  # May need to install library
-
+#   May need to install library
 # TODO: Add Hyprlock - Hyprland lock screen
-
 # TODO: Add Hypridle - Program that configures what happens when computer sits idle
 
