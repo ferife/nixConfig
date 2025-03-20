@@ -6,6 +6,6 @@
 }: {
   imports = [
     ./options.nix
-    # ./general-settings.nix
+    # ./mySetting.nix
   ];
 }
