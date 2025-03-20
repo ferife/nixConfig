@@ -1,5 +1,10 @@
-{ config, lib, pkgs, systemSettings, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  systemSettings,
+  ...
+}: {
   imports = [
     # Add general config options required for the computer to work
     ../../general-config.nix

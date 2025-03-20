@@ -1,7 +1,11 @@
-{ config, lib, pkgs, ... }:
 {
-	config = lib.mkIf config.nixos.distrobox {
-		environment.systemPackages = with pkgs; [
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.nixos.distrobox {
+    environment.systemPackages = with pkgs; [
       distrobox
     ];
 
@@ -9,5 +13,5 @@
       enable = true;
       dockerCompat = true;
     };
-	};
+  };
 }

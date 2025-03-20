@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   config = lib.mkIf config.hm.gnome.tilingShell {
     home.packages = with pkgs; [
       gnomeExtensions.tiling-shell

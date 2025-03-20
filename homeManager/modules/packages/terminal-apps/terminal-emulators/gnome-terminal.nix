@@ -1,7 +1,11 @@
-{ config, lib, pkgs, ... }:
 {
-	config = lib.mkIf config.hm.gnomeTerminal {
-		programs.gnome-terminal = {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.hm.gnomeTerminal {
+    programs.gnome-terminal = {
       showMenubar = true;
 
       profile.frfConfig = {
@@ -14,5 +18,5 @@
         colors.backgroundColor = "blue";
       };
     };
-	};
+  };
 }

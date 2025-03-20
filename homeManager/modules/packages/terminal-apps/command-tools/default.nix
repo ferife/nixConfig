@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./options.nix
     ./shells
@@ -22,20 +26,21 @@
 
   hm = {
     alejandra = lib.mkDefault true;
-    bat       = lib.mkDefault true;
-    bc        = lib.mkDefault true;
-    cmatrix   = lib.mkDefault true;
+    bat = lib.mkDefault true;
+    bc = lib.mkDefault true;
+    cmatrix = lib.mkDefault true;
     fastfetch = lib.mkDefault true;
-    fzf       = lib.mkDefault true;
-    git       = lib.mkDefault true;
-    lsd       = lib.mkDefault true;
-    neofetch  = lib.mkDefault false;
-    pandoc    = lib.mkDefault false;
-    pass      = lib.mkDefault true;
-    starship  = lib.mkDefault true;
-    tldr      = lib.mkDefault true;
-    zoxide    = lib.mkDefault true;
+    fzf = lib.mkDefault true;
+    git = lib.mkDefault true;
+    lsd = lib.mkDefault true;
+    neofetch = lib.mkDefault false;
+    pandoc = lib.mkDefault false;
+    pass = lib.mkDefault true;
+    starship = lib.mkDefault true;
+    tldr = lib.mkDefault true;
+    zoxide = lib.mkDefault true;
   };
 }
 # TODO: Install Manix CLI docs searcher for nix
 # Find documentation on Nixpkgs, NixOS options, and Home Manager options
+

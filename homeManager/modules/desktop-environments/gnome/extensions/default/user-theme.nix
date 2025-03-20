@@ -1,5 +1,8 @@
-{ config, lib, ... }:
 {
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.hm.gnome.userTheme {
     dconf.settings = {
       "org/gnome/shell" = {

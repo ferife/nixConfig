@@ -1,6 +1,11 @@
 # Link for searching home manager options: https://home-manager-options.extranix.com/
-{ config, lib, pkgs, userSettings, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  userSettings,
+  ...
+}: {
   imports = [
     ../../modules
   ];

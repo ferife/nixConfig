@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./options.nix
 
@@ -13,12 +17,12 @@
   ];
 
   hm = {
-    btop    = lib.mkDefault true;
-    dust    = lib.mkDefault true;
+    btop = lib.mkDefault true;
+    dust = lib.mkDefault true;
     lazygit = lib.mkDefault true;
-    nixvim  = lib.mkDefault true;
-    ranger  = lib.mkDefault false; # Replaced by yazi
-    tmux    = lib.mkDefault true;
-    yazi    = lib.mkDefault true;
+    nixvim = lib.mkDefault true;
+    ranger = lib.mkDefault false; # Replaced by yazi
+    tmux = lib.mkDefault true;
+    yazi = lib.mkDefault true;
   };
 }

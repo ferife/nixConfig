@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./options.nix
 
@@ -9,6 +13,6 @@
 
   hm = {
     gnomeTerminal = lib.mkDefault true;
-    kitty         = lib.mkDefault true;
+    kitty = lib.mkDefault true;
   };
 }

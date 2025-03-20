@@ -1,5 +1,8 @@
-{ config, lib, ... }:
 {
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.hm.gnome.autoMoveWindows {
     dconf.settings = {
       "org/gnome/shell" = {

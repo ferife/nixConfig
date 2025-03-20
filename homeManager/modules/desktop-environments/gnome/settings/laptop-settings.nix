@@ -1,7 +1,11 @@
-{ config, lib, pkgs, ... }:
 {
-	config = lib.mkIf config.hm.gnome.laptopSettings {
-		dconf.settings = {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.hm.gnome.laptopSettings {
+    dconf.settings = {
       "org/gnome/desktop/interface" = {
         show-battery-percentage = true;
       };
@@ -9,5 +13,5 @@
         send-events = "disabled-on-external-mouse";
       };
     };
-	};
+  };
 }

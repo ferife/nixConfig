@@ -1,17 +1,22 @@
-{ config, lib, pkgs, pkgs-unstable, ... }:
 {
-	options.hm = with lib; {
-    chromium    = mkEnableOption "Chromium";
-    eclipse     = mkEnableOption "Eclipse";
-    firefox     = mkEnableOption "Firefox";
-    gimp        = mkEnableOption "GIMP";
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
+  options.hm = with lib; {
+    chromium = mkEnableOption "Chromium";
+    eclipse = mkEnableOption "Eclipse";
+    firefox = mkEnableOption "Firefox";
+    gimp = mkEnableOption "GIMP";
     libreoffice = mkEnableOption "LibreOffice";
-    obsStudio   = mkEnableOption "OBS Studio";
-		obsidian    = mkEnableOption "Obsidian.md";
+    obsStudio = mkEnableOption "OBS Studio";
+    obsidian = mkEnableOption "Obsidian.md";
     qbittorrent = mkEnableOption "QBitTorrent";
     thunderbird = mkEnableOption "Thunderbird";
-    torBrowser  = mkEnableOption "Tor Browser";
-    vlc         = mkEnableOption "VLC";
-    vsCode      = mkEnableOption "VS Code";
-	};
+    torBrowser = mkEnableOption "Tor Browser";
+    vlc = mkEnableOption "VLC";
+    vsCode = mkEnableOption "VS Code";
+  };
 }

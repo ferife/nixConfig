@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   config = lib.mkIf config.nixos.autoUpgradeOption {
     system.autoUpgrade = {
       enable = true;

@@ -1,5 +1,8 @@
-{ config, lib, ... }:
 {
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.hm.gnome.statusIcons {
     dconf.settings = {
       "org/gnome/shell" = {

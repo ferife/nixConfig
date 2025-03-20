@@ -1,6 +1,11 @@
-{ config, lib, pkgs, userSettings, ... }:
 {
-	config = lib.mkIf config.nixos.gaming.openrazer {
+  config,
+  lib,
+  pkgs,
+  userSettings,
+  ...
+}: {
+  config = lib.mkIf config.nixos.gaming.openrazer {
     hardware.openrazer = {
       enable = true;
       users = [
@@ -9,8 +14,8 @@
     };
 
     environment.systemPackages = with pkgs; [
-      openrazer-daemon  # self-explanatory
-      polychromatic     # front-end for controlling Razer peripheral LEDs
+      openrazer-daemon # self-explanatory
+      polychromatic # front-end for controlling Razer peripheral LEDs
     ];
-	};
+  };
 }

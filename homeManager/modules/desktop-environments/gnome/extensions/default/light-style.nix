@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   config = lib.mkIf config.hm.gnome.lightStyle {
     dconf.settings = {
       "org/gnome/shell" = {

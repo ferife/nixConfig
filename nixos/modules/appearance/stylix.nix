@@ -1,8 +1,11 @@
-{ config, lib, pkgs, ... }:
 {
-	config = lib.mkIf config.nixos.stylix.enable {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.nixos.stylix.enable {
     stylix = lib.mkMerge [
-
       # General Settings
       {
         enable = true;

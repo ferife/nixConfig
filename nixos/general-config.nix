@@ -1,8 +1,14 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{ config, lib, pkgs, systemSettings, userSettings, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  systemSettings,
+  userSettings,
+  ...
+}: {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -70,7 +76,7 @@
   # services.xserver.libinput.enable = true;
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
@@ -118,9 +124,9 @@
   # Ensure that ONLY MY documentation is generated, not the docs for stylix or anything else
 
   # The following lines enable certain programs that I consider essential for the minimum installation of a computer using this config
-  nixos.git         = lib.mkForce true;
-  nixos.fastfetch   = lib.mkForce true;
+  nixos.git = lib.mkForce true;
+  nixos.fastfetch = lib.mkForce true;
   nixos.homeManager = lib.mkForce true;
-  nixos.nh.enable   = lib.mkForce true;
+  nixos.nh.enable = lib.mkForce true;
   # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
 }

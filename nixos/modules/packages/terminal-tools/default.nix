@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./options.nix
 
@@ -14,8 +18,8 @@
   config.nixos = {
     distrobox = lib.mkDefault false;
     fastfetch = lib.mkDefault true;
-    git       = lib.mkDefault true;
-    neofetch  = lib.mkDefault false;
+    git = lib.mkDefault true;
+    neofetch = lib.mkDefault false;
     nh = {
       enable = lib.mkDefault true;
       autoClean = lib.mkDefault false;

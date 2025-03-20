@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   config = lib.mkIf config.hm.gnome.forge {
     home.packages = with pkgs; [
       gnomeExtensions.forge
@@ -16,7 +20,6 @@
         tiling-mode-enabled = true;
         window-gap-hidden-on-single = true;
       };
-
     };
   };
 }

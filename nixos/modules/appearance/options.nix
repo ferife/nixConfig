@@ -1,4 +1,8 @@
-{ config, lib, ... }: {
+{
+  config,
+  lib,
+  ...
+}: {
   options.nixos.stylix = with lib; {
     enable = mkEnableOption "stylix, a tool for ricing my NixOS system (AKA styling everything at once for a consistent appearance)";
     theme = lib.mkOption {

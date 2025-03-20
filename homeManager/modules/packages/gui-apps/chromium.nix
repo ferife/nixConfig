@@ -1,6 +1,9 @@
-{ config, lib, ... }:
 {
-	config = lib.mkIf config.hm.chromium {
+  config,
+  lib,
+  ...
+}: {
+  config = lib.mkIf config.hm.chromium {
     programs.chromium.enable = true;
-	};
+  };
 }

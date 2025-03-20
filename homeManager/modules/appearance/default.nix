@@ -1,5 +1,8 @@
-{ lib, userSettings, ... }:
 {
+  lib,
+  userSettings,
+  ...
+}: {
   imports = [
     ./options.nix
 

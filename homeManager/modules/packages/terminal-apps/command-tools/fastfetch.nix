@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   config = lib.mkMerge [
     (lib.mkIf config.hm.fastfetch {
       programs.fastfetch = {
@@ -14,13 +18,14 @@
       };
     })
 
-    (lib.mkIf (config.hm.fastfetch && config.hm.bash ) {
+    (lib.mkIf (config.hm.fastfetch && config.hm.bash) {
       programs.bash.initExtra = "fastfetch";
     })
 
-    (lib.mkIf (config.hm.fastfetch && config.hm.zsh ) {
+    (lib.mkIf (config.hm.fastfetch && config.hm.zsh) {
       programs.zsh.initExtra = "fastfetch";
     })
   ];
 }
 # TODO: Look into fastfetch configuration settings
+

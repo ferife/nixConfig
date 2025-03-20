@@ -1,7 +1,10 @@
-{ lib, config, pkgs, ... }:
 {
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   config = lib.mkIf config.nixos.autoStorageCleanupOption {
-
     # Limit the number of generations to keep
     boot.loader.systemd-boot.configurationLimit = 10;
     # boot.loader.grub.configurationLimit = 10;

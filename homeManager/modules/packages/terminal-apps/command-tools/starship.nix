@@ -1,6 +1,10 @@
-{ config, lib, pkgs, ... }:
 {
-	config = lib.mkIf config.hm.starship {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.hm.starship {
     programs.starship = lib.mkMerge [
       {
         enable = true;
@@ -29,5 +33,5 @@
         enableZshIntegration = true;
       })
     ];
-	};
+  };
 }

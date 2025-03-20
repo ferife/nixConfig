@@ -1,6 +1,10 @@
-{ config, lib, pkgs, ... }:
 {
-	config = lib.mkIf config.hm.zoxide {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.hm.zoxide {
     programs.zoxide = lib.mkMerge [
       {enable = true;}
 
@@ -13,5 +17,5 @@
       })
     ];
     programs.fzf.enable = true;
-	};
+  };
 }
