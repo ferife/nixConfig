@@ -14,12 +14,6 @@
       enable = true;
       settings = {
         "$mainMod" = "SUPER";
-        bind = [
-          "$mainMod, K, exec, kitty"
-          "$mainMod, F, exec, firefox"
-          "$mainMod, W, exec, wofi --show drun --allow-images"
-          # TODO: make the specific terminal and browser depend on userSettings
-        ];
 
         # Any monitors whose settings are not explicitly defined will be set up automatically
         "monitor" = ", preferred, auto, 1";
