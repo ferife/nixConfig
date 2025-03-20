@@ -10,6 +10,7 @@
     stylix.targets.neovim.enable = false;
     stylix.targets.nixvim.enable = false;
     stylix.targets.vim.enable = false;
+    nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
 }
 # TODO: Make it so that every time I open nixvim, it shows the name of the latest active commit
