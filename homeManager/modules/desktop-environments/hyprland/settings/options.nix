@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  imports = [
-    ./settings
-  ];
-
   options = {
-    hm.hyprland.generalSettings.enable = lib.mkEnableOption "Enable some basic settings for GNOME";
+    # hm.hyprland.<setting> = lib.mkEnableOption "<description>";
   };
 }
