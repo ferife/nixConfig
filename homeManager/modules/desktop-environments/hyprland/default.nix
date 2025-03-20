@@ -8,6 +8,7 @@
     ./options.nix
 
     ./plugins
+    ./settings
     ./hyprland.nix
   ];
 }
