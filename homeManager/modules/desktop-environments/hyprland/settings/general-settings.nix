@@ -1,11 +1,15 @@
-{ config, lib, pkgs, inputs, ... }:
-let
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: let
   # startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
   #   ${pkgs.waybar}/bin/waybar &
   # '';
 in {
   config = lib.mkIf config.hm.hyprland.generalSettings.enable {
-
     home.sessionVariables.NIXOS_OZONE_WL = "1";
     # hint Electron apps to use Wayland
 
@@ -24,9 +28,8 @@ in {
         ];
       };
 
-
       plugins = [
-      #   inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
+        # inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders-plus-plus
       ];
 
       # settings = {
@@ -70,3 +73,4 @@ in {
 # TODO: Add Hyprlock - Hyprland lock screen
 
 # TODO: Add Hypridle - Program that configures what happens when computer sits idle
+
