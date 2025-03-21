@@ -31,6 +31,7 @@
           modules-right = [
             "tray"
             # "custom/language"
+            "power-profiles-daemon"
             "battery"
             # "backlight"
             # "pulseaudio"
