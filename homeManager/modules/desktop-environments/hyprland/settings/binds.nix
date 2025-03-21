@@ -10,6 +10,9 @@
       # Format for a bindd with questions:
       # "MODS, key, description, dispatcher, params"
       # TODO: make the specific terminal and browser depend on userSettings
+      {
+        bindd = ["$mainMod, q, Close the current window, killactive"];
+      }
       (lib.mkIf config.hm.kitty {
         bindd = ["$mainMod, T, Open a terminal window, exec, kitty"];
       })
