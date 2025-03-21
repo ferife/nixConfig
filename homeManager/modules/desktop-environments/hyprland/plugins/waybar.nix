@@ -10,6 +10,12 @@
   ];
 
   config = lib.mkIf config.hm.hyprland.waybar {
+    stylix.targets.waybar = {
+      enable = false;
+      # enableLeftBackColors = true;
+      # enableCenterBackColors = true;
+      # enableRightBackColors = true;
+    };
     programs.waybar = {
       enable = true;
       settings = {
@@ -31,8 +37,7 @@
           modules-right = [
             "tray"
             # "custom/language"
-            "power-profiles-daemon"
-            "battery"
+            "group/batteryGroup"
             # "backlight"
             # "pulseaudio"
             # "pulseaudio#microphone"
@@ -40,6 +45,7 @@
         };
       };
     };
+
     home.packages = with pkgs; [
       nerdfonts # Dependency for displaying symbols in the bar
       # WARNING: nerdfonts alone takes up 8GB of storage

@@ -5,8 +5,7 @@
   ...
 }: {
   imports = [
-    ./battery.nix
+    ./battery-group.nix
     ./clock.nix
-    ./power-profiles-daemon.nix
   ];
 }
