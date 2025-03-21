@@ -13,6 +13,7 @@
           interval = 1;
         };
       };
+      style = ''${builtins.readFile ./clock.css}'';
     };
   };
 }
