@@ -10,6 +10,9 @@
   # Due to Firefox's recent changes to their policies on their use of users' personal info
 
   config = lib.mkIf config.hm.firefox {
+    # The names of firefox profiles should be added to the list below for stylix to fully work on them
+    stylix.targets.firefox.profileNames = ["perpetuallyWeary"];
+
     programs.firefox = {
       enable = true;
       nativeMessagingHosts = with pkgs; [gnome-browser-connector]; # Allows the GNOME shell and its extensions to interact with Firefox
