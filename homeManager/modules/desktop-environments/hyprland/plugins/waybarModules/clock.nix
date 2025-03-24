@@ -11,6 +11,8 @@
         "clock" = {
           format = "  {:%H:%M   󰃮 %a %d %b}";
           interval = 1;
+          # TODO: Clock Tooltip
+          # TODO: Style tooltips to match the general aesthetic
         };
       };
       style = ''${builtins.readFile ./clock.css}'';
