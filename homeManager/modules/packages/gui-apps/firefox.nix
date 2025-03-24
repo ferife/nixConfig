@@ -3,6 +3,7 @@
   lib,
   pkgs,
   inputs,
+  systemSettings,
   ...
 }: {
   # TODO: Replace Firefox with Librewolf
@@ -98,7 +99,7 @@
           };
         };
 
-        extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        extensions = with inputs.firefox-addons.packages."${systemSettings.system}"; [
           # 600% Sound Volume
 
           canvasblocker # Alters some JS APIs to prevent fingerprinting
