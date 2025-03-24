@@ -47,6 +47,9 @@
       (lib.mkIf config.hm.hyprland.wofi {
         bindd = ["$mainMod, A, Open the app launcher, exec, wofi --show drun --allow-images"];
       })
+      (lib.mkIf config.hm.obsidian {
+        bindd = ["$mainMod, O, Open a browser window, exec, obsidian"];
+      })
     ];
   };
 }
