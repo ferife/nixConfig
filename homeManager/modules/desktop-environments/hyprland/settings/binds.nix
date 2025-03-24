@@ -38,7 +38,10 @@
       (lib.mkIf config.hm.kitty {
         bindd = ["$mainMod, T, Open a terminal window, exec, kitty"];
       })
-      (lib.mkIf config.hm.firefox {
+      (lib.mkIf config.hm.floorp {
+        bindd = ["$mainMod, B, Open a browser window, exec, floorp"];
+      })
+      (lib.mkIf (config.hm.firefox && !config.hm.floorp) {
         bindd = ["$mainMod, B, Open a browser window, exec, firefox"];
       })
       (lib.mkIf config.hm.hyprland.wofi {
