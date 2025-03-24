@@ -37,7 +37,8 @@
       username = "fernandorf";
       name = "Fernando";
       colorscheme = "onedark";
-      terminal = "kitty";
+      mainBrowser = "floorp"; # Options: firefox, floorp
+      terminal = "kitty"; # Options: gnome terminal, kitty
       font = "FiraCode Nerd Font";
       fontPkg = pkgs.fira-code-nerdfont;
     };

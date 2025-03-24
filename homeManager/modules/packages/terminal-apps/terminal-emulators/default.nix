@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  userSettings,
   ...
 }: {
   imports = [
@@ -12,7 +13,7 @@
   ];
 
   hm = {
-    gnomeTerminal = lib.mkDefault true;
-    kitty = lib.mkDefault true;
+    gnomeTerminal = lib.mkIf (userSettings.terminal == "gnome terminal") true;
+    kitty = lib.mkIf (userSettings.terminal == "kitty") true;
   };
 }

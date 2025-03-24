@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  userSettings,
   ...
 }: {
   imports = [
@@ -25,8 +26,8 @@
   hm = {
     chromium = false;
     eclipse = false;
-    firefox = false;
-    floorp = lib.mkDefault true;
+    firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
+    floorp = lib.mkIf (userSettings.mainBrowser == "floorp") true;
     gimp = false;
     libreoffice = lib.mkDefault true;
     obsStudio = false;
