@@ -9,6 +9,7 @@
     chromium = mkEnableOption "Chromium";
     eclipse = mkEnableOption "Eclipse";
     firefox = mkEnableOption "Firefox";
+    floorp = mkEnableOption "Floorp";
     gimp = mkEnableOption "GIMP";
     libreoffice = mkEnableOption "LibreOffice";
     obsStudio = mkEnableOption "OBS Studio";

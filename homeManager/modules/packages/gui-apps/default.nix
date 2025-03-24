@@ -10,6 +10,7 @@
     ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
+    ./floorp.nix
     ./gimp.nix
     ./libreoffice.nix
     ./obsidian.nix
@@ -24,7 +25,8 @@
   hm = {
     chromium = false;
     eclipse = false;
-    firefox = lib.mkDefault true;
+    firefox = false;
+    floorp = lib.mkDefault true;
     gimp = false;
     libreoffice = lib.mkDefault true;
     obsStudio = false;

@@ -6,36 +6,36 @@
   systemSettings,
   ...
 }: {
-  config = lib.mkIf config.hm.firefox {
+  config = lib.mkIf config.hm.floorp {
     # The names of firefox profiles should be added to the list below for stylix to fully work on them
-    stylix.targets.firefox.profileNames = ["perpetuallyWeary"];
+    stylix.targets.floorp.profileNames = ["perpetuallyWeary"];
 
-    programs.firefox = {
+    programs.floorp = {
       enable = true;
       nativeMessagingHosts = with pkgs; [gnome-browser-connector]; # Allows the GNOME shell and its extensions to interact with Firefox
 
-      policies = {
-        # To view all possible policies, go to Firefox and type about:policies#documentation
+      # policies = {
+      #   # To view all possible policies, go to Firefox and type about:policies#documentation
 
-        CaptivePortal = false; # Enable/Disable captie portal support
-        DisableFirefoxAccounts = true; # Disables account-based services, including sync
-        DisableAccounts = true; # Same as above
-        DisableFirefoxStudies = true; # Prevent Firefox from running studies
-        DisableFormHistory = true; # Don't remember search and form history
-        DisablePocket = true; # Disable the feature to save webpages to pockets
-        DisableTelemetry = true;
-        EnableTrackingProtection = {
-          Value = true;
-          Locked = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-          EmailTracking = true;
-        };
-        DNSOverHTTPS = {Enabled = false;};
-        NetworkPrediction = false; # Enable/Disable network prediction (DNS prefetching)
-        Permissions = {Autoplay = {Default = "block-audio-video";};};
-        ExtensionSettings = {};
-      };
+      #   CaptivePortal = false; # Enable/Disable captie portal support
+      #   DisableFirefoxAccounts = true; # Disables account-based services, including sync
+      #   DisableAccounts = true; # Same as above
+      #   DisableFirefoxStudies = true; # Prevent Firefox from running studies
+      #   DisableFormHistory = true; # Don't remember search and form history
+      #   DisablePocket = true; # Disable the feature to save webpages to pockets
+      #   DisableTelemetry = true;
+      #   EnableTrackingProtection = {
+      #     Value = true;
+      #     Locked = true;
+      #     Cryptomining = true;
+      #     Fingerprinting = true;
+      #     EmailTracking = true;
+      #   };
+      #   DNSOverHTTPS = {Enabled = false;};
+      #   NetworkPrediction = false; # Enable/Disable network prediction (DNS prefetching)
+      #   Permissions = {Autoplay = {Default = "block-audio-video";};};
+      #   ExtensionSettings = {};
+      # };
 
       profiles.perpetuallyWeary = {
         isDefault = true;
@@ -104,7 +104,7 @@
 
           canvasblocker # Alters some JS APIs to prevent fingerprinting
           clearurls # Remove tracking elements from URLs
-          cookie-autodelete # When a tab closes, any cookies not being used are automatically deleted
+          # cookie-autodelete # When a tab closes, any cookies not being used are automatically deleted
           # Keep the ones you trust (forever/until restart) while deleting the rest. Containers Supported
 
           # Cookie Clicker Mod Manager
@@ -118,8 +118,8 @@
 
           # Mullvad Browser Extension
 
-          multi-account-containers # Extension by Mozilla that separates website log-ins and tabs into color-coded containers
-          omnivore
+          # multi-account-containers # Extension by Mozilla that separates website log-ins and tabs into color-coded containers
+          # omnivore
 
           # onetab
 
@@ -128,15 +128,15 @@
 
           privacy-badger # Blocks invisible trackers
           protondb-for-steam
-          react-devtools
+          # react-devtools
           read-aloud # TTS
-          reduxdevtools # Dev tools for React Redux
+          # reduxdevtools # Dev tools for React Redux
           return-youtube-dislikes
           shinigami-eyes # Highlights transphobic vs trans-friendly stuff online
           sponsorblock
-          temporary-containers # Open tabs in auto managed disposable containers
+          # temporary-containers # Open tabs in auto managed disposable containers
           ublock-origin
-          umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
+          # umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
           # Made by the dev of uBlock Origin
         ];
       };
