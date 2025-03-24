@@ -50,10 +50,13 @@
       # TODO: Configure & style the workspaces, add a button to generate a workspace
       # TODO: Add a widget for the current status of my VPN
       # TODO: Add CPU usage, RAM usage, upload and download speed
-      # TODO: Add general menu with the following options
+      # TODO: Add general menu with the following options (use group module drawer function)
       #   App launcher
       #   Keyboard state (caps lock)
-      #   An idle inhibitor (like what I have in GNOME with Forge)
+      #   Volume control (PulseAudio slider)
+
+      # TODO: Use the native idle_inhibitor module
+      # This will, by itself and with no need for any external program, inhibit idle behavior
 
       style = ''${builtins.readFile ./waybar.css}'';
     };
