@@ -6,9 +6,6 @@
   systemSettings,
   ...
 }: {
-  # TODO: Replace Firefox with Librewolf
-  # Due to Firefox's recent changes to their policies on their use of users' personal info
-
   config = lib.mkIf config.hm.firefox {
     # The names of firefox profiles should be added to the list below for stylix to fully work on them
     stylix.targets.firefox.profileNames = ["perpetuallyWeary"];
