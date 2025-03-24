@@ -22,17 +22,17 @@
   ];
 
   hm = {
-    chromium = lib.mkDefault false;
-    eclipse = lib.mkDefault false;
+    chromium = false;
+    eclipse = false;
     firefox = lib.mkDefault true;
-    gimp = lib.mkDefault false;
+    gimp = false;
     libreoffice = lib.mkDefault true;
-    obsStudio = lib.mkDefault false;
+    obsStudio = false;
     obsidian = lib.mkDefault true;
-    qbittorrent = lib.mkDefault false;
+    qbittorrent = false;
     thunderbird = lib.mkDefault true;
     torBrowser = lib.mkDefault true;
     vlc = lib.mkDefault true;
-    vsCode = lib.mkDefault false;
+    vsCode = false;
   };
 }
