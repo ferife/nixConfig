@@ -11,7 +11,8 @@
         "clock" = {
           format = "  {:%H:%M   󰃮 %a %d %b}";
           interval = 1;
-          # TODO: Clock Tooltip
+          tooltip = true;
+          tooltip-format = "󰃮  : {:%A, %B %e, %Y\n  : %I:%M:%S %p}";
           # TODO: Style tooltips to match the general aesthetic
         };
       };
