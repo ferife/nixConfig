@@ -8,7 +8,7 @@
   config = lib.mkIf config.hm.hyprland.waybar {
     programs.waybar = {
       settings.mainBar = {
-        "group/batteryGroup" = {
+        "group/battery-group" = {
           orientation = "horizontal";
           modules = [
             "power-profiles-daemon"

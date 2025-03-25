@@ -1,11 +1,11 @@
-#batteryGroup {
+#battery-group {
   /* This finally works! Just use the group name as a class, with stylix turned off */
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 1024pt;
   /* padding-left: 0; */
   padding-right: 10pt;
 }
-#batteryGroup > * {
+#battery-group > * {
   padding-left: 10pt;
   padding-right: 10pt;
 }

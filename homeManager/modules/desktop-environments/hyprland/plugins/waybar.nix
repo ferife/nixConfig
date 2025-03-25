@@ -37,7 +37,7 @@
           modules-right = [
             "tray"
             # "custom/language"
-            "group/batteryGroup"
+            "group/battery-group"
             # "backlight"
             # "pulseaudio"
             # "pulseaudio#microphone"
