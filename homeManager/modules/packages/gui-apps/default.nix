@@ -23,6 +23,9 @@
     ./vs-code.nix
   ];
 
+  # TODO: Install a basic calculator app
+  # TODO: Install CAVA (the audio visualizer I see a lot on r/unixporn)
+
   hm = {
     chromium = false;
     eclipse = false;
