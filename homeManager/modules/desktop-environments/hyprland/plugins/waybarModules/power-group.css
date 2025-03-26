@@ -1,0 +1,14 @@
+#power-group {
+  font-size: 16pt;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1024pt;
+  /* padding-left: 0; */
+  /* padding-right: 10pt; */
+}
+#power {
+  color: var(--base00);
+}
+/* #power-group > * { */
+/*   padding-left: 10pt; */
+/*   padding-right: 10pt; */
+/* } */
