@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./waybar-style.nix
+
     ./battery-group.nix
     ./clock.nix
   ];

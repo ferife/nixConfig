@@ -1,6 +1,6 @@
 #battery-group {
   /* This finally works! Just use the group name as a class, with stylix turned off */
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: @module-bg-color;
   border-radius: 1024pt;
   /* padding-left: 0; */
   padding-right: 10pt;
@@ -19,5 +19,5 @@
   transition: background-color 0.3s ease; /* transition for color on hover */
 }
 #power-profiles-daemon:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: @module-bg-color;
 }
