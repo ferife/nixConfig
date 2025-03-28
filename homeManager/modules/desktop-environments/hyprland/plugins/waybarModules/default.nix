@@ -9,6 +9,7 @@
 
     ./battery-group.nix
     ./clock.nix
+    ./idle-inhibitor.nix
     ./power-group.nix
   ];
 }
