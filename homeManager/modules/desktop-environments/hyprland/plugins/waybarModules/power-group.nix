@@ -16,9 +16,12 @@
             transition-left-to-right = true; # transition from top to bottom
           };
           modules = [
-            "custom/power"
+            # "custom/power" # Group Leader
+            # TODO: Fix strange styling with drawer options
+
             # "custom/lock"
             "custom/reboot"
+            # "custom/quit"
           ];
         };
         "custom/power" = {
@@ -36,8 +39,13 @@
           tooltip = false;
           on-click = "reboot";
         };
+        "custom/quit" = {
+          format = "󰈆";
+          tooltip = false;
+          on-click = "hyprctl dispatch exit";
+        };
       };
-      # style = ''${builtins.readFile ./battery-group.css}'';
+      style = ''${builtins.readFile ./power-group.css}'';
     };
   };
 }
