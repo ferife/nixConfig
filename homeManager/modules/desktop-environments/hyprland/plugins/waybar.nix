@@ -20,8 +20,6 @@
           # mod = "dock";
 
           modules-left = [
-            # "symbols"
-            # "custom/weather"
             "hyprland/workspaces"
             "hyprland/window"
           ];
@@ -29,23 +27,20 @@
             "clock"
           ];
           modules-right = [
-            # "tray"
-            # "custom/language"
+            "idle_inhibitor"
             "group/battery-group"
-            # "backlight"
-            # "pulseaudio"
-            # "pulseaudio#microphone"
             "group/power-group"
           ];
         };
       };
 
       # TODO: Add weather to waybar
-      # TODO: Add power menu to waybar (power off, reboot, sleep)
+      # TODO: Add power menu to waybar (power off, reboot, sleep, log out)
       # TODO: Configure & style the workspaces, add a button to generate a workspace
       # TODO: Add a widget for the current status of my VPN
       # TODO: Add CPU usage, RAM usage, upload and download speed
       # TODO: Add general menu with the following options (use group module drawer function)
+      #   backlight (screen brightness)
       #   App launcher
       #   Keyboard state (caps lock)
       #   Volume control (PulseAudio slider)
