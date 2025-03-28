@@ -9,5 +9,6 @@
 
     ./battery-group.nix
     ./clock.nix
+    ./power-group.nix
   ];
 }

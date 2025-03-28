@@ -35,6 +35,7 @@
             # "backlight"
             # "pulseaudio"
             # "pulseaudio#microphone"
+            "group/power-group"
           ];
         };
       };
