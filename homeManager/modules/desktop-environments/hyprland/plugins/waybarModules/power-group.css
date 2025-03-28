@@ -2,13 +2,22 @@
   font-size: 16pt;
   background-color: @module-bg-color;
   border-radius: 1024pt;
-  /* padding-left: 0; */
-  /* padding-right: 10pt; */
+  padding: 0 10pt;
 }
-#power {
-  color: var(--base00);
+#custom-power,
+#custom-reboot,
+#custom-lock,
+#custom-quit {
+  font-size: 16pt;
+  border-radius: 100px;
+  margin-left: 1pt;
+  margin-bottom: 1pt;
+  margin-top: 3pt;
+  margin-right: 2pt;
 }
-/* #power-group > * { */
-/*   padding-left: 10pt; */
-/*   padding-right: 10pt; */
-/* } */
+#custom-power {
+  color: @base08;
+}
+#custom-reboot {
+  color: @base0D
+}
