@@ -34,6 +34,7 @@
         #   tooltip = false;
         #   on-click = ""; # TODO: Set up hyprlock
         # };
+        # TODO: sleep option
         "custom/reboot" = {
           format = "";
           tooltip = false;
