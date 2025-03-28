@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-
   config = lib.mkIf config.hm.fd {
     programs.fd = {
       enable = true;

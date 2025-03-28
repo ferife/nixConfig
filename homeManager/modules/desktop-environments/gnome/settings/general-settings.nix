@@ -21,6 +21,9 @@
       "org/gnome/mutter" = {
         dynamic-workspaces = true;
       };
+      "org/gnome/desktop/wm/preferences" = {
+        focus-mode = "mouse"; # Focus follows mouse
+      };
 
       "org/gnome/shell".disabled-extensions = [];
       # The line above makes it so that the list of disabled extensions is empty
