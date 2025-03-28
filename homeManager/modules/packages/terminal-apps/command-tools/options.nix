@@ -12,6 +12,7 @@
     cmatrix = mkEnableOption "cmatrix, a tool that just displays falling text like the Matrix";
     eza = mkEnableOption "eza, an improved version of the ls command with added features";
     fastfetch = mkEnableOption "fastfetch, a CLI system information tool that exists as an improved alternative to neofetch";
+    fd = mkEnableOption "fd, an improved version of the find command with added features";
     fzf = mkEnableOption "fzf, a tool for fuzzy searching on the terminal";
     git = mkEnableOption "git, the most widely used version control system";
     lsd = mkEnableOption "lsd, an improved version of the ls command with added features";

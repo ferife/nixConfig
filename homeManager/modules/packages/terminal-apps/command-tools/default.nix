@@ -14,6 +14,7 @@
     ./cmatrix.nix
     ./eza.nix
     ./fastfetch.nix
+    ./fd.nix
     ./fzf.nix
     ./git.nix
     ./lsd.nix
@@ -32,6 +33,7 @@
     cmatrix = lib.mkDefault true;
     eza = lib.mkDefault true;
     fastfetch = lib.mkDefault true;
+    fd = lib.mkDefault true;
     fzf = lib.mkDefault true;
     git = lib.mkDefault true;
     lsd = false;
