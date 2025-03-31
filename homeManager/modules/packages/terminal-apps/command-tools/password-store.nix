@@ -15,6 +15,9 @@
     # Some extra dependency stuff in nixos/modules/packages/cli-tools/password-store.nix
   };
 }
-# FIXME: password-store
 # TODO: Cancel ExpressVPN subscription
+# TODO: Set up pass with firefox extension and ios app
 
+# TODO: Also set up pass-otp (github:tadfisher/pass-otp)
+
+# The zbarimg is a command tool that can read images for QR codes and spit out the URLs they lead to
