@@ -8,7 +8,9 @@
 }: {
   config = lib.mkIf config.hm.floorp {
     # The names of firefox profiles should be added to the list below for stylix to fully work on them
-    stylix.targets.floorp.profileNames = ["perpetuallyWeary"];
+    stylix.targets.floorp = {
+      profileNames = ["perpetuallyWeary"];
+    };
 
     programs.floorp = {
       enable = true;
@@ -56,7 +58,7 @@
           }
           {
             name = "Nix sites";
-            # toolbar = true;
+            toolbar = true;
             bookmarks = [
               {
                 name = "NixOS Search";
@@ -93,10 +95,11 @@
                 }
               ];
 
-              # icon = "";
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
               definedAliases = ["@np"];
             };
           };
+          privateDefault = "DuckDuckGo";
         };
 
         extensions = with inputs.firefox-addons.packages."${systemSettings.system}"; [
