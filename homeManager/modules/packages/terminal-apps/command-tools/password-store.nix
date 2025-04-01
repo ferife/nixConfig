@@ -20,6 +20,10 @@
     #   qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
     #   imagemagick # Image file manipulation, used here to convert PNGs to GIF
     # ];
+
+    # Sync passwords whenever shell gets (re)initialized
+    programs.bash.initExtra = lib.mkIf (config.hm.bash) "pass git pull origin main";
+    programs.zsh.initExtra = lib.mkIf (config.hm.zsh) "pass git pull origin main";
   };
   # TODO: Cancel ExpressVPN subscription
   # TODO: Also set up pass-otp (github:tadfisher/pass-otp)
