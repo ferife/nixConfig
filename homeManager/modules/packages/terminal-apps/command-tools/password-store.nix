@@ -25,6 +25,8 @@
     programs.bash.initExtra = lib.mkIf (config.hm.bash) "pass git pull origin main";
     programs.zsh.initExtra = lib.mkIf (config.hm.zsh) "pass git pull origin main";
   };
+  # WARN: The latest commit on the password-store project repo was in December of 2023
+  # For the record, the latest commit on KeePassXC was 2 days ago as of 2025-04-01
   # WARN: Apparently GPG and pass use shitty, deprecated encryption methods (see the YT video on this by Spectra Secure)
   # TODO: Replace pass with KeePassXC AS SOON AS POSSIBLE
   # TODO: Cancel ExpressVPN subscription
