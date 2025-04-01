@@ -9,8 +9,6 @@
       enable = true;
     };
 
-    # Some extra dependency stuff in nixos/modules/packages/cli-tools/password-store.nix
-
     home.file.passff-host-workaround = {
       # WARN: This is a dirty workaround done until Home Manager maintainers fix the issue
       target = "${config.home.homeDirectory}/.mozilla/native-messaging-hosts/passff.json";
