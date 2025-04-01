@@ -18,7 +18,7 @@
     lsd = mkEnableOption "lsd, an improved version of the ls command with added features";
     neofetch = mkEnableOption "neofetch, a now-discontinued CLI system information tool";
     pandoc = mkEnableOption "pandoc, a CLI tool used to convert documents from one file type to another";
-    pass = mkEnableOption "password-store (AKA pass), a password storing solution";
+    pass = mkEnableOption "password-store (AKA pass), the official GNU password storing solution";
     starship = mkEnableOption "starship, a cross-shell prompt with a lot of customizability";
     tldr = mkEnableOption "tldr, a set of simplified and community-driven man pages";
     zoxide = mkEnableOption "zoxide, an improved version of the cd command with added features";

@@ -25,6 +25,8 @@
     programs.bash.initExtra = lib.mkIf (config.hm.bash) "pass git pull origin main";
     programs.zsh.initExtra = lib.mkIf (config.hm.zsh) "pass git pull origin main";
   };
+  # WARN: Apparently GPG and pass use shitty, deprecated encryption methods (see the YT video on this by Spectra Secure)
+  # TODO: Replace pass with KeePassXC AS SOON AS POSSIBLE
   # TODO: Cancel ExpressVPN subscription
   # TODO: Also set up pass-otp (github:tadfisher/pass-otp)
   # NOTE: To sync this with the iphone app, I need to set the URL for the git repo to `ssh://git@github.com/<username>/<repo name>.git`, set the branch name, set the username to `git`, and use the SSH key to log in
