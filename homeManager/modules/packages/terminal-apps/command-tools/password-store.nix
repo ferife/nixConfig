@@ -14,6 +14,12 @@
       target = "${config.home.homeDirectory}/.mozilla/native-messaging-hosts/passff.json";
       source = "${pkgs.passff-host}/share/passff-host/passff.json";
     };
+
+    # NOTE: The following packages are only really necessary for setting up password-store for ios and firefox. Once that's done, I don't need them anymore
+    home.packages = with pkgs; [
+      qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
+      imagemagick # Image file manipulation, used here to convert PNGs to GIF
+    ];
   };
   # TODO: Cancel ExpressVPN subscription
   # TODO: Set up pass with ios app
