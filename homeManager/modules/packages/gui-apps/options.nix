@@ -11,6 +11,7 @@
     firefox = mkEnableOption "Firefox";
     floorp = mkEnableOption "Floorp";
     gimp = mkEnableOption "GIMP";
+    keepassxc = mkEnableOption "KeePassXC, an offline password manager";
     libreoffice = mkEnableOption "LibreOffice";
     obsStudio = mkEnableOption "OBS Studio";
     obsidian = mkEnableOption "Obsidian.md";
