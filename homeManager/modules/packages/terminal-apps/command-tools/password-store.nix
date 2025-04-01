@@ -16,13 +16,12 @@
     };
 
     # NOTE: The following packages are only really necessary for setting up password-store for ios and firefox. Once that's done, I don't need them anymore
-    home.packages = with pkgs; [
-      qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
-      imagemagick # Image file manipulation, used here to convert PNGs to GIF
-    ];
+    # home.packages = with pkgs; [
+    #   qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
+    #   imagemagick # Image file manipulation, used here to convert PNGs to GIF
+    # ];
   };
   # TODO: Cancel ExpressVPN subscription
-  # TODO: Set up pass with ios app
   # TODO: Also set up pass-otp (github:tadfisher/pass-otp)
-  # The zbarimg is a command tool that can read images for QR codes and spit out the URLs they lead to
+  # NOTE: To sync this with the iphone app, I need to set the URL for the git repo to `ssh://git@github.com/<username>/<repo name>.git`, set the branch name, set the username to `git`, and use the SSH key to log in
 }
