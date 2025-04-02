@@ -15,11 +15,11 @@
       source = "${pkgs.passff-host}/share/passff-host/passff.json";
     };
 
-    # NOTE: The following packages are only really necessary for setting up password-store for ios and firefox. Once that's done, I don't need them anymore
-    # home.packages = with pkgs; [
-    #   qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
-    #   imagemagick # Image file manipulation, used here to convert PNGs to GIF
-    # ];
+    home.packages = with pkgs; [
+      # NOTE: The following packages are only really necessary for setting up password-store for ios and firefox. Once that's done, I don't need them anymore
+      # qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
+      # imagemagick # Image file manipulation, used here to convert PNGs to GIF
+    ];
 
     # Sync passwords whenever shell gets (re)initialized
     programs.bash.initExtra = lib.mkIf (config.hm.bash) "pass git pull origin main";
