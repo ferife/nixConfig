@@ -9,5 +9,5 @@
       keepassxc
     ];
   };
+  # TODO: Set up Keepassium app on phone
 }
-# TODO: Set up Keepassium app on phone
