@@ -44,15 +44,15 @@
     };
     programs.firefox.profiles.perpetuallyWeary.bookmarks = [
       {
-        name = "Doom Radio";
-        url = "https://www.youtube.com/watch?v=JEuAYnjtJP0";
-        keyword = "radio";
-        tags = ["Music"];
-      }
-      {
-        name = "Nix sites";
+        name = "Toolbar sites";
         toolbar = true;
         bookmarks = [
+          {
+            name = "Doom Radio";
+            url = "https://www.youtube.com/watch?v=JEuAYnjtJP0";
+            keyword = "radio";
+            tags = ["music"];
+          }
           {
             name = "NixOS Search";
             url = "https://search.nixos.org/packages";
@@ -61,6 +61,12 @@
           {
             name = "Home Manager Search";
             url = "https://home-manager-options.extranix.com";
+            tags = ["nix" "home manager" "search"];
+          }
+          {
+            name = "School Dashboard";
+            url = "https://utsa.instructure.com";
+            tags = ["school"];
           }
         ];
       }
@@ -153,5 +159,42 @@
         id = 8;
       };
     };
+    # programs.firefox.profiles.perpetuallyWeary.search = {
+    #   force = true;
+    #   default = "DuckDuckGo";
+    #   privateDefault = "DuckDuckGo";
+    #   engines = {
+    #     "Nix Packages" = {
+    #       urls = [
+    #         {
+    #           template = "https://search.nixos.org/packages";
+    #           params = [
+    #             {
+    #               name = "type";
+    #               value = "packages";
+    #             }
+    #             {
+    #               name = "query";
+    #               value = "{searchTerms}";
+    #             }
+    #           ];
+    #         }
+    #       ];
+
+    #       icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+    #       definedAliases = ["@np"];
+    #     };
+
+    #     "NixOS Wiki" = {
+    #       urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
+    #       iconUpdateURL = "https://wiki.nixos.org/favicon.png";
+    #       updateInterval = 24 * 60 * 60 * 1000;
+    #       definedAliases = ["@nw"];
+    #     };
+
+    #     "Bing".metaData.hidden = true;
+    #     "Google".metaData.alias = "@g";
+    #   };
+    # };
   };
 }
