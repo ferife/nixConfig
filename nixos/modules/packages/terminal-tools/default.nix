@@ -13,17 +13,19 @@
     ./git.nix
     ./neofetch.nix
     ./nh.nix
+    ./nixos-shell.nix
   ];
 
   config.nixos = {
-    distrobox = lib.mkDefault false;
+    distrobox = false;
     fastfetch = lib.mkDefault true;
     git = lib.mkDefault true;
-    neofetch = lib.mkDefault false;
+    neofetch = false;
     nh = {
       enable = lib.mkDefault true;
-      autoClean = lib.mkDefault false;
+      autoClean = false;
       shellAliases = lib.mkDefault true;
     };
+    # nixos-shell = lib.mkDefault true;
   };
 }

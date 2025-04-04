@@ -13,5 +13,6 @@
       autoClean = lib.mkEnableOption "periodic garbage collection with nh clean all";
       shellAliases = lib.mkEnableOption "shell aliases relating to nh";
     };
+    nixos-shell = lib.mkEnableOption "nixos-shell, a program made for creating NixOS virtual machines";
   };
 }
