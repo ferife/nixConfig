@@ -13,6 +13,7 @@
     ./firefox.nix
     ./floorp.nix
     ./gimp.nix
+    ./keepassxc.nix
     ./libreoffice.nix
     ./obsidian.nix
     ./obs-studio.nix
@@ -32,6 +33,7 @@
     firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
     floorp = lib.mkIf (userSettings.mainBrowser == "floorp") true;
     gimp = false;
+    keepassxc = lib.mkDefault true;
     libreoffice = lib.mkDefault true;
     obsStudio = false;
     obsidian = lib.mkDefault true;

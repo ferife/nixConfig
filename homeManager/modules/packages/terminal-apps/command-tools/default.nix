@@ -39,7 +39,7 @@
     lsd = false;
     neofetch = false;
     pandoc = false;
-    pass = lib.mkDefault true;
+    pass = false;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
     zoxide = lib.mkDefault true;
