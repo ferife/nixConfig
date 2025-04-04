@@ -9,6 +9,9 @@
   userSettings,
   ...
 }: {
+  # The only lines that are ABSOLUTELY necessary are the two lines regarding the bootloader and the one regarding the system state version
+  # The way I know this is that these are the only lines included in the minimal config of NixOS
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -42,10 +45,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
