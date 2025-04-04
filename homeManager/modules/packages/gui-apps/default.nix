@@ -11,6 +11,7 @@
     ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
+    ./firefoxOptions.nix
     ./floorp.nix
     ./gimp.nix
     ./keepassxc.nix
