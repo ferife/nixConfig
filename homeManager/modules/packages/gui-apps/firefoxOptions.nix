@@ -102,5 +102,56 @@
       umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
       # Made by the dev of uBlock Origin
     ];
+    programs.firefox.profiles.perpetuallyWeary.containersForce = true;
+    programs.firefox.profiles.perpetuallyWeary.containers = {
+      personal = {
+        name = "Personal";
+        color = "blue";
+        icon = "fingerprint";
+        id = 1;
+      };
+      school = {
+        name = "School";
+        color = "turquoise";
+        icon = "fruit";
+        id = 2;
+      };
+      work = {
+        name = "Work";
+        color = "orange";
+        icon = "briefcase";
+        id = 3;
+      };
+      banking = {
+        name = "Banking";
+        color = "green";
+        icon = "dollar";
+        id = 4;
+      };
+      shopping = {
+        name = "Shopping";
+        color = "pink";
+        icon = "cart";
+        id = 5;
+      };
+      private = {
+        name = "Private";
+        color = "purple";
+        icon = "chill";
+        id = 6;
+      };
+      gaming = {
+        name = "Gaming";
+        color = "red";
+        icon = "gift";
+        id = 7;
+      };
+      facebook = {
+        name = "Facebook";
+        color = "toolbar";
+        icon = "fence";
+        id = 8;
+      };
+    };
   };
 }
