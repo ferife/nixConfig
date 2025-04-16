@@ -105,7 +105,7 @@
       sponsorblock
       temporary-containers # Open tabs in auto managed disposable containers
       ublock-origin
-      umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
+      # umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
       # Made by the dev of uBlock Origin
     ];
     programs.firefox.profiles.perpetuallyWeary.containersForce = true;
@@ -141,8 +141,8 @@
         id = 5;
       };
       private = {
-        name = "Private";
-        color = "purple";
+        name = "Streaming Services";
+        color = "yellow";
         icon = "chill";
         id = 6;
       };
