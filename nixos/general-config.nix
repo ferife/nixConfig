@@ -114,5 +114,4 @@
   nixos.fastfetch = lib.mkForce true;
   nixos.homeManager = lib.mkForce true;
   nixos.nh.enable = lib.mkForce true;
-  # Once I become comfortable with NeoVim, I will replace vsCodeModule.enable with neovimModule.enable
 }

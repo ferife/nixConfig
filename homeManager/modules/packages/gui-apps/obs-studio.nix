@@ -9,6 +9,5 @@
       obs-studio
     ];
   };
+  # TODO: Switch to programs.obs-studio.enable
 }
-# TODO: Switch to programs.obs-studio.enable
-

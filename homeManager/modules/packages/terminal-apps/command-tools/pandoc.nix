@@ -14,7 +14,6 @@
       enable = true;
     };
   };
+  # FIXME: Figure out how to use texlive to install pdflatex, a dependency of pandoc
+  # pdflatex is not available by itself in nixpkgs, which is why I need to figure out how to use texlive for this instead
 }
-# FIXME: Figure out how to use texlive to install pdflatex, a dependency of pandoc
-# pdflatex is not available by itself in nixpkgs, which is why I need to figure out how to use texlive for this instead
-

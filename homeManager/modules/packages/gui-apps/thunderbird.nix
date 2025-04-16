@@ -14,6 +14,5 @@
       thunderbird
     ];
   };
+  # TODO: Switch to programs.thunderbird.enable
 }
-# TODO: Switch to programs.thunderbird.enable
-

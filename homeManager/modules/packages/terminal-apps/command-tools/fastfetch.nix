@@ -26,6 +26,5 @@
       programs.zsh.initExtra = "fastfetch";
     })
   ];
+  # TODO: Look into fastfetch configuration settings
 }
-# TODO: Look into fastfetch configuration settings
-

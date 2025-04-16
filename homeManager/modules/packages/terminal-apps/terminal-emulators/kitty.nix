@@ -14,7 +14,6 @@
       (lib.mkIf config.hm.zsh {shellIntegration.enableZshIntegration = true;})
     ];
   };
+  # TODO: Customize font
+  # To search through command history in the terminal using stylix, simply use CTRL+R
 }
-# TODO: Customize font
-# To search through command history in the terminal using stylix, simply use CTRL+R
-
