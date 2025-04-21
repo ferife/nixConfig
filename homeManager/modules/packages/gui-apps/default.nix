@@ -39,7 +39,7 @@
     obsStudio = false;
     obsidian = lib.mkDefault true;
     qbittorrent = false;
-    thunderbird = lib.mkDefault true;
+    thunderbird = false;
     torBrowser = lib.mkDefault true;
     vlc = lib.mkDefault true;
     vsCode = false;
