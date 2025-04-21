@@ -23,6 +23,7 @@
     ./password-store.nix
     ./starship.nix
     ./tldr.nix
+    ./zellij.nix
     ./zoxide.nix
   ];
 
@@ -42,6 +43,7 @@
     pass = false;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
+    zellij = lib.mkDefault true;
     zoxide = lib.mkDefault true;
   };
   # TODO: Install Manix CLI docs searcher for nix
