@@ -25,7 +25,7 @@
     ./vs-code.nix
   ];
 
-  # TODO: Install a basic calculator app
+  # TODO: Install a basic calculator app (just install gnome-calculator separately from GNOME)
   # TODO: Install CAVA (the audio visualizer I see a lot on r/unixporn)
 
   hm = {
