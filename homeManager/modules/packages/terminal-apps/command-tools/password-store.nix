@@ -15,12 +15,12 @@
       source = "${pkgs.passff-host}/share/passff-host/passff.json";
     };
 
-    home.packages = with pkgs; [
-      # NOTE: The following packages are only really necessary for setting up password-store for ios and firefox. Once that's done, I don't need them anymore
+    # home.packages = with pkgs; [
+    #   # NOTE: The following packages are only really necessary for setting up password-store for ios and firefox. Once that's done, I don't need them anymore
 
-      # qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
-      # imagemagick # Image file manipulation, used here to convert PNGs to GIF
-    ];
+    #   # qrencode # Library for encoding data into a QR code, used to transfer public & private keys safely
+    #   # imagemagick # Image file manipulation, used here to convert PNGs to GIF
+    # ];
 
     # Sync passwords whenever shell gets (re)initialized
     programs.bash.initExtra = lib.mkIf (config.hm.bash) "pass git pull origin main";
@@ -29,7 +29,6 @@
   # WARN: The latest commit on the password-store project repo was in December of 2023
   # For the record, the latest commit on KeePassXC was 2 days ago as of 2025-04-01
   # WARN: Apparently GPG and pass use shitty, deprecated encryption methods (see the YT video on this by Spectra Secure)
-  # TODO: Cancel ExpressVPN subscription
-  # TODO: Also set up pass-otp (github:tadfisher/pass-otp)
   # NOTE: To sync this with the iphone app, I need to set the URL for the git repo to `ssh://git@github.com/<username>/<repo name>.git`, set the branch name, set the username to `git`, and use the SSH key to log in
+  # TO-DO: Also set up pass-otp (github:tadfisher/pass-otp)
 }
