@@ -21,7 +21,6 @@
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
-  # TODO: Figure out how to switch from GNOME to Hyprland
   # TODO: Look into NixOS overlays
 
   outputs = {

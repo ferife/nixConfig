@@ -9,5 +9,5 @@
     ./gui-apps
     ./terminal-tools
   ];
-  # TODO: Set up a VM tool such as QEMU and use it to test switching to Hyprland
+  # TODO: Set up QEMU and use it to test switching to Hyprland
 }
