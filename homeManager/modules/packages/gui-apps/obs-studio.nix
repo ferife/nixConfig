@@ -5,9 +5,8 @@
   ...
 }: {
   config = lib.mkIf config.hm.obsStudio {
-    home.packages = with pkgs; [
-      obs-studio
-    ];
+    programs.obs-studio = {
+      enable = true;
+    };
   };
-  # TODO: Switch to programs.obs-studio.enable
 }
