@@ -21,6 +21,7 @@
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
+  # TODO: Look into the disko tool for disk paritioning. Could I use it to install multiple OS's into a single disk device?
   # TODO: Look into NixOS overlays
 
   outputs = {
