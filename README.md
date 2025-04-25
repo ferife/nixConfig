@@ -63,3 +63,4 @@ This keeps native NixOS options from appearing in my docs, so it will be only my
 Use [this website](https://nlewo.github.io/nixos-manual-sphinx/development/option-types.xml.html#sec-option-types) to look at option types
 Use [this website](https://wiki.nixos.org/wiki/NixOS_modules) to get a quick idea of how to write options
 [This website](https://github.com/nix-community/awesome-nix?tab=readme-ov-file) has a large list of Nix-related resources
+[This website](https://heywoodlh.io/nixos-gnome-settings-and-keyboard-shortcuts) has tips for modifying GNOME settings within Nix
