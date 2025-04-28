@@ -16,5 +16,6 @@
   config.nixos = {
     autoUpgradeOption = lib.mkDefault false;
     autoStorageCleanupOption = lib.mkDefault false;
+    # lowPowerOptions = true;
   };
 }
