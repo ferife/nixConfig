@@ -1,3 +1,6 @@
+# These are the minimal required settings to have a bootable computer
+# This computer will not have any desktop environment installed, and the tools installed will be the minimum required for a user to make use of it
+# This is what will exist if the minimal config is installed from https://nixos.org
 {
   config,
   lib,
