@@ -96,6 +96,9 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Enable software for updating firmware
+  services.fwupd.enable = true;
+
   # The following installs documentation for all existing nixos options
   documentation.man.enable = true;
   documentation.doc.enable = true;
