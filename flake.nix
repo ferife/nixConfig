@@ -18,6 +18,7 @@
     nixvim-config = {
       url = "github:ferife/nvimConfig";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
@@ -30,6 +31,7 @@
     nixpkgs-unstable,
     home-manager,
     stylix,
+    nixos-hardware,
     ...
   } @ inputs: let
     userSettings = {
@@ -78,6 +80,7 @@
         modules = [
           (./. + "/nixos/hosts/${systemSettings.hostname1}/configuration.nix")
           stylix.nixosModules.stylix
+          nixos-hardware.nixosModules.framework-11th-gen-intel
         ];
       };
       device2 = nixpkgs.lib.nixosSystem {
