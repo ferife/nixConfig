@@ -7,10 +7,12 @@
   config = lib.mkIf config.hm.lazygit {
     programs.lazygit = {
       enable = true;
+      settings = {
+        os.editPreset = "nvim";
+      };
     };
     home.shellAliases = {
       "lg" = "lazygit";
-      "lazy" = "lazygit";
     };
   };
   # NOTE: To undo commits in lazygit and put their changes back in the working tree, do the following:
