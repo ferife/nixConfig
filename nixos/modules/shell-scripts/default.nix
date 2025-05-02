@@ -11,6 +11,6 @@
   ];
 
   config.nixos.scripts = {
-    gas = lib.mkDefault true;
+    gas = false;
   };
 }

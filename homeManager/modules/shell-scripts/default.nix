@@ -8,11 +8,10 @@
   imports = [
     ./options.nix
 
-    # ./gas.nix
+    ./gas.nix
   ];
 
-  # hm = {
-  #   gnomeTerminal = lib.mkIf (userSettings.terminal == "gnome terminal") true;
-  #   kitty = lib.mkIf (userSettings.terminal == "kitty") true;
-  # };
+  config.hm.scripts = {
+    gas = lib.mkDefault true;
+  };
 }

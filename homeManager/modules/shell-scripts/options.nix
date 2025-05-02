@@ -5,8 +5,7 @@
   pkgs-unstable,
   ...
 }: {
-  # options.hm = with lib; {
-  #   kitty = mkEnableOption "Kitty, a terminal emulator that takes advantage of the GPU, can display images, and adds great customization";
-  #   gnomeTerminal = mkEnableOption "the GNOME terminal emulator, which comes installed by default with the GNOME desktop environment";
-  # };
+  options.hm.scripts = {
+    gas = lib.mkEnableOption "gas, a shell script designed to make the process of updating my config simple";
+  };
 }
