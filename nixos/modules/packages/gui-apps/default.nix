@@ -9,7 +9,7 @@
 
     ./gaming
     ./android-studio.nix
-    ./mullvad-vpn.nix
+    ./mullvad.nix
     ./vlc.nix
   ];
 
