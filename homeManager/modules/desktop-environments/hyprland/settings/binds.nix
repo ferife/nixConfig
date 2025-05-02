@@ -48,7 +48,10 @@
         bindd = ["$mainMod, A, Open the app launcher, exec, wofi --show drun --allow-images"];
       })
       (lib.mkIf config.hm.obsidian {
-        bindd = ["$mainMod, O, Open a browser window, exec, obsidian"];
+        bindd = ["$mainMod, O, Open Obsidian, exec, obsidian"];
+      })
+      (lib.mkIf config.hm.keepassxc {
+        bindd = ["$mainMod, P, Open the password manager, exec, keepassxc"];
       })
     ];
   };
