@@ -13,5 +13,6 @@
 
   config.hm.scripts = {
     gas = lib.mkDefault true;
+    test = true;
   };
 }
