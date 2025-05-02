@@ -8,5 +8,7 @@
     ./appearance
     ./desktop-environments
     ./packages
+
+    ./hm-general-settings.nix
   ];
 }
