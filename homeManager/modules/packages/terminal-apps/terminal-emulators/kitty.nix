@@ -2,12 +2,13 @@
   config,
   lib,
   pkgs,
+  userSettings,
   ...
 }: {
   config = lib.mkMerge [
     (lib.mkIf config.hm.kitty {programs.kitty.enable = true;})
 
-    (lib.mkIf (config.hm.stylix.theme == "onedark") {
+    (lib.mkIf (userSettings.colorscheme == "onedark") {
       stylix.targets.kitty.enable = false;
       programs.kitty.themeFile = "OneDark";
     })
