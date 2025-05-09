@@ -10,5 +10,7 @@
     ./hyprland.nix
   ];
 
-  nixos.hyprland.enable = lib.mkDefault true;
+  # TODO: Set up all F-key functions
+
+  config.nixos.hyprland.enable = lib.mkDefault true;
 }

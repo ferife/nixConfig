@@ -21,6 +21,12 @@
       url = "github:ferife/nvimConfig";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
