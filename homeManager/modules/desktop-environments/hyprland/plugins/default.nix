@@ -16,7 +16,10 @@
   config.hm.hyprland = {
     eww = lib.mkDefault config.hm.hyprland.enable;
     hypridle = lib.mkDefault config.hm.hyprland.enable;
-    waybar = lib.mkDefault config.hm.hyprland.enable;
+    # waybar = lib.mkDefault config.hm.hyprland.enable;
+    # TEST
+    waybar = false;
+
     wofi = lib.mkDefault config.hm.hyprland.enable;
   };
 }
