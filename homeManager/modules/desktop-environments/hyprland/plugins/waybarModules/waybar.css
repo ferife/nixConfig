@@ -1,0 +1,6 @@
+* {
+  font-size: 12pt;
+}
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.0);
+}

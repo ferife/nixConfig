@@ -9,7 +9,6 @@
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Format for a bindd with questions:
       # "MODS, key, description, dispatcher, params"
-      # TODO: make the specific terminal and browser depend on userSettings
       {
         bindd = [
           "$mainMod, q, Close the current window, killactive"
