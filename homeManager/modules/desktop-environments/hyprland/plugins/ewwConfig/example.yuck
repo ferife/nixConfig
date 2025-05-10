@@ -9,8 +9,8 @@
            :stacking "fg"
            :exclusive true ; This allows the window manager to move other windows aside to make space for this
            :reserve (struts :distance "40px" :side "top")
-           :windowtype "dock"
-           :wm-ignore false
+           ; :windowtype "dock"
+           ; :wm-ignore false
   (greeter :text "Say hello!"
            :name "Tim"))
 
