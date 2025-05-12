@@ -27,6 +27,19 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    # Hardware optimizations for gaming
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    # AGS/Astal Widgets
+    astal = {
+      url = "github:aylur/astal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ags = {
+      url = "github:aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
@@ -40,6 +53,8 @@
     home-manager,
     stylix,
     nixos-hardware,
+    astal,
+    ags,
     ...
   } @ inputs: let
     userSettings = {
