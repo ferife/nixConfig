@@ -11,10 +11,10 @@
     };
     stylix.url = "github:danth/stylix/release-24.11";
 
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # firefox-addons = {
+    #   url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nixvim-config = {
       url = "github:ferife/nvimConfig";
     };
