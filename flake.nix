@@ -51,7 +51,7 @@
       timezone = "America/Chicago";
       locale = "en_US.UTF-8";
       nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig/";
-      flakePath = "${nixConfigPath}/nixConfig-shell-scripts";
+      flakePath = "${nixConfigPath}/nixConfig-main";
     };
 
     pkgs = import nixpkgs {
