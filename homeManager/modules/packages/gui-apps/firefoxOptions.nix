@@ -71,43 +71,47 @@
         ];
       }
     ];
-    programs.firefox.profiles.perpetuallyWeary.extensions = with inputs.firefox-addons.packages."${systemSettings.system}"; [
-      # 600% Sound Volume
+    # programs.firefox.profiles.perpetuallyWeary.extensions = with inputs.firefox-addons.packages."${systemSettings.system}"; [
+    #   # 600% Sound Volume
 
-      canvasblocker # Alters some JS APIs to prevent fingerprinting
-      clearurls # Remove tracking elements from URLs
-      # cookie-autodelete # When a tab closes, any cookies not being used are automatically deleted
-      # # Keep the ones you trust (forever/until restart) while deleting the rest. Containers Supported
+    #   canvasblocker # Alters some JS APIs to prevent fingerprinting
+    #   clearurls # Remove tracking elements from URLs
+    #   # cookie-autodelete # When a tab closes, any cookies not being used are automatically deleted
+    #   # # Keep the ones you trust (forever/until restart) while deleting the rest. Containers Supported
 
-      # Cookie Clicker Mod Manager
+    #   # Cookie Clicker Mod Manager
 
-      decentraleyes # Protects against tracking through centralized content delivery platforms like Google
+    #   decentraleyes # Protects against tracking through centralized content delivery platforms like Google
 
-      # EPUBReader
+    #   facebook-container # Extension by Mozilla that isolates facebook activity for the sake of privacy
 
-      facebook-container # Extension by Mozilla that isolates facebook activity for the sake of privacy
-      gnome-shell-integration
+    #   # Forest pomodoro timer
 
-      # Mullvad Browser Extension
+    #   gnome-shell-integration # TODO: Make it so that this extension is only enabled if GNOME is installed
 
-      multi-account-containers # Extension by Mozilla that separates website log-ins and tabs into color-coded containers
-      omnivore
+    #   # KeePassXC browser extension
 
-      # onetab
+    #   # Mullvad Browser Extension # Installed directly through mullvad.net
 
-      privacy-badger # Blocks invisible trackers
-      protondb-for-steam
-      # react-devtools
-      read-aloud # TTS
-      # reduxdevtools # Dev tools for React Redux
-      return-youtube-dislikes
-      shinigami-eyes # Highlights transphobic vs trans-friendly stuff online
-      sponsorblock
-      temporary-containers # Open tabs in auto managed disposable containers
-      ublock-origin
-      # umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
-      # Made by the dev of uBlock Origin
-    ];
+    #   multi-account-containers # Extension by Mozilla that separates website log-ins and tabs into color-coded containers
+    #   omnivore
+
+    #   # onetab
+
+    #   privacy-badger # Blocks invisible trackers
+    #   protondb-for-steam
+    #   # react-devtools
+    #   read-aloud # TTS
+    #   # reduxdevtools # Dev tools for React Redux
+    #   shinigami-eyes # Highlights transphobic vs trans-friendly stuff online
+    #   sponsorblock
+    #   temporary-containers # Open tabs in auto managed disposable containers
+    #   ublock-origin
+    #   # umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
+    #   # Made by the dev of uBlock Origin
+    #   #
+    #   # TODO: Look into installing the vimium plugin, to use vim-like keybinds within the browser
+    # ];
     programs.firefox.profiles.perpetuallyWeary.containersForce = true;
     programs.firefox.profiles.perpetuallyWeary.containers = {
       personal = {
