@@ -1,5 +1,10 @@
-{ config, lib, pkgs, inputs, ... }:
-let
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: let
   # startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
   #   ${pkgs.waybar}/bin/waybar &
   # '';
@@ -9,7 +14,6 @@ in {
   };
 
   config = lib.mkIf config.hyprland.generalSettings.enable {
-
     home.sessionVariables.NIXOS_OZONE_WL = "1";
     # hint Electron apps to use Wayland
 
@@ -22,7 +26,6 @@ in {
       # ];
 
       settings = {
-
         "plugin:borders-plus-plus" = {
           add_borders = 1;
 
