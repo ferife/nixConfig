@@ -115,6 +115,9 @@
     #   shinigami-eyes # Highlights transphobic vs trans-friendly stuff online
     #   sponsorblock
     #   temporary-containers # Open tabs in auto managed disposable containers
+
+    #   # Tree-Style Tabs
+
     #   ublock-origin
     #   # umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
     #   # Made by the dev of uBlock Origin
