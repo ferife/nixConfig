@@ -20,7 +20,6 @@
     nixvim-config = {
       url = "github:ferife/nvimConfig";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
