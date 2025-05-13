@@ -10,5 +10,5 @@
     ./hyprland.nix
   ];
 
-  nixos.hyprland.enable = lib.mkDefault true;
+  config.nixos.hyprland.enable = lib.mkDefault true;
 }
