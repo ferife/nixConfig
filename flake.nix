@@ -28,9 +28,6 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    # Hardware optimizations for gaming
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-
     # AGS/Astal Widgets
     astal = {
       url = "github:aylur/astal";
