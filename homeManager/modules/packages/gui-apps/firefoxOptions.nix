@@ -35,7 +35,16 @@
       ExtensionSettings = {};
     };
 
+    # programs.firefox.profiles.testProfile = {
+    #   name = "Test Profile";
+    #   id = 1;
+    #   isDefault = false;
+    #   search = {
+    #     default = "DuckDuckGo";
+    #   };
+    # };
     programs.firefox.profiles.perpetuallyWeary.name = "Perpetually Weary";
+    programs.firefox.profiles.perpetuallyWeary.id = 0;
     programs.firefox.profiles.perpetuallyWeary.isDefault = true;
     programs.firefox.profiles.perpetuallyWeary.settings = {
       # To view all possible settings, go to firefox and type "about:config"
