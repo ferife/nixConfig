@@ -11,7 +11,8 @@
     ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
-    ./firefoxOptions.nix
+    ./firefox-options-stable.nix
+    # ./firefox-options-unstable.nix
     ./floorp.nix
     ./gimp.nix
     ./keepassxc.nix
@@ -35,7 +36,7 @@
     floorp = lib.mkIf (userSettings.mainBrowser == "floorp") true;
     gimp = false;
     keepassxc = lib.mkDefault true;
-    libreoffice = lib.mkDefault true;
+    libreoffice = false;
     obsStudio = false;
     obsidian = lib.mkDefault true;
     qbittorrent = false;
