@@ -11,8 +11,8 @@
     ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
-    ./firefox-options-stable.nix
-    # ./firefox-options-unstable.nix
+    # ./firefox-options-stable.nix
+    ./firefox-options-unstable.nix
     ./floorp.nix
     ./gimp.nix
     ./keepassxc.nix
