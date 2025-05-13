@@ -3,18 +3,20 @@
   # Shown in the CLI by the `nix flake metadata` command
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11"; # Stable
+    # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; # Unstable
+
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+
     home-manager = {
-      url = "github:nix-community/home-manager?ref=release-24.11";
+      url = "github:nix-community/home-manager?ref=release-24.11"; # Stable
+      # url = "github:nix-community/home-manager"; # Unstable
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix/release-24.11";
 
-    # firefox-addons = {
-    #   url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    stylix.url = "github:danth/stylix/release-24.11"; # Stable
+    # stylix.url = "github:danth/stylix"; # Unstable
+
     nixvim-config = {
       url = "github:ferife/nvimConfig";
     };
@@ -52,6 +54,7 @@
       locale = "en_US.UTF-8";
       nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig/";
       flakePath = "${nixConfigPath}/nixConfig-main";
+      nixpkgs = "stable"; # Options: unstable, stable
     };
 
     pkgs = import nixpkgs {
