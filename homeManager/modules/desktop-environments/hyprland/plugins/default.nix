@@ -7,7 +7,7 @@
   imports = [
     ./options.nix
 
-    ./astal-ags.nix
+    ./astal.nix
     ./hypridle.nix
     ./waybar.nix
     ./wofi.nix
