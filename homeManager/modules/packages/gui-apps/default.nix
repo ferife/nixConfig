@@ -36,7 +36,7 @@
     floorp = lib.mkIf (userSettings.mainBrowser == "floorp") true;
     gimp = false;
     keepassxc = lib.mkDefault true;
-    libreoffice = false;
+    libreoffice = lib.mkDefault true;
     obsStudio = false;
     obsidian = lib.mkDefault true;
     qbittorrent = false;
