@@ -10,210 +10,230 @@
     # The names of firefox profiles should be added to the list below for stylix to fully work on them
     stylix.targets.firefox.profileNames = ["perpetuallyWeary"];
 
-    # programs.firefox.enableGnomeExtensions = true;
-    programs.firefox.nativeMessagingHosts = with pkgs; [gnome-browser-connector]; # Allows the GNOME shell and its extensions to interact with Firefox
-    programs.firefox.policies = {
-      # To view all possible policies, go to Firefox and type about:policies#documentation
+    hm.ff-config = {
+      enable = true;
+      # enableGnomeExtensions = true;
+      nativeMessagingHosts = with pkgs; [gnome-browser-connector]; # Allows the GNOME shell and its extensions to interact with Firefox
 
-      CaptivePortal = false; # Enable/Disable captie portal support
-      DisableFirefoxAccounts = true; # Disables account-based services, including sync
-      DisableAccounts = true; # Same as above
-      DisableFirefoxStudies = true; # Prevent Firefox from running studies
-      DisableFormHistory = true; # Don't remember search and form history
-      DisablePocket = true; # Disable the feature to save webpages to pockets
-      DisableTelemetry = true;
-      EnableTrackingProtection = {
-        Value = true;
-        Locked = true;
-        Cryptomining = true;
-        Fingerprinting = true;
-        EmailTracking = true;
+      policies = {
+        # To view all possible policies, go to Firefox and type about:policies#documentation
+
+        CaptivePortal = false; # Enable/Disable captie portal support
+        DisableFirefoxAccounts = true; # Disables account-based services, including sync
+        DisableAccounts = true; # Same as above
+        DisableFirefoxStudies = true; # Prevent Firefox from running studies
+        DisableFormHistory = true; # Don't remember search and form history
+        DisablePocket = true; # Disable the feature to save webpages to pockets
+        DisableTelemetry = true;
+        EnableTrackingProtection = {
+          Value = true;
+          Locked = true;
+          Cryptomining = true;
+          Fingerprinting = true;
+          EmailTracking = true;
+        };
+        DNSOverHTTPS = {Enabled = false;};
+        NetworkPrediction = false; # Enable/Disable network prediction (DNS prefetching)
+        Permissions = {Autoplay = {Default = "block-audio-video";};};
+        ExtensionSettings = {};
       };
-      DNSOverHTTPS = {Enabled = false;};
-      NetworkPrediction = false; # Enable/Disable network prediction (DNS prefetching)
-      Permissions = {Autoplay = {Default = "block-audio-video";};};
-      ExtensionSettings = {};
-    };
 
-    # programs.firefox.profiles.testProfile = {
-    #   name = "Test Profile";
-    #   id = 1;
-    #   isDefault = false;
-    #   search = {
-    #     default = "ddg";
-    #   };
-    # };
-    programs.firefox.profiles.perpetuallyWeary.name = "Perpetually Weary";
-    programs.firefox.profiles.perpetuallyWeary.id = 0;
-    programs.firefox.profiles.perpetuallyWeary.isDefault = true;
-    programs.firefox.profiles.perpetuallyWeary.settings = {
-      # To view all possible settings, go to firefox and type "about:config"
-      browser.fixup.fallback-to-https = true;
-      browser.newtabpage.activity-stream.showSponsoredTopSites = false;
-    };
-    programs.firefox.profiles.perpetuallyWeary.bookmarks = {
-      force = true;
-      settings = [
-        {
-          name = "Toolbar sites";
-          toolbar = true;
-          bookmarks = [
+      profiles.perpetuallyWeary = {
+        id = 0;
+        name = "Perpetually Weary";
+        isDefault = true;
+
+        # Settings
+        settings = {
+          # To view all possible settings, go to firefox and type "about:config"
+          browser.fixup.fallback-to-https = true;
+          browser.newtabpage.activity-stream.showSponsoredTopSites = false;
+        };
+
+        # Bookmarks
+        bookmarks = {
+          force = true;
+          settings = [
             {
-              name = "Doom Radio";
-              url = "https://www.youtube.com/watch?v=JEuAYnjtJP0";
-              keyword = "radio";
-              tags = ["music"];
-            }
-            {
-              name = "NixOS Search";
-              url = "https://search.nixos.org/packages";
-              tags = ["nix" "search"];
-            }
-            {
-              name = "Home Manager Search";
-              url = "https://home-manager-options.extranix.com";
-              tags = ["nix" "home manager" "search"];
-            }
-            {
-              name = "School Dashboard";
-              url = "https://utsa.instructure.com";
-              tags = ["school"];
+              name = "Toolbar sites";
+              toolbar = true;
+              bookmarks = [
+                {
+                  name = "Doom Radio";
+                  url = "https://www.youtube.com/watch?v=JEuAYnjtJP0";
+                  keyword = "radio";
+                  tags = ["music"];
+                }
+                {
+                  name = "NixOS Search";
+                  url = "https://search.nixos.org/packages";
+                  tags = ["nix" "search"];
+                }
+                {
+                  name = "Home Manager Search";
+                  url = "https://home-manager-options.extranix.com";
+                  tags = ["nix" "home manager" "search"];
+                }
+                {
+                  name = "School Dashboard";
+                  url = "https://utsa.instructure.com";
+                  tags = ["school"];
+                }
+              ];
             }
           ];
-        }
-      ];
+        };
+
+        # Containers
+        containersForce = true;
+        containers = {
+          personal = {
+            id = 1;
+            name = "Personal";
+            color = "blue";
+            icon = "fingerprint";
+          };
+          school = {
+            id = 2;
+            name = "School";
+            color = "turquoise";
+            icon = "fruit";
+          };
+          work = {
+            id = 3;
+            name = "Work";
+            color = "orange";
+            icon = "briefcase";
+          };
+          banking = {
+            id = 4;
+            name = "Banking";
+            color = "green";
+            icon = "dollar";
+          };
+          shopping = {
+            id = 5;
+            name = "Shopping";
+            color = "pink";
+            icon = "cart";
+          };
+          private = {
+            id = 6;
+            name = "Streaming Services";
+            color = "yellow";
+            icon = "chill";
+          };
+          gaming = {
+            id = 7;
+            name = "Gaming";
+            color = "red";
+            icon = "gift";
+          };
+          facebook = {
+            id = 8;
+            name = "Facebook";
+            color = "toolbar";
+            icon = "fence";
+          };
+        };
+
+        # Search
+        search = {
+          force = true;
+          default = "ddg";
+          privateDefault = "ddg";
+          engines = {
+            "Nix Packages" = {
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = ["@np"];
+            };
+            "NixOS Wiki" = {
+              urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
+              icon = "https://wiki.nixos.org/favicon.png";
+              updateInterval = 24 * 60 * 60 * 1000;
+              definedAliases = ["@nw"];
+            };
+            "bing".metaData.hidden = true;
+            "google".metaData.alias = "@g";
+          };
+        };
+
+        # Extensions
+        # extensions = [
+        #   600% Sound Volume
+        #   Canvas Blocker
+        #   Clear URLs
+        #   Cookie Autodelete
+        #   Cookie Clicker Mod Manager
+        #   DeArrow (crowdsourced un-clickbaited YT thumbnails and titles)
+        #   Decentraleyes
+        #   Facebook Container
+        #   Firefox Multi-Account Containers
+        #   Forest Pomodoro Timer
+        #   Gnome Shell Integration
+        #   KeePassXC Browser Extension
+        #   Mullvad Browser Extension (installed directly through mullvad.net)
+        #   Omnivore
+        #   Privacy Badger
+        #   ProtonDB for Steam
+        #   React Developer Tools
+        #   Read Allowed (TTS)
+        #   Redux Dev Tools (Used for React Redux)
+        #   Search by Image
+        #   Shinigami Eyes
+        #   Sponsorblock
+        #   Temporary Containers
+        #   Tree-Style Tabs
+        #   uBlock Origin
+        #   uMatrix (point-and-click based firewall made by the dev of uBlock Origin)
+        #   Unhook (hide annoying stuff on youtube)
+        #   Vimium
+        # ];
+        #
+        # Settings
+        #
+        # Enable sleeping tabs - Tabs will slep after being inactive for [30] minutes
+        # Play DRM-controlled content
+        # Always underline links
+        # Multi-Row Tab Bar
+        # Display tab bar underneath the Toolbar
+        # Browser Manager Sidebar
+        #   Browser Manager
+        #   Bookmarks
+        #   History
+        #   Downloads
+        #   Notes
+        #   proton mail inbox (open in personal container)
+        #   github:ferife/nixConfig (open in personal container)
+        #   docs.floorp.app (open in personal container)
+        #   Tree Style Tab
+        # Manage workspace on Browser Manager Sidebar
+        # Firefox Home Content
+        #   Shortcuts - (2 rows)
+        #     Sponsored shortcuts (off)
+        #   Recent Activity - (1 row)
+        # Default Search Engine - DuckDuckGo (use this search engine in private windows)
+        # Tell websites not to sell or share my data
+        # Send websites a "Do Not Track" request
+        # (Turn off all password options)
+        # (Turn off all autofill options)
+        # Turn on auto update for extensions
+      };
     };
-    # programs.firefox.profiles.perpetuallyWeary.extensions = with inputs.firefox-addons.packages."${systemSettings.system}"; [
-    #   # 600% Sound Volume
-
-    #   canvasblocker # Alters some JS APIs to prevent fingerprinting
-    #   clearurls # Remove tracking elements from URLs
-    #   # cookie-autodelete # When a tab closes, any cookies not being used are automatically deleted
-    #   # # Keep the ones you trust (forever/until restart) while deleting the rest. Containers Supported
-
-    #   # Cookie Clicker Mod Manager
-
-    #   decentraleyes # Protects against tracking through centralized content delivery platforms like Google
-
-    #   facebook-container # Extension by Mozilla that isolates facebook activity for the sake of privacy
-
-    #   # Forest pomodoro timer
-
-    #   gnome-shell-integration # TODO: Make it so that this extension is only enabled if GNOME is installed
-
-    #   # KeePassXC browser extension
-
-    #   # Mullvad Browser Extension # Installed directly through mullvad.net
-
-    #   multi-account-containers # Extension by Mozilla that separates website log-ins and tabs into color-coded containers
-    #   omnivore
-
-    #   # onetab
-
-    #   privacy-badger # Blocks invisible trackers
-    #   protondb-for-steam
-    #   # react-devtools
-    #   read-aloud # TTS
-    #   # reduxdevtools # Dev tools for React Redux
-    #   shinigami-eyes # Highlights transphobic vs trans-friendly stuff online
-    #   sponsorblock
-    #   temporary-containers # Open tabs in auto managed disposable containers
-
-    #   # Tree-Style Tabs
-
-    #   ublock-origin
-    #   # umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
-    #   # Made by the dev of uBlock Origin
-    #   #
-    #   # TODO: Look into installing the vimium plugin, to use vim-like keybinds within the browser
-    # ];
-    programs.firefox.profiles.perpetuallyWeary.containersForce = true;
-    programs.firefox.profiles.perpetuallyWeary.containers = {
-      personal = {
-        name = "Personal";
-        color = "blue";
-        icon = "fingerprint";
-        id = 1;
-      };
-      school = {
-        name = "School";
-        color = "turquoise";
-        icon = "fruit";
-        id = 2;
-      };
-      work = {
-        name = "Work";
-        color = "orange";
-        icon = "briefcase";
-        id = 3;
-      };
-      banking = {
-        name = "Banking";
-        color = "green";
-        icon = "dollar";
-        id = 4;
-      };
-      shopping = {
-        name = "Shopping";
-        color = "pink";
-        icon = "cart";
-        id = 5;
-      };
-      private = {
-        name = "Streaming Services";
-        color = "yellow";
-        icon = "chill";
-        id = 6;
-      };
-      gaming = {
-        name = "Gaming";
-        color = "red";
-        icon = "gift";
-        id = 7;
-      };
-      facebook = {
-        name = "Facebook";
-        color = "toolbar";
-        icon = "fence";
-        id = 8;
-      };
-    };
-    # programs.firefox.profiles.perpetuallyWeary.search = {
-    #   force = true;
-    #   default = "DuckDuckGo";
-    #   privateDefault = "DuckDuckGo";
-    #   engines = {
-    #     "Nix Packages" = {
-    #       urls = [
-    #         {
-    #           template = "https://search.nixos.org/packages";
-    #           params = [
-    #             {
-    #               name = "type";
-    #               value = "packages";
-    #             }
-    #             {
-    #               name = "query";
-    #               value = "{searchTerms}";
-    #             }
-    #           ];
-    #         }
-    #       ];
-
-    #       icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-    #       definedAliases = ["@np"];
-    #     };
-
-    #     "NixOS Wiki" = {
-    #       urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
-    #       iconUpdateURL = "https://wiki.nixos.org/favicon.png";
-    #       updateInterval = 24 * 60 * 60 * 1000;
-    #       definedAliases = ["@nw"];
-    #     };
-
-    #     "Bing".metaData.hidden = true;
-    #     "Google".metaData.alias = "@g";
-    #   };
-    # };
   };
 }

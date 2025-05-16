@@ -20,5 +20,11 @@
     torBrowser = mkEnableOption "Tor Browser";
     vlc = mkEnableOption "VLC";
     vsCode = mkEnableOption "VS Code";
+
+    # Firefox/Floorp Config
+    ff-config = mkOption {
+      type = lib.types.attrs;
+      description = "The configuration that will be used by default with Firefox, Floorp, or any other Firefox-based browser";
+    };
   };
 }
