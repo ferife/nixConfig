@@ -138,41 +138,41 @@
         };
 
         # Search
-        search = {
-          force = true;
-          default = "ddg";
-          privateDefault = "ddg";
-          engines = {
-            "Nix Packages" = {
-              urls = [
-                {
-                  template = "https://search.nixos.org/packages";
-                  params = [
-                    {
-                      name = "type";
-                      value = "packages";
-                    }
-                    {
-                      name = "query";
-                      value = "{searchTerms}";
-                    }
-                  ];
-                }
-              ];
-              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = ["@np"];
-            };
-            "NixOS Wiki" = {
-              urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
-              icon = "https://wiki.nixos.org/favicon.png";
-              updateInterval = 24 * 60 * 60 * 1000;
-              definedAliases = ["@nw"];
-            };
-            "bing".metaData.hidden = true;
-            "google".metaData.alias = "@g";
-          };
-        };
-
+        # search = {
+        #   force = true;
+        #   default = "ddg";
+        #   privateDefault = "ddg";
+        #   engines = {
+        #     "Nix Packages" = {
+        #       urls = [
+        #         {
+        #           template = "https://search.nixos.org/packages";
+        #           params = [
+        #             {
+        #               name = "type";
+        #               value = "packages";
+        #             }
+        #             {
+        #               name = "query";
+        #               value = "{searchTerms}";
+        #             }
+        #           ];
+        #         }
+        #       ];
+        #       icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+        #       definedAliases = ["@np"];
+        #     };
+        #     "NixOS Wiki" = {
+        #       urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
+        #       icon = "https://wiki.nixos.org/favicon.png";
+        #       updateInterval = 24 * 60 * 60 * 1000;
+        #       definedAliases = ["@nw"];
+        #     };
+        #     "bing".metaData.hidden = true;
+        #     "google".metaData.alias = "@g";
+        #   };
+        # };
+        #
         # Extensions
         # extensions = [
         #   600% Sound Volume
