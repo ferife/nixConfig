@@ -33,7 +33,7 @@
     screenshotWindowSizer = lib.mkDefault false;
     statusIcons = lib.mkDefault config.hm.gnome.enable;
     systemMonitor = lib.mkDefault config.hm.gnome.enable;
-    userTheme = lib.mkDefault config.hm.gnome.enable;
+    userTheme = lib.mkDefault (config.hm.gnome.enable && !config.hm.stylix.enable);
     windowList = lib.mkDefault false;
     windowsNavigator = lib.mkDefault config.hm.gnome.enable;
     workspaceIndicator = lib.mkDefault false;

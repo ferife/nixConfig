@@ -1,9 +1,17 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: {
   config = lib.mkIf config.hm.gnome.statusIcons {
+    programs.gnome-shell.extensions = [
+      {
+        id = "status-icons@gnome-shell-extensions.gcampax.github.com";
+        package = pkgs.gnomeExtensions.status-icons;
+      }
+    ];
+
     dconf.settings = {
       "org/gnome/shell" = {
         enabled-extensions = [

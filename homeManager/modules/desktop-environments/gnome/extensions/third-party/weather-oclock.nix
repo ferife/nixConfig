@@ -5,8 +5,11 @@
   ...
 }: {
   config = lib.mkIf config.hm.gnome.weatherOClock {
-    home.packages = with pkgs; [
-      gnomeExtensions.weather-oclock
+    programs.gnome-shell.extensions = [
+      {
+        id = "weatheroclock@CleoMenezesJr.github.io";
+        package = pkgs.gnomeExtensions.weather-oclock;
+      }
     ];
 
     dconf.settings = {
