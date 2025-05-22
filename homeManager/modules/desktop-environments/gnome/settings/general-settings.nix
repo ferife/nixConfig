@@ -62,9 +62,9 @@
         binding = "<Super>o";
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
-        name = "KeePassXC";
+        name = "Password Manager";
         command = "keepassxc";
-        binding = "<Super>k";
+        binding = "<Super>p";
       };
     };
   };
