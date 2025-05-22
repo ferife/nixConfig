@@ -116,7 +116,7 @@
         modules = [
           (./. + "/homeManager/hosts/${systemSettings.hostname1}/home.nix")
           ./homeManager/hosts/laptop/home.nix
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
         ];
       };
       "${userSettings.username}@${systemSettings.hostname2}" = home-manager.lib.homeManagerConfiguration {
@@ -131,7 +131,7 @@
         };
         modules = [
           (./. + "/homeManager/hosts/${systemSettings.hostname2}/home.nix")
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
         ];
       };
     };
