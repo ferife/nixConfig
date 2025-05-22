@@ -5,8 +5,11 @@
   ...
 }: {
   config = lib.mkIf config.hm.gnome.clipboardIndicator {
-    home.packages = with pkgs; [
-      gnomeExtensions.clipboard-indicator
+    programs.gnome-shell.extensions = [
+      {
+        id = "clipboard-indicator@tudmotu.com";
+        package = pkgs.gnomeExtensions.clipboard-indicator;
+      }
     ];
 
     dconf.settings = {
