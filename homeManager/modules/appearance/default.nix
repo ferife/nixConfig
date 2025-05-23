@@ -6,6 +6,7 @@
   imports = [
     ./options.nix
 
+    ./cursor.nix
     ./stylix.nix
   ];
 
