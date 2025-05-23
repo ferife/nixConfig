@@ -14,7 +14,7 @@
       clean = lib.mkIf config.nixos.nh.autoClean {
         enable = true;
         dates = "weekly";
-        extraArgs = "-- ask --keep 10";
+        extraArgs = "--ask --keep-since 7d --keep 10";
       };
     };
 
