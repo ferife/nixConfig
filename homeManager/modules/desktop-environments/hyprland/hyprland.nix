@@ -20,6 +20,7 @@
       };
     };
     # TODO: Set up auto disable of mousepad when external mouse is connected
+    # NOTE: wearewaylandnow.com is a website listing many tools and packages that can be used for all sorts of things in wayland systems
   };
   # TODO: Add Hyprpaper - Wallpaper manager
   # TODO: Add Dolphin - File manager

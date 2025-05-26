@@ -9,7 +9,10 @@
       stylix = with lib;
         mkMerge [
           # General Settings
-          {enable = true;}
+          {
+            enable = true;
+            autoEnable = true;
+          }
 
           # Onedark
           (mkIf (config.hm.stylix.theme == "onedark") {
