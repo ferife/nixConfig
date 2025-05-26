@@ -12,6 +12,7 @@
     wayland.windowManager.hyprland = {
       # allow home manager to configure hyprland
       enable = true;
+      systemd.enable = true;
       settings = {
         "$mainMod" = "SUPER";
 

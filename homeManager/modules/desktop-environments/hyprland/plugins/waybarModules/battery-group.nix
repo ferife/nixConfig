@@ -21,9 +21,9 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon}";
+          format = "{icon} {capacity}%";
           interval = 1;
-          format-charging = "{capacity}% 󰂄";
+          format-charging = "󰂄 {capacity}%";
           format-icons = [" " " " " " " " " "];
         };
         "power-profiles-daemon" = {
@@ -37,7 +37,7 @@
           };
         };
       };
-      style = ''${builtins.readFile ./battery-group.css}'';
+      # style = ''${builtins.readFile ./battery-group.css}'';
     };
   };
 }

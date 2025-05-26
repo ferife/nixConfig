@@ -1,7 +1,0 @@
-#clock {
-  /* This finally works! Just use the group name as a class, with stylix turned off */
-  background-color: @module-bg-color;
-  border-radius: 1024pt;
-  padding-left: 10pt;
-  padding-right: 10pt;
-}

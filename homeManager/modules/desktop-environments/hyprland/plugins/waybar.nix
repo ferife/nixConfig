@@ -13,12 +13,15 @@
   config = lib.mkIf config.hm.hyprland.waybar {
     programs.waybar = {
       enable = true;
+      systemd = {
+        enable = true;
+        enableDebug = true;
+        enableInspect = true;
+      };
       settings = {
         mainBar = {
-          # font = "FiraCode Nerd Font Mono 16";
           layer = "top";
           position = "top";
-          # mod = "dock";
 
           modules-left = [
             "hyprland/workspaces"
@@ -51,6 +54,6 @@
     home.packages = [
       userSettings.fontPkg
     ];
-    wayland.windowManager.hyprland.settings.exec-once = ["waybar"];
+    # wayland.windowManager.hyprland.settings.exec-once = ["waybar"];
   };
 }

@@ -1,8 +1,0 @@
-#idle_inhibitor {
-  font-size: 16pt;
-  background-color: @module-bg-color;
-  border-radius: 1024pt;
-  /* padding: 0 10pt; */
-  padding-left: 10pt;
-  padding-right: 8pt;
-}

@@ -46,7 +46,7 @@
           on-click = "hyprctl dispatch exit";
         };
       };
-      style = ''${builtins.readFile ./power-group.css}'';
+      # style = ''${builtins.readFile ./power-group.css}'';
     };
   };
 }

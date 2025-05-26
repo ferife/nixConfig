@@ -20,7 +20,7 @@
           # on-click = "notify-send \"Idle inhibitor {status}\""; # FIXME
         };
       };
-      style = ''${builtins.readFile ./idle-inhibitor.css}'';
+      # style = ''${builtins.readFile ./idle-inhibitor.css}'';
     };
   };
 }

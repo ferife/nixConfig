@@ -12,7 +12,7 @@
           # TODO: custom/weather (use wttrbar package)
         };
       };
-      # style = ''${builtins.readFile ./battery-group.css}'';
+      # style = ''${builtins.readFile ./weather.css}'';
     };
   };
 }
