@@ -11,5 +11,6 @@
     ./clock.nix
     ./idle-inhibitor.nix
     ./power-group.nix
+    ./pulseaudio.nix
   ];
 }

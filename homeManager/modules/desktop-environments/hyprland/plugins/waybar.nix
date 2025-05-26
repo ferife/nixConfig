@@ -31,9 +31,10 @@
             "clock"
           ];
           modules-right = [
+            "pulseaudio"
             "idle_inhibitor"
             "group/battery-group"
-            "group/power-group"
+            # "group/power-group"
           ];
         };
       };
