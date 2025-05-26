@@ -17,8 +17,8 @@
       programs.kitty = {
         settings.background_opacity = lib.mkForce 0.9;
         font = lib.mkForce {
-          name = "Fira Code";
-          package = pkgs.fira-code;
+          name = userSettings.font;
+          package = userSettings.fontPkg;
           size = 12;
         };
       };

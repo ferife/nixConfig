@@ -3,6 +3,7 @@
   lib,
   pkgs,
   inputs,
+  userSettings,
   ...
 }: {
   imports = [
@@ -44,14 +45,11 @@
       #   App launcher
       #   Keyboard state (caps lock)
       #   Volume control (PulseAudio slider)
-
-      # TODO: Use the native idle_inhibitor module
-      # This will, by itself and with no need for any external program, inhibit idle behavior
+      # Add a module that displays any currently playing audio (use the MPRIS module)
     };
 
-    home.packages = with pkgs; [
-      nerdfonts # Dependency for displaying symbols in the bar
-      # WARNING: nerdfonts alone takes up 8GB of storage
+    home.packages = [
+      userSettings.fontPkg
     ];
     wayland.windowManager.hyprland.settings.exec-once = ["waybar"];
   };
