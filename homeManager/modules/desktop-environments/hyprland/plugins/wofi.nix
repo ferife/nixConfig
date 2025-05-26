@@ -11,6 +11,4 @@
       # settings = {};
     };
   };
-  # TODO: Things to see if I can do with this
-  # Create a power options menu to access with waybar
 }

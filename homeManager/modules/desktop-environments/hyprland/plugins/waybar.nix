@@ -48,7 +48,6 @@
       #   backlight (screen brightness)
       #   App launcher
       #   Keyboard state (caps lock)
-      #   Volume control (PulseAudio slider)
       # Add a module that displays any currently playing audio (use the MPRIS module)
     };
 

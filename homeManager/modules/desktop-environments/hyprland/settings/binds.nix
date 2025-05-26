@@ -43,6 +43,9 @@
       (lib.mkIf (config.hm.firefox && !config.hm.floorp) {
         bindd = ["$mainMod, B, Open a browser window, exec, firefox"];
       })
+      (lib.mkIf config.hm.hyprland.rofi {
+        bindd = ["$mainMod, A, Open the app launcher, exec, rofi -show drun"];
+      })
       (lib.mkIf config.hm.hyprland.wofi {
         bindd = ["$mainMod, A, Open the app launcher, exec, wofi --show drun --allow-images"];
       })
