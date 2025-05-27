@@ -12,5 +12,6 @@
     ./idle-inhibitor.nix
     ./power-menu.nix
     ./pulseaudio.nix
+    ./workspaces.nix
   ];
 }
