@@ -34,13 +34,12 @@
             "pulseaudio"
             "idle_inhibitor"
             "group/battery-group"
-            # "group/power-group"
+            "custom/power-menu"
           ];
         };
       };
 
       # TODO: Add weather to waybar
-      # TODO: Add power menu to waybar (power off, reboot, sleep, log out)
       # TODO: Configure & style the workspaces, add a button to generate a workspace
       # TODO: Add a widget for the current status of my VPN
       # TODO: Add CPU usage, RAM usage, upload and download speed

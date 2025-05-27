@@ -10,7 +10,7 @@
     ./battery-group.nix
     ./clock.nix
     ./idle-inhibitor.nix
-    ./power-group.nix
+    ./power-menu.nix
     ./pulseaudio.nix
   ];
 }
