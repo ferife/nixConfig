@@ -31,9 +31,9 @@
           tooltip-format = "Power profile: {profile}\nDriver: {driver}";
           tooltip = true;
           format-icons = {
-            "performance" = "󱐋";
-            "balanced" = "󱦟";
-            "power-saver" = "󰔱";
+            "performance" = " 󱐋 ";
+            "balanced" = " 󱦟 ";
+            "power-saver" = " 󰔱 ";
           };
         };
       };
