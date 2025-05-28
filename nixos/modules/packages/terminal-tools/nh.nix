@@ -24,7 +24,7 @@
     };
 
     environment.shellAliases = lib.mkIf config.nixos.nh.shellAliases {
-      gas = "bash ~/Documents/Scripts/nh-script.bash";
+      gas = "bash ~/Documents/Scripts/gas.bash";
     };
   };
   # NOTE: In order to ensure that changes here get applied, reboot after rebuilding
