@@ -52,7 +52,7 @@
       hostname2 = "device2";
       timezone = "America/Chicago";
       locale = "en_US.UTF-8";
-      nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig/";
+      nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig";
       flakePath = "${nixConfigPath}/nixConfig-main";
       nixpkgs = "unstable"; # Options: unstable, stable
     };
