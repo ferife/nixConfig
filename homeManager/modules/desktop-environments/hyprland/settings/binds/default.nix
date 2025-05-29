@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./f-keys.nix
     ./general.nix
   ];
 }
