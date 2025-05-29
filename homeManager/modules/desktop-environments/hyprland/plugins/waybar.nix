@@ -53,6 +53,6 @@
     home.packages = [
       userSettings.fontPkg
     ];
-    # wayland.windowManager.hyprland.settings.exec-once = ["waybar"];
+    wayland.windowManager.hyprland.settings.exec-once = ["waybar"];
   };
 }
