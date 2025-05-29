@@ -13,9 +13,10 @@
         targets = {
           chromium.enable = true;
           console.enable = true;
+          gnome.enable = true;
           grub = {
             enable = true;
-            useImage = true;
+            useWallpaper = true;
           };
           kmscon.enable = true;
           lightdm.enable = true;
