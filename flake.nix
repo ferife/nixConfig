@@ -3,18 +3,18 @@
   # Shown in the CLI by the `nix flake metadata` command
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11"; # Stable
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05"; # Stable
     # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; # Unstable
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager?ref=release-24.11"; # Stable
+      url = "github:nix-community/home-manager?ref=release-25.05"; # Stable
       # url = "github:nix-community/home-manager"; # Unstable
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix/release-24.11"; # Stable
+    stylix.url = "github:danth/stylix/release-25.05"; # Stable
     # stylix.url = "github:danth/stylix"; # Unstable
 
     nixvim-config = {
@@ -116,7 +116,7 @@
         modules = [
           (./. + "/homeManager/hosts/${systemSettings.hostname1}/home.nix")
           ./homeManager/hosts/laptop/home.nix
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
         ];
       };
       "${userSettings.username}@${systemSettings.hostname2}" = home-manager.lib.homeManagerConfiguration {
@@ -131,7 +131,7 @@
         };
         modules = [
           (./. + "/homeManager/hosts/${systemSettings.hostname2}/home.nix")
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
         ];
       };
     };

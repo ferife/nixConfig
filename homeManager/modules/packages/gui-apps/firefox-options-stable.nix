@@ -51,35 +51,38 @@
       browser.fixup.fallback-to-https = true;
       browser.newtabpage.activity-stream.showSponsoredTopSites = false;
     };
-    programs.firefox.profiles.perpetuallyWeary.bookmarks = [
-      {
-        name = "Toolbar sites";
-        toolbar = true;
-        bookmarks = [
-          {
-            name = "Doom Radio";
-            url = "https://www.youtube.com/watch?v=JEuAYnjtJP0";
-            keyword = "radio";
-            tags = ["music"];
-          }
-          {
-            name = "NixOS Search";
-            url = "https://search.nixos.org/packages";
-            tags = ["nix" "search"];
-          }
-          {
-            name = "Home Manager Search";
-            url = "https://home-manager-options.extranix.com";
-            tags = ["nix" "home manager" "search"];
-          }
-          {
-            name = "School Dashboard";
-            url = "https://utsa.instructure.com";
-            tags = ["school"];
-          }
-        ];
-      }
-    ];
+    programs.firefox.profiles.perpetuallyWeary.bookmarks = {
+      force = true;
+      settings = [
+        {
+          name = "Toolbar sites";
+          toolbar = true;
+          bookmarks = [
+            {
+              name = "Doom Radio";
+              url = "https://www.youtube.com/watch?v=JEuAYnjtJP0";
+              keyword = "radio";
+              tags = ["music"];
+            }
+            {
+              name = "NixOS Search";
+              url = "https://search.nixos.org/packages";
+              tags = ["nix" "search"];
+            }
+            {
+              name = "Home Manager Search";
+              url = "https://home-manager-options.extranix.com";
+              tags = ["nix" "home manager" "search"];
+            }
+            {
+              name = "School Dashboard";
+              url = "https://utsa.instructure.com";
+              tags = ["school"];
+            }
+          ];
+        }
+      ];
+    };
     # programs.firefox.profiles.perpetuallyWeary.extensions = with inputs.firefox-addons.packages."${systemSettings.system}"; [
     #   # 600% Sound Volume
 
