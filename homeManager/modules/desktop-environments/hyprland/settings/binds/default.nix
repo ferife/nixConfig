@@ -5,8 +5,6 @@
   ...
 }: {
   imports = [
-    ./binds
-
-    ./options.nix
+    ./general.nix
   ];
 }

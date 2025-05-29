@@ -11,7 +11,7 @@
       settings.mainBar = {
         "pulseaudio" = {
           format = " {volume}% {icon}";
-          format-muted = "󰝟 ";
+          format-muted = " 󰝟 ";
           format-icons = {
             default = ["󰕿 " "󰖀 " "󰕾 "];
           };

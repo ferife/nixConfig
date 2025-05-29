@@ -12,6 +12,7 @@
       {
         bindd = [
           "$mainMod, q, Close the current window, killactive"
+
           "$mainMod, 1, Go to workspace 1, workspace, 1"
           "$mainMod, 2, Go to workspace 2, workspace, 2"
           "$mainMod, 3, Go to workspace 3, workspace, 3"
