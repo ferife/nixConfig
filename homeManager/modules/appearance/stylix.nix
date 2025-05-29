@@ -9,7 +9,25 @@
       stylix = with lib;
         mkMerge [
           # General Settings
-          {enable = true;}
+          {
+            enable = true;
+            autoEnable = true;
+            # fonts = {
+            #   sansSerif = {
+            #     package = pkgs.fira;
+            #     name = "Fira Sans";
+            #   };
+            #   serif = config.stylix.fonts.sansSerif;
+            #   monospace = {
+            #     package = pkgs.nerd-fonts.fira-code;
+            #     name = "Fira Code";
+            #   };
+            #   emoji = {
+            #     package = pkgs.noto-fonts-monochrome-emoji;
+            #     name = "Noto Emoji";
+            #   };
+            # };
+          }
 
           # Onedark
           (mkIf (config.hm.stylix.theme == "onedark") {

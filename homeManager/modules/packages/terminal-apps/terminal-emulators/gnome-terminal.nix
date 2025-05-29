@@ -4,19 +4,25 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf config.hm.gnomeTerminal {
-    programs.gnome-terminal = {
-      showMenubar = true;
+  config = lib.mkMerge [
+    (lib.mkIf config.hm.gnomeTerminal {
+      programs.gnome-terminal = {
+        enable = true;
+        showMenubar = true;
 
-      profile.frfConfig = {
-        default = true;
-        visibleName = "Fernando's Terminal config";
+        profile.frfConfig = {
+          default = true;
+          visibleName = "Fernando's Terminal config";
 
-        showScrollbar = false;
-        font = "FiraCode Nerd Font 12";
+          showScrollbar = false;
+          font = "FiraCode Nerd Font 12";
 
-        colors.backgroundColor = "blue";
+          colors.backgroundColor = "blue";
+        };
       };
-    };
-  };
+    })
+    (lib.mkIf (!config.hm.gnomeTerminal) {
+      programs.gnome-terminal.enable = false;
+    })
+  ];
 }

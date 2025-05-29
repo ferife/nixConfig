@@ -11,12 +11,14 @@
     ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
-    ./firefox-options-stable.nix
-    # ./firefox-options-unstable.nix
+    # ./firefox-options-stable.nix
+    ./firefox-options-unstable.nix
     ./floorp.nix
     ./gimp.nix
+    ./gnome-calculator.nix
     ./keepassxc.nix
     ./libreoffice.nix
+    ./mpv.nix
     ./obsidian.nix
     ./obs-studio.nix
     ./qbittorrent.nix
@@ -28,6 +30,7 @@
 
   # TODO: Install a basic calculator app (just install gnome-calculator separately from GNOME)
   # TODO: Install CAVA (the audio visualizer I see a lot on r/unixporn)
+  # TODO: Look into installing the zathura document viewer (stylable by stylix)
 
   hm = {
     chromium = false;
@@ -35,8 +38,10 @@
     firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
     floorp = lib.mkIf (userSettings.mainBrowser == "floorp") true;
     gimp = false;
+    gnome-calculator = lib.mkDefault true;
     keepassxc = lib.mkDefault true;
-    libreoffice = false;
+    libreoffice = lib.mkDefault true;
+    mpv = lib.mkDefault true;
     obsStudio = false;
     obsidian = lib.mkDefault true;
     qbittorrent = false;

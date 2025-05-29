@@ -6,5 +6,8 @@
 }: {
   imports = [
     ./gnome
+    ./hyprland
   ];
+
+  config.nixos.gnome.enable = lib.mkForce false;
 }

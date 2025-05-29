@@ -7,8 +7,8 @@
 }: {
   imports = [
     # Add general config options required for the computer to work
-    ../../general-config-stable.nix
-    # ../../general-config-unstable.nix
+    # ../../general-config-stable.nix
+    ../../general-config-unstable.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix

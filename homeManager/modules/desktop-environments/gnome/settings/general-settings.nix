@@ -11,6 +11,8 @@
       gnome-tweaks # Find the existence of hidden settings much more easily than with dconf editor
     ];
 
+    programs.gnome-shell.enable = true;
+
     # To figure out where to make the changes in dconf, do the following
     # 1) Use the command `dconf dump / > old-conf.txt`
     # 2) Make the desired changes within the regular settings menu and/or gnome tweaks
@@ -62,9 +64,9 @@
         binding = "<Super>o";
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
-        name = "KeePassXC";
+        name = "Password Manager";
         command = "keepassxc";
-        binding = "<Super>k";
+        binding = "<Super>p";
       };
     };
   };

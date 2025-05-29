@@ -3,24 +3,30 @@
   # Shown in the CLI by the `nix flake metadata` command
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05"; # Stable
-    # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; # Unstable
+    # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05"; # Stable
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; # Unstable
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager?ref=release-25.05"; # Stable
-      # url = "github:nix-community/home-manager"; # Unstable
+      # url = "github:nix-community/home-manager?ref=release-25.05"; # Stable
+      url = "github:nix-community/home-manager"; # Unstable
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix/release-25.05"; # Stable
-    # stylix.url = "github:danth/stylix"; # Unstable
+    # stylix.url = "github:danth/stylix/release-25.05"; # Stable
+    stylix.url = "github:danth/stylix"; # Unstable
 
     nixvim-config = {
       url = "github:ferife/nvimConfig";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
@@ -43,7 +49,7 @@
       mainBrowser = "floorp"; # Options: firefox, floorp
       terminal = "kitty"; # Options: gnome terminal, kitty
       font = "FiraCode Nerd Font";
-      fontPkg = pkgs.fira-code-nerdfont;
+      fontPkg = pkgs.nerd-fonts.fira-code;
     };
     systemSettings = rec {
       system = "x86_64-linux";
@@ -52,9 +58,9 @@
       hostname2 = "device2";
       timezone = "America/Chicago";
       locale = "en_US.UTF-8";
-      nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig/";
+      nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig";
       flakePath = "${nixConfigPath}/nixConfig-main";
-      nixpkgs = "stable"; # Options: unstable, stable
+      nixpkgs = "unstable"; # Options: unstable, stable
     };
 
     pkgs = import nixpkgs {

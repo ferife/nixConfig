@@ -52,6 +52,7 @@ If a list or object gets modified in multiple modules, all those modifications m
 
 Watch Vimjoyer's YT video "Modularize NixOS and Home Manager | Great Practices" to learn about some good practices to make my config more controllable in a modular way
 This touches on the idea of custom options, described in further detail in the NixOS wiki pages on [declaration](https://nixos.wiki/wiki/Declaration) and [NixOS modules](https://nixos.wiki/wiki/NixOS_modules)
+
 # Resources to check out
 
 - [NixOS for the Impatient](https://borretti.me/article/nixos-for-the-impatient)
@@ -61,6 +62,11 @@ According to [this blog](https://bmcgee.ie/posts/2023/03/til-how-to-generate-nix
 This keeps native NixOS options from appearing in my docs, so it will be only my own custom options
 
 Use [this website](https://nlewo.github.io/nixos-manual-sphinx/development/option-types.xml.html#sec-option-types) to look at option types
+
 Use [this website](https://wiki.nixos.org/wiki/NixOS_modules) to get a quick idea of how to write options
+
 [This website](https://github.com/nix-community/awesome-nix?tab=readme-ov-file) has a large list of Nix-related resources
+
 [This website](https://heywoodlh.io/nixos-gnome-settings-and-keyboard-shortcuts) has tips for modifying GNOME settings within Nix
+
+[This Reddit post](https://www.reddit.com/r/unixporn/comments/1k74msy/hyprland_updated_my_nixdots_to_have_everything/#lightbox) contains a cool NixOS Hyprland config for me to reference ([dots](https://github.com/Immelancholy/NixDots/))

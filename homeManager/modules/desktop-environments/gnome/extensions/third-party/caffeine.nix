@@ -5,8 +5,11 @@
   ...
 }: {
   config = lib.mkIf config.hm.gnome.caffeine {
-    home.packages = with pkgs; [
-      gnomeExtensions.caffeine
+    programs.gnome-shell.extensions = [
+      {
+        id = "caffeine@patapon.info";
+        package = pkgs.gnomeExtensions.caffeine;
+      }
     ];
 
     dconf.settings = {
