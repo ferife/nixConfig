@@ -9,6 +9,6 @@
     isNormalUser = true;
     description = "${userSettings.name}";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [];
+    # packages = with pkgs; [];
   };
 }

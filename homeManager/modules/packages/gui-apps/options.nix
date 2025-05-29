@@ -11,6 +11,7 @@
     firefox = mkEnableOption "Firefox";
     floorp = mkEnableOption "Floorp";
     gimp = mkEnableOption "GIMP";
+    gnome-calculator = mkEnableOption "the GNOME calculator app";
     keepassxc = mkEnableOption "KeePassXC, an offline password manager";
     libreoffice = mkEnableOption "LibreOffice";
     mpv = mkEnableOption "MVP, a media player";

@@ -15,6 +15,7 @@
     ./firefox-options-unstable.nix
     ./floorp.nix
     ./gimp.nix
+    ./gnome-calculator.nix
     ./keepassxc.nix
     ./libreoffice.nix
     ./mpv.nix
@@ -37,6 +38,7 @@
     firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
     floorp = lib.mkIf (userSettings.mainBrowser == "floorp") true;
     gimp = false;
+    gnome-calculator = lib.mkDefault true;
     keepassxc = lib.mkDefault true;
     libreoffice = lib.mkDefault true;
     mpv = lib.mkDefault true;
