@@ -1,4 +1,4 @@
-{
+{ #
   description = "A flake for my NixOS configuration";
   # Shown in the CLI by the `nix flake metadata` command
 
