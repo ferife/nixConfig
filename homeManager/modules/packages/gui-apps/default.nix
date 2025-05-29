@@ -17,6 +17,7 @@
     ./gimp.nix
     ./keepassxc.nix
     ./libreoffice.nix
+    ./mpv.nix
     ./obsidian.nix
     ./obs-studio.nix
     ./qbittorrent.nix
@@ -28,6 +29,7 @@
 
   # TODO: Install a basic calculator app (just install gnome-calculator separately from GNOME)
   # TODO: Install CAVA (the audio visualizer I see a lot on r/unixporn)
+  # TODO: Look into installing the zathura document viewer (stylable by stylix)
 
   hm = {
     chromium = false;
@@ -37,6 +39,7 @@
     gimp = false;
     keepassxc = lib.mkDefault true;
     libreoffice = lib.mkDefault true;
+    mpv = lib.mkDefault true;
     obsStudio = false;
     obsidian = lib.mkDefault true;
     qbittorrent = false;

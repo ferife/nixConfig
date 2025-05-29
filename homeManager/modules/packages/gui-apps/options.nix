@@ -13,18 +13,19 @@
     gimp = mkEnableOption "GIMP";
     keepassxc = mkEnableOption "KeePassXC, an offline password manager";
     libreoffice = mkEnableOption "LibreOffice";
+    mpv = mkEnableOption "MVP, a media player";
     obsStudio = mkEnableOption "OBS Studio";
     obsidian = mkEnableOption "Obsidian.md";
     qbittorrent = mkEnableOption "QBitTorrent";
     thunderbird = mkEnableOption "Thunderbird";
     torBrowser = mkEnableOption "Tor Browser";
-    vlc = mkEnableOption "VLC";
+    vlc = mkEnableOption "VLC, a media player";
     vsCode = mkEnableOption "VS Code";
 
     # Firefox/Floorp Config
     ff-config = mkOption {
       type = lib.types.attrs;
-      description = "The configuration that will be used by default with Firefox, Floorp, or any other Firefox-based browser";
+      description = "The configuration that will be used by default with Firefox, Floorp, and any other Firefox-based browser";
     };
   };
 }
