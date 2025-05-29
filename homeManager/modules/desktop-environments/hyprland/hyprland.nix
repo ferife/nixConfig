@@ -21,6 +21,9 @@
       };
     };
     # TODO: Set up auto disable of mousepad when external mouse is connected
+    #   Needs to use a udev rule
+    #   If the currently active window manager/desktop environment is hyprland, then the environment variable XDG_SESSION_DESKTOP=hyprland
+    #
     # NOTE: wearewaylandnow.com is a website listing many tools and packages that can be used for all sorts of things in wayland systems
   };
   # TODO: Add Hyprpaper - Wallpaper manager

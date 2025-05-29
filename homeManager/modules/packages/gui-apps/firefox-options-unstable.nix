@@ -8,7 +8,10 @@
 }: {
   config = {
     # The names of firefox profiles should be added to the list below for stylix to fully work on them
-    stylix.targets.firefox.profileNames = ["perpetuallyWeary"];
+    stylix.targets.firefox = {
+      colorTheme.enable = true;
+      profileNames = ["perpetuallyWeary"];
+    };
 
     hm.ff-config = {
       enable = true;
@@ -49,6 +52,7 @@
           browser.fixup.fallback-to-https = true;
           browser.newtabpage.activity-stream.showSponsoredTopSites = false;
         };
+        extensions.force = true;
 
         # Bookmarks
         bookmarks = {
