@@ -11,6 +11,7 @@
     ./settings
     ./hyprland.nix
   ];
+
   # TODO: Top bar components
   # Workspace indicator
   #   Pressing it should allow switching workspaces
