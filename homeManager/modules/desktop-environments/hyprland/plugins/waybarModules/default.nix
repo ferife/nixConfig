@@ -10,6 +10,7 @@
     ./battery-group.nix
     ./clock.nix
     ./idle-inhibitor.nix
+    ./network.nix
     ./power-menu.nix
     ./pulseaudio.nix
     ./workspaces.nix
