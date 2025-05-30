@@ -9,7 +9,7 @@
     programs.waybar = {
       settings.mainBar = {
         "idle_inhibitor" = {
-          format = "{icon}";
+          format = "<span size=\"large\" >{icon}</span>";
           format-icons = {
             activated = "󰒳 ";
             deactivated = "󰒲 ";

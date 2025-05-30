@@ -6,11 +6,12 @@
   ...
 }: {
   config = lib.mkIf config.hm.hyprland.waybar {
+    home.packages = [pkgs.pavucontrol];
     programs.waybar = {
       settings.mainBar = {
         "pulseaudio" = {
           format = " {volume}% {icon}";
-          format-muted = " 󰝟 ";
+          format-muted = " {volume}% 󰝟 ";
           format-icons = {
             default = ["󰕿 " "󰖀 " "󰕾 "];
           };
