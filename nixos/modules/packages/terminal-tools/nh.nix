@@ -7,6 +7,19 @@
   ...
 }: {
   config = lib.mkIf config.nixos.nh.enable {
+    environment.etc = {
+      "nix-scripts/gas.bash" = {
+        enable = true;
+        user = "${userSettings.username}";
+        source = ./shell-scripts/gas.bash;
+      };
+      "nix-scripts/reload-floorp-profile.bash" = {
+        # Dependency for gas.bash
+        enable = true;
+        user = "${userSettings.username}";
+        source = ./shell-scripts/reload-floorp-profile.bash;
+      };
+    };
     programs.nh = {
       enable = true;
       flake = systemSettings.flakePath;
@@ -24,7 +37,7 @@
     };
 
     environment.shellAliases = lib.mkIf config.nixos.nh.shellAliases {
-      gas = "bash ~/Documents/Scripts/gas.bash";
+      gas = "bash /etc/nix-scripts/gas.bash";
     };
   };
   # NOTE: In order to ensure that changes here get applied, reboot after rebuilding
