@@ -27,7 +27,7 @@
           format-icons = [" " " " " " " " " "];
         };
         "power-profiles-daemon" = {
-          format = "{icon}";
+          format = "<span size=\"large\" >{icon}</span>";
           tooltip-format = "Power profile: {profile}\nDriver: {driver}";
           tooltip = true;
           format-icons = {

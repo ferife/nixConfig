@@ -15,8 +15,9 @@ in {
     programs.waybar = {
       settings.mainBar = {
         "custom/power-menu" = {
-          format = " 󱄅 ";
+          format = "<span size=\"xx-large\"> 󱄅 </span>";
           on-click = "bash ~/${power-menu-path}";
+          tooltip = false;
         };
         # TODO: Set up lock option (hyprlock)
         # TODO: Set up sleep option
