@@ -8,6 +8,7 @@
   imports = [
     ./options.nix
 
+    ./audacity.nix
     ./chromium.nix
     ./eclipse.nix
     ./firefox.nix
@@ -34,6 +35,7 @@
   # TODO: Look into installing the zathura document viewer (stylable by stylix)
 
   hm = {
+    audacity = lib.mkDefault true;
     chromium = false;
     eclipse = false;
     firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
