@@ -19,8 +19,9 @@
     ./keepassxc.nix
     ./libreoffice.nix
     ./mpv.nix
-    ./obsidian.nix
     ./obs-studio.nix
+    ./obsidian.nix
+    ./openshot.nix
     ./qbittorrent.nix
     ./thunderbird.nix
     ./tor-browser.nix
@@ -44,6 +45,7 @@
     mpv = lib.mkDefault true;
     obsStudio = false;
     obsidian = lib.mkDefault true;
+    openshot = lib.mkDefault true;
     qbittorrent = false;
     thunderbird = false;
     torBrowser = lib.mkDefault true;

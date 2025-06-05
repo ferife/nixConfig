@@ -17,6 +17,7 @@
     mpv = mkEnableOption "MVP, a media player";
     obsStudio = mkEnableOption "OBS Studio";
     obsidian = mkEnableOption "Obsidian.md";
+    openshot = mkEnableOption "the OpenShot video editor";
     qbittorrent = mkEnableOption "QBitTorrent";
     thunderbird = mkEnableOption "Thunderbird";
     torBrowser = mkEnableOption "Tor Browser";
