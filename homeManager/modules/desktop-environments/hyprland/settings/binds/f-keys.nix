@@ -17,11 +17,6 @@
         source = ./shell-scripts/monitor-brightness.bash;
         executable = true;
       };
-      ".nix-scripts/brightness-notification.bash" = {
-        enable = true;
-        source = ./shell-scripts/brightness-notification.bash;
-        executable = true;
-      };
     };
 
     wayland.windowManager.hyprland.settings = lib.mkMerge [
@@ -46,17 +41,10 @@
       {
         binde = [
           # F7
-          ", XF86MonBrightnessUp, exec, ~/.nix-scripts/modify-monitor-brightness.bash intel_backlight 10%+"
+          ", XF86MonBrightnessUp, exec, ~/.nix-scripts/modify-monitor-brightness.bash intel_backlight 5%+"
 
           # F8
-          ", XF86MonBrightnessDown, exec, ~/.nix-scripts/modify-monitor-brightness.bash intel_backlight 10%-"
-        ];
-        bindr = [
-          # F7
-          ", XF86MonBrightnessUp, exec, ~/.nix-scripts/brightness-notification.bash intel_backlight"
-
-          # F8
-          ", XF86MonBrightnessDown, exec, ~/.nix-scripts/brightness-notification.bash intel_backlight"
+          ", XF86MonBrightnessDown, exec, ~/.nix-scripts/modify-monitor-brightness.bash intel_backlight 5%-"
         ];
       }
     ];
