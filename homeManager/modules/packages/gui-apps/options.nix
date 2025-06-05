@@ -6,6 +6,7 @@
   ...
 }: {
   options.hm = with lib; {
+    audacity = mkEnableOption "Audacity, a sound editor";
     chromium = mkEnableOption "Chromium";
     eclipse = mkEnableOption "Eclipse";
     firefox = mkEnableOption "Firefox";
