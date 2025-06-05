@@ -61,6 +61,9 @@
       nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig";
       flakePath = "${nixConfigPath}/nixConfig-main";
       nixpkgs = "unstable"; # Options: unstable, stable
+      configFilesDirectory = ".nixConfig-assets";
+      scriptsDirectory = "${configFilesDirectory}/scripts";
+      assetsDirectory = "${configFilesDirectory}/assets";
     };
 
     pkgs = import nixpkgs {
