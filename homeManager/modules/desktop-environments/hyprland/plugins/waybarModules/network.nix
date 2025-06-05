@@ -3,9 +3,10 @@
   lib,
   pkgs,
   inputs,
+  systemSettings,
   ...
 }: let
-  wifi-menu-path = ".nix-scripts/rofi-wifi-menu.bash";
+  wifi-menu-path = "${systemSettings.scriptsDirectory}/rofi-wifi-menu.bash";
 in {
   config = lib.mkIf config.hm.hyprland.waybar {
     home.file."${wifi-menu-path}" = {

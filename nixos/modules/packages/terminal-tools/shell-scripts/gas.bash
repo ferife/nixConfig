@@ -157,7 +157,7 @@ if [ "$updateHome" ]; then
     echo ""
     echo "Backing up Floorp profiles"
     echo ""
-    bash "/etc/nix-scripts/reload-floorp-profile.bash -b"
+    bash "./reload-floorp-profile.bash -b"
   fi
 
   $homeString
@@ -167,7 +167,7 @@ if [ "$updateHome" ]; then
     echo ""
     echo "Loading Floorp profiles from backups"
     echo ""
-    bash "/etc/nix-scripts/reload-floorp-profile.bash"
+    bash "./reload-floorp-profile.bash"
   fi
 fi
 

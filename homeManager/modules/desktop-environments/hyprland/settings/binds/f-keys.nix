@@ -3,20 +3,21 @@
   lib,
   pkgs,
   inputs,
+  systemSettings,
   ...
-}: {
+}: let
+  brightness-mod-path = "${systemSettings.scriptsDirectory}/modify-monitor-brightness.bash";
+in {
   config = lib.mkIf config.hm.hyprland.enable {
     home.packages = [
       pkgs.brightnessctl
       pkgs.bc
     ];
 
-    home.file = {
-      ".nix-scripts/modify-monitor-brightness.bash" = {
-        enable = true;
-        source = ./shell-scripts/monitor-brightness.bash;
-        executable = true;
-      };
+    home.file."${brightness-mod-path}" = {
+      enable = true;
+      source = ./shell-scripts/monitor-brightness.bash;
+      executable = true;
     };
 
     wayland.windowManager.hyprland.settings = lib.mkMerge [
@@ -41,10 +42,10 @@
       {
         binde = [
           # F7
-          ", XF86MonBrightnessUp, exec, ~/.nix-scripts/modify-monitor-brightness.bash intel_backlight 5%+"
+          ", XF86MonBrightnessUp, exec, ~/${brightness-mod-path} intel_backlight 5%+"
 
           # F8
-          ", XF86MonBrightnessDown, exec, ~/.nix-scripts/modify-monitor-brightness.bash intel_backlight 5%-"
+          ", XF86MonBrightnessDown, exec, ~/${brightness-mod-path} intel_backlight 5%-"
         ];
       }
     ];
