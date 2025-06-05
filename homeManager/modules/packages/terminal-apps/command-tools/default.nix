@@ -23,6 +23,7 @@
     ./password-store.nix
     ./starship.nix
     ./tldr.nix
+    ./yt-dlp.nix
     ./zellij.nix
     ./zoxide.nix
   ];
@@ -43,6 +44,7 @@
     pass = false;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
+    yt-dlp = lib.mkDefault true;
     zellij = lib.mkDefault true;
     zoxide = lib.mkDefault true;
   };
