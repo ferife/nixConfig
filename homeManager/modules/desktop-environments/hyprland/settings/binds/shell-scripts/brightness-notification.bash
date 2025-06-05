@@ -4,4 +4,4 @@
 
 device="$1"
 percent=$(brightnessctl --device="$device" | grep -m 1 -Eo "[0-9]+%")
-notify-send "Brightness" "$percent"
+dunstify "Brightness" "$percent"

@@ -17,7 +17,8 @@
           tooltip = true;
           tooltip-format-activated = "{status}";
           tooltip-format-deactivated = "{status}";
-          # on-click = "notify-send \"Idle inhibitor {status}\""; # FIXME
+          # on-click = "dunstify \"Idle inhibitor {status}\""; # FIXME
+          # Look at the --hints flag for dustify for how to make this work
         };
       };
       # style = ''${builtins.readFile ./idle-inhibitor.css}'';

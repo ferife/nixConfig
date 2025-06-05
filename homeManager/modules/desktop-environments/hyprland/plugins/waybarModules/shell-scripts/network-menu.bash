@@ -2,7 +2,7 @@
 
 # Based on github:ericmurphyxyz/rofi-wifi-menu
 
-notify-send "Getting list of available Wi-Fi networks..."
+dunstify "Getting list of available Wi-Fi networks..."
 
 # Get all available wifi networks
 # The sed statements are to put them into a nice looking list
@@ -25,7 +25,7 @@ if [[ "$connected" =~ "enabled" ]]; then
 elif [[ "$connected" =~ "disabled" ]]; then
   toggle="$enable_wifi"
 else
-  notify-send "ERROR: connection detection"
+  dunstify "ERROR: connection detection"
   exit 1
 fi
 
@@ -48,13 +48,13 @@ case "$chosen_network" in
     saved_connections=$(nmcli -g NAME connection)
     if [[ $(echo "$saved_connections" | grep -w "$chosen_id") == "$chosen_id" ]]; then
       nmcli connection up id "$chosen_id" |
-      grep "successfully" && notify-send "Connection Established" "$success_message"
+      grep "successfully" && dunstify "Connection Established" "$success_message"
     else
       if [[ "$chosen_network" =~ "" ]]; then
         wifi_password=$(rofi -dmenu -p "Password: " )
       fi
       nmcli device wifi connect "$chosen_id" password "$wifi_password" |
-      grep "successfully" && notify-send "Connection Established" "$success_message"
+      grep "successfully" && dunstify "Connection Established" "$success_message"
     fi
     ;;
 esac
