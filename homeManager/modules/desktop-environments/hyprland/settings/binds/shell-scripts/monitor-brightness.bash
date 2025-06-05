@@ -11,6 +11,7 @@ current_state=$(brightnessctl --device="$device")
 
 current_brightness=$(echo "$current_state" | grep -oP 'Current brightness: \K\d+')
 max_brightness=$(echo "$current_state" | grep -oP 'Max brightness: \K\d+')
+max_percent=100
 
 min_percent=5 # NOTE: CHANGE HERE
 
@@ -68,6 +69,8 @@ fi
 after_brightness=""
 after_percent=""
 
+notif_body=""
+
 if [[ "$change_operation" == "add" ]]; then
   after_brightness=$(echo "scale=0; $current_brightness + $change_brightness" | bc)
   after_percent=$(echo "scale=2; $after_brightness / $max_brightness * 100" | bc)
@@ -82,9 +85,19 @@ else # set
 fi
 
 if (( "$after_brightness" < "$min_brightness" )); then
+  notif_body="The brightness you've set is too low\n"
   after_brightness="$min_brightness"
+  after_percent="$min_percent"
 elif (( "$after_brightness" > "$max_brightness" )); then
+  notif_body="The brightness you've set is too high\n"
   after_brightness="$max_brightness"
+  after_percent="$max_percent"
 fi
 
+if [[ -n "$notif_body" ]]; then
+  notif_body="${notif_body}Brightness is now "
+fi
+notif_body="${notif_body}$after_brightness ($after_percent%)"
+
 brightnessctl set "$after_brightness" --device="$device" --quiet
+dunstify --hints string:x-dunst-stack-tag:brightness "Brightness" "$notif_body"
