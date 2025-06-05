@@ -21,6 +21,7 @@
     pass = mkEnableOption "password-store (AKA pass), the official GNU password storing solution";
     starship = mkEnableOption "starship, a cross-shell prompt with a lot of customizability";
     tldr = mkEnableOption "tldr, a set of simplified and community-driven man pages";
+    yt-dlp = mkEnableOption "yt-dlp, a terminal tool used to download videos from YouTube and similar websites";
     zellij = mkEnableOption "zellij, a terminal multiplexer";
     zoxide = mkEnableOption "zoxide, an improved version of the cd command with added features";
   };
