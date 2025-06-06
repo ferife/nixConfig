@@ -21,7 +21,6 @@
           # Look at the --hints flag for dustify for how to make this work
         };
       };
-      # style = ''${builtins.readFile ./idle-inhibitor.css}'';
     };
   };
 }

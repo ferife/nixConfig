@@ -20,7 +20,6 @@
           max-volume = config.hm.hyprland.max-volume;
         };
       };
-      # style = ''${builtins.readFile ./pulseaudio.css}'';
     };
   };
 }
