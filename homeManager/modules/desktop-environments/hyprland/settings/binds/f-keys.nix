@@ -4,14 +4,16 @@
   pkgs,
   inputs,
   systemSettings,
+  userSettings,
   ...
 }: let
   brightness-mod-path = "${systemSettings.scriptsDirectory}/modify-monitor-brightness.bash";
 in {
   config = lib.mkIf config.hm.hyprland.enable {
+    hm.scripts.modify-volume.enable = true;
+
     home.packages = [
       pkgs.brightnessctl
-      pkgs.bc
     ];
 
     home.file."${brightness-mod-path}" = {
@@ -33,10 +35,10 @@ in {
       {
         binde = [
           # F2
-          ", XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l ${toString (config.hm.hyprland.max-volume / 100.0)} @DEFAULT_AUDIO_SINK@ 5%+"
+          ", XF86AudioRaiseVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.hyprland.max-volume} 5%+"
 
           # F3
-          ", XF86AudioLowerVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0 && wpctl set-volume -l ${toString (config.hm.hyprland.max-volume / 100.0)} @DEFAULT_AUDIO_SINK@ 5%-"
+          ", XF86AudioLowerVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.hyprland.max-volume} 5%-"
         ];
       }
       {

@@ -149,5 +149,12 @@
       nixos.homeManager = lib.mkForce true;
       nixos.nh.enable = lib.mkForce true;
     }
+    {
+      environment.variables = {
+        NIXOS_CONFIG_FILES_DIR = "/${systemSettings.configFilesDirectory}";
+        NIXOS_CONFIG_SCRIPTS_DIR = "/${systemSettings.scriptsDirectory}";
+        NIXOS_CONFIG_ASSETS_DIR = "/${systemSettings.assetsDirectory}";
+      };
+    }
   ];
 }

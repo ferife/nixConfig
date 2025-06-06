@@ -6,6 +6,8 @@
   ...
 }: {
   config = lib.mkIf config.hm.hyprland.waybar {
+    hm.scripts.modify-volume.enable = true;
+
     home.packages = [pkgs.pavucontrol];
     programs.waybar = {
       settings.mainBar = {
@@ -17,7 +19,8 @@
           };
           on-click = "pavucontrol";
           tooltip = true;
-          max-volume = config.hm.hyprland.max-volume;
+          on-scroll-up = "exec ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.hyprland.max-volume} 1%+";
+          on-scroll-down = "exec ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.hyprland.max-volume} 1%-";
         };
       };
     };
