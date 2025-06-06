@@ -37,7 +37,6 @@
           };
         };
       };
-      # style = ''${builtins.readFile ./battery-group.css}'';
     };
   };
 }

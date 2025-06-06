@@ -12,7 +12,6 @@
           # TODO: custom/weather (use wttrbar package)
         };
       };
-      # style = ''${builtins.readFile ./weather.css}'';
     };
   };
 }
