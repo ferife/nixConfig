@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  systemSettings,
   ...
 }: {
   imports = [
@@ -13,10 +12,10 @@
   ];
 
   config = lib.mkMerge [
-    (lib.mkIf (systemSettings.shell == "bash") {
+    (lib.mkIf (config.hm.specialArgs.system-settings.shell == "bash") {
       hm.bash = true;
     })
-    (lib.mkIf (systemSettings.shell == "zsh") {
+    (lib.mkIf (config.hm.specialArgs.system-settings.shell == "zsh") {
       hm.zsh = true;
     })
   ];

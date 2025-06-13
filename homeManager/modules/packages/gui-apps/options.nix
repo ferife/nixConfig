@@ -21,7 +21,7 @@
     openshot = mkEnableOption "the OpenShot video editor";
     qbittorrent = mkEnableOption "QBitTorrent";
     thunderbird = mkEnableOption "Thunderbird";
-    torBrowser = mkEnableOption "Tor Browser";
+    tor-browser = mkEnableOption "Tor Browser";
     vlc = mkEnableOption "VLC, a media player";
     vsCode = mkEnableOption "VS Code";
 

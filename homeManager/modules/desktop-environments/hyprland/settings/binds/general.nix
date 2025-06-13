@@ -1,13 +1,12 @@
 {
   config,
   lib,
-  userSettings,
   pkgs,
   inputs,
   ...
 }: {
   config = lib.mkIf config.hm.hyprland.enable {
-    # TODO: Add a keybind to toggle fullscreen the current focused window
+    # TODO: Add a keybind to toggle fullscreen the current focused window. Make it $mainMod + ENTER
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Format for a bindd with questions:
       # "MODS, key, description, dispatcher, params"
@@ -37,25 +36,36 @@
           "$mainMod SHIFT, 0, Move active window to workspace 10, movetoworkspace, 10"
         ];
       }
-      (lib.mkIf (userSettings.terminal == "ghostty") {
+      # Terminal
+      (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "ghostty") {
         bindd = ["$mainMod, T, Open a terminal window, exec, ghostty"];
       })
-      (lib.mkIf (userSettings.terminal == "kitty") {
+      (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "kitty") {
         bindd = ["$mainMod, T, Open a terminal window, exec, kitty"];
       })
-      # firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
-      (lib.mkIf (userSettings.mainBrowser == "floorp") {
+
+      # Browser
+      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "chromium") {
+        bindd = ["$mainMod, B, Open a browser window, exec, chromium"];
+      })
+      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") {
         bindd = ["$mainMod, B, Open a browser window, exec, floorp"];
       })
-      (lib.mkIf (userSettings.mainBrowser == "firefox") {
+      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") {
         bindd = ["$mainMod, B, Open a browser window, exec, firefox"];
       })
-      (lib.mkIf config.hm.hyprland.rofi {
+      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "tor-browser") {
+        bindd = ["$mainMod, B, Open a browser window, exec, tor-browser"];
+      })
+
+      # App Launcher
+      (lib.mkIf (config.hm.hyprland.app-launcher == "rofi") {
         bindd = ["$mainMod, A, Open the app launcher, exec, rofi -show drun"];
       })
-      (lib.mkIf config.hm.hyprland.wofi {
+      (lib.mkIf (config.hm.hyprland.app-launcher == "wofi") {
         bindd = ["$mainMod, A, Open the app launcher, exec, wofi --show drun --allow-images"];
       })
+
       (lib.mkIf config.hm.obsidian {
         bindd = ["$mainMod, O, Open Obsidian, exec, obsidian"];
       })

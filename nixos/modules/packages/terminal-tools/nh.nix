@@ -2,30 +2,28 @@
   config,
   lib,
   pkgs,
-  systemSettings,
-  userSettings,
   ...
 }: let
-  gas-path = "${systemSettings.scriptsDirectory}/gas.bash";
-  reload-floorp-path = "${systemSettings.scriptsDirectory}/reload-floorp-profile.bash";
+  gas-path = "${config.nixos.specialArgs.system-settings.scripts-dir}/gas.bash";
+  reload-floorp-path = "${config.nixos.specialArgs.system-settings.scripts-dir}/reload-floorp-profile.bash";
 in {
   config = lib.mkIf config.nixos.nh.enable {
     environment.etc = {
       "${gas-path}" = {
         enable = true;
-        user = "${userSettings.username}";
+        user = "${config.nixos.specialArgs.user-settings.username}";
         source = ./shell-scripts/gas.bash;
       };
       "${reload-floorp-path}" = {
         # Dependency for gas.bash
         enable = true;
-        user = "${userSettings.username}";
+        user = "${config.nixos.specialArgs.user-settings.username}";
         source = ./shell-scripts/reload-floorp-profile.bash;
       };
     };
     programs.nh = {
       enable = true;
-      flake = systemSettings.flakePath;
+      flake = config.nixos.specialArgs.system-settings.flake-path;
 
       clean = lib.mkIf config.nixos.nh.autoClean {
         enable = true;
@@ -35,8 +33,8 @@ in {
     };
 
     environment.variables = {
-      NIX_CONFIG_PATH = "${systemSettings.nixConfigPath}";
-      FLAKE_HOSTNAME = "${systemSettings.hostname1}";
+      NIX_CONFIG_PATH = "${config.nixos.specialArgs.system-settings.config-path}";
+      FLAKE_HOSTNAME = "${config.nixos.specialArgs.system-settings.hostname}";
     };
 
     environment.shellAliases = lib.mkIf config.nixos.nh.shellAliases {

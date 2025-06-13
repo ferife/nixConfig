@@ -5,8 +5,6 @@
   config,
   lib,
   pkgs,
-  systemSettings,
-  userSettings,
   ...
 }: {
   # Bootloader.

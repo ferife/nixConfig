@@ -3,11 +3,9 @@
   lib,
   pkgs,
   inputs,
-  systemSettings,
-  userSettings,
   ...
 }: let
-  brightness-mod-path = "${systemSettings.scriptsDirectory}/modify-monitor-brightness.bash";
+  brightness-mod-path = "${config.hm.specialArgs.system-settings.scripts-dir}/modify-monitor-brightness.bash";
 in {
   config = lib.mkIf config.hm.hyprland.enable {
     hm.scripts.modify-volume.enable = true;

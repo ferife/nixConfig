@@ -2,14 +2,13 @@
   config,
   lib,
   pkgs,
-  userSettings,
   ...
 }: {
   config = lib.mkIf config.nixos.gaming.openrazer {
     hardware.openrazer = {
       enable = true;
       users = [
-        "${userSettings.username}"
+        "${config.nixos.specialArgs.user-settings.username}"
       ];
     };
 

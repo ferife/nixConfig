@@ -1,13 +1,12 @@
 {
   config,
   pkgs,
-  userSettings,
   ...
 }: {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${userSettings.username} = {
+  users.users.${config.nixos.specialArgs.user-settings.username} = {
     isNormalUser = true;
-    description = "${userSettings.name}";
+    description = "${config.nixos.specialArgs.user-settings.name}";
     extraGroups = ["networkmanager" "wheel"];
     # packages = with pkgs; [];
   };

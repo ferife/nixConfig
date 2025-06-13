@@ -9,5 +9,7 @@
     ./desktop-environments
     ./packages
     ./settings
+
+    ./options-special-args.nix
   ];
 }

@@ -11,5 +11,6 @@
     ./shell-scripts
 
     ./hm-general-settings.nix
+    ./options-special-args.nix
   ];
 }

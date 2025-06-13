@@ -7,6 +7,7 @@
 }: {
   config = lib.mkIf config.hm.hyprland.enable {
     hm.hyprland.max-volume = 120;
+    hm.hyprland.app-launcher = "rofi";
 
     # hint Electron apps to use Wayland
     home.sessionVariables.NIXOS_OZONE_WL = "1";

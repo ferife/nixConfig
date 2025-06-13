@@ -2,13 +2,12 @@
   config,
   lib,
   pkgs,
-  userSettings,
   ...
 }: {
   config = lib.mkMerge [
     (lib.mkIf config.hm.kitty {programs.kitty.enable = true;})
 
-    (lib.mkIf (userSettings.colorscheme == "onedark") {
+    (lib.mkIf (config.hm.specialArgs.user-settings.colorscheme == "onedark") {
       stylix.targets.kitty.enable = false;
       programs.kitty.themeFile = "OneDark";
     })
@@ -17,8 +16,8 @@
       programs.kitty = {
         settings.background_opacity = lib.mkForce 0.9;
         font = lib.mkForce {
-          name = userSettings.font;
-          package = userSettings.fontPkg;
+          name = config.hm.specialArgs.user-settings.font.name;
+          package = config.hm.specialArgs.user-settings.font.package;
           size = 12;
         };
       };

@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  userSettings,
   ...
 }: {
   imports = [
@@ -12,6 +11,6 @@
 
   nixos.stylix = {
     enable = lib.mkDefault true;
-    theme = userSettings.colorscheme;
+    theme = config.nixos.specialArgs.user-settings.colorscheme;
   };
 }

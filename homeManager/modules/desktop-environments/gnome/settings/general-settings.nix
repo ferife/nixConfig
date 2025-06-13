@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  userSettings,
   ...
 }: {
   config = lib.mkIf config.hm.gnome.generalSettings {
@@ -47,17 +46,19 @@
           name = "Terminal";
           binding = "<Super>t";
         }
-        (lib.mkIf (userSettings.terminal == "ghostty") {command = "ghostty";})
-        (lib.mkIf (userSettings.terminal == "gnome-terminal") {command = "gnome-terminal";})
-        (lib.mkIf (userSettings.terminal == "kitty") {command = "kitty";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "ghostty") {command = "ghostty";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-terminal") {command = "gnome-terminal";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "kitty") {command = "kitty";})
       ];
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = lib.mkMerge [
         {
           name = "Browser";
           binding = "<Super>b";
         }
-        (lib.mkIf (userSettings.mainBrowser == "floorp") {command = "floorp";})
-        (lib.mkIf (userSettings.mainBrowser == "firefox") {command = "firefox";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.browser == "chromium") {command = "chromium";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") {command = "floorp";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") {command = "firefox";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.browser == "tor-browser") {command = "tor-browser";})
       ];
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
         name = "Obsidian";

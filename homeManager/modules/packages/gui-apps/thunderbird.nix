@@ -2,13 +2,12 @@
   config,
   lib,
   pkgs,
-  userSettings,
   ...
 }: {
   config = lib.mkIf config.hm.thunderbird {
     programs.thunderbird = {
       enable = true;
-      # profiles.${userSettings.username}.name = "Fernando RF";
+      # profiles.${config.hm.specialArgs.user-settings.username}.name = "${config.hm.specialArgs.user-settings.name}";
     };
   };
 }

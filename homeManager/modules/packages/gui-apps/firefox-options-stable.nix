@@ -3,7 +3,6 @@
   lib,
   pkgs,
   inputs,
-  systemSettings,
   ...
 }: {
   config = {
@@ -83,7 +82,7 @@
         }
       ];
     };
-    # programs.firefox.profiles.perpetuallyWeary.extensions = with inputs.firefox-addons.packages."${systemSettings.system}"; [
+    # programs.firefox.profiles.perpetuallyWeary.extensions = with inputs.firefox-addons.packages."${config.hm.specialArgs.system-settings.system}"; [
     #   # 600% Sound Volume
 
     #   canvasblocker # Alters some JS APIs to prevent fingerprinting

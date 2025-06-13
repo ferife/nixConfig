@@ -3,10 +3,9 @@
   lib,
   pkgs,
   inputs,
-  systemSettings,
   ...
 }: let
-  power-menu-path = "${systemSettings.scriptsDirectory}/rofi-power-menu.bash";
+  power-menu-path = "${config.hm.specialArgs.system-settings.scripts-dir}/rofi-power-menu.bash";
 in {
   config = lib.mkIf config.hm.hyprland.waybar {
     home.file.${power-menu-path} = {

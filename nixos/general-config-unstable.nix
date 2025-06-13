@@ -5,8 +5,6 @@
   config,
   lib,
   pkgs,
-  systemSettings,
-  userSettings,
   ...
 }: {
   imports = [./minimal-config.nix];
@@ -28,21 +26,21 @@
       # Location information
 
       # Set your time zone.
-      time.timeZone = "${systemSettings.timezone}";
+      time.timeZone = "${config.nixos.specialArgs.system-settings.timezone}";
 
       # Select internationalisation properties.
-      i18n.defaultLocale = "${systemSettings.locale}";
+      i18n.defaultLocale = "${config.nixos.specialArgs.system-settings.locale}";
 
       i18n.extraLocaleSettings = {
-        LC_ADDRESS = "${systemSettings.locale}";
-        LC_IDENTIFICATION = "${systemSettings.locale}";
-        LC_MEASUREMENT = "${systemSettings.locale}";
-        LC_MONETARY = "${systemSettings.locale}";
-        LC_NAME = "${systemSettings.locale}";
-        LC_NUMERIC = "${systemSettings.locale}";
-        LC_PAPER = "${systemSettings.locale}";
-        LC_TELEPHONE = "${systemSettings.locale}";
-        LC_TIME = "${systemSettings.locale}";
+        LC_ADDRESS = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_IDENTIFICATION = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_MEASUREMENT = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_MONETARY = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_NAME = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_NUMERIC = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_PAPER = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_TELEPHONE = "${config.nixos.specialArgs.system-settings.locale}";
+        LC_TIME = "${config.nixos.specialArgs.system-settings.locale}";
       };
     }
     {
@@ -151,9 +149,9 @@
     }
     {
       environment.variables = {
-        NIXOS_CONFIG_FILES_DIR = "/${systemSettings.configFilesDirectory}";
-        NIXOS_CONFIG_SCRIPTS_DIR = "/${systemSettings.scriptsDirectory}";
-        NIXOS_CONFIG_ASSETS_DIR = "/${systemSettings.assetsDirectory}";
+        NIXOS_CONFIG_FILES_DIR = "/${config.nixos.specialArgs.system-settings.config-files-dir}";
+        NIXOS_CONFIG_SCRIPTS_DIR = "/${config.nixos.specialArgs.system-settings.scripts-dir}";
+        NIXOS_CONFIG_ASSETS_DIR = "/${config.nixos.specialArgs.system-settings.assets-dir}";
       };
     }
   ];

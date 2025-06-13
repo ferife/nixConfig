@@ -17,8 +17,9 @@
   config.hm.hyprland = {
     dunst = lib.mkDefault config.hm.hyprland.enable;
     hypridle = lib.mkDefault config.hm.hyprland.enable;
-    rofi = lib.mkDefault config.hm.hyprland.enable;
     waybar = lib.mkDefault config.hm.hyprland.enable;
-    wofi = false;
+
+    # rofi
+    # wofi
   };
 }

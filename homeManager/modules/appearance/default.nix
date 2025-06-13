@@ -1,6 +1,6 @@
 {
+  config,
   lib,
-  userSettings,
   ...
 }: {
   imports = [
@@ -12,6 +12,6 @@
 
   hm.stylix = {
     enable = lib.mkDefault true;
-    theme = userSettings.colorscheme;
+    theme = config.hm.specialArgs.user-settings.colorscheme;
   };
 }

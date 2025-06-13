@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  userSettings,
   ...
 }: {
   imports = [
@@ -38,8 +37,8 @@
     audacity = lib.mkDefault true;
     chromium = false;
     eclipse = false;
-    firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
-    floorp = lib.mkIf (userSettings.mainBrowser == "floorp") true;
+    firefox = lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") true;
+    floorp = lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") true;
     gimp = false;
     gnome-calculator = lib.mkDefault true;
     keepassxc = lib.mkDefault true;
@@ -50,7 +49,7 @@
     openshot = lib.mkDefault true;
     qbittorrent = false;
     thunderbird = false;
-    torBrowser = lib.mkDefault true;
+    tor-browser = lib.mkDefault true;
     vlc = lib.mkDefault true;
     vsCode = false;
   };

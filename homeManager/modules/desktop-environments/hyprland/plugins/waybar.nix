@@ -3,7 +3,6 @@
   lib,
   pkgs,
   inputs,
-  userSettings,
   ...
 }: {
   imports = [
@@ -56,7 +55,7 @@
     };
 
     home.packages = [
-      userSettings.fontPkg
+      config.hm.specialArgs.user-settings.font.package
     ];
     wayland.windowManager.hyprland.settings.exec-once = lib.mkIf (!config.hm.gnome.enable) ["waybar"];
   };

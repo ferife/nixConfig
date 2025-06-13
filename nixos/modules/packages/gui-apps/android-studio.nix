@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs-unstable,
-  userSettings,
   ...
 }: {
   config = lib.mkIf config.nixos.androidStudio {
@@ -10,6 +9,6 @@
       android-studio
     ];
     nixpkgs.config.android_sdk.accept_license = true;
-    users.users.${userSettings.username}.extraGroups = ["kvm"];
+    users.users.${config.nixos.specialArgs.user-settings.username}.extraGroups = ["kvm"];
   };
 }

@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  userSettings,
   inputs,
   ...
 }: {
@@ -12,7 +11,7 @@
 
       settings = {
         global = {
-          font = lib.mkForce "${userSettings.font} 12";
+          font = lib.mkForce "${config.hm.specialArgs.user-settings.font.name} 12";
           dmenu = lib.mkIf config.hm.hyprland.rofi "rofi -dmenu";
         };
       };

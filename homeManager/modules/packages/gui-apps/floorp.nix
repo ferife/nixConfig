@@ -3,10 +3,13 @@
   lib,
   pkgs,
   inputs,
-  systemSettings,
   ...
 }: {
   config = lib.mkMerge [
+    (lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") {
+      hm.floorp = lib.mkForce true;
+    })
+
     (lib.mkIf config.hm.floorp {
       # Go to ./firefox-options-(un)stable.nix for the firefox hm options
 
