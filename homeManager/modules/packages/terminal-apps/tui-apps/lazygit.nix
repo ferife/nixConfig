@@ -14,6 +14,7 @@
     home.shellAliases = {
       "lg" = "lazygit";
     };
+    # TODO: See if I should replace this with GitUI
   };
   # NOTE: To undo commits in lazygit and put their changes back in the working tree, do the following:
   # Go to the commits window and put the cursor on the commit that will be the new head

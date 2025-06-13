@@ -20,6 +20,7 @@
       };
 
       # NOTE: Basic text formatting can be done using Pango Markup Format (https://docs.gtk.org/Pango/pango_markup.html#pango-markup)
+      # GTK CSS properties can also be used (https://docs.gtk.org/gtk3/css-properties.html)
 
       settings = {
         mainBar = {

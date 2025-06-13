@@ -9,5 +9,8 @@
       enable = true;
       enableCompletion = true;
     };
+    home.shellAliases = {
+      "fc" = "fc -e nvim"; # sets default editor for fc to nvim
+    };
   };
 }

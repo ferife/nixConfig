@@ -12,6 +12,8 @@ in {
   config = lib.mkIf config.hm.hyprland.enable {
     hm.scripts.modify-volume.enable = true;
 
+    # The names of the F-keys (based on function, not number) can be seen at https://github.com/xkbcommon/libxkbcommon/blob/master/include/xkbcommon/xkbcommon-keysyms.h
+
     home.packages = [
       pkgs.brightnessctl
     ];
