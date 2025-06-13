@@ -27,5 +27,5 @@
     (lib.mkIf config.hm.bash {programs.kitty.shellIntegration.enableBashIntegration = true;})
     (lib.mkIf config.hm.zsh {programs.kitty.shellIntegration.enableZshIntegration = true;})
   ];
-  # NOTE: To search through command history in the terminal using stylix, simply use CTRL+R
+  # NOTE: To search through command history in the terminal using kitty, simply use CTRL+R
 }

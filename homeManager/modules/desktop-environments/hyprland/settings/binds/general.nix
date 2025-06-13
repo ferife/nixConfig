@@ -1,11 +1,13 @@
 {
   config,
   lib,
+  userSettings,
   pkgs,
   inputs,
   ...
 }: {
   config = lib.mkIf config.hm.hyprland.enable {
+    # TODO: Add a keybind to toggle fullscreen the current focused window
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Format for a bindd with questions:
       # "MODS, key, description, dispatcher, params"
@@ -35,13 +37,17 @@
           "$mainMod SHIFT, 0, Move active window to workspace 10, movetoworkspace, 10"
         ];
       }
-      (lib.mkIf config.hm.kitty {
+      (lib.mkIf (userSettings.terminal == "ghostty") {
+        bindd = ["$mainMod, T, Open a terminal window, exec, ghostty"];
+      })
+      (lib.mkIf (userSettings.terminal == "kitty") {
         bindd = ["$mainMod, T, Open a terminal window, exec, kitty"];
       })
-      (lib.mkIf config.hm.floorp {
+      # firefox = lib.mkIf (userSettings.mainBrowser == "firefox") true;
+      (lib.mkIf (userSettings.mainBrowser == "floorp") {
         bindd = ["$mainMod, B, Open a browser window, exec, floorp"];
       })
-      (lib.mkIf (config.hm.firefox && !config.hm.floorp) {
+      (lib.mkIf (userSettings.mainBrowser == "firefox") {
         bindd = ["$mainMod, B, Open a browser window, exec, firefox"];
       })
       (lib.mkIf config.hm.hyprland.rofi {

@@ -47,7 +47,7 @@
       name = "Fernando";
       colorscheme = "onedark";
       mainBrowser = "floorp"; # Options: firefox, floorp
-      terminal = "kitty"; # Options: gnome terminal, kitty
+      terminal = "ghostty"; # Options: ghostty, gnome-terminal, kitty
       font = "FiraCode Nerd Font";
       fontPkg = pkgs.nerd-fonts.fira-code;
     };

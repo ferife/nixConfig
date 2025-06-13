@@ -47,8 +47,9 @@
           name = "Terminal";
           binding = "<Super>t";
         }
-        (lib.mkIf (userSettings.terminal == "kitty") {command = "kitty";})
+        (lib.mkIf (userSettings.terminal == "ghostty") {command = "ghostty";})
         (lib.mkIf (userSettings.terminal == "gnome-terminal") {command = "gnome-terminal";})
+        (lib.mkIf (userSettings.terminal == "kitty") {command = "kitty";})
       ];
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = lib.mkMerge [
         {
