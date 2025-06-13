@@ -8,7 +8,7 @@
     programs.yazi = {
       enable = true;
       settings = {
-        manager.show_hidden = true;
+        mgr.show_hidden = true;
       };
     };
   };
