@@ -35,7 +35,7 @@
             "clock"
           ];
           modules-right = [
-            "pulseaudio"
+            "wireplumber"
             "idle_inhibitor"
             "group/battery-group"
             "network"

@@ -13,6 +13,7 @@
     ./network.nix
     ./power-menu.nix
     ./pulseaudio.nix
+    ./wireplumber.nix
     ./workspaces.nix
   ];
 }
