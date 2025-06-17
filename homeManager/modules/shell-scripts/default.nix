@@ -9,5 +9,6 @@
 
     ./modify-volume.nix
     ./network-menu.nix
+    ./power-menu.nix
   ];
 }
