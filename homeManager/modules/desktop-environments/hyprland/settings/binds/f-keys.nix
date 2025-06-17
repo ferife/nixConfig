@@ -1,31 +1,19 @@
 {
   config,
   lib,
-  pkgs,
-  inputs,
   ...
-}: let
-  brightness-mod-path = "${config.hm.specialArgs.system-settings.scripts-dir}/modify-monitor-brightness.bash";
-in {
+}: {
   config = lib.mkIf config.hm.hyprland.enable {
-    hm.scripts.modify-volume.enable = true;
+    hm.scripts = {
+      modify-monitor-brightness.enable = true;
+      modify-volume.enable = true;
+    };
 
     # The names of the F-keys (based on function, not number) can be seen at https://github.com/xkbcommon/libxkbcommon/blob/master/include/xkbcommon/xkbcommon-keysyms.h
-
-    home.packages = [
-      pkgs.brightnessctl
-    ];
-
-    home.file."${brightness-mod-path}" = {
-      enable = true;
-      source = ./shell-scripts/monitor-brightness.bash;
-      executable = true;
-    };
 
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Format for a bindd with questions:
       # "MODS, key, description, dispatcher, params"
-      # NOTE: Requires wireplumber to be enabled in nixos config
       {
         bind = [
           # F1
@@ -44,10 +32,10 @@ in {
       {
         binde = [
           # F7
-          ", XF86MonBrightnessUp, exec, ~/${brightness-mod-path} intel_backlight 5%+"
+          ", XF86MonBrightnessUp, exec, ${config.hm.scripts.modify-monitor-brightness.true-path} intel_backlight 5%+"
 
           # F8
-          ", XF86MonBrightnessDown, exec, ~/${brightness-mod-path} intel_backlight 5%-"
+          ", XF86MonBrightnessDown, exec, ${config.hm.scripts.modify-monitor-brightness.true-path} intel_backlight 5%-"
         ];
       }
     ];

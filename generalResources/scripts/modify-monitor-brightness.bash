@@ -4,6 +4,19 @@
 
 # format SCRIPT_NAME DEVICE_NAME CHANGE
 
+# Dependency checking
+errorMessage=""
+dependencies=(bc brightnessctl dunstify grep)
+for item in "${dependencies[@]}"; do
+  if ! type "$item" > /dev/null; then
+    errorMessage="${errorMessage}ERROR: $item command not working\n"
+  fi
+done
+if [[ -n "$errorMessage" ]]; then
+  dunstify "ERROR: $0" "$errorMessage" || echo -e "ERROR: $0\n$errorMessage"
+  exit 1
+fi
+
 device="$1"
 change="$2"
 
