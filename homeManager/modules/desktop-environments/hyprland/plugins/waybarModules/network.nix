@@ -4,14 +4,10 @@
   pkgs,
   inputs,
   ...
-}: let
-  wifi-menu-path = "${config.hm.specialArgs.system-settings.scripts-dir}/rofi-wifi-menu.bash";
-in {
+}: {
   config = lib.mkIf config.hm.hyprland.waybar {
-    home.file."${wifi-menu-path}" = {
-      enable = true;
-      source = ./shell-scripts/network-menu.bash;
-    };
+    hm.scripts.network-menu.enable = true;
+
     programs.waybar = {
       settings.mainBar = {
         "network" = {
@@ -25,7 +21,7 @@ in {
             wifi = "󰖩 ";
             disconnected = "󰖪 ";
           };
-          on-click = "bash ~/${wifi-menu-path}";
+          on-click = "bash ${config.hm.scripts.network-menu.true-path}";
         };
       };
     };

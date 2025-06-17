@@ -8,5 +8,6 @@
     ./options.nix
 
     ./modify-volume.nix
+    ./network-menu.nix
   ];
 }
