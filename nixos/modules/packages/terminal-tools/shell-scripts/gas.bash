@@ -87,7 +87,7 @@ else
   path="$NIX_CONFIG_PATH/nixConfig-main"
 fi
 
-export FLAKE="$path"
+export NH_FLAKE="$path"
 
 # Step 1: cd to the correct file location
 cd "$path" || (echo "cd failed for some reason" && exit 1)
