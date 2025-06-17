@@ -10,10 +10,6 @@
 # scriptName audioSink maxVolume volumeMod
 # scriptName.bash "@DEFAULT_AUDIO_SINK@" 150 5%+
 
-# Set initial variables
-# if [[ -z "$sound_file" ]]; then
-#   sound_file="$HM_CONFIG_ASSETS_DIR/volume-test.mp3"
-# fi
 lock_file="/tmp/volume-notif-sound.lock"
 cooldown_ms=250
 
@@ -25,25 +21,17 @@ fi
 if [[ "$#" != 3 ]]; then
   errorMessage="${errorMessage}ERROR: Incorrect number of arguments\n"
 fi
-if ! type bc > /dev/null; then
-  errorMessage="${errorMessage}ERROR: bc not installed\n"
-fi
-if ! type date > /dev/null; then
-  errorMessage="${errorMessage}ERROR: date not installed\n"
-fi
-if ! type pw-play > /dev/null; then
-  errorMessage="${errorMessage}ERROR: pw-play command does not exist (ensure pipewire and wireplumber are installed)\n"
-fi
-if ! type wpctl > /dev/null; then
-  errorMessage="${errorMessage}ERROR: wpctl command does not exist (ensure pipewire and wireplumber are installed)\n"
-fi
-if ! type wpctl > /dev/null; then
-  errorMessage="${errorMessage}ERROR: wpctl command does not exist (ensure pipewire and wireplumber are installed)\n"
-fi
+dependencies=(bc date pw-play wpctl)
+for item in "${dependencies[@]}"; do
+  if ! type "$item" > /dev/null; then
+    errorMessage="${errorMessage}ERROR: $item command not working\n"
+  fi
+done
 if [[ -n "$errorMessage" ]]; then
-  dunstify "ERROR: $0" "$errorMessage"
+  dunstify "ERROR: $0" "$errorMessage" || echo -e "ERROR: $0\n$errorMessage"
   exit 1
 fi
+
 
 audioSink="$1"
 maxVolume="$2"

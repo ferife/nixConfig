@@ -2,34 +2,14 @@
 
 # Based on github:ericmurphyxyz/rofi-wifi-menu
 
-# Dependencies
-# awk
-# dunstify
-# grep
-# nmcli
-# rofi
-# sed
-
 # Dependency checking
 errorMessage=""
-if ! type awk > /dev/null; then
-  errorMessage="${errorMessage}ERROR: awk command not working\n"
-fi
-if ! type dunstify > /dev/null; then
-  errorMessage="${errorMessage}ERROR: dunstify command not working\n"
-fi
-if ! type grep > /dev/null; then
-  errorMessage="${errorMessage}ERROR: grep command not working\n"
-fi
-if ! type nmcli > /dev/null; then
-  errorMessage="${errorMessage}ERROR: nmcli command not working\n"
-fi
-if ! type rofi > /dev/null; then
-  errorMessage="${errorMessage}ERROR: rofi command not working\n"
-fi
-if ! type sed > /dev/null; then
-  errorMessage="${errorMessage}ERROR: sed command not working\n"
-fi
+dependencies=(awk dunstify grep nmcli rofi sed)
+for item in "${dependencies[@]}"; do
+  if ! type "$item" > /dev/null; then
+    errorMessage="${errorMessage}ERROR: $item command not working\n"
+  fi
+done
 if [[ -n "$errorMessage" ]]; then
   dunstify "ERROR: $0" "$errorMessage" || echo -e "ERROR: $0\n$errorMessage"
   exit 1
