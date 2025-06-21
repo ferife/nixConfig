@@ -7,7 +7,7 @@
   imports = [
     ./deskEnv2
     ./gnome
-    ./hyprland
+    ./window-managers
   ];
 
   hm.gnome.enable = lib.mkDefault true;
