@@ -14,10 +14,10 @@
     ./wofi.nix
   ];
 
-  config.hm.hyprland = {
-    dunst = lib.mkDefault config.hm.hyprland.enable;
-    hypridle = lib.mkDefault config.hm.hyprland.enable;
-    waybar = lib.mkDefault config.hm.hyprland.enable;
+  config.hm.wm.components = {
+    dunst = lib.mkDefault config.hm.wm.hyprland.enable;
+    hypridle = lib.mkDefault config.hm.wm.hyprland.enable;
+    waybar = lib.mkDefault config.hm.wm.hyprland.enable;
 
     # rofi
     # wofi

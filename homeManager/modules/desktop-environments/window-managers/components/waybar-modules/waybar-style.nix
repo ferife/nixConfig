@@ -5,7 +5,7 @@
   inputs,
   ...
 }: {
-  config = lib.mkIf config.hm.hyprland.waybar {
+  config = lib.mkIf config.hm.wm.components.waybar {
     stylix.targets.waybar = {
       enableLeftBackColors = true;
       enableCenterBackColors = true;

@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./gnome
-    ./hyprland
+    ./window-managers
   ];
 
   # config.nixos.gnome.enable = lib.mkForce false;

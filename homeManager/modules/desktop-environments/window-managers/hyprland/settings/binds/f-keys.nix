@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf config.hm.hyprland.enable {
+  config = lib.mkIf config.hm.wm.hyprland.enable {
     hm.scripts = {
       modify-monitor-brightness.enable = true;
       modify-volume.enable = true;
@@ -23,10 +23,10 @@
       {
         binde = [
           # F2
-          ", XF86AudioRaiseVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.hyprland.max-volume} 5%+"
+          ", XF86AudioRaiseVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.wm.max-volume} 5%+"
 
           # F3
-          ", XF86AudioLowerVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.hyprland.max-volume} 5%-"
+          ", XF86AudioLowerVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.wm.max-volume} 5%-"
         ];
       }
       {

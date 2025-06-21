@@ -6,10 +6,10 @@
   ...
 }: {
   config = lib.mkMerge [
-    (lib.mkIf (config.hm.hyprland.app-launcher == "wofi") {
-      hm.hyprland.wofi = lib.mkForce true;
+    (lib.mkIf (config.hm.wm.app-launcher == "wofi") {
+      hm.wm.components.wofi = lib.mkForce true;
     })
-    (lib.mkIf config.hm.hyprland.wofi {
+    (lib.mkIf config.hm.wm.components.wofi {
       programs.wofi = {
         enable = true;
         # settings = {};

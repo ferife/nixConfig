@@ -9,7 +9,7 @@
     ./waybar-modules
   ];
 
-  config = lib.mkIf config.hm.hyprland.waybar {
+  config = lib.mkIf config.hm.wm.components.waybar {
     programs.waybar = {
       enable = true;
       systemd = {
@@ -27,8 +27,8 @@
           position = "top";
 
           modules-left = [
-            "hyprland/workspaces"
-            "hyprland/window"
+            "${config.hm.wm.window-manager}/workspaces"
+            "${config.hm.wm.window-manager}/window"
           ];
           modules-center = [
             "clock"
@@ -57,6 +57,5 @@
     home.packages = [
       config.hm.specialArgs.user-settings.font.package
     ];
-    wayland.windowManager.hyprland.settings.exec-once = lib.mkIf (!config.hm.gnome.enable) ["waybar"];
   };
 }

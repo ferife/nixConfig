@@ -11,6 +11,8 @@
     ./hyprland.nix
   ];
 
+  config.hm.wm.hyprland.enable = lib.mkIf (config.hm.wm.window-manager == "hyprland") config.hm.wm.enable;
+
   # TODO: Top bar components
   # Workspace indicator
   #   Pressing it should allow switching workspaces

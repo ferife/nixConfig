@@ -10,6 +10,9 @@
     ./window-managers
   ];
 
-  hm.gnome.enable = lib.mkDefault true;
-  hm.hyprland.enable = lib.mkDefault true;
+  config.hm = {
+    gnome.enable = true;
+
+    wm.enable = lib.mkDefault true;
+  };
 }

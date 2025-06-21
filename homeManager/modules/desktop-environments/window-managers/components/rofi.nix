@@ -6,10 +6,10 @@
   ...
 }: {
   config = lib.mkMerge [
-    (lib.mkIf (config.hm.hyprland.app-launcher == "rofi") {
-      hm.hyprland.rofi = lib.mkForce true;
+    (lib.mkIf (config.hm.wm.app-launcher == "rofi") {
+      hm.wm.components.rofi = lib.mkForce true;
     })
-    (lib.mkIf config.hm.hyprland.rofi {
+    (lib.mkIf config.hm.wm.components.rofi {
       programs.rofi = {
         enable = true;
         package = pkgs.rofi-wayland; # lbonn's fork of rofi, with added wayland support

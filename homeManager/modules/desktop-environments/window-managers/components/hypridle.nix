@@ -5,7 +5,7 @@
   inputs,
   ...
 }: {
-  config = lib.mkIf config.hm.hyprland.hypridle {
+  config = lib.mkIf config.hm.wm.components.hypridle {
     services.hypridle = {
       enable = true;
       # settings = {};

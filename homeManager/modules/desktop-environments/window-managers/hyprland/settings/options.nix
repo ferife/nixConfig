@@ -5,6 +5,6 @@
   ...
 }: {
   options = {
-    # hm.hyprland.<setting> = lib.mkEnableOption "<description>";
+    # hm.wm.hyprland.<setting> = lib.mkEnableOption "<description>";
   };
 }
