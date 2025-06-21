@@ -6,34 +6,19 @@
 
 # TODO: Move this into my nixConfig using writeShellScriptBin
 
-# Step -1: Check to make sure that any necessary packages are installed
-missingDependencies=0
-if [ ! "$(command -v getopts 2> /dev/null)" ]; then
-  echo "ERROR: getopts not found"
-  ((missingDependencies++))
+# Dependency checking
+errorMessage=""
+if [ ! -f "$reload_floorp_profile" ]; then
+  errorMessage="${errorMessage}ERROR: reload-floorp-profile script not found\n"
 fi
-if [ ! "$(command -v git 2> /dev/null)" ]; then
-  echo "ERROR: git not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v home-manager 2> /dev/null)" ]; then
-  echo "ERROR: home manager not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v nix 2> /dev/null)" ]; then
-  echo "ERROR: nix not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v nh 2> /dev/null)" ]; then
-  echo "ERROR: nh not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v alejandra 2> /dev/null)" ]; then
-  echo "ERROR: alejandra not found"
-  ((missingDependencies++))
-fi
-if [ "$missingDependencies" -gt 0 ]; then
-  echo "Missing dependencies: $missingDependencies"
+dependencies=(alejandra git home-manager nh nix)
+for item in "${dependencies[@]}"; do
+  if ! type "$item" > /dev/null; then
+    errorMessage="${errorMessage}ERROR: $item command not working\n"
+  fi
+done
+if [[ -n "$errorMessage" ]]; then
+  dunstify "ERROR: $0" "$errorMessage" || echo -e "ERROR: $0\n$errorMessage"
   exit 1
 fi
 
@@ -99,12 +84,6 @@ if [ ! -f "flake.nix" ] || { [ ! -d ".git" ] && [ ! -f ".git" ]; }; then
 fi
 
 # Step 2: Upgrade flake.lock/nixvim?
-if [ "$upgradeFlakeLock" ] && [ ! "$updateOS" ] && [ ! "$updateHome" ]; then
-  nix flake update
-elif [ "$upgradeNixvim" ]; then
-  nix flake update nixvim-config
-fi
-
 if [ "$upgradeFlakeLock" ] || [ "$upgradeNixvim" ]; then
   cd "$HOME/Documents/Configs/nvimConfig/nvimConfig-main" || (echo "cd into nvimConfig failed for some reason" && exit 1)
   alejandra .
@@ -116,6 +95,12 @@ if [ "$upgradeFlakeLock" ] || [ "$upgradeNixvim" ]; then
     git push
   fi
   cd "$path" || (echo "cd out of nvimConfig failed for some reason" && exit 1)
+fi
+
+if [ "$upgradeFlakeLock" ] && [ ! "$updateOS" ] && [ ! "$updateHome" ]; then
+  nix flake update
+elif [ "$upgradeNixvim" ]; then
+  nix flake update nixvim-config
 fi
 
 # Step 3: Add to git stage
@@ -201,13 +186,13 @@ if [ "$updateFirmware" ]; then
   fwupdmgr update
 fi
 
-# Step 7: Clean?
+# Step 8: Clean?
 if [ "$cleanUpdate" ]; then
   nh clean all --ask --keep-since 7d --keep 10
   nix store optimise
 fi
 
-# Step 8: Go back and execute shell
+# Step 9: Go back and execute shell
 # Shell is executed so that shell aliases and enviroment variables are reset
 cd "$cwd" || exit 1
 exec "$SHELL"

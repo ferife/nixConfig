@@ -8,7 +8,6 @@
     ./options.nix
     ./shells
 
-    ./alejandra.nix
     ./bat.nix
     ./bc.nix
     ./cmatrix.nix
@@ -29,7 +28,6 @@
   ];
 
   hm = {
-    alejandra = lib.mkDefault true;
     bat = lib.mkDefault true;
     bc = lib.mkDefault true;
     cmatrix = lib.mkDefault true;

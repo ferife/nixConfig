@@ -6,7 +6,6 @@
   ...
 }: {
   options.hm = with lib; {
-    alejandra = mkEnableOption "alejandra, a Nix code formatter tool";
     bat = mkEnableOption "bat, a cat clone with syntax highlighting and Git integration";
     bc = mkEnableOption "bc, a basic CLI math calculator that is often used when writing shell scripts";
     cmatrix = mkEnableOption "cmatrix, a tool that just displays falling text like the Matrix";
