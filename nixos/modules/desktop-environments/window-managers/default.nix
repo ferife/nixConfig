@@ -8,6 +8,7 @@
     ./options.nix
 
     ./hyprland
+    ./sway
   ];
 
   config = {
