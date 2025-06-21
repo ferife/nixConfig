@@ -5,14 +5,14 @@
   inputs,
   ...
 }: {
-  config = lib.mkIf config.hm.hyprland.dunst {
+  config = lib.mkIf config.hm.wm.components.dunst {
     services.dunst = {
       enable = true;
 
       settings = {
         global = {
           font = lib.mkForce "${config.hm.specialArgs.user-settings.font.name} 12";
-          dmenu = lib.mkIf config.hm.hyprland.rofi "rofi -dmenu";
+          dmenu = lib.mkIf (config.hm.wm.app-launcher == "rofi") "rofi -dmenu";
         };
       };
     };

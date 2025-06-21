@@ -6,7 +6,5 @@
 }: {
   imports = [
     ./binds
-
-    ./options.nix
   ];
 }

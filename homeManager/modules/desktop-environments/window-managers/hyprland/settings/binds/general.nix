@@ -5,7 +5,7 @@
   inputs,
   ...
 }: {
-  config = lib.mkIf config.hm.hyprland.enable {
+  config = lib.mkIf config.hm.wm.hyprland.enable {
     # TODO: Add a keybind to toggle fullscreen the current focused window. Make it $mainMod + ENTER
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Format for a bindd with questions:
@@ -59,10 +59,10 @@
       })
 
       # App Launcher
-      (lib.mkIf (config.hm.hyprland.app-launcher == "rofi") {
+      (lib.mkIf (config.hm.wm.app-launcher == "rofi") {
         bindd = ["$mainMod, A, Open the app launcher, exec, rofi -show drun"];
       })
-      (lib.mkIf (config.hm.hyprland.app-launcher == "wofi") {
+      (lib.mkIf (config.hm.wm.app-launcher == "wofi") {
         bindd = ["$mainMod, A, Open the app launcher, exec, wofi --show drun --allow-images"];
       })
 
