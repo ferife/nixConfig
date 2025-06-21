@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./waybarModules
+    ./waybar-modules
   ];
 
   config = lib.mkIf config.hm.hyprland.waybar {

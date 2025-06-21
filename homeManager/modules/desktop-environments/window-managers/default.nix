@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./components
+
     ./hyprland
   ];
 }
