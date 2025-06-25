@@ -28,9 +28,11 @@
 
           modules-left = [
             "custom/settings-menu"
-            "${config.hm.wm.window-manager}/workspaces"
             "hyprland/submap"
-            "${config.hm.wm.window-manager}/window"
+            "hyprland/workspaces"
+            "hyprland/window"
+            "sway/workspaces"
+            "sway/window"
           ];
           modules-center = [
             "clock"
