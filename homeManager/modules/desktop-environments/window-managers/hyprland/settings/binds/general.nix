@@ -6,7 +6,7 @@
   ...
 }: {
   config = lib.mkIf config.hm.wm.hyprland.enable {
-    # TODO: Add a keybind to toggle fullscreen the current focused window. Make it $mainMod + ENTER
+    # TODO: Add a keybind to toggle fullscreen the current focused window. Make it $mainMod + SHIFT + ENTER
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Format for a bindd with questions:
       # "MODS, key, description, dispatcher, params"
@@ -39,9 +39,11 @@
       # Terminal
       (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "ghostty") {
         bindd = ["$mainMod, T, Open a terminal window, exec, ghostty"];
+        # bindd = ["$mainMod, Return, Open a terminal window, exec, ghostty"];
       })
       (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "kitty") {
         bindd = ["$mainMod, T, Open a terminal window, exec, kitty"];
+        # bindd = ["$mainMod, Return, Open a terminal window, exec, kitty"];
       })
 
       # Browser

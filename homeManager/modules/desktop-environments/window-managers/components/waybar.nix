@@ -27,8 +27,12 @@
           position = "top";
 
           modules-left = [
-            "${config.hm.wm.window-manager}/workspaces"
-            "${config.hm.wm.window-manager}/window"
+            # "${config.hm.wm.window-manager}/workspaces"
+            # "${config.hm.wm.window-manager}/window"
+            "hyprland/workspaces"
+            "hyprland/window"
+            "sway/workspaces"
+            "sway/window"
           ];
           modules-center = [
             "clock"
