@@ -7,6 +7,7 @@
   imports = [
     ./options.nix
 
+    ./settings
     ./sway.nix
   ];
 
