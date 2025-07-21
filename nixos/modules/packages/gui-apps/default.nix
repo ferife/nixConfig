@@ -14,7 +14,7 @@
   ];
 
   nixos = {
-    # androidStudio = true;
+    androidStudio = lib.mkDefault false;
     gaming.enable = lib.mkDefault true;
     mullvadVpn = lib.mkDefault true;
     vlc = {
