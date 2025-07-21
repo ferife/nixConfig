@@ -42,7 +42,7 @@
         bindd = let
           terminal = config.hm.specialArgs.user-settings.terminal;
         in [
-          "$mainMod, T, Open a terminal window, exec, ${terminal}"
+          "$mainMod, return, Open a terminal window, exec, ${terminal}"
         ];
       }
 
