@@ -36,27 +36,24 @@
           "$mainMod SHIFT, 0, Move active window to workspace 10, movetoworkspace, 10"
         ];
       }
+
       # Terminal
-      (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "ghostty") {
-        bindd = ["$mainMod, T, Open a terminal window, exec, ghostty"];
-      })
-      (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "kitty") {
-        bindd = ["$mainMod, T, Open a terminal window, exec, kitty"];
-      })
+      {
+        bindd = let
+          terminal = config.hm.specialArgs.user-settings.terminal;
+        in [
+          "$mainMod, T, Open a terminal window, exec, ${terminal}"
+        ];
+      }
 
       # Browser
-      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "chromium") {
-        bindd = ["$mainMod, B, Open a browser window, exec, chromium"];
-      })
-      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") {
-        bindd = ["$mainMod, B, Open a browser window, exec, floorp"];
-      })
-      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") {
-        bindd = ["$mainMod, B, Open a browser window, exec, firefox"];
-      })
-      (lib.mkIf (config.hm.specialArgs.user-settings.browser == "tor-browser") {
-        bindd = ["$mainMod, B, Open a browser window, exec, tor-browser"];
-      })
+      {
+        bindd = let
+          browser = config.hm.specialArgs.user-settings.browser;
+        in [
+          "$mainMod, B, Open a browser window, exec, ${browser}"
+        ];
+      }
 
       # App Launcher
       (lib.mkIf (config.hm.wm.app-launcher == "rofi") {
