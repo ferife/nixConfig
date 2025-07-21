@@ -14,4 +14,6 @@
     enable = lib.mkDefault true;
     theme = config.hm.specialArgs.user-settings.colorscheme;
   };
+
+  fonts.fontconfig.enable = true;
 }

@@ -57,5 +57,8 @@
     home.packages = [
       config.hm.specialArgs.user-settings.font.package
     ];
+
+    # Required to display unicode symbols in waybar
+    fonts.fontconfig.enable = lib.mkForce true;
   };
 }
