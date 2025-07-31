@@ -17,10 +17,10 @@
       };
     };
 
+    # Use pw-play command to play audio from scripts
 
     home.packages = [
       pkgs.libnotify
-      pkgs.pulseaudio # Allows access to the paplay command for sound notifications
       pkgs.ffmpeg # To use to configure sound files
     ];
   };
