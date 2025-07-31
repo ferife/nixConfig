@@ -4,36 +4,16 @@
 # To view that NixOS config, go to my nixConfig repository
 # The nixvim being referred to below is my Nix-based Neovim config, viewable within my nvimConfig repository
 
-# TODO: Move this into my nixConfig using writeShellScriptBin
-
 # Step -1: Check to make sure that any necessary packages are installed
-missingDependencies=0
-if [ ! "$(command -v getopts 2> /dev/null)" ]; then
-  echo "ERROR: getopts not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v git 2> /dev/null)" ]; then
-  echo "ERROR: git not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v home-manager 2> /dev/null)" ]; then
-  echo "ERROR: home manager not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v nix 2> /dev/null)" ]; then
-  echo "ERROR: nix not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v nh 2> /dev/null)" ]; then
-  echo "ERROR: nh not found"
-  ((missingDependencies++))
-fi
-if [ ! "$(command -v alejandra 2> /dev/null)" ]; then
-  echo "ERROR: alejandra not found"
-  ((missingDependencies++))
-fi
-if [ "$missingDependencies" -gt 0 ]; then
-  echo "Missing dependencies: $missingDependencies"
+errorMessage=""
+dependencies=(alejandra git home-manager nix nh sed) # Add fwupdmgr
+for item in "${dependencies[@]}"; do
+  if ! type "$item" > /dev/null; then
+    errorMessage="${errorMessage}ERROR: $item command not working\n"
+  fi
+done
+if [[ -n "$errorMessage" ]]; then
+  dunstify "ERROR: $0" "$errorMessage" || echo -e "ERROR: $0\n$errorMessage"
   exit 1
 fi
 

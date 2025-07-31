@@ -9,7 +9,7 @@
     programs.waybar = {
       settings.mainBar = {
         "custom/weather" = {
-          # TODO: custom/weather (use wttrbar package)
+          # custom/weather (use wttrbar package)
         };
       };
     };

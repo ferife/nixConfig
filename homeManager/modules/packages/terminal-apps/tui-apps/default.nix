@@ -25,5 +25,4 @@
     tmux = lib.mkDefault true;
     yazi = lib.mkDefault true;
   };
-  # TODO: Look into using pkgs.meowpdf to view PDFs from within Kitty
 }

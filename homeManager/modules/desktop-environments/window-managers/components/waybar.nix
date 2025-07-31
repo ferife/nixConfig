@@ -42,16 +42,6 @@
           ];
         };
       };
-
-      # TODO: Add weather to waybar
-      # TODO: Configure & style the workspaces, add a button to generate a workspace
-      # TODO: Add a widget for the current status of my VPN
-      # TODO: Add CPU usage, RAM usage, upload and download speed
-      # TODO: Add general menu with the following options (use group module drawer function)
-      #   backlight (screen brightness)
-      #   App launcher
-      #   Keyboard state (caps lock)
-      # Add a module that displays any currently playing audio (use the MPRIS module)
     };
 
     home.packages = [

@@ -17,8 +17,6 @@
       };
     };
 
-    # TODO: Add sound to notifications
-    # TODO: Make newest notifications appear at the top
 
     home.packages = [
       pkgs.libnotify

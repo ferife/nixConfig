@@ -13,7 +13,6 @@
           interval = 1;
           tooltip = true;
           tooltip-format = "<tt><small>{calendar}</small></tt>";
-          # TODO: Style tooltips to match the general aesthetic
           calendar = {
             mode = "year";
             mode-mon-col = 3;

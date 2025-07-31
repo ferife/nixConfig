@@ -48,6 +48,4 @@
     zellij = lib.mkDefault true;
     zoxide = lib.mkDefault true;
   };
-  # TODO: Install Manix CLI docs searcher for nix
-  # Find documentation on Nixpkgs, NixOS options, and Home Manager options
 }

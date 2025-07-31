@@ -26,5 +26,4 @@
   # gamemoderun %command%
   # mangohud %command%
   # gamescope %command%
-  # TODO: Look into installing Lutris
 }

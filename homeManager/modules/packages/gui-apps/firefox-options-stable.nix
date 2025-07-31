@@ -98,7 +98,7 @@
 
     #   # Forest pomodoro timer
 
-    #   gnome-shell-integration # TODO: Make it so that this extension is only enabled if GNOME is installed
+    #   gnome-shell-integration
 
     #   # KeePassXC browser extension
 
@@ -124,7 +124,6 @@
     #   # umatrix # Point-and-click based firewall, giving full control of which data goes in and out, and to where
     #   # Made by the dev of uBlock Origin
     #   #
-    #   # TODO: Look into installing the vimium plugin, to use vim-like keybinds within the browser
     # ];
     programs.firefox.profiles.perpetuallyWeary.containersForce = true;
     programs.firefox.profiles.perpetuallyWeary.containers = {

@@ -42,5 +42,4 @@ in {
     };
   };
   # NOTE: In order to ensure that changes here get applied, reboot after rebuilding
-  # TODO: Make it so that if the nh cleanup is enabled, it forces the one that doesn't rely on nh to be false
 }

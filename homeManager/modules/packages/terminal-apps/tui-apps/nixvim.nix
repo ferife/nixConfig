@@ -16,6 +16,4 @@
 
     nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   };
-  # TODO: Make it so that every time I open nixvim, it shows the name of the latest active commit
-  # This is so that I know whether I need to update the flake input to achieve what I want
 }

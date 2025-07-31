@@ -30,10 +30,6 @@
     ./vs-code.nix
   ];
 
-  # TODO: Install a basic calculator app (just install gnome-calculator separately from GNOME)
-  # TODO: Install CAVA (the audio visualizer I see a lot on r/unixporn)
-  # TODO: Look into installing the zathura document viewer (stylable by stylix)
-
   hm = {
     audacity = lib.mkDefault true;
     chromium = false;

@@ -2,9 +2,6 @@
 
 # This script is to be used in combination with rofi-wayland to open a power menu from my waybar
 
-# TODO: Set up lock option (hyprlock)
-# TODO: Set up sleep option
-
 # Dependency checking
 errorMessage=""
 dependencies=(reboot rofi shutdown)
