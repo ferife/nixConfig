@@ -19,6 +19,7 @@
     obsStudio = mkEnableOption "OBS Studio";
     obsidian = mkEnableOption "Obsidian.md";
     openshot = mkEnableOption "the OpenShot video editor";
+    proton-mail = mkEnableOption "the desktop application for Proton Mail and Proton Calendar";
     qbittorrent = mkEnableOption "QBitTorrent";
     thunderbird = mkEnableOption "Thunderbird";
     tor-browser = mkEnableOption "Tor Browser";

@@ -22,6 +22,7 @@
     ./obs-studio.nix
     ./obsidian.nix
     ./openshot.nix
+    ./proton-mail.nix
     ./qbittorrent.nix
     ./thunderbird.nix
     ./tor-browser.nix
@@ -47,6 +48,7 @@
     obsStudio = false;
     obsidian = lib.mkDefault true;
     openshot = lib.mkDefault true;
+    proton-mail = lib.mkDefault true;
     qbittorrent = false;
     thunderbird = false;
     tor-browser = lib.mkDefault true;
