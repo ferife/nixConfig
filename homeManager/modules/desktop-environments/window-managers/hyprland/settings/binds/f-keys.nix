@@ -23,19 +23,19 @@
       {
         binde = [
           # F2
-          ", XF86AudioRaiseVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.wm.max-volume} 5%+"
+          ", XF86AudioRaiseVolume, exec, ${config.hm.scripts.modify-volume.full-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.wm.max-volume} 5%+"
 
           # F3
-          ", XF86AudioLowerVolume, exec, ${config.hm.scripts.modify-volume.true-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.wm.max-volume} 5%-"
+          ", XF86AudioLowerVolume, exec, ${config.hm.scripts.modify-volume.full-path} @DEFAULT_AUDIO_SINK@ ${toString config.hm.wm.max-volume} 5%-"
         ];
       }
       {
         binde = [
           # F7
-          ", XF86MonBrightnessUp, exec, ${config.hm.scripts.modify-monitor-brightness.true-path} intel_backlight 5%+"
+          ", XF86MonBrightnessUp, exec, ${config.hm.scripts.modify-monitor-brightness.full-path} intel_backlight 5%+"
 
           # F8
-          ", XF86MonBrightnessDown, exec, ${config.hm.scripts.modify-monitor-brightness.true-path} intel_backlight 5%-"
+          ", XF86MonBrightnessDown, exec, ${config.hm.scripts.modify-monitor-brightness.full-path} intel_backlight 5%-"
         ];
       }
     ];

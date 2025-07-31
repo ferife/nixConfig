@@ -17,7 +17,7 @@
           type = lib.types.str;
           description = "The path of the final resulting file, NOT including the \"$HOME/\" or \"/etc/\"";
         };
-        true-path = lib.mkOption {
+        full-path = lib.mkOption {
           type = lib.types.str;
           description = "The path of the final resulting file, including the \"$HOME\" or \"/etc/\"";
         };

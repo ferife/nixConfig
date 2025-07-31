@@ -9,7 +9,7 @@
       hm.scripts.network-menu = {
         source = ../../../generalResources/scripts/network-menu.bash;
         path = "${config.hm.specialArgs.system-settings.scripts-dir}/network-menu.bash";
-        true-path = "$HOME/${config.hm.scripts.network-menu.path}";
+        full-path = "$HOME/${config.hm.scripts.network-menu.path}";
       };
     }
     (lib.mkIf config.hm.scripts.network-menu.enable {

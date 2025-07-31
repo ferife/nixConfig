@@ -9,7 +9,7 @@
       hm.scripts.power-menu = {
         source = ../../../generalResources/scripts/power-menu.bash;
         path = "${config.hm.specialArgs.system-settings.scripts-dir}/power-menu.bash";
-        true-path = "$HOME/${config.hm.scripts.power-menu.path}";
+        full-path = "$HOME/${config.hm.scripts.power-menu.path}";
       };
     }
     (lib.mkIf config.hm.scripts.power-menu.enable {

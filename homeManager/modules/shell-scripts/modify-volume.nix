@@ -12,7 +12,7 @@
         in "${script-start}\n\n${builtins.readFile ../../../generalResources/scripts/modify-volume.bash}";
 
         path = "${config.hm.specialArgs.system-settings.scripts-dir}/modify-volume.bash";
-        true-path = "$HOME/${config.hm.scripts.modify-volume.path}";
+        full-path = "$HOME/${config.hm.scripts.modify-volume.path}";
       };
     }
     (lib.mkIf config.hm.scripts.modify-volume.enable {

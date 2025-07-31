@@ -21,7 +21,7 @@
             wifi = "󰖩 ";
             disconnected = "󰖪 ";
           };
-          on-click = "bash ${config.hm.scripts.network-menu.true-path}";
+          on-click = "bash ${config.hm.scripts.network-menu.full-path}";
         };
       };
     };

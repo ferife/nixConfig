@@ -9,7 +9,7 @@
       hm.scripts.modify-monitor-brightness = {
         source = ../../../generalResources/scripts/modify-monitor-brightness.bash;
         path = "${config.hm.specialArgs.system-settings.scripts-dir}/modify-monitor-brightness.bash";
-        true-path = "$HOME/${config.hm.scripts.modify-monitor-brightness.path}";
+        full-path = "$HOME/${config.hm.scripts.modify-monitor-brightness.path}";
       };
     }
     (lib.mkIf config.hm.scripts.modify-monitor-brightness.enable {
