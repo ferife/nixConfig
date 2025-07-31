@@ -11,7 +11,7 @@
 # scriptName.bash "@DEFAULT_AUDIO_SINK@" 150 5%+
 
 lock_file="/tmp/volume-notif-sound.lock"
-cooldown_ms=250
+cooldown_ms=100
 
 # Dependency checking
 errorMessage=""
