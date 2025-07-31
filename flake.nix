@@ -6,6 +6,7 @@
     # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05"; # Stable
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; # Unstable
 
+    nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager = {
@@ -33,6 +34,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-stable,
     nixpkgs-unstable,
     home-manager,
     stylix,
@@ -69,6 +71,12 @@
         allowUnfree = true;
       };
     };
+    pkgs-stable = import nixpkgs-stable {
+      system = systemSettings.system;
+      config = {
+        allowUnfree = true;
+      };
+    };
     pkgs-unstable = import nixpkgs-unstable {
       system = systemSettings.system;
       config = {
@@ -82,6 +90,7 @@
         specialArgs = {
           system = systemSettings.system;
           inherit pkgs;
+          inherit pkgs-stable;
           inherit pkgs-unstable;
           inherit systemSettings;
           inherit userSettings;
@@ -96,6 +105,7 @@
         specialArgs = {
           system = systemSettings.system;
           inherit pkgs;
+          inherit pkgs-stable;
           inherit pkgs-unstable;
           inherit systemSettings;
           inherit userSettings;
@@ -115,6 +125,7 @@
           system = systemSettings.system;
           inherit inputs;
           inherit pkgs;
+          inherit pkgs-stable;
           inherit pkgs-unstable;
           inherit systemSettings;
           inherit userSettings;
@@ -131,6 +142,7 @@
           system = systemSettings.system;
           inherit inputs;
           inherit pkgs;
+          inherit pkgs-stable;
           inherit pkgs-unstable;
           inherit systemSettings;
           inherit userSettings;
