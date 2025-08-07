@@ -6,13 +6,21 @@
   ...
 }: {
   config = lib.mkIf config.hm.wm.hyprland.enable {
+    hm.scripts = {
+      hypr-kill-all-instances.enable = true;
+    };
+
     # TODO: Add a keybind to toggle fullscreen the current focused window. Make it $mainMod + ENTER
+
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Format for a bindd with questions:
       # "MODS, key, description, dispatcher, params"
       {
-        bindd = [
+        bindd = let
+          kill-all-instances = config.hm.scripts.hypr-kill-all-instances.full-path;
+        in [
           "$mainMod, q, Close the current window, killactive"
+          "$mainMod SHIFT, q, Close all instances of application in active window, exec, ${kill-all-instances}"
 
           "$mainMod, 1, Go to workspace 1, workspace, 1"
           "$mainMod, 2, Go to workspace 2, workspace, 2"
