@@ -95,12 +95,12 @@
       scripts-dir = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The name of the directories where the scripts for this config will be stored. They will be within the home directory and within the /etc directory respectively.";
-        default = systemSettings.configFilesDirectory;
+        default = systemSettings.scriptsDirectory;
       };
       assets-dir = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The name of the directories where the assets for this config will be stored. They will be within the home directory and within the /etc directory respectively.";
-        default = systemSettings.configFilesDirectory;
+        default = systemSettings.assetsDirectory;
       };
     };
   };
