@@ -3,24 +3,10 @@
   lib,
   pkgs,
   ...
-}: let
-  gas-path = "${config.nixos.specialArgs.system-settings.scripts-dir}/gas.bash";
-  reload-floorp-path = "${config.nixos.specialArgs.system-settings.scripts-dir}/reload-floorp-profile.bash";
-in {
+}: {
   config = lib.mkIf config.nixos.nh.enable {
-    environment.etc = {
-      "${gas-path}" = {
-        enable = true;
-        user = "${config.nixos.specialArgs.user-settings.username}";
-        source = ./shell-scripts/gas.bash;
-      };
-      "${reload-floorp-path}" = {
-        # Dependency for gas.bash
-        enable = true;
-        user = "${config.nixos.specialArgs.user-settings.username}";
-        source = ./shell-scripts/reload-floorp-profile.bash;
-      };
-    };
+    nixos.scripts.gas.enable = true;
+
     programs.nh = {
       enable = true;
       flake = config.nixos.specialArgs.system-settings.flake-path;
@@ -38,7 +24,7 @@ in {
     };
 
     environment.shellAliases = lib.mkIf config.nixos.nh.shellAliases {
-      gas = "bash /etc/${gas-path}";
+      gas = "bash ${config.nixos.scripts.gas.full-path}";
     };
   };
   # NOTE: In order to ensure that changes here get applied, reboot after rebuilding

@@ -17,6 +17,19 @@
 #     - Delete generated profile
 #     - Replace with custom profile backup
 
+# Step -1: Check to make sure that any necessary packages are installed
+errorMessage=""
+dependencies=(basename cp rm)
+for item in "${dependencies[@]}"; do
+  if ! type "$item" > /dev/null; then
+    errorMessage="${errorMessage}ERROR: $item command not working\n"
+  fi
+done
+if [[ -n "$errorMessage" ]]; then
+  dunstify "ERROR: $0" "$errorMessage" || echo -e "ERROR: $0\n$errorMessage"
+  exit 1
+fi
+
 backups_directory="$HOME/NEVER_DELETE/settings-backups/floorp-profiles"
 profiles_directory="$HOME/.floorp"
 autogen_profile_backups="nh-gen-backups"

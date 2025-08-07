@@ -6,7 +6,7 @@
 
 # Step -1: Check to make sure that any necessary packages are installed
 errorMessage=""
-dependencies=(alejandra git home-manager nix nh sed) # Add fwupdmgr
+dependencies=(alejandra bash grep git home-manager nix nh sed) # Add fwupdmgr
 for item in "${dependencies[@]}"; do
   if ! type "$item" > /dev/null; then
     errorMessage="${errorMessage}ERROR: $item command not working\n"
