@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./waybar-style.nix
+    ./hyprland
 
     ./battery-group.nix
     ./clock.nix
@@ -14,6 +15,5 @@
     ./power-menu.nix
     ./pulseaudio.nix
     ./wireplumber.nix
-    ./workspaces.nix
   ];
 }
