@@ -7,6 +7,7 @@
   imports = [
     ./options.nix
 
+    ./gnome-apps
     ./audacity.nix
     ./chromium.nix
     ./eclipse.nix
@@ -15,7 +16,6 @@
     ./firefox-options-unstable.nix
     ./floorp.nix
     ./gimp.nix
-    ./gnome-calculator.nix
     ./keepassxc.nix
     ./libreoffice.nix
     ./mpv.nix
@@ -37,7 +37,6 @@
     firefox = lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") true;
     floorp = lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") true;
     gimp = false;
-    gnome-calculator = lib.mkDefault true;
     keepassxc = lib.mkDefault true;
     libreoffice = lib.mkDefault true;
     mpv = lib.mkDefault true;
