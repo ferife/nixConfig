@@ -20,7 +20,5 @@
         "monitor" = ", preferred, auto, 1";
       };
     };
-
-    wayland.windowManager.hyprland.settings.exec-once = lib.mkIf (config.hm.wm.components.waybar && !config.hm.gnome.enable) ["waybar"];
   };
 }

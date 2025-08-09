@@ -50,5 +50,7 @@
 
     # Required to display unicode symbols in waybar
     fonts.fontconfig.enable = lib.mkForce true;
+
+    # wayland.windowManager.hyprland.settings.exec-once = lib.mkIf (config.hm.wm.components.waybar && config.hm.wm.hyprland.enable && !config.hm.gnome.enable) ["waybar"];
   };
 }
