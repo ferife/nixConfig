@@ -8,9 +8,10 @@
     ./options.nix
 
     ./gdm.nix
+    ./regreet.nix
   ];
 
   config.nixos.login-manager = {
-    name = "gdm";
+    name = "regreet";
   };
 }
