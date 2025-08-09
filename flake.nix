@@ -59,7 +59,7 @@
       locale = "en_US.UTF-8";
       nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig";
       flakePath = "${nixConfigPath}/nixConfig-main";
-      nixpkgs = "unstable"; # Options: unstable, stable
+      nixpkgs = "unstable"; # Options: unstable, 25.05
       configFilesDirectory = ".nixConfig-assets";
       scriptsDirectory = "${configFilesDirectory}/scripts";
       assetsDirectory = "${configFilesDirectory}/assets";

@@ -83,7 +83,7 @@
         default = systemSettings.flakePath;
       };
       nixpkgs = lib.mkOption {
-        type = lib.types.enum ["stable" "unstable"];
+        type = lib.types.enum ["unstable" "25.05"];
         description = "The toggle to choose between the latest stable or unstable nixpkgs";
         default = systemSettings.nixpkgs;
       };
