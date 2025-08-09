@@ -9,21 +9,7 @@
       # General Settings
       {
         enable = true;
-        autoEnable = false;
-        targets = {
-          chromium.enable = true;
-          console.enable = true;
-          gnome.enable = true;
-          grub = {
-            enable = true;
-            useWallpaper = true;
-          };
-          kmscon.enable = true;
-          lightdm.enable = true;
-          nixos-icons.enable = true;
-          plymouth.enable = true;
-          regreet.enable = true;
-        };
+        autoEnable = true;
       }
 
       # Onedark
