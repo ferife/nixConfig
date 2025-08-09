@@ -10,6 +10,7 @@
     # ./gdm-25-05.nix
     ./gdm-unstable.nix
     ./regreet.nix
+    ./sddm.nix
   ];
 
   config.nixos.login-manager = {

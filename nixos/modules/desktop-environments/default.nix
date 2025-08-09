@@ -6,12 +6,14 @@
 }: {
   imports = [
     ./login-managers
+    ./window-managers
 
     ./gnome
-    ./window-managers
+    ./plasma
   ];
   config.nixos = {
     gnome.enable = true;
+    plasma.enable = true;
     wm = {
       hyprland.enable = true;
     };

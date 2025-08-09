@@ -9,6 +9,10 @@
       nixos.login-manager.name = lib.mkForce "gdm";
     })
 
+    (lib.mkIf (config.nixos.gnome.enable && config.nixos.plasma.enable) {
+      programs.seahorse.enable = lib.mkForce false;
+    })
+
     (lib.mkIf config.nixos.gnome.enable {
       services = {
         desktopManager.gnome.enable = true; # FIXME: UNSTABLE
