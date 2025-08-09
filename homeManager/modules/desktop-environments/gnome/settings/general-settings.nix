@@ -44,7 +44,7 @@
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = lib.mkMerge [
         {
           name = "Terminal";
-          binding = "<Super>t";
+          binding = "<Super>Return";
         }
         (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "ghostty") {command = "ghostty";})
         (lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-terminal") {command = "gnome-terminal";})
