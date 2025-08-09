@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./login-managers
+
     ./gnome
     ./window-managers
   ];

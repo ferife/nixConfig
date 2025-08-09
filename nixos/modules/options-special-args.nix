@@ -102,6 +102,11 @@
         description = "The name of the directories where the assets for this config will be stored. They will be within the home directory and within the /etc directory respectively.";
         default = systemSettings.assetsDirectory;
       };
+      desktop-environment = lib.mkOption {
+        type = lib.types.enum ["gnome" "hyprland"];
+        description = "The main desktop environment to use";
+        default = systemSettings.desktopEnvironment;
+      };
     };
   };
 }

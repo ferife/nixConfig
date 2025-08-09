@@ -4,11 +4,17 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf config.nixos.gnome.enable {
-    # Enable the GNOME Desktop Environment.
-    services.displayManager.gdm.enable = true;
-    services.desktopManager.gnome.enable = true;
+  config = lib.mkMerge [
+    (lib.mkIf (config.nixos.specialArgs.system-settings.desktop-environment == "gnome") {
+      nixos.login-manager.name = lib.mkForce "gdm";
+    })
 
-    services.gnome.gnome-browser-connector.enable = true; # Allows for GNOME extensions to affect browsers
-  };
+    (lib.mkIf config.nixos.gnome.enable {
+      services = {
+        desktopManager.gnome.enable = true;
+
+        gnome.gnome-browser-connector.enable = true; # Allows for GNOME extensions to affect browsers
+      };
+    })
+  ];
 }

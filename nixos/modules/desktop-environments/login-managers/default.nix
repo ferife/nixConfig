@@ -7,10 +7,10 @@
   imports = [
     ./options.nix
 
-    ./general-settings.nix
+    ./gdm.nix
   ];
 
-  nixos.gnome = {
-    enable = lib.mkDefault true;
+  config.nixos.login-manager = {
+    name = "gdm";
   };
 }

@@ -63,6 +63,7 @@
       configFilesDirectory = ".nixConfig-assets";
       scriptsDirectory = "${configFilesDirectory}/scripts";
       assetsDirectory = "${configFilesDirectory}/assets";
+      desktopEnvironment = "hyprland";
     };
 
     pkgs = import nixpkgs {
