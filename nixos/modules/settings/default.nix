@@ -6,17 +6,20 @@
 }: {
   imports = [
     ./options.nix
+    ./configuration-nix
 
-    ./auto-upgrade-option.nix
-    ./auto-storage-cleanup-option.nix
+    ./documentation.nix
+    ./firmware-updater.nix
+    ./force-install-basics.nix
     ./low-power-options.nix
     ./nixpkgs-config.nix
     ./user-config.nix
   ];
 
   config.nixos = {
-    autoUpgradeOption = lib.mkDefault false;
-    autoStorageCleanupOption = lib.mkDefault false;
-    lowPowerOptions = true;
+    documentation = false;
+    firmware-updater = lib.mkDefault true;
+    force-install-basics = lib.mkForce true;
+    lowPowerOptions = lib.mkDefault true;
   };
 }

@@ -8,6 +8,5 @@
     isNormalUser = true;
     description = "${config.nixos.specialArgs.user-settings.name}";
     extraGroups = ["networkmanager" "wheel"];
-    # packages = with pkgs; [];
   };
 }
