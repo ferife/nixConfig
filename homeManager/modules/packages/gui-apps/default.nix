@@ -8,6 +8,7 @@
     ./options.nix
 
     ./gnome-apps
+    ./plasma-apps
     ./audacity.nix
     ./chromium.nix
     ./eclipse.nix
