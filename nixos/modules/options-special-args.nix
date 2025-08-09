@@ -80,7 +80,7 @@
       flake-path = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The absolute path leading to the flake";
-        default = systemSettings.nixConfigPath;
+        default = systemSettings.flakePath;
       };
       nixpkgs = lib.mkOption {
         type = lib.types.enum ["stable" "unstable"];
