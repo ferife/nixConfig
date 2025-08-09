@@ -10,7 +10,9 @@
     ./general-settings.nix
   ];
 
-  nixos.gnome = {
-    enable = lib.mkDefault true;
-  };
+  config = lib.mkMerge [
+    (lib.mkIf (config.nixos.specialArgs.system-settings.desktop-environment == "gnome") {
+      nixos.gnome.enable = lib.mkForce true;
+    })
+  ];
 }

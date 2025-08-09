@@ -10,7 +10,10 @@
     ./gnome
     ./window-managers
   ];
-
-  # config.nixos.gnome.enable = lib.mkForce false;
-  # config.nixos.hyprland.enable = lib.mkForce false;
+  config.nixos = {
+    gnome.enable = true;
+    wm = {
+      hyprland.enable = true;
+    };
+  };
 }

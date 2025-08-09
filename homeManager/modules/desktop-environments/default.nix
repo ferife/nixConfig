@@ -5,14 +5,14 @@
   ...
 }: {
   imports = [
+    ./window-managers
     ./deskEnv2
     ./gnome
-    ./window-managers
   ];
 
   config.hm = {
-    gnome.enable = true;
-
     wm.enable = lib.mkDefault true;
+
+    gnome.enable = true;
   };
 }

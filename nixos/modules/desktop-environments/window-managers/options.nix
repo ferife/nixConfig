@@ -7,7 +7,7 @@
   options.nixos.wm = {
     enable = lib.mkEnableOption "a window manager";
     window-manager = lib.mkOption {
-      type = lib.types.enum ["hyprland" "sway"];
+      type = lib.types.enum ["hyprland"];
       description = "The main window manager to use";
     };
   };
