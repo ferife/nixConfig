@@ -19,8 +19,10 @@
         bindd = let
           kill-all-instances = config.hm.scripts.hypr-kill-all-instances.full-path;
         in [
-          "$mainMod, q, Close the current window, killactive"
-          "$mainMod SHIFT, q, Close all instances of application in active window, exec, ${kill-all-instances}"
+          "$mainMod, Q, Close the current window, killactive"
+          "$mainMod SHIFT, Q, Close all instances of application in active window, exec, ${kill-all-instances}"
+          "$mainMod, F, Fullscreen active window, fullscreen, 0"
+          "$mainMod, M, Maximize active window, fullscreen, 1"
 
           "$mainMod, 1, Go to workspace 1, workspace, 1"
           "$mainMod, 2, Go to workspace 2, workspace, 2"
