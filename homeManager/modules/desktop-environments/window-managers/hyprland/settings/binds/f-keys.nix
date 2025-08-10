@@ -4,6 +4,7 @@
   ...
 }: {
   config = lib.mkIf config.hm.wm.hyprland.enable {
+    hm.playerctl = lib.mkForce true;
     hm.scripts = {
       modify-monitor-brightness.enable = true;
       modify-volume.enable = true;
@@ -21,26 +22,26 @@
         # "MODS, key, description, dispatcher, params"
         {
           bind = [
-            # F1
             ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" #F1
           ];
         }
         {
           binde = [
-            # F2
-            ", XF86AudioRaiseVolume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%+"
-
-            # F3
-            ", XF86AudioLowerVolume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%-"
+            ", XF86AudioRaiseVolume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%+" # F2
+            ", XF86AudioLowerVolume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%-" # F3
+          ];
+        }
+        {
+          bind = [
+            ", XF86AudioPrev, exec, playerctl previous" # F4
+            ", XF86AudioPlay, exec, playerctl play-pause" # F5
+            ", XF86AudioNext, exec, playerctl next" # F6
           ];
         }
         {
           binde = [
-            # F7
-            ", XF86MonBrightnessUp, exec, ${modify-monitor-brightness} intel_backlight 5%+"
-
-            # F8
-            ", XF86MonBrightnessDown, exec, ${modify-monitor-brightness} intel_backlight 5%-"
+            ", XF86MonBrightnessUp, exec, ${modify-monitor-brightness} intel_backlight 5%+" # F7
+            ", XF86MonBrightnessDown, exec, ${modify-monitor-brightness} intel_backlight 5%-" # F8
           ];
         }
       ];
