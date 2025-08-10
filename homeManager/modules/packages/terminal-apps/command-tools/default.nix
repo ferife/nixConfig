@@ -21,6 +21,7 @@
     ./neofetch.nix
     ./pandoc.nix
     ./password-store.nix
+    ./playerctl.nix
     ./starship.nix
     ./tldr.nix
     ./yt-dlp.nix
@@ -42,6 +43,7 @@
     neofetch = false;
     pandoc = false;
     pass = false;
+    playerctl = lib.mkDefault true;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
     yt-dlp = lib.mkDefault true;
