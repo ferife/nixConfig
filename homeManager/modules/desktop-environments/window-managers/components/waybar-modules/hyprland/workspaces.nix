@@ -8,7 +8,6 @@
   config = lib.mkIf config.hm.wm.components.waybar {
     programs.waybar = {
       settings.mainBar = lib.mkMerge [
-        # Hyprland
         (lib.mkIf (config.hm.wm.window-manager == "hyprland") {
           "hyprland/workspaces" = {
             all-outputs = true;
@@ -19,9 +18,6 @@
             on-scroll-down = "hyprctl dispatch workspace +1";
           };
         })
-
-        # Sway
-        # (lib.mkIf (config.hm.wm.window-manager == "sway") {})
       ];
     };
   };
