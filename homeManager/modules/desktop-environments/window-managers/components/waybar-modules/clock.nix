@@ -9,7 +9,7 @@
     programs.waybar = {
       settings.mainBar = {
         "clock" = {
-          format = "  {:%H:%M:%S   󰃮 %a %d %b}";
+          format = " <span size=\"large\">  {:%H:%M:%S   󰃮 %a %d %b}</span> ";
           interval = 1;
           tooltip = true;
           tooltip-format = "<tt><small>{calendar}</small></tt>";
