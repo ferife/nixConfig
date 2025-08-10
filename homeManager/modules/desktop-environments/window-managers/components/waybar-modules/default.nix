@@ -13,7 +13,6 @@
     ./idle-inhibitor.nix
     ./network.nix
     ./power-menu.nix
-    ./pulseaudio.nix
     ./settings-menu.nix
     ./wireplumber.nix
   ];
