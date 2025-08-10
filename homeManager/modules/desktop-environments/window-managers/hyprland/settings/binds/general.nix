@@ -45,6 +45,10 @@
           "$mainMod SHIFT, 9, Move active window to workspace 9, movetoworkspace, 9"
           "$mainMod SHIFT, 0, Move active window to workspace 10, movetoworkspace, 10"
         ];
+        bindmd = [
+          "$mainMod, mouse:272, LMB move window, movewindow"
+          "$mainMod, mouse:273, RMB move window, resizewindow"
+        ];
       }
 
       # Terminal
