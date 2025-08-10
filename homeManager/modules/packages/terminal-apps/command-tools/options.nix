@@ -19,6 +19,7 @@
     neofetch = mkEnableOption "neofetch, a now-discontinued CLI system information tool";
     pandoc = mkEnableOption "pandoc, a CLI tool used to convert documents from one file type to another";
     pass = mkEnableOption "password-store (AKA pass), the official GNU password storing solution";
+    playerctl = mkEnableOption "playerctl, a tool that can control media players from within the CLI";
     starship = mkEnableOption "starship, a cross-shell prompt with a lot of customizability";
     tldr = mkEnableOption "tldr, a set of simplified and community-driven man pages";
     yt-dlp = mkEnableOption "yt-dlp, a terminal tool used to download videos from YouTube and similar websites";
