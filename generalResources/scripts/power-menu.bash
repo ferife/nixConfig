@@ -4,7 +4,7 @@
 
 # Dependency checking
 errorMessage=""
-dependencies=(reboot rofi shutdown)
+dependencies=(poweroff rofi reboot)
 for item in "${dependencies[@]}"; do
   if ! type "$item" > /dev/null; then
     errorMessage="${errorMessage}ERROR: $item command not working\n"
@@ -15,13 +15,16 @@ if [[ -n "$errorMessage" ]]; then
   exit 1
 fi
 
-chosen=$(printf "Shut down\nReboot\nCancel" | rofi -dmenu -i)
+chosen=$(printf "Power Off\nRestart\nCancel" | rofi -dmenu -i)
 
 case "$chosen" in
-  "Shut Down")
-    shutdown now
+  "Power Off")
+    # shutdown now
+    duntify "Powering Off"
+    poweroff
     ;;
-  "Reboot")
+  "Restart")
+    duntify "Restarting"
     reboot
     ;;
   "Cancel")
