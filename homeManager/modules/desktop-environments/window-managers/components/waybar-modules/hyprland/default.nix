@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./submap.nix
     ./workspaces.nix
   ];
 }

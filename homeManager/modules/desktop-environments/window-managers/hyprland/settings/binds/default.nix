@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./submaps
+
     ./f-keys.nix
     ./general.nix
   ];

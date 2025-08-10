@@ -29,6 +29,7 @@
           modules-left = [
             "custom/settings-menu"
             "${config.hm.wm.window-manager}/workspaces"
+            "hyprland/submap"
             "${config.hm.wm.window-manager}/window"
           ];
           modules-center = [
