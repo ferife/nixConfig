@@ -15,9 +15,12 @@ if [[ -n "$errorMessage" ]]; then
   exit 1
 fi
 
-chosen=$(printf "Bluetooth Settings\nCancel" | rofi -dmenu -i)
+chosen=$(printf "WiFi Settings\nBluetooth Settings\nCancel" | rofi -dmenu -i)
 
 case "$chosen" in
+  "WiFi Settings")
+    bash $HOME/.nixConfig-assets/scripts/network-menu.bash
+    ;;
   "Bluetooth Settings")
     blueman-manager
     ;;
