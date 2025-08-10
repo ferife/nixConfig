@@ -35,6 +35,7 @@
             "clock"
           ];
           modules-right = [
+            "bluetooth"
             "wireplumber"
             "idle_inhibitor"
             "group/battery-group"
