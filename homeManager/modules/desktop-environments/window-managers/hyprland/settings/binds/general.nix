@@ -1,8 +1,6 @@
 {
   config,
   lib,
-  pkgs,
-  inputs,
   ...
 }: {
   config = lib.mkIf config.hm.wm.hyprland.enable {
@@ -10,11 +8,11 @@
       hypr-kill-all-instances.enable = true;
     };
 
-    # TODO: Add a keybind to toggle fullscreen the current focused window. Make it $mainMod + ENTER
+    # Format for a bindd with questions:
+    # "MODS, key, description, dispatcher, params"
 
     wayland.windowManager.hyprland.settings = lib.mkMerge [
-      # Format for a bindd with questions:
-      # "MODS, key, description, dispatcher, params"
+      # Basics
       {
         bindd = let
           kill-all-instances = config.hm.scripts.hypr-kill-all-instances.full-path;
@@ -23,7 +21,20 @@
           "$mainMod SHIFT, Q, Close all instances of application in active window, exec, ${kill-all-instances}"
           "$mainMod, F, Fullscreen active window, fullscreen, 0"
           "$mainMod, M, Maximize active window, fullscreen, 1"
+        ];
+      }
 
+      # Mouse Binds
+      {
+        bindmd = [
+          "$mainMod, mouse:272, LMB move window, movewindow"
+          "$mainMod, mouse:273, RMB move window, resizewindow"
+        ];
+      }
+
+      # Moving between workspaces
+      {
+        bindd = [
           "$mainMod, 1, Go to workspace 1, workspace, 1"
           "$mainMod, 2, Go to workspace 2, workspace, 2"
           "$mainMod, 3, Go to workspace 3, workspace, 3"
@@ -44,10 +55,6 @@
           "$mainMod SHIFT, 8, Move active window to workspace 8, movetoworkspace, 8"
           "$mainMod SHIFT, 9, Move active window to workspace 9, movetoworkspace, 9"
           "$mainMod SHIFT, 0, Move active window to workspace 10, movetoworkspace, 10"
-        ];
-        bindmd = [
-          "$mainMod, mouse:272, LMB move window, movewindow"
-          "$mainMod, mouse:273, RMB move window, resizewindow"
         ];
       }
 
@@ -77,6 +84,7 @@
         bindd = ["$mainMod, A, Open the app launcher, exec, wofi --show drun --allow-images"];
       })
 
+      # Other Apps
       (lib.mkIf config.hm.obsidian {
         bindd = ["$mainMod, O, Open Obsidian, exec, obsidian"];
       })
