@@ -27,6 +27,7 @@
           position = "top";
 
           modules-left = [
+            "custom/settings-menu"
             "${config.hm.wm.window-manager}/workspaces"
             "${config.hm.wm.window-manager}/window"
           ];

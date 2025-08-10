@@ -12,5 +12,6 @@
     ./modify-volume.nix
     ./network-menu.nix
     ./power-menu.nix
+    ./settings-menu.nix
   ];
 }
