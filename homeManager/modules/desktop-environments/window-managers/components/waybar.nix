@@ -36,11 +36,12 @@
             "clock"
           ];
           modules-right = [
+            "mpris"
             "bluetooth"
+            "network"
             "wireplumber"
             "idle_inhibitor"
             "group/battery-group"
-            "network"
             "custom/power-menu"
           ];
         };

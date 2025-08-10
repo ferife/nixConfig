@@ -12,6 +12,7 @@
     ./bluetooth.nix
     ./clock.nix
     ./idle-inhibitor.nix
+    ./mpris.nix
     ./network.nix
     ./power-menu.nix
     ./settings-menu.nix
