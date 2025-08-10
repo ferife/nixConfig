@@ -14,8 +14,8 @@
       enable = true;
       systemd = {
         enable = true;
-        enableDebug = true;
-        enableInspect = true;
+        # enableDebug = true;
+        # enableInspect = true;
       };
 
       # NOTE: Basic text formatting can be done using Pango Markup Format (https://docs.gtk.org/Pango/pango_markup.html#pango-markup)
