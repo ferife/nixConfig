@@ -132,8 +132,14 @@
             color = "red";
             icon = "gift";
           };
-          facebook = {
+          social-media = {
             id = 8;
+            name = "Social Media";
+            color = "pink";
+            icon = "circle";
+          };
+          facebook = {
+            id = 9;
             name = "Facebook";
             color = "toolbar";
             icon = "fence";
