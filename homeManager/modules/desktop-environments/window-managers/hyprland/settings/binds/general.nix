@@ -61,15 +61,30 @@
       # Moving window focus
       {
         bindd = [
-          "$mainMod, h, Move window focus to the left, movefocus, l"
-          "$mainMod, j, Move window focus to the left, movefocus, d"
-          "$mainMod, k, Move window focus to the left, movefocus, u"
-          "$mainMod, l, Move window focus to the left, movefocus, r"
+          "$mainMod, H, Move window focus to the left, movefocus, l"
+          "$mainMod, J, Move window focus to the left, movefocus, d"
+          "$mainMod, K, Move window focus to the left, movefocus, u"
+          "$mainMod, L, Move window focus to the left, movefocus, r"
 
           "$mainMod, left, Move window focus to the left, movefocus, l"
           "$mainMod, down, Move window focus to the left, movefocus, d"
           "$mainMod, up, Move window focus to the left, movefocus, u"
           "$mainMod, right, Move window focus to the left, movefocus, r"
+        ];
+      }
+
+      # Moving windows
+      {
+        binde = [
+          "$mainMod SHIFT, H, swapwindow, l"
+          "$mainMod SHIFT, J, swapwindow, d"
+          "$mainMod SHIFT, K, swapwindow, u"
+          "$mainMod SHIFT, L, swapwindow, r"
+
+          "$mainMod SHIFT, left, swapwindow, l"
+          "$mainMod SHIFT, down, swapwindow, d"
+          "$mainMod SHIFT, up, swapwindow, u"
+          "$mainMod SHIFT, right, swapwindow, r"
         ];
       }
 
