@@ -7,7 +7,6 @@
   imports = [
     ./options.nix
 
-    ./bluetooth-toggle.nix
     ./hypr-kill-all-instances.nix
     ./modify-monitor-brightness.nix
     ./modify-volume.nix
