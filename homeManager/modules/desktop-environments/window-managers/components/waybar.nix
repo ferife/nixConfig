@@ -41,7 +41,8 @@
             "network"
             "wireplumber"
             "idle_inhibitor"
-            "group/battery-group"
+            # "power-profiles-daemon"
+            "battery"
             "custom/power-menu"
           ];
         };
