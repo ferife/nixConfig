@@ -15,6 +15,7 @@
     };
 
     # To open blueman from the CLI, run `blueman-manager`
+    # WARN: Required by home-manager/.../waybar-modules/bluetooth.nix
     services.blueman.enable = true;
   };
 }

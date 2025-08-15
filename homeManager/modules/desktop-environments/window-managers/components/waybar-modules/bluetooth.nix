@@ -6,8 +6,6 @@
   ...
 }: {
   config = lib.mkIf config.hm.wm.components.waybar {
-    hm.scripts.bluetooth-toggle.enable = true;
-
     programs.waybar = {
       settings.mainBar = {
         "bluetooth" = {
@@ -16,7 +14,7 @@
           format-disabled = "<span size=\"x-large\">󰂲</span> disabled";
           format-connected = "<span size=\"x-large\">󰂱 </span>connected";
           on-click = "blueman-manager";
-          # on-click-right = "bash ${config.hm.scripts.bluetooth-toggle.full-path}"; # FIXME
+          on-click-right = "bluetooth toggle";
           tooltip = true;
           tooltip-format-connected = "{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias}";
