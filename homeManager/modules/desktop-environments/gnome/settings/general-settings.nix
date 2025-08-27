@@ -25,10 +25,11 @@
       };
       "org/gnome/desktop/wm/preferences".focus-mode = "mouse"; # Focus follows mouse
       "org/gnome/mutter".dynamic-workspaces = true;
-      "org/gnome/shell".disabled-extensions = [];
-      # The line above makes it so that the list of disabled extensions is empty
-      # Since the list of disabled extensions takes precedence over enabled extensions, letting it not be empty would sometimes cause extensions to not successfully enable
-      # ---
+      "org/gnome/shell" = {
+        disabled-extensions = []; # Causes list of disabled extensions to be empty
+        # Since the list of disabled extensions takes precedence over enabled extensions, letting it not be empty would sometimes cause extensions to not successfully enable
+      };
+
       # Keybinds
       "org/gnome/desktop/wm/keybindings" = {
         close = ["<Super>q"];
@@ -56,8 +57,9 @@
           binding = "<Super>b";
         }
         (lib.mkIf (config.hm.specialArgs.user-settings.browser == "chromium") {command = "chromium";})
-        (lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") {command = "floorp";})
         (lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") {command = "firefox";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") {command = "floorp";})
+        (lib.mkIf (config.hm.specialArgs.user-settings.browser == "librewolf") {command = "librewolf";})
         (lib.mkIf (config.hm.specialArgs.user-settings.browser == "tor-browser") {command = "tor-browser";})
       ];
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {

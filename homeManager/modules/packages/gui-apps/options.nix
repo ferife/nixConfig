@@ -14,6 +14,7 @@
     gimp = mkEnableOption "GIMP";
     keepassxc = mkEnableOption "KeePassXC, an offline password manager";
     libreoffice = mkEnableOption "LibreOffice";
+    librewolf = mkEnableOption "LibreWolf, a privacy-focused Firefox-based browser";
     mpv = mkEnableOption "MVP, a media player";
     obsStudio = mkEnableOption "OBS Studio";
     obsidian = mkEnableOption "Obsidian.md";

@@ -24,7 +24,7 @@
         default = userSettings.colorscheme;
       };
       browser = lib.mkOption {
-        type = lib.types.enum ["chromium" "firefox" "floorp" "tor-browser"];
+        type = lib.types.enum ["chromium" "firefox" "floorp" "librewolf" "tor-browser"];
         description = "The main web browser";
         default = userSettings.mainBrowser;
       };
