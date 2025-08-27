@@ -18,6 +18,7 @@
     ./gimp.nix
     ./keepassxc.nix
     ./libreoffice.nix
+    ./librewolf.nix
     ./mpv.nix
     ./obs-studio.nix
     ./obsidian.nix
@@ -39,6 +40,7 @@
     gimp = false;
     keepassxc = lib.mkDefault true;
     libreoffice = lib.mkDefault true;
+    librewolf = lib.mkIf (config.hm.specialArgs.user-settings.browser == "librewolf") true;
     mpv = lib.mkDefault true;
     obsStudio = false;
     obsidian = lib.mkDefault true;
