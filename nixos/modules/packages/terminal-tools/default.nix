@@ -15,6 +15,7 @@
     ./neofetch.nix
     ./nh.nix
     ./nixos-shell.nix
+    ./nix-tree.nix
   ];
 
   config.nixos = {
@@ -29,5 +30,6 @@
       shellAliases = lib.mkDefault true;
     };
     # nixos-shell = lib.mkDefault true;
+    nix-tree = lib.mkDefault true;
   };
 }
