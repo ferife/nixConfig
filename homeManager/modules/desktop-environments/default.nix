@@ -13,7 +13,7 @@
 
   config.hm = {
     wm.enable = lib.mkDefault true;
-    # gnome.enable = true;
+    gnome.enable = true;
     # plasma.enable = true;
   };
 }
