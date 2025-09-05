@@ -19,14 +19,14 @@
   ];
 
   config.nixos = {
-    distrobox = false;
+    # distrobox = lib.mkDefault false;
     fastfetch = lib.mkDefault true;
     git = lib.mkDefault true;
     kitty = lib.mkDefault true;
-    neofetch = false;
+    # neofetch = lib.mkDefault false;
     nh = {
       enable = lib.mkDefault true;
-      autoClean = false;
+      # autoClean = lib.mkDefault false;
       shellAliases = lib.mkDefault true;
     };
     # nixos-shell = lib.mkDefault true;
