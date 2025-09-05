@@ -5,7 +5,7 @@
   ...
 }: {
   config = lib.mkMerge [
-    (lib.mkIf config.hm.gnomeTerminal {
+    (lib.mkIf config.hm.gnome-terminal {
       programs.gnome-terminal = {
         enable = true;
         showMenubar = true;
@@ -21,7 +21,7 @@
         };
       };
     })
-    (lib.mkIf (!config.hm.gnomeTerminal) {
+    (lib.mkIf (!config.hm.gnome-terminal) {
       programs.gnome-terminal.enable = false;
     })
   ];

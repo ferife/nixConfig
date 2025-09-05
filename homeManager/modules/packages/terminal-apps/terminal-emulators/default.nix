@@ -14,7 +14,7 @@
 
   hm = {
     ghostty = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "ghostty") true;
-    gnomeTerminal = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-terminal") true;
+    gnome-terminal = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-terminal") true;
     kitty = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "kitty") true;
   };
 }

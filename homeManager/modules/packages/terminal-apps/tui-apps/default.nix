@@ -23,7 +23,7 @@
     lazygit = lib.mkDefault true;
     nixvim = lib.mkDefault true;
     procs = lib.mkDefault true;
-    ranger = lib.mkDefault false; # Replaced by yazi
+    # ranger = lib.mkDefault false; # Replaced by yazi
     tmux = lib.mkDefault true;
     yazi = lib.mkDefault true;
   };

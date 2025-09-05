@@ -33,23 +33,23 @@
 
   hm = {
     audacity = lib.mkDefault true;
-    chromium = true;
-    eclipse = false;
+    chromium = lib.mkDefault false;
+    # eclipse = lib.mkDefault false;
     firefox = lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") true;
     floorp = lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") true;
-    gimp = false;
+    # gimp = lib.mkDefault false;
     keepassxc = lib.mkDefault true;
     libreoffice = lib.mkDefault true;
     librewolf = lib.mkIf (config.hm.specialArgs.user-settings.browser == "librewolf") true;
     mpv = lib.mkDefault true;
-    obsStudio = false;
+    # obsStudio = lib.mkDefault false;
     obsidian = lib.mkDefault true;
-    openshot = lib.mkDefault true;
+    # openshot = lib.mkDefault false;
     proton-mail = lib.mkDefault true;
-    qbittorrent = false;
-    thunderbird = false;
+    qbittorrent = lib.mkDefault true;
+    thunderbird = lib.mkDefault true;
     tor-browser = lib.mkDefault true;
-    vlc = lib.mkDefault true;
-    vsCode = false;
+    # vlc = lib.mkDefault false;
+    # vsCode = lib.mkDefault false;
   };
 }
