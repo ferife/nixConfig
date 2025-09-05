@@ -19,4 +19,5 @@
     max-volume = 120;
     app-launcher = "rofi";
   };
+  # Consider using wob for volume/brightness bar (it's supported by stylix)
 }
