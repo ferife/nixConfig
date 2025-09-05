@@ -5,6 +5,9 @@
   ...
 }: {
   config = lib.mkIf config.hm.procs {
-    home.packages = with pkgs; [procs];
+    home.packages = [pkgs.procs];
+    home.shellAliases = {
+      "ps" = "procs";
+    };
   };
 }
