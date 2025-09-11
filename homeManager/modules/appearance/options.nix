@@ -3,13 +3,16 @@
   lib,
   ...
 }: {
-  options.hm.stylix = with lib; {
-    enable = mkEnableOption "stylix, a tool for ricing my NixOS system (AKA styling everything at once for a consistent appearance)";
-    theme = mkOption {
-      type = with types; uniq str;
-      description = "Select a theme from the available options (currently only onedark)";
-      default = "onedark";
-      example = "onedark";
+  options.hm = {
+    stylix = {
+      enable = lib.mkEnableOption "stylix, a tool for ricing my NixOS system (AKA styling everything at once for a consistent appearance)";
+      theme = lib.mkOption {
+        type = lib.types.enum ["onedark"];
+        description = "Select a color theme from the available options";
+        default = "onedark";
+        example = "onedark";
+      };
     };
+    wpaperd = lib.mkEnableOption "wpaperd, a wayland-based wallpaper daemon (supports compositors and KDE, not GNOME)";
   };
 }
