@@ -29,7 +29,7 @@
         default = userSettings.mainBrowser;
       };
       terminal = lib.mkOption {
-        type = lib.types.enum ["ghostty" "gnome-terminal" "kitty"];
+        type = lib.types.enum ["ghostty" "gnome-console" "gnome-terminal" "kitty"];
         description = "The main terminal emulator for this system";
         default = userSettings.terminal;
       };

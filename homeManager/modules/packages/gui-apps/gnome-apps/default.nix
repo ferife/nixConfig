@@ -10,6 +10,7 @@
     ./cheese.nix
     ./calculator.nix
     ./clocks.nix
+    ./console.nix
     ./loupe.nix
     ./terminal.nix
   ];
@@ -18,6 +19,7 @@
     cheese = lib.mkDefault true;
     gnome-calculator = lib.mkDefault true;
     gnome-clocks = lib.mkDefault true;
+    gnome-console = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-console") true;
     gnome-terminal = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-terminal") true;
     loupe = lib.mkDefault true;
   };
