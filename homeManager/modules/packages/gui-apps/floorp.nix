@@ -10,6 +10,11 @@
       hm.floorp = lib.mkForce true;
     })
 
+    # (lib.mkIf (config.hm.floorp && config.hm.gnome.enable) {
+    (lib.mkIf ((config.hm.specialArgs.user-settings.browser == "floorp") && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["floorp.desktop"];};
+    })
+
     (lib.mkIf config.hm.floorp {
       # Go to ./firefox-options.nix for the firefox hm options
 

@@ -16,5 +16,10 @@
       #   enable = true;
       # };
     })
+
+    # (lib.mkIf (config.hm.tor-browser && config.hm.gnome.enable) {
+    (lib.mkIf ((config.hm.specialArgs.user-settings.browser == "tor-browser") && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["torbrowser.desktop"];};
+    })
   ];
 }

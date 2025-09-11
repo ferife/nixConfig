@@ -5,9 +5,13 @@
   pkgs-unstable,
   ...
 }: {
-  config = lib.mkIf config.hm.obsidian {
-    home.packages = with pkgs-unstable; [
-      obsidian
-    ];
-  };
+  config = lib.mkMerge [
+    (lib.mkIf config.hm.obsidian {
+      home.packages = [pkgs-unstable.obsidian];
+    })
+
+    (lib.mkIf (config.hm.obsidian && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["obsidian.desktop"];};
+    })
+  ];
 }

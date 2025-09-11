@@ -19,5 +19,10 @@
         };
       };
     })
+
+    # (lib.mkIf (config.hm.gnome-terminal && config.hm.gnome.enable) {
+    (lib.mkIf ((config.hm.specialArgs.user-settings.terminal == "gnome-terminal") && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["org.gnome.Terminal.desktop"];};
+    })
   ];
 }

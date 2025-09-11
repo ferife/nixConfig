@@ -21,6 +21,12 @@
       #   LIBREWOLF_ACTIVE = "1";
       # };
     })
+
+    # (lib.mkIf (config.hm.librewolf && config.hm.gnome.enable) {
+    (lib.mkIf ((config.hm.specialArgs.user-settings.browser == "librewolf") && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["librewolf.desktop"];};
+    })
+
     # (lib.mkIf (!config.hm.librewolf) {
     #   home.sessionVariables = {
     #     LIBREWOLF_ACTIVE = "";

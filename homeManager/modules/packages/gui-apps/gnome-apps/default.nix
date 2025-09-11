@@ -12,6 +12,7 @@
     ./clocks.nix
     ./console.nix
     ./loupe.nix
+    ./nautilus.nix
     ./terminal.nix
   ];
 
@@ -22,6 +23,7 @@
     gnome-console = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-console") true;
     gnome-terminal = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-terminal") true;
     loupe = lib.mkDefault true;
+    # nautilus = false;
   };
   # The GUI used by GNOME for volume control is pavucontrol
 

@@ -12,5 +12,10 @@
 
       programs.firefox = config.hm.ff-config;
     })
+
+    # (lib.mkIf (config.hm.firefox && config.hm.gnome.enable) {
+    (lib.mkIf ((config.hm.specialArgs.user-settings.browser == "firefox") && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["firefox.desktop"];};
+    })
   ];
 }

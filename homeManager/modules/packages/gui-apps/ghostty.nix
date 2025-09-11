@@ -24,5 +24,10 @@
 
     (lib.mkIf (config.hm.ghostty && config.hm.bash) {programs.ghostty.enableBashIntegration = true;})
     (lib.mkIf (config.hm.ghostty && config.hm.zsh) {programs.ghostty.enableZshIntegration = true;})
+
+    # (lib.mkIf (config.hm.ghostty && config.hm.gnome.enable) {
+    (lib.mkIf ((config.hm.specialArgs.user-settings.terminal == "ghostty") && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["com.mitchellh.ghostty.desktop"];};
+    })
   ];
 }
