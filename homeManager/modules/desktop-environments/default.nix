@@ -6,7 +6,6 @@
 }: {
   imports = [
     ./window-managers
-    ./deskEnv2
     ./gnome
     ./plasma
   ];
