@@ -7,10 +7,10 @@
   config = lib.mkMerge [
     (lib.mkIf config.hm.kitty {programs.kitty.enable = true;})
 
-    (lib.mkIf (config.hm.specialArgs.user-settings.colorscheme == "onedark") {
-      stylix.targets.kitty.enable = false;
-      programs.kitty.themeFile = "OneDark";
-    })
+    # (lib.mkIf (config.hm.specialArgs.user-settings.colorscheme == "onedark") {
+    #   stylix.targets.kitty.enable = false;
+    #   programs.kitty.themeFile = "OneDark";
+    # })
 
     {
       programs.kitty = {

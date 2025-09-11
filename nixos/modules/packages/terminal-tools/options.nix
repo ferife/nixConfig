@@ -7,7 +7,6 @@
     distrobox = lib.mkEnableOption "distrobox, a program used to create containers running other Linux distros";
     fastfetch = lib.mkEnableOption "fastfetch, a system information tool";
     git = lib.mkEnableOption "git, a version-control system";
-    kitty = lib.mkEnableOption "kitty, a terminal emulator";
     mullvad = lib.mkEnableOption "the Mullvad VPN CLI";
     neofetch = lib.mkEnableOption "neofetch, a system information tool";
     nh = {

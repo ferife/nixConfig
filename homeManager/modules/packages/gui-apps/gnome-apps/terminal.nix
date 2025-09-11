@@ -10,19 +10,14 @@
         enable = true;
         showMenubar = true;
 
-        profile.frfConfig = {
+        profile.cf2615ef-4917-4c62-a71c-2b875e0964cb = {
           default = true;
-          visibleName = "Fernando's Terminal config";
+          visibleName = "FRF's terminal config";
 
           showScrollbar = false;
-          font = "FiraCode Nerd Font 12";
-
-          colors.backgroundColor = "blue";
+          font = "${config.hm.specialArgs.user-settings.font.name} 12";
         };
       };
-    })
-    (lib.mkIf (!config.hm.gnome-terminal) {
-      programs.gnome-terminal.enable = false;
     })
   ];
 }

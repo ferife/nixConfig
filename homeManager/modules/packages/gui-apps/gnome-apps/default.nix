@@ -11,12 +11,14 @@
     ./calculator.nix
     ./clocks.nix
     ./loupe.nix
+    ./terminal.nix
   ];
 
   hm = {
     cheese = lib.mkDefault true;
     gnome-calculator = lib.mkDefault true;
     gnome-clocks = lib.mkDefault true;
+    gnome-terminal = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "gnome-terminal") true;
     loupe = lib.mkDefault true;
   };
   # The GUI used by GNOME for volume control is pavucontrol

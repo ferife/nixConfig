@@ -11,7 +11,6 @@
     ./distrobox.nix
     ./fastfetch.nix
     ./git.nix
-    ./kitty.nix
     ./mullvad.nix
     ./neofetch.nix
     ./nh.nix
@@ -23,7 +22,6 @@
     # distrobox = false;
     fastfetch = lib.mkDefault true;
     git = lib.mkDefault true;
-    kitty = lib.mkDefault true;
     # neofetch = false;
     mullvad = lib.mkDefault true;
     nh = {
