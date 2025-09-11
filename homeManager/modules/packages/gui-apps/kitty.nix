@@ -14,7 +14,6 @@
 
     {
       programs.kitty = {
-        settings.background_opacity = lib.mkForce 0.9;
         font = lib.mkForce {
           name = config.hm.specialArgs.user-settings.font.name;
           package = config.hm.specialArgs.user-settings.font.package;
