@@ -12,6 +12,7 @@
     ./fastfetch.nix
     ./git.nix
     ./kitty.nix
+    ./mullvad.nix
     ./neofetch.nix
     ./nh.nix
     ./nixos-shell.nix
@@ -19,17 +20,18 @@
   ];
 
   config.nixos = {
-    # distrobox = lib.mkDefault false;
+    # distrobox = false;
     fastfetch = lib.mkDefault true;
     git = lib.mkDefault true;
     kitty = lib.mkDefault true;
-    # neofetch = lib.mkDefault false;
+    # neofetch = false;
+    mullvad = lib.mkDefault true;
     nh = {
       enable = lib.mkDefault true;
-      # autoClean = lib.mkDefault false;
+      # autoClean = false;
       shellAliases = lib.mkDefault true;
     };
-    # nixos-shell = lib.mkDefault true;
+    # nixos-shell = false;
     nix-tree = lib.mkDefault true;
   };
 }

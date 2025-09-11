@@ -8,6 +8,7 @@
     fastfetch = lib.mkEnableOption "fastfetch, a system information tool";
     git = lib.mkEnableOption "git, a version-control system";
     kitty = lib.mkEnableOption "kitty, a terminal emulator";
+    mullvad = lib.mkEnableOption "the Mullvad VPN CLI";
     neofetch = lib.mkEnableOption "neofetch, a system information tool";
     nh = {
       enable = lib.mkEnableOption "nh, a nix CLI helper";

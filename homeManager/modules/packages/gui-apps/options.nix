@@ -16,6 +16,7 @@
     libreoffice = mkEnableOption "LibreOffice";
     librewolf = mkEnableOption "LibreWolf, a privacy-focused Firefox-based browser";
     mpv = mkEnableOption "MVP, a media player";
+    mullvad = mkEnableOption "the GUI for Mullvad VPN";
     obsStudio = mkEnableOption "OBS Studio";
     obsidian = mkEnableOption "Obsidian.md";
     openshot = mkEnableOption "the OpenShot video editor";

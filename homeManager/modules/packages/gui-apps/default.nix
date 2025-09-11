@@ -20,6 +20,7 @@
     ./libreoffice.nix
     ./librewolf.nix
     ./mpv.nix
+    ./mullvad.nix
     ./obs-studio.nix
     ./obsidian.nix
     ./openshot.nix
@@ -42,6 +43,7 @@
     libreoffice = lib.mkDefault true;
     librewolf = lib.mkIf (config.hm.specialArgs.user-settings.browser == "librewolf") true;
     mpv = lib.mkDefault true;
+    mullvad = lib.mkDefault true;
     # obsStudio = lib.mkDefault false;
     obsidian = lib.mkDefault true;
     # openshot = lib.mkDefault false;
