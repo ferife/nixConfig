@@ -19,7 +19,7 @@
         };
         full-path = lib.mkOption {
           type = lib.types.str;
-          description = "The path of the final resulting file, including the \"$HOME\" or \"/etc/\"";
+          description = "The path of the final resulting file, including the \"$HOME/\" or \"/etc/\"";
         };
       };
     });
