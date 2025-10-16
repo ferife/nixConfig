@@ -16,5 +16,6 @@
 
     # Command tools
     yt-dlp = mkTrue;
+    wine = mkTrue; # Needed for my CompArch class
   };
 }

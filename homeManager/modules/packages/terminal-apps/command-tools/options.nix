@@ -22,6 +22,7 @@
     playerctl = lib.mkEnableOption "playerctl, a tool that can control media players from within the CLI";
     starship = lib.mkEnableOption "starship, a cross-shell prompt with a lot of customizability";
     tldr = lib.mkEnableOption "tldr, a set of simplified and community-driven man pages";
+    wine = lib.mkEnableOption "wine, a tool used to emulate Windows for the sake of running certain windows-only applications and packages";
     yt-dlp = lib.mkEnableOption "yt-dlp, a terminal tool used to download videos from YouTube and similar websites";
     zellij = lib.mkEnableOption "zellij, a terminal multiplexer";
     zoxide = lib.mkEnableOption "zoxide, an improved version of the cd command with added features";

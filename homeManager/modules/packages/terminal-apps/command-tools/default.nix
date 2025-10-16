@@ -24,6 +24,7 @@
     ./playerctl.nix
     ./starship.nix
     ./tldr.nix
+    ./wine.nix
     ./yt-dlp.nix
     ./zellij.nix
     ./zoxide.nix
@@ -46,6 +47,7 @@
     playerctl = lib.mkDefault true;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
+    # wine = lib.mkDefault false;
     # yt-dlp = lib.mkDefault false;
     zellij = lib.mkDefault true;
     zoxide = lib.mkDefault true;
