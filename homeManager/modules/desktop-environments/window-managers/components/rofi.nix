@@ -12,10 +12,12 @@
     (lib.mkIf config.hm.wm.components.rofi {
       programs.rofi = {
         enable = true;
-        package = pkgs.rofi-wayland; # lbonn's fork of rofi, with added wayland support
         font = lib.mkForce "${config.hm.specialArgs.user-settings.font.name} 12";
         terminal = "${pkgs.ghostty}/bin/ghostty";
       };
+    })
+    (lib.mkIf (config.hm.wm.components.rofi && (config.hm.specialArgs.system-settings.nixpkgs == "25.05")) {
+      programs.rofi.package = pkgs.rofi-wayland;
     })
   ];
 }
