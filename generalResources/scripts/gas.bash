@@ -79,12 +79,6 @@ if [ ! -f "flake.nix" ] || { [ ! -d ".git" ] && [ ! -f ".git" ]; }; then
 fi
 
 # Step 2: Upgrade flake.lock/nixvim?
-if [ "$upgradeFlakeLock" ] && [ ! "$updateOS" ] && [ ! "$updateHome" ]; then
-  nix flake update
-elif [ "$upgradeNixvim" ]; then
-  nix flake update nixvim-config
-fi
-
 if [ "$upgradeFlakeLock" ] || [ "$upgradeNixvim" ]; then
   cd "$HOME/Documents/Configs/nvimConfig/nvimConfig-main" || (echo "cd into nvimConfig failed for some reason" && exit 1)
   alejandra .
@@ -96,6 +90,12 @@ if [ "$upgradeFlakeLock" ] || [ "$upgradeNixvim" ]; then
     git push
   fi
   cd "$path" || (echo "cd out of nvimConfig failed for some reason" && exit 1)
+fi
+
+if [ "$upgradeFlakeLock" ] && [ ! "$updateOS" ] && [ ! "$updateHome" ]; then
+  nix flake update
+elif [ "$upgradeNixvim" ]; then
+  nix flake update nixvim-config
 fi
 
 # Step 3: Add to git stage
