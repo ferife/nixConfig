@@ -9,6 +9,7 @@
 
     ./btop.nix
     ./dust.nix
+    ./gitui.nix
     ./lazygit.nix
     ./nixvim.nix
     ./procs.nix
@@ -20,6 +21,7 @@
   hm = {
     btop = lib.mkDefault true;
     dust = lib.mkDefault true;
+    # gitui = lib.mkDefault false;
     lazygit = lib.mkDefault true;
     nixvim = lib.mkDefault true;
     procs = lib.mkDefault true;
