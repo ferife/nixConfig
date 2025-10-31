@@ -10,7 +10,4 @@ https://aylur.github.io/astal/guide/typescript/examples
 vim cheat sheet (looking for a nice graphic)
 hey.com (recommended by No Boilerplate)
 
-AppProg final exam
-AppProg download all presentations
-
 

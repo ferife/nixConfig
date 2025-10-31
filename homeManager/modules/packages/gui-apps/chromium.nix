@@ -9,6 +9,7 @@
     })
     (lib.mkIf (config.hm.chromium) {
       programs.chromium.enable = true;
+      # User-Agent Switcher plugin: https://chromewebstore.google.com/detail/user-agent-switcher/dbclpoekepcmadpkeaelmhiheolhjflj
     })
 
     (lib.mkIf (config.hm.chromium && config.hm.gnome.enable) {

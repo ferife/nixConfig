@@ -12,7 +12,7 @@
     ./plasma
   ];
   config.nixos = {
-    gnome.enable = true;
+    # gnome.enable = true;
     # plasma.enable = true;
     wm = {
       hyprland.enable = true;
