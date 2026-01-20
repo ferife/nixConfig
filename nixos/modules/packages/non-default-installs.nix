@@ -9,7 +9,7 @@
     mkFalse = lib.mkForce false;
   in {
     # GUI
-    # gaming.enable = mkFalse;
+    gaming.enable = mkFalse;
     #
     # Command tools
     # distrobox = mkTrue;
