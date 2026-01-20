@@ -55,6 +55,10 @@
           "$mainMod SHIFT, 8, Move active window to workspace 8, movetoworkspace, 8"
           "$mainMod SHIFT, 9, Move active window to workspace 9, movetoworkspace, 9"
           "$mainMod SHIFT, 0, Move active window to workspace 10, movetoworkspace, 10"
+
+          "$mainMod, TAB, Go to next workspace, workspace, e+1"
+          "$mainMod SHIFT, TAB, Go to previous workspace, workspace, e-1"
+          "$mainMod CTRL, TAB, Go to former workspace, workspace, previous"
         ];
       }
 
@@ -108,10 +112,10 @@
 
       # App Launcher
       (lib.mkIf (config.hm.wm.app-launcher == "rofi") {
-        bindd = ["$mainMod, A, Open the app launcher, exec, rofi -show drun"];
+        bindd = ["$mainMod, Space, Open the app launcher, exec, rofi -show drun"];
       })
       (lib.mkIf (config.hm.wm.app-launcher == "wofi") {
-        bindd = ["$mainMod, A, Open the app launcher, exec, wofi --show drun --allow-images"];
+        bindd = ["$mainMod, Space, Open the app launcher, exec, wofi --show drun --allow-images"];
       })
 
       # Other Apps
