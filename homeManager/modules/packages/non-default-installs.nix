@@ -9,7 +9,7 @@
     mkFalse = lib.mkForce false;
   in {
     # GUI
-    # chromium = mkTrue;
+    chromium = mkTrue;
     librewolf = mkTrue;
     qbittorrent = mkFalse;
     thunderbird = mkFalse;
