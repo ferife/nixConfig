@@ -35,7 +35,7 @@
   ];
 
   hm = {
-    audacity = lib.mkDefault true;
+    audacity = lib.mkDefault false;
     chromium = lib.mkDefault false;
     # eclipse = lib.mkDefault false;
     firefox = lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") true;

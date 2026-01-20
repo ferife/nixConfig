@@ -9,6 +9,7 @@
     mkFalse = lib.mkForce false;
   in {
     # GUI
+    # audacity = mkTrue;
     chromium = mkTrue;
     librewolf = mkTrue;
     qbittorrent = mkFalse;
