@@ -35,8 +35,8 @@
   ];
 
   hm = {
-    audacity = lib.mkDefault false;
-    chromium = lib.mkDefault false;
+    # audacity = lib.mkDefault false;
+    # chromium = lib.mkDefault false;
     # eclipse = lib.mkDefault false;
     firefox = lib.mkIf (config.hm.specialArgs.user-settings.browser == "firefox") true;
     floorp = lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") true;

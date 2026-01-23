@@ -15,7 +15,7 @@
   ];
 
   nixos = {
-    # androidStudio = lib.mkDefault false;
+    # android-studio = lib.mkDefault false;
     gaming.enable = lib.mkDefault true;
     kitty = lib.mkDefault true;
     vlc = {

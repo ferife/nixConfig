@@ -4,7 +4,7 @@
   ...
 }: {
   options.nixos = {
-    androidStudio = lib.mkEnableOption "Android Studio, an IDE designed by Google specifically to create Android applications";
+    android-studio = lib.mkEnableOption "Android Studio, an IDE designed by Google specifically to create Android applications";
     gaming.enable = lib.mkEnableOption "All the gaming-related packages and options";
     kitty = lib.mkEnableOption "kitty, a terminal emulator";
     vlc = {
