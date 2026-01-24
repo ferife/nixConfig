@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  pkgs-stable,
   inputs,
   ...
 }: {
@@ -13,7 +14,15 @@
     (lib.mkIf config.hm.librewolf {
       # Go to ./firefox-options.nix for the firefox hm options
 
-      programs.librewolf = config.hm.ff-config;
+      # programs.librewolf = config.hm.ff-config;
+      programs.librewolf = {
+        package = pkgs-stable.librewolf;
+        enable = true;
+        policies = config.hm.ff-config.policies;
+        nativeMessagingHosts = config.hm.ff-config.nativeMessagingHosts;
+        profiles = config.hm.ff-config.profiles;
+      };
+
       stylix.targets.librewolf = config.stylix.targets.firefox;
 
       # Variable is used to restore librewolf profiles through gas

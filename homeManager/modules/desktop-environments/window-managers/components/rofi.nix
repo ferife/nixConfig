@@ -16,8 +16,5 @@
         terminal = "${pkgs.ghostty}/bin/ghostty";
       };
     })
-    (lib.mkIf (config.hm.wm.components.rofi && (config.hm.specialArgs.system-settings.nixpkgs == "25.05")) {
-      programs.rofi.package = pkgs.rofi-wayland;
-    })
   ];
 }

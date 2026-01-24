@@ -7,8 +7,7 @@
   imports = [
     ./options.nix
 
-    # ./gdm-25-05.nix
-    ./gdm-unstable.nix
+    ./gdm.nix
     ./regreet.nix
     ./sddm.nix
   ];

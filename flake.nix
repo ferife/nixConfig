@@ -3,19 +3,19 @@
   # Shown in the CLI by the `nix flake metadata` command
 
   inputs = {
-    # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05"; # Stable
+    # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11"; # Stable
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; # Unstable
 
-    nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs?ref=nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     home-manager = {
-      # url = "github:nix-community/home-manager?ref=release-25.05"; # Stable
+      # url = "github:nix-community/home-manager?ref=release-25.11"; # Stable
       url = "github:nix-community/home-manager"; # Unstable
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # stylix.url = "github:danth/stylix/release-25.05"; # Stable
+    # stylix.url = "github:danth/stylix/release-25.11"; # Stable
     stylix.url = "github:danth/stylix"; # Unstable
 
     nixvim-config = {
@@ -59,7 +59,7 @@
       locale = "en_US.UTF-8";
       nixConfigPath = "/home/${userSettings.username}/Documents/Configs/nixConfig";
       flakePath = "${nixConfigPath}/nixConfig-main";
-      nixpkgs = "unstable"; # Options: unstable, 25.05
+      nixpkgs = "unstable"; # Options: unstable, 25.11
       configFilesDirectory = ".nixConfig-assets";
       scriptsDirectory = "${configFilesDirectory}/scripts";
       assetsDirectory = "${configFilesDirectory}/assets";

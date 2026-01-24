@@ -7,8 +7,7 @@
   imports = [
     ./options.nix
 
-    # ./general-settings-25-05.nix
-    ./general-settings-unstable.nix
+    ./general-settings.nix
   ];
 
   config = lib.mkMerge [

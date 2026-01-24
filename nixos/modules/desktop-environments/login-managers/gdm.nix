@@ -5,7 +5,7 @@
   ...
 }: {
   config = lib.mkIf (config.nixos.login-manager.name == "gdm") {
-    services.xserver.displayManager.gdm.enable = true; # FIXME: 25.05
+    services.displayManager.gdm.enable = true;
 
     environment.systemPackages = with pkgs; [
       gdm-settings

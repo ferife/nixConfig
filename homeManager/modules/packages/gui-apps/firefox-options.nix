@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  pkgs-stable,
   inputs,
   ...
 }: {
@@ -15,7 +16,7 @@
     hm.ff-config = {
       enable = true;
       # enableGnomeExtensions = true;
-      nativeMessagingHosts = with pkgs; [gnome-browser-connector]; # Allows the GNOME shell and its extensions to interact with Firefox
+      nativeMessagingHosts = lib.mkIf (config.hm.gnome.enable) [pkgs-stable.gnome-browser-connector]; # Allows the GNOME shell and its extensions to interact with Firefox
 
       policies = {
         # To view all possible policies, go to Firefox and type about:policies#documentation

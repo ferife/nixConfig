@@ -15,7 +15,7 @@
 
     (lib.mkIf config.nixos.gnome.enable {
       services = {
-        xserver.desktopManager.gnome.enable = true; # FIXME: 25.05
+        desktopManager.gnome.enable = true;
 
         gnome.gnome-browser-connector.enable = true; # Allows for GNOME extensions to affect browsers
       };
