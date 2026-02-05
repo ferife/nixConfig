@@ -9,6 +9,7 @@
     mkFalse = lib.mkForce false;
   in {
     # GUI
+    android-studio = mkTrue;
     gaming.enable = mkFalse;
     #
     # Command tools

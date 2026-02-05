@@ -11,6 +11,7 @@
     # GUI
     # audacity = mkTrue;
     chromium = mkTrue;
+    eclipse = mkTrue;
     librewolf = mkTrue;
     qbittorrent = mkFalse;
     thunderbird = mkFalse;
