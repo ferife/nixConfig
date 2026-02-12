@@ -17,6 +17,7 @@
     thunderbird = mkFalse;
 
     # Command tools
+    plantuml = mkTrue;
     yt-dlp = mkTrue;
     # wine = mkTrue;
   };

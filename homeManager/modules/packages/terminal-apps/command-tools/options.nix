@@ -19,6 +19,7 @@
     neofetch = lib.mkEnableOption "neofetch, a now-discontinued CLI system information tool";
     pandoc = lib.mkEnableOption "pandoc, a CLI tool used to convert documents from one file type to another";
     pass = lib.mkEnableOption "password-store (AKA pass), the official GNU password storing solution";
+    plantuml = lib.mkEnableOption "plantuml, a tool used to generate diagrams (for things such as Java classes) from text";
     playerctl = lib.mkEnableOption "playerctl, a tool that can control media players from within the CLI";
     starship = lib.mkEnableOption "starship, a cross-shell prompt with a lot of customizability";
     tldr = lib.mkEnableOption "tldr, a set of simplified and community-driven man pages";

@@ -21,6 +21,7 @@
     ./neofetch.nix
     ./pandoc.nix
     ./password-store.nix
+    ./plantuml.nix
     ./playerctl.nix
     ./starship.nix
     ./tldr.nix
@@ -44,6 +45,7 @@
     # neofetch = lib.mkDefault false;
     # pandoc = lib.mkDefault false;
     # pass = lib.mkDefault false;
+    # plantuml = lib.mkDefault false;
     playerctl = lib.mkDefault true;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
