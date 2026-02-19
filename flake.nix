@@ -99,7 +99,7 @@
         modules = [
           (./. + "/nixos/hosts/${systemSettings.hostname1}/configuration.nix")
           stylix.nixosModules.stylix
-          nixos-hardware.nixosModules.framework-11th-gen-intel
+          nixos-hardware.nixosModules.framework-amd-ai-300-series
         ];
       };
       device2 = nixpkgs.lib.nixosSystem {
