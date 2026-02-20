@@ -10,6 +10,7 @@
       settings = {
         mgr.show_hidden = true;
       };
+      shellWrapperName = "yy";
     };
   };
 }
