@@ -96,18 +96,14 @@
       {
         bindd = let
           terminal = config.hm.specialArgs.user-settings.terminal;
-        in [
-          "$mainMod, return, Open a terminal window, exec, ${terminal}"
-        ];
+        in ["$mainMod, return, Open a terminal window, exec, ${terminal}"];
       }
 
       # Browser
       {
         bindd = let
           browser = config.hm.specialArgs.user-settings.browser;
-        in [
-          "$mainMod, B, Open a browser window, exec, ${browser}"
-        ];
+        in ["$mainMod, B, Open a browser window, exec, ${browser}"];
       }
 
       # App Launcher
