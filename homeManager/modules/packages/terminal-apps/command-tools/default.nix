@@ -17,6 +17,7 @@
     ./fd.nix
     ./fzf.nix
     ./git.nix
+    ./grep.nix
     ./lsd.nix
     ./neofetch.nix
     ./pandoc.nix
@@ -41,6 +42,7 @@
     fd = lib.mkDefault true;
     fzf = lib.mkDefault true;
     git = lib.mkDefault true;
+    grep.options = lib.mkDefault true;
     # lsd = lib.mkDefault false;
     # neofetch = lib.mkDefault false;
     # pandoc = lib.mkDefault false;

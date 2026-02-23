@@ -15,6 +15,7 @@
     fd = lib.mkEnableOption "fd, an improved version of the find command with added features";
     fzf = lib.mkEnableOption "fzf, a tool for fuzzy searching on the terminal";
     git = lib.mkEnableOption "git, the most widely used version control system";
+    grep.options = lib.mkEnableOption "some basic nice options for grep";
     lsd = lib.mkEnableOption "lsd, an improved version of the ls command with added features";
     neofetch = lib.mkEnableOption "neofetch, a now-discontinued CLI system information tool";
     pandoc = lib.mkEnableOption "pandoc, a CLI tool used to convert documents from one file type to another";
