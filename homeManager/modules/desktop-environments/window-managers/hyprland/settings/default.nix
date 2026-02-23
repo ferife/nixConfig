@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./appearance.nix
     ./binds
+    ./general.nix
   ];
 }

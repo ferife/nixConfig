@@ -1,0 +1,16 @@
+{
+  config,
+  lib,
+  ...
+}: {
+  config = lib.mkIf config.hm.wm.hyprland.enable {
+    wayland.windowManager.hyprland.settings = lib.mkMerge [
+      {
+        general = {
+          gaps_in = 5;
+          gaps_out = 10;
+        };
+      }
+    ];
+  };
+}

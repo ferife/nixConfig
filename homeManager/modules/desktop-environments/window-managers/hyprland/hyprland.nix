@@ -21,5 +21,6 @@
         misc.vfr = true;
       };
     };
+    services.hyprpolkitagent.enable = true;
   };
 }
