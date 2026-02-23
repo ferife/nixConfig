@@ -10,6 +10,7 @@
 
     ./bluetooth.nix
     ./documentation.nix
+    ./extra-network-settings.nix
     ./firmware-updater.nix
     ./force-install-basics.nix
     ./nixpkgs-config.nix
@@ -20,6 +21,7 @@
   config.nixos = {
     bluetooth = lib.mkDefault true;
     documentation = false;
+    extra-network-settings = lib.mkDefault true;
     firmware-updater = lib.mkDefault true;
     force-install-basics = lib.mkForce true;
     power-config = lib.mkDefault true;
