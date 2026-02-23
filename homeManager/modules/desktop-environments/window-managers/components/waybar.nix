@@ -37,6 +37,7 @@
           ];
           modules-right = [
             "mpris"
+            "cpu"
             "bluetooth"
             "network"
             "wireplumber"

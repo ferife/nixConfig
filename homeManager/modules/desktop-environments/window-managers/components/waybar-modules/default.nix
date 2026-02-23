@@ -11,6 +11,7 @@
     ./battery.nix
     ./bluetooth.nix
     ./clock.nix
+    ./cpu.nix
     ./idle-inhibitor.nix
     ./mpris.nix
     ./network.nix
