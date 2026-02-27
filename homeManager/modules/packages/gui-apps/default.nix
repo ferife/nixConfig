@@ -17,6 +17,7 @@
     ./floorp.nix
     ./ghostty.nix
     ./gimp.nix
+    ./jetuml.nix
     ./keepassxc.nix
     ./kitty.nix
     ./libreoffice.nix
@@ -42,6 +43,7 @@
     floorp = lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") true;
     ghostty = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "ghostty") true;
     # gimp = lib.mkDefault false;
+    # jetuml = lib.mkDefault false;
     keepassxc = lib.mkDefault true;
     kitty = lib.mkIf (config.hm.specialArgs.user-settings.terminal == "kitty") true;
     libreoffice = lib.mkDefault true;

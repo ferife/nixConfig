@@ -13,6 +13,7 @@
     floorp = mkEnableOption "Floorp";
     ghostty = mkEnableOption "Ghostty, a terminal emulator that supports the Kitty graphics protocol, and prides itself on requiring as little configuration as possible (while still allowing for configuration)";
     gimp = mkEnableOption "GIMP";
+    jetuml = mkEnableOption "JetUML, a FOSS GUI used to generate UML diagrams";
     keepassxc = mkEnableOption "KeePassXC, an offline password manager";
     kitty = mkEnableOption "Kitty, a terminal emulator that takes advantage of the GPU, can display images, and adds great customization";
     libreoffice = mkEnableOption "LibreOffice";

@@ -12,13 +12,14 @@
     # audacity = mkTrue;
     chromium = mkTrue;
     eclipse = mkTrue;
+    # jetuml = mkTrue;
     librewolf = mkTrue;
     qbittorrent = mkFalse;
     thunderbird = mkFalse;
 
     # Command tools
     plantuml = mkTrue;
-    yt-dlp = mkTrue;
     # wine = mkTrue;
+    yt-dlp = mkTrue;
   };
 }
