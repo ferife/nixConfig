@@ -8,9 +8,9 @@
     ./appearance
     ./desktop-environments
     ./packages
+    ./settings
     ./shell-scripts
 
-    ./hm-general-settings.nix
     ./options-special-args.nix
   ];
 }
