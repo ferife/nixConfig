@@ -20,6 +20,7 @@
         "monitor" = ", preferred, auto, 1";
         misc.vfr = true;
       };
+      systemd.enableXdgAutostart = true;
     };
     services.hyprpolkitagent.enable = true;
   };
