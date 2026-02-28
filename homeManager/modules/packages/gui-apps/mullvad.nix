@@ -10,6 +10,7 @@
         enable = true;
         # settings = {};
       };
+      xdg.autostart.entries = ["${pkgs.mullvad-vpn}/share/applications/mullvad-vpn.desktop"];
     })
 
     (lib.mkIf (config.hm.mullvad && config.hm.gnome.enable) {
