@@ -113,7 +113,7 @@
       {
         bindd = let
           browser = config.hm.specialArgs.user-settings.browser;
-        in ["$mainMod, B, Open a browser window, exec, ${browser}"];
+        in ["$mainMod SHIFT, return, Open a browser window, exec, ${browser}"];
       }
 
       # App Launcher
