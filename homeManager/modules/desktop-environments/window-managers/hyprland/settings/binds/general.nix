@@ -21,6 +21,7 @@
           "$mainMod SHIFT, Q, Close all instances of application in active window, exec, ${kill-all-instances}"
           "$mainMod, F, Fullscreen active window, fullscreen, 0"
           "$mainMod ALT, F, Maximize active window, fullscreen, 1"
+          # "$mainMod, J, Toggle window split, layoutmsg, togglesplit" # WARN: Super+J taken already
         ];
         binddu = [
           "$mainMod, escape, Exit submap, submap, reset"
@@ -29,7 +30,7 @@
 
       # Mouse Binds
       {
-        bindmd = [
+        binddm = [
           "$mainMod, mouse:272, LMB move window, movewindow"
           "$mainMod, mouse:273, RMB move window, resizewindow"
         ];
@@ -92,16 +93,16 @@
 
       # Moving windows
       {
-        binde = [
-          "$mainMod SHIFT, H, swapwindow, l"
-          "$mainMod SHIFT, J, swapwindow, d"
-          "$mainMod SHIFT, K, swapwindow, u"
-          "$mainMod SHIFT, L, swapwindow, r"
+        bindde = [
+          "$mainMod SHIFT, H, swap window leftwards, swapwindow, l"
+          "$mainMod SHIFT, J, swap window downwards, swapwindow, d"
+          "$mainMod SHIFT, K, swap window upwards, swapwindow, u"
+          "$mainMod SHIFT, L, swap window rightwards, swapwindow, r"
 
-          "$mainMod SHIFT, left, swapwindow, l"
-          "$mainMod SHIFT, down, swapwindow, d"
-          "$mainMod SHIFT, up, swapwindow, u"
-          "$mainMod SHIFT, right, swapwindow, r"
+          "$mainMod SHIFT, left, swap window leftwards, swapwindow, l"
+          "$mainMod SHIFT, down, swap window downwards, swapwindow, d"
+          "$mainMod SHIFT, up, swap window upwards, swapwindow, u"
+          "$mainMod SHIFT, right, swap window rightwards, swapwindow, r"
         ];
       }
 
