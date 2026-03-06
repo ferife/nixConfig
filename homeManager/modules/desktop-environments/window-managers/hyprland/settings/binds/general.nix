@@ -22,6 +22,9 @@
           "$mainMod, F, Fullscreen active window, fullscreen, 0"
           "$mainMod ALT, F, Maximize active window, fullscreen, 1"
         ];
+        binddu = [
+          "$mainMod, escape, Exit submap, submap, reset"
+        ];
       }
 
       # Mouse Binds
