@@ -5,23 +5,19 @@
 }: {
   config = lib.mkIf config.hm.wm.hyprland.enable {
     wayland.windowManager.hyprland = {
-      settings.bind = ["$mainMod SHIFT, M, submap, move-window"];
+      settings.bindd = ["$mainMod SHIFT, M, Submap: move-window, submap, move-window"];
 
       submaps.move-window.settings = {
-        binde = [
-          ", H, swapwindow, l"
-          ", J, swapwindow, d"
-          ", K, swapwindow, u"
-          ", L, swapwindow, r"
+        bindde = [
+          ", H, swap windows leftwards, swapwindow, l"
+          ", J, swap windows downwards, swapwindow, d"
+          ", K, swap windows upwards, swapwindow, u"
+          ", L, swap windows rightwards, swapwindow, r"
 
-          ", left, swapwindow, l"
-          ", down, swapwindow, d"
-          ", up, swapwindow, u"
-          ", right, swapwindow, r"
-        ];
-
-        bind = [
-          ", escape, submap, reset"
+          ", left, swap windows leftwards, swapwindow, l"
+          ", down, swap windows downwards, swapwindow, d"
+          ", up, swap windows upwards, swapwindow, u"
+          ", right, swap windows rightwards, swapwindow, r"
         ];
       };
     };

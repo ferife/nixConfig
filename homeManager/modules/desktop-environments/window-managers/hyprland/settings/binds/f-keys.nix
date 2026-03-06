@@ -21,27 +21,27 @@
         # Format for a bindd with questions:
         # "MODS, key, description, dispatcher, params"
         {
-          bind = [
-            ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" #F1
+          bindd = [
+            ", XF86AudioMute, Toggle mute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" #F1
           ];
         }
         {
-          binde = [
-            ", XF86AudioRaiseVolume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%+" # F2
-            ", XF86AudioLowerVolume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%-" # F3
+          bindde = [
+            ", XF86AudioRaiseVolume, Raise volume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%+" # F2
+            ", XF86AudioLowerVolume, Lower volume, exec, ${modify-volume} @DEFAULT_AUDIO_SINK@ ${max-volume} 5%-" # F3
           ];
         }
         {
-          bind = [
-            ", XF86AudioPrev, exec, playerctl previous" # F4
-            ", XF86AudioPlay, exec, playerctl play-pause" # F5
-            ", XF86AudioNext, exec, playerctl next" # F6
+          bindd = [
+            ", XF86AudioPrev, Go to previous audio track, exec, playerctl previous" # F4
+            ", XF86AudioPlay, Toggle play/pause of audio track, exec, playerctl play-pause" # F5
+            ", XF86AudioNext, Go to next audio track, exec, playerctl next" # F6
           ];
         }
         {
-          binde = [
-            ", XF86MonBrightnessUp, exec, ${modify-monitor-brightness} intel_backlight 5%+" # F7
-            ", XF86MonBrightnessDown, exec, ${modify-monitor-brightness} intel_backlight 5%-" # F8
+          bindde = [
+            ", XF86MonBrightnessUp, Increase brightness, exec, ${modify-monitor-brightness} intel_backlight 5%+" # F7
+            ", XF86MonBrightnessDown, Decrease brightness, exec, ${modify-monitor-brightness} intel_backlight 5%-" # F8
           ];
         }
       ];
