@@ -20,7 +20,7 @@
           "$mainMod, Q, Close the current window, killactive"
           "$mainMod SHIFT, Q, Close all instances of application in active window, exec, ${kill-all-instances}"
           "$mainMod, F, Fullscreen active window, fullscreen, 0"
-          "$mainMod, M, Maximize active window, fullscreen, 1"
+          "$mainMod ALT, F, Maximize active window, fullscreen, 1"
         ];
       }
 
