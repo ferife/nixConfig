@@ -14,8 +14,6 @@
       enable = true;
       systemd.enable = true;
       settings = {
-        "$mainMod" = "SUPER";
-
         # Any monitors whose settings are not explicitly defined will be set up automatically
         "monitor" = ", preferred, auto, 1";
         misc.vfr = true;

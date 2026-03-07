@@ -5,7 +5,7 @@
 }: {
   config = lib.mkIf config.hm.wm.hyprland.enable {
     wayland.windowManager.hyprland = {
-      settings.bindd = ["$mainMod, R, Submap: resize-window, submap, resize-window"];
+      settings.bindd = ["SUPER, R, Submap: resize-window, submap, resize-window"];
 
       submaps.resize-window.settings = {
         bindde = [
