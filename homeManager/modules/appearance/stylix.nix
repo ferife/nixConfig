@@ -11,7 +11,6 @@
         {
           enable = true;
           autoEnable = true;
-          opacity.terminal = 0.9;
           # fonts = {
           #   monospace = {
           #     package = pkgs.nerd-fonts.fira-code;
