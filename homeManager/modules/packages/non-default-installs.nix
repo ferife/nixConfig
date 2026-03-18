@@ -20,6 +20,6 @@
     # Command tools
     plantuml = mkTrue;
     # wine = mkTrue;
-    yt-dlp = mkTrue;
+    # yt-dlp = mkTrue;
   };
 }
