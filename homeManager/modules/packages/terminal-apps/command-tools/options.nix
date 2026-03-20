@@ -23,6 +23,7 @@
     pass = lib.mkEnableOption "password-store (AKA pass), the official GNU password storing solution";
     plantuml = lib.mkEnableOption "plantuml, a tool used to generate diagrams (for things such as Java classes) from text";
     playerctl = lib.mkEnableOption "playerctl, a tool that can control media players from within the CLI";
+    ripgrep = lib.mkEnableOption "ripgrep, a drop-in replacement for grep";
     starship = lib.mkEnableOption "starship, a cross-shell prompt with a lot of customizability";
     tldr = lib.mkEnableOption "tldr, a set of simplified and community-driven man pages";
     wine = lib.mkEnableOption "wine, a tool used to emulate Windows for the sake of running certain windows-only applications and packages";

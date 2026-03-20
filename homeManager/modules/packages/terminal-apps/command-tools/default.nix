@@ -25,6 +25,7 @@
     ./password-store.nix
     ./plantuml.nix
     ./playerctl.nix
+    ./ripgrep.nix
     ./starship.nix
     ./tldr.nix
     ./wine.nix
@@ -51,6 +52,7 @@
     # pass = lib.mkDefault false;
     # plantuml = lib.mkDefault false;
     playerctl = lib.mkDefault true;
+    ripgrep = lib.mkDefault true;
     starship = lib.mkDefault true;
     tldr = lib.mkDefault true;
     # wine = lib.mkDefault false;
