@@ -8,6 +8,7 @@
     ./options.nix
 
     ./core-plugins.nix
+    ./hotkeys.nix
     ./obsidian.nix
     ./settings.nix
   ];
