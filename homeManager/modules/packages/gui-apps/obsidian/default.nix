@@ -17,3 +17,5 @@
     obsidian = lib.mkDefault true;
   };
 }
+# rsync -rDL --progress "/home/fernandorf/Documents/test-git-vault/test-gen-vault/.obsidian" "/home/fernandorf/Documents/test-git-vault/test-gen-vault/backup" && find "/home/fernandorf/Documents/test-git-vault/test-gen-vault/backup" -name "*" -exec chmod 777 {} \;
+
