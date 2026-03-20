@@ -9,6 +9,7 @@
 
     ./browsers
     ./gnome-apps
+    ./obsidian
     ./plasma-apps
     ./audacity.nix
     ./eclipse.nix
@@ -21,7 +22,6 @@
     ./mpv.nix
     ./mullvad.nix
     ./obs-studio.nix
-    ./obsidian.nix
     ./openshot.nix
     ./proton-mail.nix
     ./qbittorrent.nix
@@ -42,7 +42,6 @@
     mpv = lib.mkDefault true;
     mullvad = lib.mkDefault true;
     # obsStudio = lib.mkDefault false;
-    obsidian = lib.mkDefault true;
     # openshot = lib.mkDefault false;
     proton-mail = lib.mkDefault true;
     qbittorrent = lib.mkDefault true;

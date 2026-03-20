@@ -17,7 +17,6 @@
     mpv = mkEnableOption "MVP, a media player";
     mullvad = mkEnableOption "the GUI for Mullvad VPN";
     obsStudio = mkEnableOption "OBS Studio";
-    obsidian = mkEnableOption "Obsidian.md";
     openshot = mkEnableOption "the OpenShot video editor";
     proton-mail = mkEnableOption "the desktop application for Proton Mail and Proton Calendar";
     qbittorrent = mkEnableOption "QBitTorrent";
