@@ -87,6 +87,7 @@
         {
           name = "webviewer";
           enable = true;
+          settings.markdownPath = "/Attachments/WebViewerSites";
         }
         {
           name = "word-count";

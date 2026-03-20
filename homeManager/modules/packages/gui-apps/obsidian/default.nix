@@ -9,6 +9,7 @@
 
     ./core-plugins.nix
     ./obsidian.nix
+    ./settings.nix
   ];
 
   hm = {
