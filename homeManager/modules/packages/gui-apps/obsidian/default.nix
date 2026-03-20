@@ -7,6 +7,7 @@
   imports = [
     ./options.nix
 
+    ./core-plugins.nix
     ./obsidian.nix
   ];
 
