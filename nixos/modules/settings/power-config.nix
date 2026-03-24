@@ -5,7 +5,10 @@
   ...
 }: {
   config = lib.mkIf config.nixos.power-config {
-    services.tlp.enable = lib.mkIf (!config.nixos.gnome.enable) true;
+    # services.tlp.enable = lib.mkIf (!config.nixos.gnome.enable) true;
+    services.tlp.enable = false;
+    services.tuned.enable = true;
+    services.upower.enable = true;
     # services.upower = {
     #   enable = true;
 
@@ -16,6 +19,6 @@
     #   criticalPowerAction = "Hibernate";
     # };
     # WARN: It is best to never manually enable power-profiles-daemon. It conflicts with TLP, which manages power automatically and with more effectiveness
-    services.power-profiles-daemon.enable = false;
+    # services.power-profiles-daemon.enable = false;
   };
 }
