@@ -9,6 +9,7 @@
       enable = true;
     };
 
-    home.packages = with pkgs; [libgcc gnumake];
+    home.packages = with pkgs; [gnumake];
+    programs.gcc.enable = true;
   };
 }
