@@ -6,5 +6,6 @@
 }: {
   imports = [
     ./bar.nix
+    ./general.nix
   ];
 }
