@@ -8,5 +8,6 @@
     ./appLauncher.nix
     ./bar.nix
     ./general.nix
+    ./location.nix
   ];
 }
