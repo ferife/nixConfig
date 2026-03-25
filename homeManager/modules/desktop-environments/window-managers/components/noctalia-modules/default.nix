@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./appLauncher.nix
     ./bar.nix
     ./general.nix
   ];
