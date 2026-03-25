@@ -18,7 +18,7 @@
   config.hm.wm.components = {
     dunst = lib.mkDefault config.hm.wm.hyprland.enable;
     hypridle = lib.mkDefault config.hm.wm.hyprland.enable;
-    noctalia = lib.mkDefault config.hm.wm.hyprland.enable;
+    noctalia.enable = lib.mkDefault config.hm.wm.hyprland.enable;
     # waybar = lib.mkDefault config.hm.wm.hyprland.enable;
 
     # rofi

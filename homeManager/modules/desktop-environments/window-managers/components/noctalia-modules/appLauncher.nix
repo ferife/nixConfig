@@ -4,16 +4,16 @@
   pkgs,
   ...
 }: let
-  enable-noctalia = config.hm.wm.components.noctalia;
+  noctalia = config.hm.wm.components.noctalia.enable;
 in {
   config = lib.mkMerge [
-    (lib.mkIf enable-noctalia {
+    (lib.mkIf noctalia {
       programs.noctalia-shell.settings.appLauncher = {
         enableClipboardHistory = true;
       };
     })
 
-    (lib.mkIf (enable-noctalia && config.hm.specialArgs.user-settings.terminal == "ghostty") {
+    (lib.mkIf (noctalia && config.hm.specialArgs.user-settings.terminal == "ghostty") {
       programs.noctalia-shell.settings.appLauncher.terminalCommand = "${config.programs.ghostty.package}/bin/ghostty";
     })
   ];

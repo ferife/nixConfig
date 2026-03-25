@@ -14,7 +14,7 @@
         decoration.inactive_opacity = 0.85;
       }
 
-      (lib.mkIf (config.hm.wm.components.noctalia) {
+      (lib.mkIf (config.hm.wm.components.noctalia.enable) {
         general = {
           gaps_in = 5;
           gaps_out = 10;

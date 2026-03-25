@@ -5,6 +5,8 @@
   ...
 }: {
   imports = [
+    ./plugins
+
     ./appLauncher.nix
     ./audio.nix
     ./bar.nix

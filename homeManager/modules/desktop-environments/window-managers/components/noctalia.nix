@@ -5,7 +5,7 @@
   inputs,
   ...
 }: let
-  enable-noctalia = config.hm.wm.components.noctalia;
+  noctalia = config.hm.wm.components.noctalia.enable;
 in {
   imports = [
     inputs.noctalia.homeModules.default
@@ -13,12 +13,12 @@ in {
   ];
 
   config = lib.mkMerge [
-    (lib.mkIf enable-noctalia {
+    (lib.mkIf noctalia {
       programs.noctalia-shell = {
         enable = true;
       };
     })
-    (lib.mkIf (enable-noctalia && config.hm.wm.hyprland.enable) {
+    (lib.mkIf (noctalia && config.hm.wm.hyprland.enable) {
       wayland.windowManager.hyprland.extraConfig = "exec-once = noctalia-shell";
     })
   ];

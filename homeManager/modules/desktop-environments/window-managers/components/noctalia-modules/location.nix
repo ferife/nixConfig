@@ -4,9 +4,9 @@
   pkgs,
   ...
 }: let
-  enable-noctalia = config.hm.wm.components.noctalia;
+  noctalia = config.hm.wm.components.noctalia.enable;
 in {
-  config = lib.mkIf enable-noctalia {
+  config = lib.mkIf noctalia {
     programs.noctalia-shell.settings.location = {
       # name = config.hm.secrets.noctalia-shell-location-name;
       useFahrenheit = true;
