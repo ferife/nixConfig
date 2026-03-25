@@ -12,5 +12,6 @@
     ./general.nix
     ./idle.nix
     ./location.nix
+    ./notifications.nix
   ];
 }
