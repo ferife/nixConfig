@@ -9,6 +9,7 @@
 in {
   imports = [
     inputs.noctalia.homeModules.default
+    ./noctalia-modules
   ];
 
   config = lib.mkMerge [
