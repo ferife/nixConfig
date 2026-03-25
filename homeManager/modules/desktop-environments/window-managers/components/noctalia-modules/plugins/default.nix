@@ -9,11 +9,13 @@ in {
   imports = [
     ./options.nix
 
+    ./custom-commands.nix
     ./sticky-notes.nix
   ];
 
   config = lib.mkIf noctalia {
     hm.wm.components.noctalia.plugins = {
+      custom-commands = lib.mkDefault noctalia;
       sticky-notes = lib.mkDefault noctalia;
     };
 
