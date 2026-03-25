@@ -9,6 +9,7 @@
       programs.ghostty = {
         enable = true;
         clearDefaultKeybinds = true;
+        systemd.enable = true;
         settings.keybind = [
           "ctrl+shift+i=inspector:toggle"
           "ctrl+shift+v=paste_from_clipboard"
