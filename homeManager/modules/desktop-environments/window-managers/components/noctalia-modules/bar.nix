@@ -38,6 +38,8 @@ in {
           }
         ];
         right = [
+          {id = "plugin:sticky-notes";}
+          {id = "Spacer";}
           {id = "VPN";}
           {id = "NotificationHistory";}
           {

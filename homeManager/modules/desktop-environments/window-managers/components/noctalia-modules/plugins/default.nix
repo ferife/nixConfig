@@ -8,10 +8,13 @@
 in {
   imports = [
     ./options.nix
+
+    ./sticky-notes.nix
   ];
 
   config = lib.mkIf noctalia {
     hm.wm.components.noctalia.plugins = {
+      sticky-notes = lib.mkDefault noctalia;
     };
 
     programs.noctalia-shell.plugins = {
