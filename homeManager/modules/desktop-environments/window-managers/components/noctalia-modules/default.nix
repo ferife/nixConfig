@@ -10,6 +10,7 @@
     ./bar.nix
     ./controlCenter.nix
     ./general.nix
+    ./idle.nix
     ./location.nix
   ];
 }
