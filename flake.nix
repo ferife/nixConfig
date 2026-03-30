@@ -32,6 +32,7 @@
       url = "github:noctalia-dev/noctalia-qs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
   # NOTE: To update a single input, use the command `nix flake update <name-of-input>`
 
