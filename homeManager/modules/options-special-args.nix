@@ -11,38 +11,38 @@
       username = lib.mkOption {
         type = lib.types.strMatching "[^ <>.]+";
         description = "The username for the main user. This will be used for the naming of the home directory, so it must comply with rules for naming non-hidden directories";
-        default = userSettings.username;
+        default = "fernandorf";
       };
       name = lib.mkOption {
         type = lib.types.str;
         description = "The name of the user";
-        default = userSettings.name;
+        default = "Fernando";
       };
       colorscheme = lib.mkOption {
         type = lib.types.enum ["onedark"];
         description = "The colorscheme that will be used to rice the entire system";
-        default = userSettings.colorscheme;
+        default = "onedark";
       };
       browser = lib.mkOption {
         type = lib.types.enum ["chromium" "firefox" "floorp" "librewolf" "tor-browser"];
         description = "The main web browser";
-        default = userSettings.mainBrowser;
+        default = "floorp";
       };
       terminal = lib.mkOption {
         type = lib.types.enum ["ghostty" "gnome-console" "gnome-terminal" "kitty"];
         description = "The main terminal emulator for this system";
-        default = userSettings.terminal;
+        default = "ghostty";
       };
       font = {
         name = lib.mkOption {
           type = lib.types.str;
           description = "The name of the font that will be used across the system";
-          default = userSettings.font;
+          default = "FiraCode Nerd Font";
         };
         package = lib.mkOption {
           type = lib.types.package;
           description = "The package that will be used for the font";
-          default = userSettings.fontPkg;
+          default = pkgs.nerd-fonts.fira-code;
         };
       };
     };
@@ -50,62 +50,62 @@
       system = lib.mkOption {
         type = lib.types.enum ["x86_64-linux"];
         description = "The system architecture of the device";
-        default = systemSettings.system;
+        default = "x86_64-linux";
       };
       shell = lib.mkOption {
         type = lib.types.enum ["bash" "zsh"];
         description = "The main shell to be used";
-        default = systemSettings.shell;
+        default = "bash";
       };
       hostname = lib.mkOption {
         type = lib.types.strMatching "[^ <>.]+";
         description = "The name of the host device";
-        default = systemSettings.hostname1;
+        default = "laptop";
       };
       timezone = lib.mkOption {
         type = lib.types.enum ["America/Chicago"];
         description = "The home timezone";
-        default = systemSettings.timezone;
+        default = "America/Chicago";
       };
       locale = lib.mkOption {
         type = lib.types.enum ["en_US.UTF-8"];
         description = "The locale";
-        default = systemSettings.locale;
+        default = "en_US.UTF-8";
       };
       config-path = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The absolute path leading to the nix Config";
-        default = systemSettings.nixConfigPath;
+        default = "/home/fernandorf/Documents/Configs/nixConfig/";
       };
       flake-path = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The absolute path leading to the flake";
-        default = systemSettings.flakePath;
+        default = "/home/fernandorf/Documents/Configs/nixConfig/nixConfig-main";
       };
       nixpkgs = lib.mkOption {
         type = lib.types.enum ["unstable" "25.11"];
         description = "The toggle to choose between the latest stable or unstable nixpkgs";
-        default = systemSettings.nixpkgs;
+        default = "unstable";
       };
       config-files-dir = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The name of the directories where the scripts/assets for this config will be stored. They will be within the home directory and within the /etc directory respectively.";
-        default = systemSettings.configFilesDirectory;
+        default = ".nixConfig-assets";
       };
       scripts-dir = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The name of the directories where the scripts for this config will be stored. They will be within the home directory and within the /etc directory respectively.";
-        default = systemSettings.scriptsDirectory;
+        default = ".nixConfig-assets/scripts";
       };
       assets-dir = lib.mkOption {
         type = lib.types.strMatching "[^ <>]+";
         description = "The name of the directories where the assets for this config will be stored. They will be within the home directory and within the /etc directory respectively.";
-        default = systemSettings.assetsDirectory;
+        default = ".nixConfig-assets/assets";
       };
       desktop-environment = lib.mkOption {
         type = lib.types.enum ["gnome" "hyprland"];
         description = "The main desktop environment to use";
-        default = systemSettings.desktopEnvironment;
+        default = "hyprland";
       };
     };
   };
