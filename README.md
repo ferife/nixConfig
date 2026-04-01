@@ -1,3 +1,6 @@
+nixos modules imported at modules/hosts/NAME/configuration.nix
+home manager modules imported at modules/users/NAME/NAME.nix
+
 # Introduction
 
 This is the configuration for NixOS that I daily drive on my personal laptop
