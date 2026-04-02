@@ -28,6 +28,7 @@
           system-minimal
           ghostty
           lazygit
+          nh
         ];
         home.packages = [pkgs.mediainfo];
       };
