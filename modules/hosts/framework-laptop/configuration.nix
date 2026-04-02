@@ -8,6 +8,7 @@
       systemd-boot
       gnome
       regreet
+      hyprland
     ];
   };
 }

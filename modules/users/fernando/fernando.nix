@@ -31,6 +31,7 @@
           nh
           librewolf
           keepassxc
+          hyprland
         ];
         home.packages = [pkgs.mediainfo];
       };
