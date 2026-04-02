@@ -1,0 +1,35 @@
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
+  config = lib.mkMerge [
+    (lib.mkIf (config.hm.specialArgs.user-settings.browser == "floorp") {
+      hm.floorp = lib.mkForce true;
+    })
+
+    # (lib.mkIf (config.hm.floorp && config.hm.gnome.enable) {
+    (lib.mkIf ((config.hm.specialArgs.user-settings.browser == "floorp") && config.hm.gnome.enable) {
+      dconf.settings = {"org/gnome/shell".favorite-apps = ["floorp.desktop"];};
+    })
+
+    (lib.mkIf config.hm.floorp {
+      # Go to ./firefox-options.nix for the firefox hm options
+
+      programs.floorp = config.hm.ff-config;
+      stylix.targets.floorp = config.stylix.targets.firefox;
+
+      # Variable is used to restore floorp profiles through gas
+      home.sessionVariables = {
+        FLOORP_ACTIVE = "1";
+      };
+    })
+    (lib.mkIf (!config.hm.floorp) {
+      home.sessionVariables = {
+        FLOORP_ACTIVE = "";
+      };
+    })
+  ];
+}
