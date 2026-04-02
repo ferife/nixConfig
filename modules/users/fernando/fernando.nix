@@ -26,12 +26,13 @@
         imports = with self.modules.homeManager; [
           # home manager modules imported here
           system-minimal
+
           ghostty
-          lazygit
-          nh
-          librewolf
-          keepassxc
           hyprland
+          keepassxc
+          lazygit
+          librewolf
+          nh
         ];
         home.packages = [pkgs.mediainfo];
       };
