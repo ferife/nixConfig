@@ -26,6 +26,7 @@
         imports = with self.modules.homeManager; [
           # home manager modules imported here
           system-minimal
+          lazygit
         ];
         home.packages = [pkgs.mediainfo];
       };
