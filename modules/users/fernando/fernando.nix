@@ -35,6 +35,7 @@
           lazygit
           librewolf
           nh
+          noctalia
           stylix
         ];
         home.packages = [pkgs.mediainfo];
