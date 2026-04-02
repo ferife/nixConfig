@@ -45,6 +45,9 @@
 
     homeManager."${username}" = {
       home.username = "${username}";
+
+      programs.librewolf.profiles."${username}".extensions.force = true;
+      stylix.targets.librewolf.profileNames = ["${username}"];
     };
   };
 }

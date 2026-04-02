@@ -34,6 +34,7 @@
           lazygit
           librewolf
           nh
+          stylix
         ];
         home.packages = [pkgs.mediainfo];
       };
