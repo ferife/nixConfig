@@ -1,24 +1,13 @@
-{
-  config,
-  lib,
-  ...
-}: {
-  config = lib.mkIf config.hm.wm.hyprland.enable {
-    hm.scripts = {
-      hypr-kill-all-instances.enable = true;
-    };
+{inputs, ...}: {
+  # flake.modules.nixos.hyprland = {pkgs, ...}: {};
 
-    # Format for a bindd with questions:
-    # "MODS, key, description, dispatcher, params"
-
+  flake.modules.homeManager.hyprland = {lib, ...}: {
     wayland.windowManager.hyprland.settings = lib.mkMerge [
       # Basics
       {
-        bindd = let
-          kill-all-instances = config.hm.scripts.hypr-kill-all-instances.full-path;
-        in [
+        bindd = [
           "SUPER, Q, Close the current window, killactive"
-          "SUPER SHIFT, Q, Close all instances of application in active window, exec, ${kill-all-instances}"
+          # "SUPER SHIFT, Q, Close all instances of application in active window, exec, ${kill-all-instances}"
           "SUPER, F, Fullscreen active window, fullscreen, 0"
           "SUPER ALT, F, Maximize active window, fullscreen, 1"
           # "SUPER, J, Toggle window split, layoutmsg, togglesplit" # WARN: Super+J taken already
@@ -26,10 +15,6 @@
         binddu = [
           "SUPER, escape, Exit submap, submap, reset"
         ];
-      }
-
-      # Mouse Binds
-      {
         binddm = [
           "SUPER, mouse:272, LMB move window, movewindow"
           "SUPER, mouse:273, RMB move window, resizewindow"
@@ -75,66 +60,6 @@
           "SUPER CTRL, TAB, Go to former workspace, workspace, previous"
         ];
       }
-
-      # Moving window focus
-      {
-        bindd = [
-          "SUPER, H, Move window focus to the left, movefocus, l"
-          "SUPER, J, Move window focus to the left, movefocus, d"
-          "SUPER, K, Move window focus to the left, movefocus, u"
-          "SUPER, L, Move window focus to the left, movefocus, r"
-
-          "SUPER, left, Move window focus to the left, movefocus, l"
-          "SUPER, down, Move window focus to the left, movefocus, d"
-          "SUPER, up, Move window focus to the left, movefocus, u"
-          "SUPER, right, Move window focus to the left, movefocus, r"
-        ];
-      }
-
-      # Moving windows
-      {
-        bindde = [
-          "SUPER SHIFT, H, swap window leftwards, swapwindow, l"
-          "SUPER SHIFT, J, swap window downwards, swapwindow, d"
-          "SUPER SHIFT, K, swap window upwards, swapwindow, u"
-          "SUPER SHIFT, L, swap window rightwards, swapwindow, r"
-
-          "SUPER SHIFT, left, swap window leftwards, swapwindow, l"
-          "SUPER SHIFT, down, swap window downwards, swapwindow, d"
-          "SUPER SHIFT, up, swap window upwards, swapwindow, u"
-          "SUPER SHIFT, right, swap window rightwards, swapwindow, r"
-        ];
-      }
-
-      # Terminal
-      {
-        bindd = let
-          terminal = config.hm.specialArgs.user-settings.terminal;
-        in ["SUPER, return, Open a terminal window, exec, ${terminal}"];
-      }
-
-      # Browser
-      {
-        bindd = let
-          browser = config.hm.specialArgs.user-settings.browser;
-        in ["SUPER SHIFT, return, Open a browser window, exec, ${browser}"];
-      }
-
-      # App Launcher
-      (lib.mkIf (config.hm.wm.app-launcher == "rofi") {
-        bindd = ["SUPER, Space, Open the app launcher, exec, rofi -show drun"];
-      })
-      (lib.mkIf (config.hm.wm.app-launcher == "wofi") {
-        bindd = ["SUPER, Space, Open the app launcher, exec, wofi --show drun --allow-images"];
-      })
-
-      # Other Apps
-      (lib.mkIf config.hm.obsidian {
-        bindd = ["SUPER, O, Open Obsidian, exec, obsidian"];
-      })
-      (lib.mkIf config.hm.keepassxc {
-        bindd = ["SUPER, P, Open the password manager, exec, keepassxc"];
-      })
     ];
   };
 }

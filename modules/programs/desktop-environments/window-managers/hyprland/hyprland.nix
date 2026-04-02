@@ -18,6 +18,8 @@
       enable = true;
       systemd.enable = true;
       settings = {
+        input.touchpad.disable_while_typing = true;
+
         # Any monitors whose settings are not explicitly defined will be set up automatically
         "monitor" = ", preferred, auto, 1";
         misc.vfr = true;
