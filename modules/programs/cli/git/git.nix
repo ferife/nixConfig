@@ -4,6 +4,7 @@
   flake.modules.homeManager.git = {pkgs, ...}: {
     programs.git = {
       enable = true;
+      signing.format = "openpgp";
     };
   };
 }
