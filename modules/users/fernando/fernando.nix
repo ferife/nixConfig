@@ -31,6 +31,7 @@
           cursor
           ghostty
           hyprland
+          jq
           keepassxc
           lazygit
           librewolf
