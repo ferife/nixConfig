@@ -9,6 +9,7 @@
       hyprland
       networkmanager
       regreet
+      stylix
       systemd-boot
       vpn
     ];
