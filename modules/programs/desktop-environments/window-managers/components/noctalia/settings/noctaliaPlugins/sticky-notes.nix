@@ -1,12 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: let
-  plugins = config.hm.wm.components.noctalia.plugins;
-in {
-  config = lib.mkIf plugins.sticky-notes {
+{inputs, ...}: {
+  # flake.modules.nixos.noctaliaPlugins = {pkgs, ...}: {};
+
+  flake.modules.homeManager.noctaliaPlugins = {lib, ...}: {
     programs.noctalia-shell = {
       plugins.states.sticky-notes = {
         enabled = true;

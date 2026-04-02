@@ -2,7 +2,10 @@
   # flake.modules.nixos.noctalia = {pkgs, ...}: {};
 
   flake.modules.homeManager.noctalia = {pkgs, ...}: {
-    imports = [inputs.noctalia.homeModules.default];
+    imports = [
+      inputs.noctalia.homeModules.default
+      inputs.self.modules.homeManager.noctaliaPlugins
+    ];
 
     programs.noctalia-shell.enable = true;
     wayland.windowManager.hyprland = {
