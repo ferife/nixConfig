@@ -27,6 +27,7 @@
           # home manager modules imported here
           system-minimal
 
+          cursor
           ghostty
           hyprland
           keepassxc
