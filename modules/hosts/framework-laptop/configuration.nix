@@ -7,6 +7,7 @@
       vpn
       systemd-boot
       gnome
+      regreet
     ];
   };
 }
