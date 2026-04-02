@@ -29,6 +29,7 @@
           ghostty
           lazygit
           nh
+          keepassxc
         ];
         home.packages = [pkgs.mediainfo];
       };
