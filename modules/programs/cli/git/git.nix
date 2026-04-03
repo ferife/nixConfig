@@ -5,6 +5,10 @@
     programs.git = {
       enable = true;
       signing.format = "openpgp";
+      settings.user = {
+        email = "github.backtrack434@passmail.net";
+        name = "Fernando";
+      };
     };
   };
 }
