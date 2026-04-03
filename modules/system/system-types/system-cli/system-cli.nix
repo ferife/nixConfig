@@ -5,6 +5,7 @@
     imports = with inputs.self.modules.nixos; [
       system-default
 
+      location-settings
       network-settings
       # ssh
       vpn
