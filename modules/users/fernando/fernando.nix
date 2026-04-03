@@ -38,6 +38,7 @@
           librewolf
           nh
           noctalia
+          ripgrep
           stylix
           zoxide
           zsh
