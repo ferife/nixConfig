@@ -12,6 +12,7 @@
   flake.modules.homeManager.hyprland = {pkgs, ...}: {
     # hint Electron apps to use Wayland
     home.sessionVariables.NIXOS_OZONE_WL = "1";
+    home.pointerCursor.hyprcursor.enable = true;
 
     wayland.windowManager.hyprland = {
       # allow home manager to configure hyprland
