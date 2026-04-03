@@ -6,6 +6,7 @@
       [
         system-minimal
 
+        firmware
         home-manager
         systemd-boot
       ]
