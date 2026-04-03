@@ -6,6 +6,7 @@
       system-default
 
       network-settings
+      # ssh
       vpn
     ];
   };
