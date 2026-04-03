@@ -1,10 +1,7 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  config = lib.mkIf config.hm.zsh {
+{inputs, ...}: {
+  # flake.modules.nixos.zsh = {pkgs, ...}: {};
+
+  flake.modules.homeManager.zsh = {pkgs, ...}: {
     programs.zsh = {
       enable = true;
       autosuggestion.enable = true;

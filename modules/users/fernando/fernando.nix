@@ -39,6 +39,7 @@
           noctalia
           stylix
           zoxide
+          zsh
         ];
         home.packages = [pkgs.mediainfo];
       };
