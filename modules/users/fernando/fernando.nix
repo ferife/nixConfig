@@ -25,25 +25,7 @@
       homeManager.fernandorf = {pkgs, ...}: {
         imports = with self.modules.homeManager; [
           # home manager modules imported here
-          system-minimal
-
-          alejandra
-          cursor
-          fzf
-          ghostty
-          hyprland
-          jq
-          keepassxc
-          lazygit
-          librewolf
-          nh
-          nixvim
-          noctalia
-          ripgrep
-          starship
-          stylix
-          zoxide
-          zsh
+          system-desktop
         ];
         home.packages = [pkgs.mediainfo];
       };

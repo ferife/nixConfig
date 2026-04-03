@@ -4,7 +4,13 @@
   flake.modules.nixos.system-desktop = {
     imports = with inputs.self.modules.nixos; [
       system-cli
-      networkmanager
+
+      bluetooth
+      # gdm
+      # gnome
+      hyprland
+      regreet
+      stylix
     ];
   };
 
@@ -17,7 +23,18 @@
   flake.modules.homeManager.system-desktop = {
     imports = with inputs.self.modules.homeManager; [
       system-cli
-      vpn
+
+      cursor
+      ghostty
+      hyprland
+      keepassxc
+      lazygit
+      librewolf
+      nixvim
+      noctalia
+      starship
+      stylix
+      zoxide
     ];
   };
 }

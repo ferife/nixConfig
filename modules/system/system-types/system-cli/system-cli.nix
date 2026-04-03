@@ -22,6 +22,15 @@
   flake.modules.homeManager.system-cli = {
     imports = with inputs.self.modules.homeManager; [
       system-default
+      alejandra
+      fzf
+      git
+      # grep
+      jq
+      nh
+      ripgrep
+      vpn
+      zsh
     ];
   };
 }
