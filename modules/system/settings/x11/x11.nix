@@ -1,0 +1,14 @@
+{inputs, ...}: {
+  flake.modules.nixos.x11 = {pkgs, ...}: {
+    # Enable the X11 windowing system.
+    services.xserver.enable = true;
+
+    # Configure keymap in X11
+    services.xserver.xkb = {
+      layout = "us";
+      variant = "";
+    };
+  };
+
+  # flake.modules.homeManager.x11 = {pkgs, ...}: {};
+}
