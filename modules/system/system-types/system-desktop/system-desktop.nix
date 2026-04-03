@@ -9,6 +9,7 @@
       # gdm
       # gnome
       hyprland
+      power-settings
       regreet
       stylix
     ];

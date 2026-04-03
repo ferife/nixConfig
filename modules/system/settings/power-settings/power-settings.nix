@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  config = lib.mkIf config.nixos.power-config {
+{inputs, ...}: {
+  flake.modules.nixos.power-settings = {
     # services.tlp.enable = lib.mkIf (!config.nixos.gnome.enable) true;
     services.tlp.enable = false;
     services.tuned.enable = true;
@@ -21,4 +16,6 @@
     # WARN: It is best to never manually enable power-profiles-daemon. It conflicts with TLP, which manages power automatically and with more effectiveness
     # services.power-profiles-daemon.enable = false;
   };
+
+  # flake.modules.homeManager.power-settings = {};
 }
