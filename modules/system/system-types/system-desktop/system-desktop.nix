@@ -12,6 +12,7 @@
       power-settings
       regreet
       stylix
+      # x11
     ];
   };
 
