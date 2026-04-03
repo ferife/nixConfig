@@ -5,7 +5,9 @@
     imports = with inputs.self.modules.nixos;
       [
         system-minimal
+
         home-manager
+        systemd-boot
       ]
       ++ (with inputs.self.modules.generic; []);
   };
