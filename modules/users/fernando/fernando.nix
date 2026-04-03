@@ -39,6 +39,7 @@
           nh
           noctalia
           ripgrep
+          starship
           stylix
           zoxide
           zsh
