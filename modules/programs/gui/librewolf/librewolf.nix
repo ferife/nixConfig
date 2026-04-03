@@ -5,5 +5,8 @@
     programs.librewolf = {
       enable = true;
     };
+
+    stylix.targets.librewolf.colorTheme.enable = true;
+    dconf.settings."org/gnome/shell".favorite-apps = ["librewolf.desktop"];
   };
 }
