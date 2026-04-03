@@ -37,6 +37,7 @@
           lazygit
           librewolf
           nh
+          nixvim
           noctalia
           ripgrep
           starship
