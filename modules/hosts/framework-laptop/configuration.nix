@@ -7,7 +7,7 @@
       gnome
       home-manager
       hyprland
-      networkmanager
+      networkSettings
       regreet
       stylix
       systemd-boot
