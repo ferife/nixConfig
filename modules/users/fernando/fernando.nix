@@ -29,6 +29,7 @@
 
           alejandra
           cursor
+          fzf
           ghostty
           hyprland
           jq
