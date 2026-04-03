@@ -38,6 +38,7 @@
           nh
           noctalia
           stylix
+          zoxide
         ];
         home.packages = [pkgs.mediainfo];
       };
