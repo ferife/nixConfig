@@ -6,6 +6,7 @@
       system-cli
 
       bluetooth
+      clipboard
       # gdm
       # gnome
       hyprland
@@ -27,6 +28,7 @@
     imports = with inputs.self.modules.homeManager; [
       system-cli
 
+      clipboard
       cursor
       ghostty
       hyprland
