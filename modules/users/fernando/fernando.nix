@@ -26,6 +26,7 @@
         imports = with self.modules.homeManager; [
           # home manager modules imported here
           system-desktop
+          chromium
         ];
         home.packages = [pkgs.mediainfo];
       };
