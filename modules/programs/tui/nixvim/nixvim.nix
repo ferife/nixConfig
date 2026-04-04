@@ -9,7 +9,7 @@
       enable = true;
       defaultEditor = true;
       vimdiffAlias = true;
-      imports = [inputs.self.modules.homeManager.nixvimModules];
+      imports = [inputs.self.modules.homeManager.nixvim-modules];
     };
   };
 }

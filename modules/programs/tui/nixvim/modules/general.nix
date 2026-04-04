@@ -1,7 +1,7 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvimModules = {pkgs, ...}: {};
+  # flake.modules.nixos.nixvim.nixvim-general = {pkgs, ...}: {};
 
-  flake.modules.homeManager.nixvimModules = {pkgs, ...}: {
+  flake.modules.homeManager.nixvim-general = {pkgs, ...}: {
     clipboard = {
       reguster = "unnamedplus";
       providers.wl-copy.enable = true;
@@ -20,5 +20,9 @@
       scrolloff = 5;
     };
     wrapRc = true;
+
+    dependencies = {
+      nodejs.enable = true;
+    };
   };
 }
