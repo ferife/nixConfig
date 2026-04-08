@@ -3,8 +3,9 @@
     networking.wireguard.enable = true;
     services.mullvad-vpn = {
       enable = true;
-      package = pkgs.mullvad;
-      enableExcludeWrapper = true;
+      package = pkgs.mullvad; # CLI only
+      # enableExcludeWrapper = true;
+      enableEarlyBootBlocking = true; # Ensures mullvad boots before any network configuration is applied
     };
   };
 
