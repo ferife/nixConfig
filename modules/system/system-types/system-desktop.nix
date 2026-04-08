@@ -5,15 +5,22 @@
     imports = with inputs.self.modules.nixos; [
       system-cli
 
-      bluetooth
-      clipboard
+      # NIX
+      stylix
+      #
+      # PROGRAMS
       # gdm
+      # ghostty
       # gnome
       hyprland
+      # kde-plasma
+      regreet
+      # sddm
+      #
+      # SETTINGS
+      bluetooth
       io-settings
       power-settings
-      regreet
-      stylix
       # x11
     ];
   };
@@ -28,19 +35,27 @@
     imports = with inputs.self.modules.homeManager; [
       system-cli
 
-      clipboard
-      cursor
+      # NIX
+      stylix
+      #
+      # PROGRAMS
+      chromium
       dolphin
       ghostty
       hyprland
+      # kde-plasma
       keepassxc
       lazygit
       librewolf
-      nixvim
       noctalia
       starship
-      stylix
       zoxide
+      #
+      # SERVICES
+      mullvad
+      #
+      # SESTTINGS
+      cursor
     ];
   };
 }
