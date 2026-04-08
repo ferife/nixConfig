@@ -8,7 +8,7 @@
       location-settings
       network-settings
       # ssh
-      vpn
+      mullvad
     ];
   };
 
@@ -31,7 +31,7 @@
       jq
       nh
       ripgrep
-      vpn
+      mullvad
       zsh
     ];
   };

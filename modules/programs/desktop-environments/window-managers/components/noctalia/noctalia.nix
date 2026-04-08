@@ -1,4 +1,9 @@
 {inputs, ...}: {
+  flake-file.inputs.noctalia = {
+    url = "github:noctalia-dev/noctalia-shell";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   # flake.modules.nixos.noctalia = {pkgs, ...}: {};
 
   flake.modules.homeManager.noctalia = {pkgs, ...}: {
