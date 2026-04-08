@@ -49,6 +49,7 @@
       librewolf
       noctalia
       starship
+      thunderbird
       zoxide
       #
       # SERVICES
