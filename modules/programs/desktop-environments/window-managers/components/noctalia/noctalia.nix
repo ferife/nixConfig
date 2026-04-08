@@ -4,7 +4,7 @@
   flake.modules.homeManager.noctalia = {pkgs, ...}: {
     imports = [
       inputs.noctalia.homeModules.default
-      inputs.self.modules.homeManager.noctaliaPlugins
+      inputs.self.modules.homeManager.noctalia-plugins
     ];
 
     programs.noctalia-shell.enable = true;

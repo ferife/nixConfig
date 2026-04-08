@@ -1,7 +1,7 @@
 {inputs, ...}: {
-  # flake.modules.nixos.noctaliaPlugins = {pkgs, ...}: {};
+  # flake.modules.nixos.noctalia-plugins = {pkgs, ...}: {};
 
-  flake.modules.homeManager.noctaliaPlugins = {lib, ...}: {
+  flake.modules.homeManager.noctalia-plugins = {lib, ...}: {
     programs.noctalia-shell = {
       plugins.states.sticky-notes = {
         enabled = true;
