@@ -32,6 +32,7 @@
       #
       # PROGRAMS
       alejandra
+      fastfetch
       fzf
       git
       # grep
