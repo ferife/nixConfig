@@ -30,6 +30,7 @@
 
       clipboard
       cursor
+      dolphin
       ghostty
       hyprland
       keepassxc
