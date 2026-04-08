@@ -1,5 +1,7 @@
 {inputs, ...}: {
-  # flake.modules.nixos.ghostty = {pkgs, ...}: {};
+  flake.modules.nixos.ghostty = {pkgs, ...}: {
+    environment.systemPackages = [pkgs.ghostty];
+  };
 
   flake.modules.homeManager.ghostty = {pkgs, ...}: {
     programs.ghostty = {
