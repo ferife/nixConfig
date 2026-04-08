@@ -6,7 +6,9 @@
       system-default
 
       # NIX
+      comma
       nh
+      nix-index-database
       #
       # SERVICES
       clipboard
@@ -24,7 +26,9 @@
       system-default
 
       # NIX
+      comma
       nh
+      nix-index-database
       #
       # PROGRAMS
       alejandra
