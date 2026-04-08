@@ -19,10 +19,6 @@
 
     # List services that you want to enable:
 
-    # Enable the OpenSSH daemon.
-    # This would allow me to ssh into this computer from any other device
-    # services.openssh.enable = true;
-
     # Open ports in the firewall.
     # networking.firewall.allowedTCPPorts = [ ... ];
     # networking.firewall.allowedUDPPorts = [ ... ];
@@ -30,5 +26,5 @@
     # networking.firewall.enable = false;
   };
 
-  # flake.modules.homeManager.systemd-boot = {};
+  # flake.modules.homeManager.network-settings = {};
 }
