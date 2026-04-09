@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # nh is a helper that makes it easier to update my config
+
   flake.modules.nixos.nh = {pkgs, ...}: {
     programs.nh = {
       enable = true;

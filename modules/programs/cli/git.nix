@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # git is a version control system
+  #
   # flake.modules.nixos.git = {pkgs, ...}: {};
 
   flake.modules.homeManager.git = {pkgs, ...}: {

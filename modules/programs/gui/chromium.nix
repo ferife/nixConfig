@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # Chromium is a chrome-based browser
+  #
   # flake.modules.nixos.chromium = {pkgs, ...}: {};
 
   flake.modules.homeManager.chromium = {pkgs, ...}: {

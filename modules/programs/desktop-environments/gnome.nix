@@ -1,7 +1,7 @@
 {inputs, ...}: {
-  flake.modules.nixos.gnome = {pkgs, ...}: {
-    # imports = [inputs.self.modules.nixos.gdm];
+  # GNOME is a desktop environment
 
+  flake.modules.nixos.gnome = {pkgs, ...}: {
     services = {
       desktopManager.gnome.enable = true;
       gnome.gnome-browser-connector.enable = true; # Allows for GNOME extensions to affect browsers

@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # KDE plasma is a desktop environment
+
   flake.modules.nixos.kde-plasma = {lib, ...}: {
     services.desktopManager.plasma6.enable = true;
   };

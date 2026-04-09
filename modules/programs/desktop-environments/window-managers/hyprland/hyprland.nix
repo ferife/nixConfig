@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # Hyprland is a tiling window manager
+
   flake.modules.nixos.hyprland = {pkgs, ...}: {
     environment.variables.NIXOS_OZONE_WL = "1";
 

@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # lazygit is a terminal UI for git commands
+  #
   # flake.modules.nixos.lazygit = {pkgs, ...}: {};
 
   flake.modules.homeManager.lazygit = {pkgs, ...}: {

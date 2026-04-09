@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # zsh is a shell and command-line interpreter
+  #
   # flake.modules.nixos.zsh = {pkgs, ...}: {};
 
   flake.modules.homeManager.zsh = {pkgs, ...}: {

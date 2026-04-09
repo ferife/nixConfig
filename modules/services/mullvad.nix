@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # Mullvad is a VPN
+
   flake.modules.nixos.mullvad = {pkgs, ...}: {
     networking.wireguard.enable = true;
     services.mullvad-vpn = {

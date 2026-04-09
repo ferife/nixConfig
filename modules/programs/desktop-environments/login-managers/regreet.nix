@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # Regreet is a login manager made to work with a variety of desktop environments and window managers
+
   flake.modules.nixos.regreet = {pkgs, ...}: {
     services.greetd.enable = true;
 

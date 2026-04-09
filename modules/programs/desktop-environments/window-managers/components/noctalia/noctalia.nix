@@ -1,4 +1,5 @@
 {inputs, ...}: {
+  # Noctalia is a desktop shell, which can be used to put a bar on a window manager
   flake-file.inputs.noctalia = {
     url = "github:noctalia-dev/noctalia-shell";
     inputs.nixpkgs.follows = "nixpkgs";
