@@ -47,6 +47,7 @@
       keepassxc
       lazygit
       librewolf
+      mpv
       noctalia
       starship
       thunderbird
