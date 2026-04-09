@@ -46,6 +46,7 @@
       # kde-plasma
       keepassxc
       lazygit
+      libreoffice
       librewolf
       mpv
       noctalia
