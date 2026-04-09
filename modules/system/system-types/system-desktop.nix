@@ -49,6 +49,7 @@
       librewolf
       mpv
       noctalia
+      obs-studio
       starship
       thunderbird
       zoxide
