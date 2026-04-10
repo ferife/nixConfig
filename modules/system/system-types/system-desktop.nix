@@ -50,6 +50,7 @@
       obs-studio
       starship
       thunderbird
+      tldr
       tor-browser
       zoxide
       #
