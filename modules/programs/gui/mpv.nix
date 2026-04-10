@@ -4,6 +4,11 @@
   # flake.modules.nixos.mpv = {pkgs, ...}: {};
 
   flake.modules.homeManager.mpv = {pkgs, ...}: {
-    programs.mpv.enable = true;
+    services.playerctld.enable = true;
+
+    programs.mpv = {
+      enable = true;
+      scripts = [pkgs.mpvScripts.mpris]; # Allows playerctl to detect & control mpv
+    };
   };
 }
