@@ -46,6 +46,7 @@
       eza
       ghostty
       gnome-calculator
+      gnome-clocks
       hyprland
       kde-connect
       # kde-plasma
