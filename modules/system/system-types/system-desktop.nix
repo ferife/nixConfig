@@ -40,6 +40,7 @@
       dolphin
       dust
       eclipse
+      eza
       ghostty
       hyprland
       kde-connect
