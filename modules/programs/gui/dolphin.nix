@@ -1,5 +1,5 @@
 {inputs, ...}: {
-  # Dolphin is a graphical file browser
+  # Dolphin is the graphical file browser packaged with KDE Plasma
   #
   # flake.modules.nixos.dolphin = {pkgs, ...}: {};
 
