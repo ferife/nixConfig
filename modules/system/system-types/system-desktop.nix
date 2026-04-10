@@ -54,6 +54,7 @@
       lazygit
       libreoffice
       librewolf
+      loupe
       mpv
       noctalia
       obs-studio
