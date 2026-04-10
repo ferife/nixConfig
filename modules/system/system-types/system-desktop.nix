@@ -38,6 +38,7 @@
       btop
       chromium
       dolphin
+      dust
       eclipse
       ghostty
       hyprland
