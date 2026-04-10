@@ -34,6 +34,7 @@
       alejandra
       bc
       fastfetch
+      fd
       fzf
       git
       # grep
