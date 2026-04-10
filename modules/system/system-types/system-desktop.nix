@@ -36,6 +36,7 @@
       # PROGRAMS
       bat
       btop
+      cheese
       chromium
       cmatrix
       dolphin
