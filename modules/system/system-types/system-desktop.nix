@@ -65,6 +65,7 @@
       tldr
       tor-browser
       yazi
+      zellij
       zoxide
       #
       # SERVICES
