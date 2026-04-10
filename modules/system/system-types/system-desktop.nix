@@ -58,6 +58,7 @@
       mpv
       noctalia
       obs-studio
+      plantuml
       starship
       thunderbird
       tldr
