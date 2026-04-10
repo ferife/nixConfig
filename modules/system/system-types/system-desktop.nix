@@ -34,6 +34,7 @@
       stylix
       #
       # PROGRAMS
+      bat
       chromium
       dolphin
       eclipse
