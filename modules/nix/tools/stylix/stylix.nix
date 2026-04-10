@@ -16,7 +16,13 @@
     };
   };
 
-  flake.modules.homeManager.stylix = {pkgs, ...}: {
+  flake.modules.homeManager.stylix = {
+    config,
+    pkgs,
+    ...
+  }: {
+    gtk.gtk4.theme = config.gtk.theme; # To get rid of evaluation warning
+
     stylix = {
       enable = true;
       autoEnable = true;
