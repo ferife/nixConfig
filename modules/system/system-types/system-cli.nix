@@ -32,6 +32,7 @@
       #
       # PROGRAMS
       alejandra
+      bc
       fastfetch
       fzf
       git
