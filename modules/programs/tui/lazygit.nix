@@ -11,5 +11,7 @@
       enableBashIntegration = true;
       enableZshIntegration = true;
     };
+
+    home.shellAliases.lg = "lazygit";
   };
 }
