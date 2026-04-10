@@ -40,6 +40,7 @@
       # grep
       jq
       nixvim
+      playerctl
       ripgrep
       zsh
       #
