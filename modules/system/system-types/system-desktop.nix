@@ -56,6 +56,7 @@
       obs-studio
       starship
       thunderbird
+      tor-browser
       zoxide
       #
       # SERVICES
