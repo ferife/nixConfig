@@ -42,6 +42,7 @@
       # PROGRAMS
       chromium
       dolphin
+      eclipse
       ghostty
       hyprland
       # kde-connect
