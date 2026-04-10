@@ -59,6 +59,7 @@
       noctalia
       obs-studio
       plantuml
+      procs
       starship
       thunderbird
       tldr
