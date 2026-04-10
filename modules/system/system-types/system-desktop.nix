@@ -13,7 +13,7 @@
       # ghostty
       # gnome
       hyprland
-      # kde-connect
+      kde-connect
       # kde-plasma
       regreet
       # sddm
@@ -39,7 +39,7 @@
       eclipse
       ghostty
       hyprland
-      # kde-connect
+      kde-connect
       # kde-plasma
       keepassxc
       lazygit
