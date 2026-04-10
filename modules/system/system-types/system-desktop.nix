@@ -35,6 +35,7 @@
       #
       # PROGRAMS
       bat
+      btop
       chromium
       dolphin
       eclipse
