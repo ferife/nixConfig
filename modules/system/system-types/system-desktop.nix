@@ -45,6 +45,7 @@
       evince
       eza
       ghostty
+      gnome-calculator
       hyprland
       kde-connect
       # kde-plasma
