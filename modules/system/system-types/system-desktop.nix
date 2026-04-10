@@ -42,6 +42,7 @@
       dolphin
       dust
       eclipse
+      evince
       eza
       ghostty
       hyprland
