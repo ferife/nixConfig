@@ -37,6 +37,7 @@
       bat
       btop
       chromium
+      cmatrix
       dolphin
       dust
       eclipse
