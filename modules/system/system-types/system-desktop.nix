@@ -64,6 +64,7 @@
       thunderbird
       tldr
       tor-browser
+      yazi
       zoxide
       #
       # SERVICES
