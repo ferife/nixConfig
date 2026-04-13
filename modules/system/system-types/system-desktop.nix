@@ -66,6 +66,7 @@
       obs-studio
       plantuml
       procs
+      proton-mail
       starship
       thunderbird
       tldr
