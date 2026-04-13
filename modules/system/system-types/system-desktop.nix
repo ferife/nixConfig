@@ -73,6 +73,7 @@
       thunderbird
       tldr
       tor-browser
+      # vlc
       yazi
       # yt-dlp
       zellij
