@@ -78,6 +78,7 @@
       tor-browser
       # vlc
       # vs-code
+      wpaperd
       yazi
       # yt-dlp
       zellij

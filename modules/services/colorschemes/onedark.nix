@@ -22,6 +22,7 @@
       targets.zellij.enable = false;
     };
 
+    services.wpaperd.settings.any.path = lib.mkForce ./wallpapers/onedark;
     programs = {
       nixvim.colorschemes.onedark.enable = true;
       zellij.settings.theme = "onedark";
