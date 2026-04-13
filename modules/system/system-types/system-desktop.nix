@@ -60,6 +60,7 @@
       loupe
       # lsd
       mpv
+      # neofetch
       noctalia
       obs-studio
       plantuml
