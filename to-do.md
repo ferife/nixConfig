@@ -13,6 +13,7 @@
 - [ ] Set up gaming
 - [ ] Look into using bashly, a templater for bash CIP tools
 - [ ] Use sha256sum (already installed) to generate hashes based on files and checksum against those files
+- [ ] Look into meshtastic
 
 ## Done
 ## Cancelled
