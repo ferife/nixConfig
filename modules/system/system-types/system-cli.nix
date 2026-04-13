@@ -32,6 +32,7 @@
       #
       # PROGRAMS
       alejandra
+      # bash
       bc
       fastfetch
       fd
