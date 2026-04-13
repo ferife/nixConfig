@@ -68,6 +68,7 @@
       plantuml
       procs
       proton-mail
+      # qbittorrent
       starship
       thunderbird
       tldr
