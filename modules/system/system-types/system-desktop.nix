@@ -46,6 +46,7 @@
       evince
       eza
       ghostty
+      # gimp
       gnome-calculator
       gnome-clocks
       hyprland
