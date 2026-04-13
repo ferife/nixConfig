@@ -18,6 +18,9 @@
       regreet
       # sddm
       #
+      # SERVICES
+      color-onedark
+      #
       # SETTINGS
       bluetooth
       io-settings
@@ -81,6 +84,7 @@
       zoxide
       #
       # SERVICES
+      color-onedark
       mullvad
       #
       # SETTINGS

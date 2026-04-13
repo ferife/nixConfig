@@ -10,9 +10,6 @@
     stylix = {
       enable = true;
       autoEnable = true;
-      image = ./wallpapers/od_nvim.png;
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
-      polarity = "dark";
     };
   };
 
@@ -26,9 +23,6 @@
     stylix = {
       enable = true;
       autoEnable = true;
-      image = ./wallpapers/od_nvim.png;
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
-      polarity = "dark";
     };
   };
 }

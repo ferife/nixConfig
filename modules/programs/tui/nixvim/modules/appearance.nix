@@ -2,8 +2,6 @@
   # flake.modules.nixos.nixvim.nixvim-appearance = {pkgs, ...}: {};
 
   flake.modules.homeManager.nixvim-appearance = {pkgs, ...}: {
-    colorschemes.onedark.enable = true;
-
     plugins = {
       cursorline = {
         enable = true;

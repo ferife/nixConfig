@@ -10,8 +10,6 @@
       enableZshIntegration = true;
       exitShellOnExit = true;
       attachExistingSession = true;
-      settings.theme = "onedark";
     };
-    stylix.targets.zellij.enable = false;
   };
 }
