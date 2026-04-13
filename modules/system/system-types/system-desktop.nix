@@ -40,7 +40,7 @@
       cheese
       chromium
       cmatrix
-      dolphin
+      # dolphin
       dust
       eclipse
       evince
@@ -60,7 +60,7 @@
       loupe
       # lsd
       mpv
-      # nautilus
+      nautilus
       # neofetch
       noctalia
       obs-studio
