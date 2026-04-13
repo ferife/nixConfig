@@ -60,6 +60,7 @@
       loupe
       # lsd
       mpv
+      # nautilus
       # neofetch
       noctalia
       obs-studio
