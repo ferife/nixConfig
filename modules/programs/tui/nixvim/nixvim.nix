@@ -18,5 +18,6 @@
       vimdiffAlias = true;
       imports = [inputs.self.modules.homeManager.nixvim-modules];
     };
+    stylix.targets.nixvim.transparentBackground.main = true;
   };
 }

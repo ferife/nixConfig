@@ -23,6 +23,8 @@
     stylix = {
       enable = true;
       autoEnable = true;
+
+      opacity.terminal = 0.85;
     };
   };
 }
