@@ -50,6 +50,7 @@
       gnome-calculator
       gnome-clocks
       hyprland
+      # jetuml
       kde-connect
       # kde-plasma
       keepassxc
