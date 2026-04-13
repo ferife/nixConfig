@@ -58,6 +58,7 @@
       libreoffice
       librewolf
       loupe
+      # lsd
       mpv
       noctalia
       obs-studio
