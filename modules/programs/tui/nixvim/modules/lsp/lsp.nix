@@ -31,6 +31,7 @@
         # folding = true;
         nixvimInjections = true; # Will color contents of extraConfigLua and other such injections as Lua
         # grammarPackages = [pkgs.tree-sitter-grammars.tree-sitter-comment];
+        highlight.enable = true;
       };
       dependencies = {
         curl.enable = true;

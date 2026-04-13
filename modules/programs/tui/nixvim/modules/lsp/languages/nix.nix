@@ -21,5 +21,7 @@
           ''${flake}.nixosConfigurations.laptop.options'';
       };
     };
+
+    plugins.otter.enable = true;
   };
 }
