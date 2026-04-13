@@ -64,6 +64,7 @@
       # neofetch
       noctalia
       obs-studio
+      # openshot
       plantuml
       procs
       proton-mail
