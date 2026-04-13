@@ -18,6 +18,10 @@
         ", XF86AudioPrev, Go to previous audio track, exec, ${playerctl} previous" #F4
         ", XF86AudioPlay, Play/pause audio track, exec, ${playerctl} play-pause" #F5
         ", XF86AudioNext, Go to next audio track, exec, ${playerctl} next" #F6
+        # F9 is for some reason registering as Super key
+        # ", XF86RFKill, Toggle radios (AKA toggle airplane mode), exec, blablabla" #F10
+        # ", Print, Print Screen (AKA take screenshot), exec, blablabla" #F11
+        # ", XF86AudioMedia, blabla, exec, blabla" #F12
       ];
       bindde = [
         ", XF86AudioRaiseVolume, Raise volume, exec, ${wpctl} set-volume @DEFAULT_SINK@ 5%+" #F2
