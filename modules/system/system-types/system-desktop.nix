@@ -71,6 +71,7 @@
       tldr
       tor-browser
       yazi
+      # yt-dlp
       zellij
       zoxide
       #
