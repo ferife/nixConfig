@@ -7,7 +7,7 @@
       nixvim-comment
       nixvim-completion
       nixvim-files
-      # nixvim-git
+      nixvim-git
       nixvim-hardtime
       nixvim-intellitab
       nixvim-move
