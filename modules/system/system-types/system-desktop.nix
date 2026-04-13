@@ -34,6 +34,7 @@
       stylix
       #
       # PROGRAMS
+      # audacity
       bat
       btop
       cheese
