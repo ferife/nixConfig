@@ -12,6 +12,7 @@
       nixvim-intellitab
       nixvim-move
       nixvim-pairs
+      # nixvim-precognition
       nixvim-spider
       nixvim-splitjoin
       nixvim-telescope
