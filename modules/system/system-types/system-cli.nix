@@ -42,6 +42,7 @@
       jq
       nixvim
       playerctl
+      procs
       ripgrep
       zsh
       #

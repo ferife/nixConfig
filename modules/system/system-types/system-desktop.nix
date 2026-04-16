@@ -69,7 +69,6 @@
       obs-studio
       # openshot
       plantuml
-      procs
       proton-mail
       # qbittorrent
       starship
