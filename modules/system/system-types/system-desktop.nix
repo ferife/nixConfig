@@ -53,6 +53,7 @@
       gnome-calculator
       gnome-clocks
       hyprland
+      # imagemagick
       # jetuml
       kde-connect
       # kde-plasma
