@@ -44,6 +44,7 @@
       playerctl
       procs
       ripgrep
+      # yq
       zsh
       #
       # SERVICES
