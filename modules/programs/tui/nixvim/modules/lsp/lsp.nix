@@ -42,6 +42,7 @@
         enable = true;
         settings.line_numbers = true;
       };
+      tiny-inline-diagnostic.enable = true;
     };
   };
 }
