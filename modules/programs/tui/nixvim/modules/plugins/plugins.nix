@@ -18,7 +18,6 @@
       nixvim-telescope
       nixvim-textobjects
       nixvim-todo-comments
-      # nixvim-ufo
       nixvim-which-key
       nixvim-yanky
     ];
