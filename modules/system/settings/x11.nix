@@ -9,6 +9,4 @@
       variant = "";
     };
   };
-
-  # flake.modules.homeManager.x11 = {pkgs, ...}: {};
 }

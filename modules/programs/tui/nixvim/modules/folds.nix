@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-folds = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-folds = {lib, ...}: {
     plugins = {
       nvim-ufo.enable = true;

@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-cmdline = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-cmdline = {pkgs, ...}: {
     plugins.mini-cmdline = {
       enable = true;

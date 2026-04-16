@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-completion = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-completion = {pkgs, ...}: {
     plugins = {
       blink-cmp = {

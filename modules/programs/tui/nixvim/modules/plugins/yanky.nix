@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-yanky = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-yanky = {pkgs, ...}: {
     plugins.yanky = {
       enable = true;

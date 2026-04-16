@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.noctalia = {pkgs, ...}: {};
-
   flake.modules.homeManager.noctalia = {
     lib,
     pkgs,

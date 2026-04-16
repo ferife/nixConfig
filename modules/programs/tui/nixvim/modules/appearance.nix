@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-appearance = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-appearance = {pkgs, ...}: {
     plugins = {
       cursorline = {

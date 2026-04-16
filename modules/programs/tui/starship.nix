@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # starship is a customizable shell prompt
-  #
-  # flake.modules.nixos.starship = {pkgs, ...}: {};
 
   flake.modules.homeManager.starship = {pkgs, ...}: {
     programs.starship = {

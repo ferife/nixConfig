@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # bash is a shell and command-line interpreter
-  #
-  # flake.modules.nixos.bash = {pkgs, ...}: {};
 
   flake.modules.homeManager.bash = {pkgs, ...}: {
     programs.bash = {

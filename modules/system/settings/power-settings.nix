@@ -16,6 +16,4 @@
     # WARN: It is best to never manually enable power-profiles-daemon. It conflicts with TLP, which manages power automatically and with more effectiveness
     # services.power-profiles-daemon.enable = false;
   };
-
-  # flake.modules.homeManager.power-settings = {};
 }

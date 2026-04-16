@@ -25,6 +25,4 @@
     # Or disable the firewall altogether.
     # networking.firewall.enable = false;
   };
-
-  # flake.modules.homeManager.network-settings = {};
 }

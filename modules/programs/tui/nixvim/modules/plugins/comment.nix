@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-comment = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-comment = {pkgs, ...}: {
     plugins.mini-comment = {
       enable = true;

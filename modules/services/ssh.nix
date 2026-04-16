@@ -11,6 +11,4 @@
       };
     };
   };
-
-  # flake.modules.homeManager.ssh = {pkgs, ...}: {};
 }

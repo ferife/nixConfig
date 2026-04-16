@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-files = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-files = {pkgs, ...}: {
     plugins.mini-files = {
       enable = true;

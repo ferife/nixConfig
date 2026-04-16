@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # zellij is a terminal multiplexer
-  #
-  # flake.modules.nixos.zellij = {pkgs, ...}: {};
 
   flake.modules.homeManager.zellij = {pkgs, ...}: {
     programs.zellij = {

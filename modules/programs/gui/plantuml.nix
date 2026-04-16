@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # plantuml is a GUI used to create and view UML diagrams
-  #
-  # flake.modules.nixos.plantuml = {pkgs, ...}: {};
 
   flake.modules.homeManager.plantuml = {pkgs, ...}: {
     home.packages = [

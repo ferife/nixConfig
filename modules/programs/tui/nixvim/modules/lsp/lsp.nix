@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-lsp = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-lsp = {pkgs, ...}: {
     imports = with inputs.self.modules.homeManager; [
       nixvim-bash

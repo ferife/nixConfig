@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # This module adds functionality to the f-keys
-  #
-  # flake.modules.nixos.hyprland = {pkgs, ...}: {};
 
   flake.modules.homeManager.hyprland = {
     lib,

@@ -17,13 +17,6 @@
         };
       };
 
-      # darwin.fernandorf = {
-      #   imports = with inputs.self.modules.darwin; [
-      #     # drawingApps
-      #     # developmentEnvironment
-      #   ];
-      # };
-
       homeManager.fernandorf = {pkgs, ...}: {
         imports = with inputs.self.modules.homeManager; [
           # home manager modules imported here

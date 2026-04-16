@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # yazi is a file manager
-  #
-  # flake.modules.nixos.yazi = {pkgs, ...}: {};
 
   flake.modules.homeManager.yazi = {pkgs, ...}: {
     programs.yazi = {

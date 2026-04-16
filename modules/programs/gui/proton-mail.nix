@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # Proton Mail is an email client
-  #
-  # flake.modules.nixos.proton-mail = {pkgs, ...}: {};
 
   flake.modules.homeManager.proton-mail = {pkgs, ...}: {
     home.packages = [pkgs.protonmail-desktop];

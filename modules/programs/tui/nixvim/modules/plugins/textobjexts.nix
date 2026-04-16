@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-textobjects = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-textobjects = {pkgs, ...}: {
     plugins.mini-ai = {
       enable = true;

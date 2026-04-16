@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # Thunderbird is an email client
-  #
-  # flake.modules.nixos.thunderbird = {pkgs, ...}: {};
 
   flake.modules.homeManager.thunderbird = {pkgs, ...}: {
     programs.thunderbird = {

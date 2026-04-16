@@ -9,6 +9,4 @@
       settings.widget.clock.format = "%T\n%A %B %e, %Y\nTime zone: %:V";
     };
   };
-
-  # flake.modules.homeManager.regreet = {pkgs, ...}: {};
 }

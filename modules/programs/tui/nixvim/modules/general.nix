@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-general = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-general = {pkgs, ...}: {
     clipboard = {
       reguster = "unnamedplus";

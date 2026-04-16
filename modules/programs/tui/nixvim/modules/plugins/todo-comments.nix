@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-todo-comments = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-todo-comments = {pkgs, ...}: {
     plugins.telescope.enable = true; # Dependency
 

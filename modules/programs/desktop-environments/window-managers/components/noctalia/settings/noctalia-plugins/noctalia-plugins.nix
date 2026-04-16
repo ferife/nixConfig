@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.noctalia-plugins = {pkgs, ...}: {};
-
   flake.modules.homeManager.noctalia-plugins = {lib, ...}: {
     programs.noctalia-shell = {
       settings.plugins.autoUpdate = true;

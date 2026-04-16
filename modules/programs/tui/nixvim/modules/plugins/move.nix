@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-move = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-move = {pkgs, ...}: {
     plugins.mini-move = {
       enable = true;

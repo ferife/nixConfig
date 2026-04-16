@@ -6,8 +6,6 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  # flake.modules.nixos.nixvim = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim = {pkgs, ...}: {
     imports = [inputs.nixvim.homeModules.nixvim];
 

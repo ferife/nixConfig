@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-binds-basic = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-binds-basic = {pkgs, ...}: {
     keymaps = [
       {

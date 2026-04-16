@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-telescope = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-telescope = {pkgs, ...}: {
     plugins.telescope = {
       enable = true;

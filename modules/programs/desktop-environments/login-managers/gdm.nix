@@ -6,6 +6,4 @@
 
     environment.systemPackages = [pkgs.gdm-settings];
   };
-
-  # flake.modules.homeManager.gdm = {pkgs, ...}: {};
 }

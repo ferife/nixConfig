@@ -1,6 +1,6 @@
 {inputs, ...}: {
   # Ghostty is a terminal emulator
-  #
+
   flake.modules.nixos.ghostty = {pkgs, ...}: {
     environment.systemPackages = [pkgs.ghostty];
   };

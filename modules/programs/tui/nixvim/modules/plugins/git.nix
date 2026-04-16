@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-git = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-git = {pkgs, ...}: {
     plugins = {
       gitsigns = {

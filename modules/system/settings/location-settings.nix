@@ -20,6 +20,4 @@
       LC_TIME = "${locale}";
     };
   };
-
-  # flake.modules.homeManager.location-settings = {pkgs, ...}: {};
 }

@@ -1,7 +1,5 @@
 {inputs, ...}: {
   # eza is a tool for listing directory contents
-  #
-  # flake.modules.nixos.eza = {pkgs, ...}: {};
 
   flake.modules.homeManager.eza = {lib, ...}: {
     programs.eza = {

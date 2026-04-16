@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-spider = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-spider = {pkgs, ...}: {
     plugins.spider = {
       enable = true;

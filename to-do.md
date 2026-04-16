@@ -14,6 +14,13 @@
 - [ ] Look into using bashly, a templater for bash CIP tools
 - [ ] Use sha256sum (already installed) to generate hashes based on files and checksum against those files
 - [ ] Look into meshtastic
+- [ ] Look into flash.nvim
+- [ ] Look into snacks.nvim
+- [ ] Find some cool wallpapers
+- [ ] Look into improving nvim ufo setup
+- [ ] Look into improving statuscol setup
+- [ ] Look into planify (todo/project manager for linux)
+- [ ] Look into ripgrep-all
 
 ## Done
 ## Cancelled

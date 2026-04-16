@@ -5,6 +5,4 @@
       efi.canTouchEfiVariables = true;
     };
   };
-
-  # flake.modules.homeManager.systemd-boot = {};
 }

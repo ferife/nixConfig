@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.cursor = {pkgs, ...}: {};
-
   flake.modules.homeManager.cursor = {pkgs, ...}: {
     home.pointerCursor = {
       enable = true;

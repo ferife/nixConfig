@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  # flake.modules.nixos.nixvim.nixvim-plugins = {pkgs, ...}: {};
-
   flake.modules.homeManager.nixvim-plugins = {pkgs, ...}: {
     imports = with inputs.self.modules.homeManager; [
       nixvim-cmdline

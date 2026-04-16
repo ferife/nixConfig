@@ -7,6 +7,4 @@
       wayland.enable = true;
     };
   };
-
-  # flake.modules.homeManager.sddm = {pkgs, ...}: {};
 }
