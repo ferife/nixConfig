@@ -3,6 +3,8 @@
 
   flake.modules.homeManager.nixvim-comment = {pkgs, ...}: {
     plugins.mini-comment = {
+      enable = true;
+
       options = {
         # Do not put comment symbols on blank lines
         ignore_blank_line = true;

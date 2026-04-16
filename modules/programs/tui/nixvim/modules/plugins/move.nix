@@ -3,6 +3,8 @@
 
   flake.modules.homeManager.nixvim-move = {pkgs, ...}: {
     plugins.mini-move = {
+      enable = true;
+
       # Move text around with ease
       mappings = {
         # Move visual selection in visual mode

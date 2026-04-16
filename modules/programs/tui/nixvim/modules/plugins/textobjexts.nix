@@ -3,6 +3,8 @@
 
   flake.modules.homeManager.nixvim-textobjects = {pkgs, ...}: {
     plugins.mini-ai = {
+      enable = true;
+
       # Alternative to nvim-treesitter-textobject and nvim-surround
       mappings = {
         # Main textobject prefixes
