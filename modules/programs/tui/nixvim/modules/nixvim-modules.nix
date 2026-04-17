@@ -3,7 +3,6 @@
     imports = with inputs.self.modules.homeManager; [
       nixvim-appearance
       nixvim-binds
-      nixvim-folds
       nixvim-general
       nixvim-lsp
       nixvim-plugins
