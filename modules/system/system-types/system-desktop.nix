@@ -59,7 +59,7 @@
       # kde-plasma
       keepassxc
       lazygit
-      libreoffice
+      # libreoffice
       librewolf
       loupe
       # lsd
@@ -68,6 +68,7 @@
       # neofetch
       noctalia
       obs-studio
+      onlyoffice
       # openshot
       plantuml
       proton-mail
