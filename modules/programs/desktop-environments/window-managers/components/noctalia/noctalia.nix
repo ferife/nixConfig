@@ -16,6 +16,10 @@
       extraConfig = "exec-once = noctalia-shell";
 
       settings = {
+        bindd = [
+          "SUPER, Space, Open the app launcher, exec, noctalia-shell ipc call launcher toggle"
+        ];
+
         general = {
           gaps_in = 5;
           gaps_out = 10;
