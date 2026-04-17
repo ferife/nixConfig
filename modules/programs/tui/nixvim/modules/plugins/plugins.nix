@@ -11,6 +11,7 @@
       nixvim-move
       nixvim-pairs
       # nixvim-precognition
+      nixvim-snacks
       nixvim-spider
       nixvim-splitjoin
       nixvim-telescope
