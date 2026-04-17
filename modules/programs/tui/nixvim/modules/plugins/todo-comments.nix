@@ -1,4 +1,6 @@
 {inputs, ...}: {
+  # todo-comments is a plugin by nvim allowing for highlighting, listing, and searching todo comments
+
   flake.modules.homeManager.nixvim-todo-comments = {pkgs, ...}: {
     plugins.telescope.enable = true; # Dependency
 
