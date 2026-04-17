@@ -36,7 +36,22 @@
           watch_gitdir.follow_files = true;
         };
       };
+
+      snacks = {
+        enable = true;
+        settings.lazygit.enable = true; # Open lazygit in a floating window
+      };
+
       trouble.enable = true;
     };
+
+    keymaps = [
+      {
+        action = "<cmd>lua Snacks.lazygit()<CR>";
+        key = "<leader>lg";
+        mode = "n";
+        options.desc = "Open lazygit";
+      }
+    ];
   };
 }
