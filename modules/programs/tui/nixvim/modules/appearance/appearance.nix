@@ -29,6 +29,7 @@
       mini-trailspace.enable = true; # Highlight whitespace at end of line
       numbertoggle.enable = true; # Switch to non-relative numbers when in insert mode
       rainbow-delimiters.enable = true; # Use different colors for containing characters ()[]{}
+      treesitter.enable = true; # rainbow-delimiters dependency
 
       # Add a visible line at the designated character limit
       virt-column = {
