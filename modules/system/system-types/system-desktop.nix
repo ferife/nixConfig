@@ -73,6 +73,7 @@
       plantuml
       proton-mail
       # qbittorrent
+      qutebrowser
       starship
       thunderbird
       tldr
