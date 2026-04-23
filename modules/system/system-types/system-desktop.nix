@@ -91,6 +91,7 @@
       mullvad
       #
       # SETTINGS
+      autostart
       cursor
       notifications
     ];
