@@ -3,7 +3,7 @@
 
   flake.modules.nixos.color-onedark = {pkgs, ...}: {
     stylix = {
-      image = ./wallpapers/onedark/od_nvim.png;
+      image = ./wallpapers/onedark/od_autumn.jpg;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
       polarity = "dark";
     };
@@ -15,7 +15,7 @@
     ...
   }: {
     stylix = {
-      image = ./wallpapers/onedark/od_nvim.png;
+      image = ./wallpapers/onedark/od_autumn.jpg;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/onedark.yaml";
       polarity = "dark";
 

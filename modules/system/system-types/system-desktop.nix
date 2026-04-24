@@ -20,6 +20,7 @@
       #
       # SERVICES
       color-onedark
+      font-fira-code
       #
       # SETTINGS
       bluetooth
@@ -88,6 +89,7 @@
       #
       # SERVICES
       color-onedark
+      font-fira-code
       mullvad
       #
       # SETTINGS
