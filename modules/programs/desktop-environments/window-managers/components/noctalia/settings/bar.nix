@@ -2,6 +2,9 @@
   flake.modules.homeManager.noctalia = {lib, ...}: {
     programs.noctalia-shell.settings.bar = {
       position = "top";
+      backgroundOpacity = 0.8;
+      capsuleOpacity = 0.9;
+      useSeparateOpacity = true;
       widgets = {
         left = [
           {
