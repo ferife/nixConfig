@@ -26,6 +26,12 @@
         # Any monitors whose settings are not explicitly defined will be set up automatically
         "monitor" = ", preferred, auto, 1";
         misc.vfr = true;
+
+        # Allow for vertical/horizontal splits to be toggled
+        dwindle = {
+          pseudotile = true;
+          preserve_split = true;
+        };
       };
       systemd.enableXdgAutostart = true;
     };

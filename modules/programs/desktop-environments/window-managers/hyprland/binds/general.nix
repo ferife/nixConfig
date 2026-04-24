@@ -8,9 +8,9 @@
         bindd = [
           "SUPER, Q, Close the current window, killactive"
           # "SUPER SHIFT, Q, Close all instances of application in active window, exec, ${kill-all-instances}"
-          "SUPER, F, Fullscreen active window, fullscreen, 0"
-          "SUPER ALT, F, Maximize active window, fullscreen, 1"
-          # "SUPER, J, Toggle window split, layoutmsg, togglesplit" # WARN: Super+J taken already
+          "SUPER ALT, F, Fullscreen active window, fullscreen, 0"
+          "SUPER, F, Maximize active window, fullscreen, 1"
+          "SUPER, T, Toggle window split, layoutmsg, togglesplit" # WARN: Super+J taken already
         ];
         binddu = [
           "SUPER, escape, Exit submap, submap, reset"
